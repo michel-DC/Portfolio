@@ -49,7 +49,7 @@ export const Social = () => {
         </a>
         <a
           className="flex flex-col gap-1 hover:scale-110 transition-transform"
-          href="x.com"
+          href="https://x.com"
           style={{
             color: "#509CEA",
             filter: "drop-shadow(0px 0px 10px rgba(250, 250, 250, 0.3))",
@@ -85,9 +85,11 @@ export const Social = () => {
             Gmail
           </p>
         </a>
-        <a className="underline ml-4" href="mailto:djoumessi.michelc@gmail.com">
-          djoumessi.michelc@gmail.com
-        </a>
+        <div className="ml-20">
+          <a className="underline" href="mailto:djoumessi.michelc@gmail.com">
+            djoumessi.michelc@gmail.com
+          </a>
+        </div>
       </div>
     </Section>
   );
