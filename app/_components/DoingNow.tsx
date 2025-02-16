@@ -26,7 +26,8 @@ export const DoingNow = () => {
                 <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                 <span className="mr-4">
                   Freelance Front-End developer ·
-                  <span className="inline-block">
+                  <br />
+                  <span className="inline-block mt-4">
                     Maison vatier
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
