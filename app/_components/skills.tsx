@@ -1,4 +1,18 @@
-import React from "react";
+import React, { ComponentPropsWithoutRef } from "react";
+import cn from "classnames";
+import { TailwindIconV2 } from "../assets/icon/tailwindIconV2";
+
+const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
+  return (
+    <span
+      className={cn(
+        "bg-white/10 backdrop-blur-md px-2  rounded-md text-primary items-center gap-1 ",
+        className
+      )}
+      {...props}
+    />
+  );
+};
 
 export const Skills = () => {
   return (
@@ -12,8 +26,8 @@ export const Skills = () => {
             viewBox="-10.5 -9.45 21 18.9"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-24 h-24"
-            style={{ transform: "rotate(347.346deg)" }}
+            className="w-24 h-24 animate-spin"
+            style={{ animationDuration: "10s" }}
           >
             <circle cx="0" cy="0" r="2" fill="currentColor"></circle>
             <g stroke="currentColor" strokeWidth="1" fill="none">
@@ -25,9 +39,16 @@ export const Skills = () => {
         </div>
         <div className="flex flex-col gap-2">
           <p className="text-lg font-semibold">React</p>
-          <p className="text-sm text-muted-foreground">
-            I am an "expert" in React library and I can create whatever you want
-            with this.
+          <p className="text-sm text-muted-foreground leading[20]">
+            My main framework is{" "}
+            <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
+              React
+            </Code>
+            , sometimes I also use{" "}
+            <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
+              Vue.js
+            </Code>{" "}
+            for building personal project.
           </p>
         </div>
       </div>
@@ -35,18 +56,23 @@ export const Skills = () => {
       {/* TypeScript Skill */}
       <div className="row-span-1 rounded-xl bg-card/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border border-border justify-between flex flex-col space-y-4 md:col-span-1">
         <img
-          src="/images/typescript-skills.png"
-          className="w-full h-full object-cover"
+          src="https://static-00.iconduck.com/assets.00/typescript-icon-icon-2048x2048-2rhh1z66.png"
+          className="w-full h-40 rounded-md object-cover"
           alt="TypeScript"
         />
         <div className="flex flex-col gap-2">
-          <p className="text-lg font-semibold">TypeScript is my 2nd language</p>
+          <p className="text-lg font-semibold">
+            My favorite language for front-end developement
+          </p>
         </div>
       </div>
 
       {/* TailwindCSS Skill */}
+
       <div className="row-span-1 rounded-xl bg-card/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border border-border justify-between flex flex-col space-y-4 md:col-span-1">
-        <div className="overflow-hidden w-full h-full rounded-md bg-gradient-to-r from-cyan-500 to-blue-500"></div>
+        <div className="flex items-center justify-center mr-10">
+          <TailwindIconV2 />
+        </div>
         <div className="flex flex-col gap-2">
           <p className="text-lg font-semibold">TailwindCSS</p>
           <p className="text-sm text-muted-foreground">
