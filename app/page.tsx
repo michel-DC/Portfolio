@@ -4,6 +4,8 @@ import { Social } from "./_components/social";
 import { DoingNow } from "./_components/DoingNow";
 import { HowHelp } from "./_components/HowHelp";
 import { Skills } from "./_components/skills";
+import { Projects } from "./_components/Projects";
+import { SideProjects } from "./_components/SideProjects";
 
 export default function Home() {
   return (
@@ -14,6 +16,7 @@ export default function Home() {
       <DoingNow />
       <HowHelp />
       <Skills />
+      <Projects />
     </main>
   );
 }
