@@ -1,6 +1,6 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import cn from "classnames";
-import { TailwindIconV2 } from "../assets/icon/tailwindIconV2";
+import { TailwindIcon } from "../assets/icon/tailwindIcon";
 
 const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
   return (
@@ -68,16 +68,14 @@ export const Skills = () => {
       </div>
 
       {/* TailwindCSS Skill */}
-
       <div className="row-span-1 rounded-xl bg-card/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border border-border justify-between flex flex-col space-y-4 md:col-span-1">
-        <div className="flex items-center justify-center mr-10">
-          <TailwindIconV2 />
-        </div>
+        <div className="overflow-hidden w-full h-full rounded-md bg-gradient-to-r from-[#44A8B3] to-[#0F6C85]"></div>
         <div className="flex flex-col gap-2">
+          <TailwindIcon />
           <p className="text-lg font-semibold">TailwindCSS</p>
           <p className="text-sm text-muted-foreground">
-            Since 2020, I started using TailwindCSS, and I think it's the best
-            tool for CSS.
+            Since 2024 i started using tailwindCSS, and I think it's the best
+            tool fastest and easy way to use CSS.
           </p>
         </div>
       </div>
@@ -92,7 +90,7 @@ export const Skills = () => {
           />
         </div>
         <div className="flex flex-col gap-2">
-          <p className="text-lg font-semibold">No-Code Journey</p>
+          <p className="text-lg font-semibold">To create like a designer</p>
         </div>
       </div>
       <div className="row-span-1 rounded-xl bg-card/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border-border border justify-between flex flex-col space-y-4">
@@ -116,7 +114,7 @@ export const Skills = () => {
               </svg>
               <span>User</span>
             </p>
-            <p>Can you create a website?</p>
+            <p>Can you cautomatise this for me?</p>
           </div>
 
           <div className="group relative">
@@ -141,7 +139,7 @@ export const Skills = () => {
               </svg>
               <span>Assistant</span>
             </p>
-            <p>Yes, just contact me.</p>
+            <p>Yes, of course.</p>
           </div>
         </div>
 

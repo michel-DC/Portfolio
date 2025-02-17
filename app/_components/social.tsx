@@ -66,25 +66,6 @@ export const Social = () => {
             Twitter
           </p>
         </a>
-        <a
-          className="flex flex-col gap-1 hover:scale-110 transition-transform"
-          href="mailto:djoumessi.michelc@gmail.com"
-          style={{
-            color: "#ffffff",
-            filter: "drop-shadow(0px 0px 10px rgba(250, 250, 250, 0.3))",
-          }}
-        >
-          <GmailIcon />
-          <p
-            className="text-sm font-medium leading-none"
-            style={{
-              color: "#ffffff",
-              filter: "drop-shadow(0px 0px 10px rgba(250, 250, 250, 0.3))",
-            }}
-          >
-            Gmail
-          </p>
-        </a>
         <div className="ml-20">
           <a className="underline" href="mailto:djoumessi.michelc@gmail.com">
             djoumessi.michelc@gmail.com
