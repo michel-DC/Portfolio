@@ -1,6 +1,6 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import cn from "classnames";
-import { Section } from "./section";
+import { Section } from "./ui/section";
 import { Uni } from "../assets/icon/uni";
 import { ReactIcon } from "../assets/icon/reactIcon";
 import { TypescriptIcon } from "../assets/icon/typescriptIcon";

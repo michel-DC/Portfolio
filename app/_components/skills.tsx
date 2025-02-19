@@ -1,6 +1,6 @@
 import React, { ComponentPropsWithoutRef } from "react";
 import cn from "classnames";
-import { Section } from "./section";
+import { Section } from "./ui/section";
 import { TailwindIcon } from "../assets/icon/tailwindIcon";
 
 const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
@@ -165,7 +165,7 @@ export const Skills = () => {
             <p className="text-lg font-semibold">Perfect usage of AI</p>
             <p className="text-sm text-muted-foreground">
               <span className="text-sm">
-                I have created several applications using AI tools.
+                I use AI to automate my work and make it easier.
               </span>
             </p>
           </div>

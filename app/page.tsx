@@ -6,6 +6,7 @@ import { HowHelp } from "./_components/HowHelp";
 import { Skills } from "./_components/skills";
 import { Projects } from "./_components/Projects";
 import { ContactMe } from "./_components/contactMe";
+import { SnakeGame } from "./_components/snakeGame";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <ContactMe />
+      <SnakeGame />
     </main>
   );
 }

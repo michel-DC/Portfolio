@@ -1,5 +1,5 @@
 import React from "react";
-import { Section } from "./section";
+import { Section } from "./ui/section";
 import { LinkedinIcon } from "../assets/icon/linkedinIcon";
 import { GithubIcon } from "../assets/icon/githubIcon";
 import { TwitterIcon } from "../assets/icon/twitterIcon";
@@ -64,6 +64,35 @@ export const Social = () => {
             }}
           >
             Twitter
+          </p>
+        </a>
+        <a
+          className="flex flex-col gap-1 hover:scale-110 transition-transform"
+          style={{
+            color: "#EA392B",
+            filter: "drop-shadow(0px 0px 10px rgba(250, 250, 250, 0.3))",
+          }}
+          href="https://youtube.com"
+        >
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            strokeWidth="0"
+            role="img"
+            viewBox="0 0 24 24"
+            height="24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+          </svg>
+          <p
+            className="text-sm font-medium leading-none"
+            style={{
+              filter: "drop-shadow(0px 0px 10px rgba(250, 250, 250, 0.3))",
+            }}
+          >
+            Youtube
           </p>
         </a>
         <div className="ml-20">
