@@ -64,7 +64,7 @@ export const Skills = () => {
           />
           <div className="flex flex-col gap-2">
             <p className="text-lg font-semibold">
-              My favorite language for front-end developement
+              My favorite Front-End language.
             </p>
           </div>
         </div>

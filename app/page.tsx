@@ -5,7 +5,7 @@ import { DoingNow } from "./_components/DoingNow";
 import { HowHelp } from "./_components/HowHelp";
 import { Skills } from "./_components/skills";
 import { Projects } from "./_components/Projects";
-import { SideProjects } from "./_components/SideProjects";
+import { ContactMe } from "./_components/contactMe";
 
 export default function Home() {
   return (
@@ -17,6 +17,7 @@ export default function Home() {
       <HowHelp />
       <Skills />
       <Projects />
+      <ContactMe />
     </main>
   );
 }
