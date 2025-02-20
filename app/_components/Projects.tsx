@@ -351,6 +351,23 @@ export const Projects = () => {
                 </a>
               </div>
             </div>
+            <div
+              className="flex justify-center h-full mb-4 mt-8 bg-blur"
+              style={{
+                filter: "drop-shadow(0px 0px 10px rgba(250, 250, 250, 0.3))",
+              }}
+            >
+              <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 md:px-6 md:py-3">
+                <a
+                  href="https://github.com/michel-DC?tab=repositories"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center"
+                >
+                  See all projects
+                </a>
+              </button>
+            </div>
           </div>
         </div>
       </div>
