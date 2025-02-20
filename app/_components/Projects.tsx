@@ -5,7 +5,8 @@ import { Section } from "./ui/section";
 
 export const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = 6; // Update this to the total number of slides
+  const isMobile = window.innerWidth <= 768;
+  const totalSlides = isMobile ? 6 : 3;
 
   const handleNext = () => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
