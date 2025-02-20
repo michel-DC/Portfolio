@@ -7,7 +7,7 @@ const BOARD_SIZE = 20;
 const INITIAL_SNAKE = [
   { x: 8, y: 10 },
   { x: 9, y: 10 },
-  { x: 10, y: 10 }, // Tête du serpent
+  { x: 10, y: 10 },
 ];
 const DIRECTIONS = {
   ArrowUp: { x: 0, y: -1 },
@@ -25,7 +25,7 @@ export const SnakeGame = () => {
   const [snake, setSnake] = useState(INITIAL_SNAKE);
   const [direction, setDirection] = useState(DIRECTIONS.ArrowRight);
   const [food, setFood] = useState(getRandomPosition);
-  const [isRunning, setIsRunning] = useState(true);
+  const [isRunning, setIsRunning] = useState(false);
   const [score, setScore] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -92,28 +92,18 @@ export const SnakeGame = () => {
     setScore(0);
   };
 
+  const handleStart = () => {
+    setIsRunning(true);
+  };
+
   return (
     <Section>
       <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 font-caption">
-        Hey, alredy finish ?
+        Hey, already finished?
       </h2>
       <p>Before leaving, get some rest and play this chill game.</p>
       <div className="flex flex-col items-center justify-center min-h-screen text-white mb-8">
         <h1 className="text-3xl font-bold mb-4">Snake Game</h1>
-        <div className="mb-4 flex space-x-4">
-          <button
-            onClick={() => setIsRunning((prev) => !prev)}
-            className="px-4 py-2 bg-blue-600 rounded-xl hover:bg-blue-500"
-          >
-            {isRunning ? "Pause" : "Resume"}
-          </button>
-          <button
-            onClick={handleRestart}
-            className="px-4 py-2 bg-red-600 rounded-xl hover:bg-red-500"
-          >
-            Restart
-          </button>
-        </div>
         <div className="mb-2 text-lg">Score: {score}</div>
         <div
           className="grid border-4 border-gray-700"
@@ -143,6 +133,22 @@ export const SnakeGame = () => {
               ></div>
             );
           })}
+        </div>
+        <div className="space-x-4 mt-4">
+          {!isRunning && (
+            <button
+              onClick={handleStart}
+              className="px-4 py-2 w-24 bg-green-600 rounded-xl hover:bg-green-500 mb-4"
+            >
+              Play
+            </button>
+          )}
+          <button
+            onClick={handleRestart}
+            className="px-4 py-2 w-24 bg-red-600 rounded-xl hover:bg-red-500"
+          >
+            Restart
+          </button>
         </div>
         <p className="mt-4 text-sm">
           Use arrow keys to move. Press space to pause/resume.
