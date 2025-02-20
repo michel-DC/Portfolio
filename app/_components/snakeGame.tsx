@@ -108,8 +108,8 @@ export const SnakeGame = () => {
         <div
           className="grid border-4 border-gray-700"
           style={{
-            gridTemplateColumns: `repeat(${BOARD_SIZE}, 20px)`,
-            gridTemplateRows: `repeat(${BOARD_SIZE}, 20px)`,
+            gridTemplateColumns: `repeat(${BOARD_SIZE}, minmax(10px, 1fr))`,
+            gridTemplateRows: `repeat(${BOARD_SIZE}, minmax(10px, 1fr))`,
           }}
         >
           {[...Array(BOARD_SIZE * BOARD_SIZE)].map((_, i) => {
@@ -123,7 +123,7 @@ export const SnakeGame = () => {
             return (
               <div
                 key={i}
-                className={`w-5 h-5 border border-gray-800 ${
+                className={`w-full h-full border border-gray-800 ${
                   isSnake
                     ? "bg-green-500"
                     : isFood
