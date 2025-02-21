@@ -69,7 +69,7 @@ export const Skills = () => {
         {/* TypeScript Skill */}
         <div className="row-span-1 rounded-xl bg-card/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border border-border justify-between flex flex-col space-y-4 md:col-span-1">
           <img
-            src="https://static-00.iconduck.com/assets.00/typescript-icon-icon-2048x2048-2rhh1z66.png"
+            src="/images/typescript.png"
             className="w-full h-40 rounded-md object-cover"
             alt="TypeScript"
           />
@@ -93,7 +93,7 @@ export const Skills = () => {
           </div>
         </div>
 
-        {/* No-Code Journey */}
+        {/* UI library */}
         <div className="row-span-1 rounded-xl bg-card/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border border-border justify-between flex flex-col space-y-4 md:col-span-2">
           <div className="flex flex-col mt-4">
             <img

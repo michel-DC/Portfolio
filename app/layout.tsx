@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     title: "Michel portfolio",
     description: "Let's take a look at my portfolio.",
     type: "website",
-    url: "https://www.michelportfolio.com",
+    url: "",
     images: [
       {
-        url: "https://www.michelportfolio.com/og-image.jpg",
+        url: "",
         width: 800,
         height: 600,
         alt: "Michel portfolio",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     site: "@michel",
     title: "Michel portfolio",
     description: "Let's take a look at my portfolio.",
-    images: ["https://www.michelportfolio.com/twitter-image.jpg"],
+    images: [""],
   },
 };
 

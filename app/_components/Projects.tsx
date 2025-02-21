@@ -88,7 +88,7 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="https://codeline.app">
+                <a href="">
                   <div
                     style={{
                       position: "relative",
@@ -109,7 +109,7 @@ export const Projects = () => {
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
                         <img
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+                          src="null"
                           alt="Codeline"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
@@ -135,7 +135,7 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="https://codelynx.dev/">
+                <a href="">
                   <div
                     style={{
                       position: "relative",
@@ -156,7 +156,7 @@ export const Projects = () => {
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
                         <img
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="https://codelynx.dev/twitter-image.png?14e1cccc43cd3089"
+                          src="null"
                           alt="Codelynx | Blog posts"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
@@ -182,7 +182,6 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="https://codelynx.dev/"></a>
                 <a href="https://codelynx.dev/">
                   <div
                     style={{
@@ -204,7 +203,7 @@ export const Projects = () => {
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
                         <img
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="https://codelynx.dev/twitter-image.png?14e1cccc43cd3089"
+                          src="null"
                           alt="Codelynx | Blog posts"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
@@ -229,7 +228,7 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="https://example.com">
+                <a href="">
                   <div
                     style={{
                       position: "relative",
@@ -250,7 +249,7 @@ export const Projects = () => {
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
                         <img
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="https://via.placeholder.com/300"
+                          src="null"
                           alt="Fictitious Project"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
@@ -275,7 +274,7 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="https://example.com">
+                <a href="">
                   <div
                     style={{
                       position: "relative",
@@ -296,7 +295,7 @@ export const Projects = () => {
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
                         <img
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="https://via.placeholder.com/300"
+                          src="null"
                           alt="Fictitious Project"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
@@ -321,7 +320,7 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="https://example.com">
+                <a href="">
                   <div
                     style={{
                       position: "relative",
@@ -342,7 +341,7 @@ export const Projects = () => {
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
                         <img
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="https://via.placeholder.com/300"
+                          src="null"
                           alt="Fictitious Project"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">

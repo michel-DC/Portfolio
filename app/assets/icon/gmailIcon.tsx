@@ -4,7 +4,7 @@ export const GmailIcon = (
   props: ComponentPropsWithRef<"svg"> & { size?: number }
 ) => {
   return (
-    <div className="w-4 h-4">
+    <span className="w-4 h-4">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
@@ -34,6 +34,6 @@ export const GmailIcon = (
           d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"
         ></path>
       </svg>
-    </div>
+    </span>
   );
 };
