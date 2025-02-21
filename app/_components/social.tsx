@@ -7,7 +7,7 @@ import { GmailIcon } from "../assets/icon/gmailIcon";
 
 export const Social = () => {
   return (
-    <Section className="px-8 mx-auto flex w-full max-w-3xl items-center justify-between">
+    <Section className="px- mx-auto flex w-full max-w-3xl flex-col items-center justify-between md:flex-row">
       <div className="flex items-center gap-8 my-8">
         <a
           className="flex flex-col gap-1 hover:scale-110 transition-transform"
@@ -95,11 +95,11 @@ export const Social = () => {
             Youtube
           </p>
         </a>
-        <div className="ml-20">
-          <a className="underline" href="mailto:djoumessi.michelc@gmail.com">
-            djoumessi.michelc@gmail.com
-          </a>
-        </div>
+      </div>
+      <div className="mt-4 md:mt-0 md:ml-20">
+        <a className="underline" href="mailto:djoumessi.michelc@gmail.com">
+          djoumessi.michelc@gmail.com
+        </a>
       </div>
     </Section>
   );

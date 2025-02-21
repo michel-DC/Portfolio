@@ -12,7 +12,7 @@ export const ContactMe = () => {
           Contact me
         </h2>
         <p>Find me on my social networks or send me an email.</p>
-        <div className="flex items-center gap-8 my-8">
+        <div className="flex md:flex-row items-center gap-8 my-8">
           <a
             className="flex flex-col gap-1 hover:scale-110 transition-transform"
             href="https://www.linkedin.com/in/michel-djoumessi-2500b7346/"
@@ -99,11 +99,11 @@ export const ContactMe = () => {
               Youtube
             </p>
           </a>
-          <div className="ml-20">
-            <a className="underline" href="mailto:djoumessi.michelc@gmail.com">
-              djoumessi.michelc@gmail.com
-            </a>
-          </div>
+        </div>
+        <div className="mt-8 md:mt-0 md:ml-20 md:order-2 order-1">
+          <a className="underline" href="mailto:djoumessi.michelc@gmail.com">
+            djoumessi.michelc@gmail.com
+          </a>
         </div>
       </div>
     </Section>
