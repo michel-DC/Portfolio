@@ -1,3 +1,5 @@
+import { Background } from "./_components/background/background";
+import InteractiveBackground from "./_components/background/InteractiveBackground";
 import { Header } from "./_components/header";
 import { Hero } from "./_components/hero";
 import { Social } from "./_components/social";
@@ -10,14 +12,16 @@ import { SnakeGame } from "./_components/snakeGame";
 export default function Home() {
   return (
     <main>
-      <Header />
-      <Hero />
-      <Social />
-      <DoingNow />
-      <Skills />
-      <Projects />
-      <ContactMe />
-      <SnakeGame />
+      <Background>
+        <Header />
+        <Hero />
+        <Social />
+        <DoingNow />
+        <Skills />
+        <Projects />
+        <ContactMe />
+        <SnakeGame />
+      </Background>
     </main>
   );
 }

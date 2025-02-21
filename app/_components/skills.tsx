@@ -1,3 +1,4 @@
+"use client";
 import React, { ComponentPropsWithoutRef } from "react";
 import cn from "classnames";
 import { Section } from "./ui/section";
@@ -96,7 +97,7 @@ export const Skills = () => {
         <div className="row-span-1 rounded-xl bg-card/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border border-border justify-between flex flex-col space-y-4 md:col-span-2">
           <div className="flex flex-col mt-4">
             <img
-              src="../assets/images/ui-library.png"
+              src="/images/ui-library.png"
               className="w-screen h-4/6 object-cover mx-auto"
               alt="UI Library"
             />

@@ -32,7 +32,6 @@ export const metadata: Metadata = {
     "backend",
   ],
   authors: [{ name: "Michel DJOUMESSI" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
     title: "Michel portfolio",
@@ -55,6 +54,11 @@ export const metadata: Metadata = {
     description: "Let's take a look at my portfolio.",
     images: ["https://www.michelportfolio.com/twitter-image.jpg"],
   },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
 };
 
 export default function RootLayout({
