@@ -3,7 +3,7 @@ import { Section } from "./ui/section";
 
 export const Header = () => {
   return (
-    <Section className="sticky top-0 mb-14 mx-auto flex w-full max-w-4xl h-20 items-center justify-between px-4 backdrop-blur-xl rounded-md">
+    <Section className="sticky md:sticky top-0 mb-14 mx-auto flex w-full max-w-4xl h-20 items-center justify-between px-4 backdrop-blur-xl rounded-md">
       <div className="flex items-center gap-1">
         <h1 className="text-primary-foreground font-sans font-extrabold mr-4 md:mr-96">
           michel.dev
