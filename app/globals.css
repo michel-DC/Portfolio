@@ -35,6 +35,7 @@
     --chart-3: hsl(86 76% 34%);
     --chart-4: hsl(326 76% 37%);
     --chart-5: hsl(206 79% 34%);
+    --slate: hsl(206 37% 3%);
   }
 }
 
@@ -44,7 +45,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--scrollbar);
+  background: var(--slate);
 }
 
 ::-webkit-scrollbar-thumb {

@@ -41,8 +41,8 @@ export const Hero = () => {
             <Uni />
             BA MMI
           </Code>
-          , curious and passionate about web development, I specialized in
-          front-end with{" "}
+          at Vélizy, curious and passionate about web development, I specialized
+          in front-end with{" "}
           <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
             <ReactIcon />
             React

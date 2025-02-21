@@ -1,59 +1,36 @@
 "use client";
 
-import React, { ReactNode, useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { div } from "framer-motion/client";
 
-interface BackgroundProps {
-  children: ReactNode;
-}
-
-export const Background = ({ children }: BackgroundProps) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+export default function Background() {
+  const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+    const moveHandler = (e: MouseEvent) => {
+      setPosition({ x: e.clientX, y: e.clientY });
     };
-
-    resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-
-    const gradientRadius = 200;
-
-    const draw = (x: number, y: number) => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const gradient = ctx.createRadialGradient(x, y, 0, x, y, gradientRadius);
-      gradient.addColorStop(0, "rgba(255, 255, 255, 0.15)");
-      gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-    };
-
-    const handleMouseMove = (e: MouseEvent) => {
-      draw(e.clientX, e.clientY);
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("resize", resizeCanvas);
-    };
+    window.addEventListener("mousemove", moveHandler);
+    return () => window.removeEventListener("mousemove", moveHandler);
   }, []);
 
   return (
-    <div className="bg-slate-900 leading-relaxed text-white antialiased selection:bg-teal-300 selection:text-teal-900 relative">
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-[-10] mix-blend-overlay opacity-50"
-      />
-      {children}
-    </div>
+    <motion.div
+      className="pointer-events-none fixed top-0 left-0 w-screen h-screen -z-10 "
+      style={{
+        position: "fixed",
+        left: position.x,
+        top: position.y,
+        transform: "translate(-50%, -50%)",
+      }}
+      animate={{
+        x: 0,
+        y: 0,
+      }}
+      transition={{ type: "tween", duration: 0 }}
+    >
+      <div className="w-[400px] h-[400px] rounded-full bg-gradient-to-r from-blue-500 via-blue-700 to-teal-500 opacity-30 blur-3xl" />
+    </motion.div>
   );
-};
+}

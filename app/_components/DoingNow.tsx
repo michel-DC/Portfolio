@@ -49,14 +49,15 @@ export const DoingNow = () => {
               </a>
             </div>
           </h3>
-          <p className="mt-2 text-sm leading-normal">
-            Développement front-end en freelance pour la création du site
-            internet de Maison Vatier, une marque de vêtement, en collaboration
-            avec un autre développeur front-end. Pour ce projet, nous utilisons
-            React TSX avec Vite pour optimiser les performances et Tailwind CSS
-            pour le style. Cette expérience me permet de renforcer mes
-            compétences en développement moderne tout en travaillant en équipe
-            sur un projet concret.
+          <p className="mt-2 text-md leading-normal">
+            Freelance front-end development of Maison Vatier's e-commerce
+            platform using React 18 with TypeScript and Vite for optimal bundle
+            splitting and hot module replacement. Utilizing React Query for
+            efficient server state management and React Hook Form with Zod for
+            type-safe form validation. Implemented CI/CD pipeline with GitHub
+            Actions for automated testing and deployment. Collaborating through
+            Git flow branching model with thorough code reviews and pair
+            programming sessions.
           </p>
           <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
             <li className="mr-1.5 mt-2">
@@ -77,6 +78,11 @@ export const DoingNow = () => {
             <li className="mr-1.5 mt-2">
               <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
                 Tailwind CSS
+              </div>
+            </li>
+            <li className="mr-1.5 mt-2">
+              <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
+                Shadcn UI
               </div>
             </li>
           </ul>
