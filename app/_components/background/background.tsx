@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { div } from "framer-motion/client";
 
 export default function Background() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -16,21 +15,24 @@ export default function Background() {
   }, []);
 
   return (
-    <motion.div
-      className="pointer-events-none fixed top-0 left-0 w-screen h-screen -z-10 "
-      style={{
-        position: "fixed",
-        left: position.x,
-        top: position.y,
-        transform: "translate(-50%, -50%)",
-      }}
-      animate={{
-        x: 0,
-        y: 0,
-      }}
-      transition={{ type: "tween", duration: 0 }}
-    >
-      <div className="w-[400px] h-[400px] rounded-full bg-gradient-to-r from-blue-500 via-blue-700 to-teal-500 opacity-30 blur-3xl" />
-    </motion.div>
+    <>
+      <div className="fixed inset-0 -z-10 bg-slate-900" />
+      <motion.div
+        className="pointer-events-none fixed inset-0 -z-10"
+        animate={{
+          x: position.x - window.innerWidth / 2,
+          y: position.y - window.innerHeight / 2,
+        }}
+        transition={{
+          type: "spring",
+          damping: 8, // Lower damping for faster response
+          stiffness: 200, // Higher stiffness for quicker movement
+          mass: 0.3, // Lower mass for lighter, faster motion
+          restDelta: 0.001, // Smaller rest delta for smoother finish
+        }}
+      >
+        <div className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-slate-800/40 blur-[100px]" />
+      </motion.div>
+    </>
   );
 }

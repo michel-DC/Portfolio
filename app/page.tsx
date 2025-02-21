@@ -11,7 +11,7 @@ import { SnakeGame } from "./_components/snakeGame";
 
 export default function Home() {
   return (
-    <main className="bg-slate-900 z-1">
+    <main className="">
       <Background />
       <Header />
       <Hero />
