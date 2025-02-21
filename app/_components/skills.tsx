@@ -87,8 +87,8 @@ export const Skills = () => {
             <TailwindIcon />
             <p className="text-lg font-semibold">TailwindCSS</p>
             <p className="text-sm text-muted-foreground">
-              Since 2024 i started using tailwindCSS, and I think it's the best
-              tool fastest and easy way to use CSS.
+              Since 2024 i started using tailwindCSS, and I think it&apos;s the
+              best tool fastest and easy way to use CSS.
             </p>
           </div>
         </div>

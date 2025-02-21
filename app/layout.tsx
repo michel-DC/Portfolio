@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import cn from "classnames";
-import { Geist, Geist_Mono } from "next/font/google";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import { Anek_Telugu } from "next/font/google";
 
@@ -18,41 +16,50 @@ const AnekTelugu = Anek_Telugu({
 
 export const metadata: Metadata = {
   title: "Michel portfolio",
-  description: "Let's take a look at my portfolio.",
+  description:
+    "Explore Michel  portfolio showcasing innovative web development projects, internships, and front-end works.",
   keywords: [
-    "portfolio",
-    "Michel",
-    "internship",
-    "web development",
-    "full-stack developer",
-    "web developer",
-    "front-end developer",
-    "projects",
-    "frontend",
-    "backend",
+    "Michel DJOUMESSI",
+    "Michel DJOUMESSI portfolio",
+    "web development projects",
+    "full-stack web developer",
+    "frontend and backend development",
+    "web development internship",
+    "React Next.js developer",
+    "personal web projects",
+    "frontend portfolio",
+    "backend portfolio",
   ],
+
   authors: [{ name: "Michel DJOUMESSI" }],
-  robots: "index, follow",
+  robots:
+    "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+
   openGraph: {
-    title: "Michel portfolio",
-    description: "Let's take a look at my portfolio.",
+    title: "Michel DJOUMESSI - Front-End Developer Portfolio",
+    description:
+      "Explore cutting-edge web projects and internships by Michel DJOUMESSI.",
     type: "website",
-    url: "",
+    url: "null",
+    siteName: "Michel Portfolio",
+    locale: "en_US",
     images: [
       {
-        url: "",
-        width: 800,
-        height: 600,
-        alt: "Michel portfolio",
+        url: "null",
+        width: 1200,
+        height: 630,
+        alt: "Michel DJOUMESSI working on a web project",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    site: "@michel",
-    title: "Michel portfolio",
-    description: "Let's take a look at my portfolio.",
-    images: [""],
+    site: "null",
+    creator: "@Michel",
+    title: "Michel DJOUMESSI - Web Developer Portfolio",
+    description: "Check out innovative web projects by Michel DJOUMESSI.",
+    images: ["null"],
   },
 };
 
@@ -68,16 +75,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full bg-background text-foreground">
-      <body
-        className={cn(
-          GeistSans.variable,
-          AnekTelugu.variable,
-          GeistMono.variable,
-          "font-sans h-full"
-        )}
-      >
-        {children}
-      </body>
+      <body className={cn("font-sans h-full")}>{children}</body>
     </html>
   );
 }

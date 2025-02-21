@@ -50,7 +50,7 @@ export const DoingNow = () => {
             </div>
           </h3>
           <p className="mt-2 text-md leading-normal">
-            Freelance front-end development of Maison Vatier's e-commerce
+            Freelance front-end development of Maison Vatier&apos;s e-commerce
             platform using React 18 with TypeScript and Vite for optimal bundle
             splitting and hot module replacement. Utilizing React Query for
             efficient server state management and React Hook Form with Zod for

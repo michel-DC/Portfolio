@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { Section } from "./ui/section";
 
 export const Projects = () => {

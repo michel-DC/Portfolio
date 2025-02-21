@@ -3,7 +3,6 @@ import { Section } from "./ui/section";
 import { LinkedinIcon } from "../assets/icon/linkedinIcon";
 import { GithubIcon } from "../assets/icon/githubIcon";
 import { TwitterIcon } from "../assets/icon/twitterIcon";
-import { GmailIcon } from "../assets/icon/gmailIcon";
 
 export const Social = () => {
   return (
