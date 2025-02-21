@@ -3,7 +3,8 @@
 import React, { useState, useEffect, useRef, KeyboardEvent } from "react";
 import { Section } from "./ui/section";
 
-const BOARD_SIZE = 30; // Augmenter la taille de la grille
+const BOARD_SIZE = 20; // Ajustez la taille du plateau ici
+const CELL_SIZE = 22; // Ajustez la taille des cellules ici
 const INITIAL_SNAKE = [
   { x: 8, y: 10 },
   { x: 9, y: 10 },
@@ -33,6 +34,7 @@ export const SnakeGame = () => {
     const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
       if (DIRECTIONS[e.key as keyof typeof DIRECTIONS]) {
         setDirection(DIRECTIONS[e.key as keyof typeof DIRECTIONS]);
+        e.preventDefault(); // Empêche le défilement de la page
       } else if (e.key === " ") {
         setIsRunning((prev) => !prev);
       }
@@ -104,14 +106,14 @@ export const SnakeGame = () => {
       <p className="mb-12">
         Before leaving, get some rest and play this chill game.
       </p>
-      <div className="flex flex-col items-center justify-center text-white">
-        <h1 className="text-3xl font-bold mb-4">Snake Game</h1>
+      <div className="flex flex-col items-center text-white">
+        <h1 className="text-2xl font-bold mb-4">Snake Game</h1>
         <div className="mb-2 text-lg">Score: {score}</div>
         <div
-          className="grid border-4 border-gray-700"
+          className="grid rounded-md"
           style={{
-            gridTemplateColumns: `repeat(${BOARD_SIZE}, minmax(15px, 1fr))`,
-            gridTemplateRows: `repeat(${BOARD_SIZE}, minmax(15px, 1fr))`,
+            gridTemplateColumns: `repeat(${BOARD_SIZE}, minmax(10px, ${CELL_SIZE}px))`,
+            gridTemplateRows: `repeat(${BOARD_SIZE}, minmax(10px, ${CELL_SIZE}px))`,
           }}
         >
           {[...Array(BOARD_SIZE * BOARD_SIZE)].map((_, i) => {
@@ -158,6 +160,7 @@ export const SnakeGame = () => {
         <p className="mt-4 text-sm">
           Use arrow keys to move. Press space to pause/resume.
         </p>
+        <h1 className="text-4xl font-semibold py-12">GoodBye 👋</h1>
       </div>
     </Section>
   );

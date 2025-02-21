@@ -22,13 +22,16 @@ export const metadata: Metadata = {
   keywords: [
     "portfolio",
     "Michel",
+    "internship",
+    "web development",
+    "full-stack developer",
     "web developer",
     "front-end developer",
     "projects",
     "frontend",
     "backend",
   ],
-  authors: [{ name: "Michel" }],
+  authors: [{ name: "Michel DJOUMESSI" }],
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {

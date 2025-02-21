@@ -20,7 +20,7 @@ export const Skills = () => {
     <Section>
       <div className="lg:py-14 max-w-4xl w-full">
         <h2 className="scroll-m-20 text-3xl mr-4 font-semibold tracking-tight transition-colors first:mt-0 font-caption">
-          What about my skills ?
+          What about my skills ? 💪
         </h2>
         <p>
           I can create <b>perfect</b> experiences for your customer, making all
@@ -96,7 +96,7 @@ export const Skills = () => {
         <div className="row-span-1 rounded-xl bg-card/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border border-border justify-between flex flex-col space-y-4 md:col-span-2">
           <div className="flex flex-col mt-4">
             <img
-              src="http://michel.djoumessi.mmi-velizy.fr/TP%20&%20TD%20(Dev%20Web)/Capture_d_%c3%a9cran_2025-02-17_201959-removebg-preview.png"
+              src="../assets/images/ui-library.png"
               className="w-screen h-4/6 object-cover mx-auto"
               alt="UI Library"
             />

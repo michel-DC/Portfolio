@@ -5,7 +5,7 @@ export const DoingNow = () => {
   return (
     <Section>
       <h3 className="scroll-m-20 text-3xl mr-4 font-semibold tracking-tight transition-colors first:mt-0 font-caption">
-        What i am currently working on ?
+        What i am currently working on ? 💻
       </h3>
       <header
         className="z-10 mb-2 mt-1 py-2 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2 align-ri"
@@ -50,13 +50,13 @@ export const DoingNow = () => {
             </div>
           </h3>
           <p className="mt-2 text-sm leading-normal">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis,
-            recusandae distinctio nihil illo, cumque fugit minima mollitia
-            sapiente fugiat aspernatur numquam ducimus dolorem natus in. Placeat
-            quasi quod ducimus. Consequatur? Lorem ipsum dolor sit amet,
-            consectetur adipisicing elit. Accusantium iure qui quos explicabo
-            fugit animi consequuntur, nihil, modi neque similique non aut eos
-            delectus amet? Optio eaque repellat minus aliquam.
+            Développement front-end en freelance pour la création du site
+            internet de Maison Vatier, une marque de vêtement, en collaboration
+            avec un autre développeur front-end. Pour ce projet, nous utilisons
+            React TSX avec Vite pour optimiser les performances et Tailwind CSS
+            pour le style. Cette expérience me permet de renforcer mes
+            compétences en développement moderne tout en travaillant en équipe
+            sur un projet concret.
           </p>
           <ul className="mt-2 flex flex-wrap" aria-label="Technologies used">
             <li className="mr-1.5 mt-2">

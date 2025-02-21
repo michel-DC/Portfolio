@@ -20,7 +20,7 @@ export const Projects = () => {
     <Section>
       <div id="projects" className="py-10 lg:py-14 max-w-4xl w-full">
         <h2 className="text-3xl mr-4 font-semibold tracking-tight transition-colors first:mt-0 font-caption">
-          Projects
+          Projects 📂
         </h2>
         <p>
           Take a look at my selection of <b>favorite</b> projects.
@@ -117,7 +117,10 @@ export const Projects = () => {
                             Expense Tracker
                           </h3>
                           <p className="text-sm text-muted-foreground">
-                            The first learning platform for developers
+                            This project is an expense tracker built with React,
+                            TypeScript (TSX), Vite, and Tailwind CSS. It allows
+                            users to easily track and manage their expenses with
+                            a clean and responsive interface.
                           </p>
                         </div>
                       </div>
@@ -161,9 +164,10 @@ export const Projects = () => {
                             Project manager
                           </h3>
                           <p className="text-sm text-muted-foreground">
-                            Post de blog de Melvynx, développeur web et créateur
-                            de contenu sur React, Next.js, Tailwind CSS et bien
-                            d'autres technologies.
+                            This project is a project management tool built with
+                            React, TypeScript (TSX), Vite, and Tailwind CSS. It
+                            enables users to create, organize, and track the
+                            progress of their projects with an intuitiv…
                           </p>
                         </div>
                       </div>
@@ -208,9 +212,10 @@ export const Projects = () => {
                             Music player
                           </h3>
                           <p className="text-sm text-muted-foreground">
-                            Post de blog de Melvynx, développeur web et créateur
-                            de contenu sur React, Next.js, Tailwind CSS et bien
-                            d'autres technologies.
+                            This project is a music player built with JSX, CSS,
+                            Vite, and GraphQL. It enables users to play and
+                            manage music with a smooth, responsive interface,
+                            fetching data efficiently through GraphQL.
                           </p>
                         </div>
                       </div>
@@ -253,7 +258,10 @@ export const Projects = () => {
                             Pomodoro timer
                           </h3>
                           <p className="text-sm text-muted-foreground">
-                            Description of the fictitious project.
+                            This project is a Pomodoro timer built with React,
+                            Vite, and Tailwind CSS. It helps users manage work
+                            and break intervals with a simple, responsive
+                            interface and customizable timers.
                           </p>
                         </div>
                       </div>
@@ -296,7 +304,10 @@ export const Projects = () => {
                             Jobs finder
                           </h3>
                           <p className="text-sm text-muted-foreground">
-                            Description of the fictitious project.
+                            This project is a job search platform for front-end
+                            developers, built with Vite, Vue.js, and Tailwind
+                            CSS. It helps users find front-end developer
+                            positions through a sleek, responsive interface.
                           </p>
                         </div>
                       </div>
@@ -339,7 +350,12 @@ export const Projects = () => {
                             Chat App
                           </h3>
                           <p className="text-sm text-muted-foreground">
-                            Description of the fictitious project.
+                            This is a web application built with React, Vite,
+                            and CSS. It simulates two phones, each containing
+                            multiple user profiles. Users can send real-time
+                            messages to any other profile of their choice.
+                            Everything runs locally, ensuring a fast and private
+                            experience.
                           </p>
                         </div>
                       </div>
@@ -348,13 +364,8 @@ export const Projects = () => {
                 </a>
               </div>
             </div>
-            <div
-              className="flex justify-center h-full mb-2 mt-8 bg-blur"
-              style={{
-                filter: "drop-shadow(0px 0px 10px rgba(250, 250, 250, 0.3))",
-              }}
-            >
-              <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-input rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 md:px-6 md:py-3">
+            <div className="flex justify-center h-full mb-2 mt-8 bg-blur">
+              <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-slate-800 rounded-md hover:bg-slate-500 focus:outline-none focus:ring-2 focus:ring-offset-2 md:px-6 md:py-3">
                 <a
                   href="https://github.com/michel-DC?tab=repositories"
                   target="_blank"

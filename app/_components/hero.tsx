@@ -33,7 +33,7 @@ export const Hero = () => {
       <br />
       <div>
         <h3 className="text-3xl italic mb-2">
-          Front-End developer and student
+          Front-End developer and student 👨‍💻
         </h3>
         <p className="leading-[2]">
           Student in{" "}

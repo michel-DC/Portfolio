@@ -9,7 +9,7 @@ export const ContactMe = () => {
     <Section className="flex justify-start items-start mb-12">
       <div className="max-w-3xl w-full">
         <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 font-caption">
-          Contact me
+          Contact me ☎️
         </h2>
         <p>Find me on my social networks or send me an email.</p>
         <div className="flex md:flex-row items-center gap-8 my-8">
