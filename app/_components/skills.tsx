@@ -18,6 +18,16 @@ const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
 export const Skills = () => {
   return (
     <Section>
+      <div className="lg:py-14 max-w-4xl w-full">
+        <h2 className="scroll-m-20 text-3xl mr-4 font-semibold tracking-tight transition-colors first:mt-0 font-caption">
+          What about my skills ?
+        </h2>
+        <p>
+          I can create <b>perfect</b> experiences for your customer, making all
+          the applications from scratch.
+        </p>
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-auto mb-16 max-w-4xl md:auto-rows-[16rem]">
         {/* React Skill */}
         <div className="row-span-1 rounded-xl bg-card/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border border-border justify-between flex flex-col space-y-4 md:col-span-1">

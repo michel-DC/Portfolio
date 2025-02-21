@@ -2,7 +2,6 @@ import { Header } from "./_components/header";
 import { Hero } from "./_components/hero";
 import { Social } from "./_components/social";
 import { DoingNow } from "./_components/DoingNow";
-import { HowHelp } from "./_components/HowHelp";
 import { Skills } from "./_components/skills";
 import { Projects } from "./_components/Projects";
 import { ContactMe } from "./_components/contactMe";
@@ -15,7 +14,6 @@ export default function Home() {
       <Hero />
       <Social />
       <DoingNow />
-      <HowHelp />
       <Skills />
       <Projects />
       <ContactMe />

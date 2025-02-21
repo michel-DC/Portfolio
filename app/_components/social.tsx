@@ -7,7 +7,7 @@ import { GmailIcon } from "../assets/icon/gmailIcon";
 
 export const Social = () => {
   return (
-    <Section className="mx-auto flex w-full max-w-3xl items-center justify-between px-4">
+    <Section className="px-8 mx-auto flex w-full max-w-3xl items-center justify-between">
       <div className="flex items-center gap-8 my-8">
         <a
           className="flex flex-col gap-1 hover:scale-110 transition-transform"

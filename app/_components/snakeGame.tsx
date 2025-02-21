@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef, KeyboardEvent } from "react";
 import { Section } from "./ui/section";
 
-const BOARD_SIZE = 20;
+const BOARD_SIZE = 30; // Augmenter la taille de la grille
 const INITIAL_SNAKE = [
   { x: 8, y: 10 },
   { x: 9, y: 10 },
@@ -98,18 +98,20 @@ export const SnakeGame = () => {
 
   return (
     <Section>
-      <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 font-caption">
+      <h2 className="scroll-m-20 mb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0 font-caption">
         Hey, already finished?
       </h2>
-      <p>Before leaving, get some rest and play this chill game.</p>
-      <div className="flex flex-col items-center justify-center min-h-screen text-white mb-8">
+      <p className="mb-12">
+        Before leaving, get some rest and play this chill game.
+      </p>
+      <div className="flex flex-col items-center justify-center text-white">
         <h1 className="text-3xl font-bold mb-4">Snake Game</h1>
         <div className="mb-2 text-lg">Score: {score}</div>
         <div
           className="grid border-4 border-gray-700"
           style={{
-            gridTemplateColumns: `repeat(${BOARD_SIZE}, minmax(10px, 1fr))`,
-            gridTemplateRows: `repeat(${BOARD_SIZE}, minmax(10px, 1fr))`,
+            gridTemplateColumns: `repeat(${BOARD_SIZE}, minmax(15px, 1fr))`,
+            gridTemplateRows: `repeat(${BOARD_SIZE}, minmax(15px, 1fr))`,
           }}
         >
           {[...Array(BOARD_SIZE * BOARD_SIZE)].map((_, i) => {
@@ -144,7 +146,10 @@ export const SnakeGame = () => {
             </button>
           )}
           <button
-            onClick={handleRestart}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleRestart();
+            }}
             className="px-4 py-2 w-24 bg-red-600 rounded-xl hover:bg-red-500"
           >
             Restart

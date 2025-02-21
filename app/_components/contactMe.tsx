@@ -6,8 +6,8 @@ import { TwitterIcon } from "../assets/icon/twitterIcon";
 
 export const ContactMe = () => {
   return (
-    <Section>
-      <div className="m-auto py-10 lg:py-14 px-4 max-w-3xl w-full">
+    <Section className="flex justify-start items-start mb-12">
+      <div className="max-w-3xl w-full">
         <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 font-caption">
           Contact me
         </h2>

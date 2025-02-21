@@ -18,11 +18,8 @@ export const Projects = () => {
 
   return (
     <Section>
-      <div
-        id="projects"
-        className="m-auto py-10 lg:py-14 px-4 max-w-3xl w-full"
-      >
-        <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight transition-colors first:mt-0 font-caption">
+      <div id="projects" className="py-10 lg:py-14 max-w-4xl w-full">
+        <h2 className="text-3xl mr-4 font-semibold tracking-tight transition-colors first:mt-0 font-caption">
           Projects
         </h2>
         <p>
@@ -352,12 +349,12 @@ export const Projects = () => {
               </div>
             </div>
             <div
-              className="flex justify-center h-full mb-4 mt-8 bg-blur"
+              className="flex justify-center h-full mb-2 mt-8 bg-blur"
               style={{
                 filter: "drop-shadow(0px 0px 10px rgba(250, 250, 250, 0.3))",
               }}
             >
-              <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 md:px-6 md:py-3">
+              <button className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-input rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 md:px-6 md:py-3">
                 <a
                   href="https://github.com/michel-DC?tab=repositories"
                   target="_blank"

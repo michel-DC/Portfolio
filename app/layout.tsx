@@ -19,6 +19,39 @@ const AnekTelugu = Anek_Telugu({
 export const metadata: Metadata = {
   title: "Michel portfolio",
   description: "Let's take a look at my portfolio.",
+  keywords: [
+    "portfolio",
+    "Michel",
+    "web developer",
+    "front-end developer",
+    "projects",
+    "frontend",
+    "backend",
+  ],
+  authors: [{ name: "Michel" }],
+  viewport: "width=device-width, initial-scale=1",
+  robots: "index, follow",
+  openGraph: {
+    title: "Michel portfolio",
+    description: "Let's take a look at my portfolio.",
+    type: "website",
+    url: "https://www.michelportfolio.com",
+    images: [
+      {
+        url: "https://www.michelportfolio.com/og-image.jpg",
+        width: 800,
+        height: 600,
+        alt: "Michel portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@michel",
+    title: "Michel portfolio",
+    description: "Let's take a look at my portfolio.",
+    images: ["https://www.michelportfolio.com/twitter-image.jpg"],
+  },
 };
 
 export default function RootLayout({
