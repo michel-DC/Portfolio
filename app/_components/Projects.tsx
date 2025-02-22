@@ -1,13 +1,31 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { Section } from "./ui/section";
 
 export const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const isMobile = window.innerWidth <= 768;
-  const totalSlides = isMobile ? 6 : 3;
+  const [isMobile, setIsMobile] = useState(false);
+  const [totalSlides, setTotalSlides] = useState(3); // Default to desktop value
+
+  useEffect(() => {
+    // Check mobile on mount and update state
+    const checkMobile = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      setTotalSlides(mobile ? 6 : 3);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add resize listener
+    window.addEventListener("resize", checkMobile);
+
+    // Cleanup
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const handleNext = () => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -89,7 +107,7 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="">
+                <a href="https://github.com/michel-DC/Expense-Tracker-Project">
                   <div
                     style={{
                       position: "relative",
@@ -136,7 +154,7 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="">
+                <a href="https://github.com/michel-DC/Project-Manager-main">
                   <div
                     style={{
                       position: "relative",
@@ -183,7 +201,7 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="">
+                <a href="https://github.com/michel-DC/Music-Player-main">
                   <div
                     style={{
                       position: "relative",
@@ -229,7 +247,7 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="">
+                <a href="https://github.com/michel-DC/Pomodoro-Timer-main">
                   <div
                     style={{
                       position: "relative",
@@ -275,7 +293,7 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="">
+                <a href="https://github.com/michel-DC/Jobs-Finder-main">
                   <div
                     style={{
                       position: "relative",
@@ -321,7 +339,7 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="">
+                <a href="https://github.com/michel-DC/Chat-App-main-V2">
                   <div
                     style={{
                       position: "relative",

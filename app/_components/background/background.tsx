@@ -5,13 +5,35 @@ import { motion } from "framer-motion";
 
 export default function Background() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
+    // Initialize window size
+    setWindowSize({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+
     const moveHandler = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
+
+    const handleResize = () => {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    };
+
+    // Add event listeners
     window.addEventListener("mousemove", moveHandler);
-    return () => window.removeEventListener("mousemove", moveHandler);
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("mousemove", moveHandler);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
@@ -20,8 +42,8 @@ export default function Background() {
       <motion.div
         className="pointer-events-none fixed inset-0 -z-10"
         animate={{
-          x: position.x - window.innerWidth / 2,
-          y: position.y - window.innerHeight / 2,
+          x: position.x - windowSize.width / 2,
+          y: position.y - windowSize.height / 2,
         }}
         transition={{
           type: "spring",

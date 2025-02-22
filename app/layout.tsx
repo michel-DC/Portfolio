@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
 import cn from "classnames";
-import { Geist } from "next/font/google";
 import "./globals.css";
-import { Anek_Telugu } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const AnekTelugu = Anek_Telugu({
-  variable: "--font-caption",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://michel-portfolio.com"),
   title: "Michel portfolio",
   description:
     "Explore Michel  portfolio showcasing innovative web development projects, internships, and front-end works.",

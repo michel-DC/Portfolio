@@ -37,32 +37,42 @@ export const Hero = () => {
         </h3>
         <p className="leading-[2]">
           Student in{" "}
-          <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:bg-primary/20 hover:underline cursor-pointer">
-            <Uni />
-            BA MMI
-          </Code>
+          <a href="https://www.iut-velizy-rambouillet.uvsq.fr/">
+            <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:bg-primary/20 hover:underline cursor-pointer">
+              <Uni />
+              BA MMI
+            </Code>
+          </a>
           at Vélizy, curious and passionate about web development, I specialized
           in front-end with{" "}
-          <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
-            <ReactIcon />
-            React
-          </Code>{" "}
+          <a href="https://www.react.dev">
+            <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
+              <ReactIcon />
+              React
+            </Code>{" "}
+          </a>
           ,{" "}
-          <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
-            <TypescriptIcon />
-            TypeScript
-          </Code>{" "}
+          <a href="https://www.typescriptlang.org/">
+            <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
+              <TypescriptIcon />
+              TypeScript
+            </Code>{" "}
+          </a>
           and{" "}
-          <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
-            <TailwindIcon />
-            Tailwind CSS
-          </Code>
+          <a href="https://tailwindcss.com/">
+            <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
+              <TailwindIcon />
+              Tailwind CSS
+            </Code>
+          </a>
           . I like to design modern and efficient interfaces while exploring
           best practices in the field. I am looking for a{" "}
-          <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
-            <WorkIcon />
-            internship
-          </Code>{" "}
+          <a href="documents/my-cv.pdf">
+            <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
+              <WorkIcon />
+              internship
+            </Code>{" "}
+          </a>
           of at least one month for the month of June in order to deepen my
           skills and contribute to concrete projects within a team dynamic.
         </p>
