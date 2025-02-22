@@ -110,14 +110,14 @@ export const Projects = () => {
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
                         <img
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="null"
-                          alt="Codeline"
+                          src="images/projects/expense-white.png"
+                          alt="Expense tracker project"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
-                          <h3 className="text-2xl font-semibold leading-none tracking-tight">
+                          <h3 className="text-2xl text-black font-bold leading-none">
                             Expense Tracker
                           </h3>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-md text-semibold text-black">
                             This project is an expense tracker built with React,
                             TypeScript (TSX), Vite, and Tailwind CSS. It allows
                             users to easily track and manage their expenses with
@@ -157,14 +157,14 @@ export const Projects = () => {
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
                         <img
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="null"
-                          alt="Codelynx | Blog posts"
+                          src="images/projects/project-manager.png"
+                          alt="Project manager project"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
-                          <h3 className="text-2xl font-semibold leading-none tracking-tight">
+                          <h3 className="text-2xl text-black font-bold leading-none">
                             Project manager
                           </h3>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-md text-semibold text-black">
                             This project is a project management tool built with
                             React, TypeScript (TSX), Vite, and Tailwind CSS. It
                             enables users to create, organize, and track the
@@ -183,7 +183,7 @@ export const Projects = () => {
                 aria-roledescription="slide"
                 className="min-w-0 shrink-0 grow-0 basis-full pl-4 lg:basis-1/2"
               >
-                <a href="https://codelynx.dev/">
+                <a href="">
                   <div
                     style={{
                       position: "relative",
@@ -204,14 +204,14 @@ export const Projects = () => {
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
                         <img
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="null"
-                          alt="Codelynx | Blog posts"
+                          src="images/projects/music-player.png"
+                          alt="Music player project"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
-                          <h3 className="text-2xl font-semibold leading-none tracking-tight">
+                          <h3 className="text-2xl font-bold leading-none">
                             Music player
                           </h3>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-md text-semibold text-white">
                             This project is a music player built with JSX, CSS,
                             Vite, and GraphQL. It enables users to play and
                             manage music with a smooth, responsive interface,
@@ -250,14 +250,14 @@ export const Projects = () => {
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
                         <img
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="null"
+                          src="images/projects/pomodoro.png"
                           alt="Fictitious Project"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
-                          <h3 className="text-2xl font-semibold leading-none tracking-tight">
+                          <h3 className="text-2xl text-black font-bold leading-none">
                             Pomodoro timer
                           </h3>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-md text-semibold text-black">
                             This project is a Pomodoro timer built with React,
                             Vite, and Tailwind CSS. It helps users manage work
                             and break intervals with a simple, responsive
@@ -269,7 +269,7 @@ export const Projects = () => {
                   </div>
                 </a>
               </div>
-              {/* Slide 4 */}
+              {/* Slide 5 */}
               <div
                 role="group"
                 aria-roledescription="slide"
@@ -296,14 +296,14 @@ export const Projects = () => {
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
                         <img
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="null"
+                          src="images/projects/job-finder.png"
                           alt="Fictitious Project"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
-                          <h3 className="text-2xl font-semibold leading-none tracking-tight">
+                          <h3 className="text-2xl text-white font-bold leading-none">
                             Jobs finder
                           </h3>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-md text-semibold text-slate-950">
                             This project is a job search platform for front-end
                             developers, built with Vite, Vue.js, and Tailwind
                             CSS. It helps users find front-end developer
@@ -315,7 +315,7 @@ export const Projects = () => {
                   </div>
                 </a>
               </div>
-              {/* Slide 4 */}
+              {/* Slide 6 */}
               <div
                 role="group"
                 aria-roledescription="slide"
@@ -342,14 +342,14 @@ export const Projects = () => {
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
                         <img
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="null"
+                          src="images/projects/chat-app.png"
                           alt="Fictitious Project"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
-                          <h3 className="text-2xl font-semibold leading-none tracking-tight">
+                          <h3 className="text-2xl  text-black font-bold leading-none">
                             Chat App
                           </h3>
-                          <p className="text-sm text-muted-foreground">
+                          <p className="text-md text-semibold text-black">
                             This is a web application built with React, Vite,
                             and CSS. It simulates two phones, each containing
                             multiple user profiles. Users can send real-time
