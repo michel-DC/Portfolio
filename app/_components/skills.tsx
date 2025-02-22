@@ -3,6 +3,7 @@ import React, { ComponentPropsWithoutRef } from "react";
 import cn from "classnames";
 import { Section } from "./ui/section";
 import { TailwindIcon } from "../assets/icon/tailwindIcon";
+import Image from "next/image";
 
 const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
   return (
@@ -72,10 +73,12 @@ export const Skills = () => {
 
         {/* TypeScript Skill */}
         <div className="row-span-1 rounded-xl bg-card/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border border-border justify-between flex flex-col space-y-4 md:col-span-1">
-          <img
+          <Image
             src="/images/typescript.png"
-            className="w-full h-40 rounded-md object-cover"
-            alt="TypeScript"
+            className="w-40 h-40 rounded-md object-cover mx-auto"
+            alt="TypeScript logo and code example"
+            width={96}
+            height={96}
           />
           <div className="flex flex-col gap-2">
             <p className="text-lg font-semibold">
@@ -100,13 +103,16 @@ export const Skills = () => {
         {/* UI library */}
         <div className="row-span-1 rounded-xl bg-card/10 group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border border-border justify-between flex flex-col space-y-4 md:col-span-2">
           <div className="flex flex-col mt-4">
-            <img
+            <Image
               src="/images/ui-library.png"
-              className="w-screen h-4/6 object-cover mx-auto"
-              alt="UI Library"
+              className="w-40 h-40 object-cover mx-auto"
+              alt="UI Library components showcase"
+              width={400}
+              height={200}
+              layout="responsive"
             />
             <div className="flex flex-col gap-2">
-              <p className="text-lg font-semibold pb-2 mt-3">
+              <p className="text-md font-semibold pb-2">
                 To create like a designer
               </p>
             </div>

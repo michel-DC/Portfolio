@@ -8,6 +8,7 @@ import { ReactIcon } from "../assets/icon/reactIcon";
 import { TypescriptIcon } from "../assets/icon/typescriptIcon";
 import { TailwindIcon } from "../assets/icon/tailwindIcon";
 import { WorkIcon } from "../assets/icon/workIcon";
+import Image from "next/image";
 
 const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
   return (
@@ -25,10 +26,13 @@ export const Hero = () => {
   return (
     <Section className="flex max-lg:flex-col items-start flex-col">
       <div className="flex items-center gap-2 w-fit">
-        <img
-          className="rounded-full w-12 h-12 mr-auto"
-          src="images/PFP.jpg"
-          alt="Chill guy"
+        <Image
+          className="rounded-full"
+          src="/images/PFP.jpg"
+          alt="Michel DJOUMESSI profile picture"
+          width={48}
+          height={48}
+          priority
         />
         <h2 className="text-2xl font-bold">Michel DJOUMESSI</h2>
       </div>

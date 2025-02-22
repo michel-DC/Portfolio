@@ -6,24 +6,15 @@ import { Section } from "./ui/section";
 
 export const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-  const [totalSlides, setTotalSlides] = useState(3); // Default to desktop value
+  const [totalSlides, setTotalSlides] = useState(3);
 
   useEffect(() => {
-    // Check mobile on mount and update state
     const checkMobile = () => {
-      const mobile = window.innerWidth <= 768;
-      setIsMobile(mobile);
-      setTotalSlides(mobile ? 6 : 3);
+      setTotalSlides(window.innerWidth <= 768 ? 6 : 3);
     };
 
-    // Initial check
     checkMobile();
-
-    // Add resize listener
     window.addEventListener("resize", checkMobile);
-
-    // Cleanup
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
@@ -126,10 +117,13 @@ export const Projects = () => {
                       }}
                     >
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
-                        <img
+                        <Image
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="images/projects/expense-white.png"
+                          src="/images/projects/expense-white.png"
                           alt="Expense tracker project"
+                          width={800}
+                          height={400}
+                          layout="responsive"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
                           <h3 className="text-2xl text-black font-bold leading-none">
@@ -173,10 +167,13 @@ export const Projects = () => {
                       }}
                     >
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
-                        <img
+                        <Image
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="images/projects/project-manager.png"
+                          src="/images/projects/project-manager.png"
                           alt="Project manager project"
+                          width={800}
+                          height={400}
+                          layout="responsive"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
                           <h3 className="text-2xl text-black font-bold leading-none">
@@ -220,10 +217,13 @@ export const Projects = () => {
                       }}
                     >
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
-                        <img
+                        <Image
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="images/projects/music-player.png"
+                          src="/images/projects/music-player.png"
                           alt="Music player project"
+                          width={800}
+                          height={400}
+                          layout="responsive"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
                           <h3 className="text-2xl font-bold leading-none">
@@ -266,10 +266,13 @@ export const Projects = () => {
                       }}
                     >
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
-                        <img
+                        <Image
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="images/projects/pomodoro.png"
+                          src="/images/projects/pomodoro.png"
                           alt="Fictitious Project"
+                          width={800}
+                          height={400}
+                          layout="responsive"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
                           <h3 className="text-2xl text-black font-bold leading-none">
@@ -312,10 +315,13 @@ export const Projects = () => {
                       }}
                     >
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
-                        <img
+                        <Image
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="images/projects/job-finder.png"
+                          src="/images/projects/job-finder.png"
                           alt="Fictitious Project"
+                          width={800}
+                          height={400}
+                          layout="responsive"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
                           <h3 className="text-2xl text-white font-bold leading-none">
@@ -358,10 +364,13 @@ export const Projects = () => {
                       }}
                     >
                       <div className="rounded-lg border bg-card text-card-foreground shadow-sm h-full group relative hover:bg-card/60 transition-colors overflow-hidden">
-                        <img
+                        <Image
                           className="rounded shadow-xl inset-0 absolute border border-border"
-                          src="images/projects/chat-app.png"
+                          src="/images/projects/chat-app.png"
                           alt="Fictitious Project"
+                          width={800}
+                          height={400}
+                          layout="responsive"
                         />
                         <div className="flex flex-col space-y-1.5 p-6 bg-background/80 h-full backdrop-blur relative group-hover:opacity-0 transition-opacity">
                           <h3 className="text-2xl  text-black font-bold leading-none">

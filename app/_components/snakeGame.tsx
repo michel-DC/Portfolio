@@ -3,8 +3,6 @@
 import React, { useState } from "react";
 import { Section } from "./ui/section";
 
-const BOARD_SIZE = 3;
-
 type SquareValue = "X" | "O" | null;
 
 const calculateWinner = (squares: SquareValue[]): SquareValue => {
