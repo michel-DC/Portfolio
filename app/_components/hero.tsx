@@ -25,7 +25,7 @@ export const Hero = () => {
       <div className="flex items-center gap-2 w-fit">
         <img
           className="rounded-full w-12 h-12 mr-auto"
-          src="https://i.pinimg.com/236x/3b/19/a3/3b19a3c06d81766d4a6de6d344b95e86.jpg"
+          src="images/PFP.jpg"
           alt="Chill guy"
         />
         <h2 className="text-2xl font-bold">Michel DJOUMESSI</h2>
