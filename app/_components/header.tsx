@@ -3,7 +3,7 @@ import { Section } from "./ui/section";
 
 export const Header = () => {
   return (
-    <Section className="sticky md:sticky top-0 mb-14 mx-auto flex w-full max-w-4xl h-20 items-center justify-between px-4 backdrop-blur-3xl rounded-md">
+    <Section className="sticky md:sticky top-0 mb-14 mx-auto flex w-full max-w-4xl h-20 items-center justify-between backdrop-blur-3xl rounded-md">
       <div className="flex items-center gap-1">
         <h1 className="text-primary-foreground font-sans font-extrabold mr-4 md:mr-96">
           michel.dev
@@ -16,13 +16,13 @@ export const Header = () => {
         >
           <ul className="hover:cursor-pointer flex gap-4 justify-end flex-wrap">
             <li>
-              <a href="#about" className="hover:text-primary transition-colors">
+              <a href="#" className="hover:text-primary transition-colors">
                 About
               </a>
             </li>
             <li>
               <a
-                href="#Skills"
+                href="#skills"
                 className="hover:text-primary transition-colors"
               >
                 Skills
@@ -38,7 +38,7 @@ export const Header = () => {
             </li>
             <li>
               <a
-                href="#contactme"
+                href="#contact"
                 className="hover:text-primary transition-colors"
               >
                 Contact me

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { ComponentPropsWithoutRef } from "react";
 import cn from "classnames";
 import { Section } from "./ui/section";
@@ -32,9 +34,23 @@ export const Hero = () => {
       </div>
       <br />
       <div>
-        <h3 className="text-3xl italic mb-2">
+        <h3 className="text-3xl italic mb-2 animate-text-reveal">
           Front-End developer and student 👨‍💻
         </h3>
+        <style jsx>{`
+          @keyframes textReveal {
+            0% {
+              filter: blur(8px);
+              -webkit-filter: blur(8px);
+              opacity: 0;
+            }
+            100% {
+              filter: blur(0);
+              -webkit-filter: blur(0);
+              opacity: 1;
+            }
+          }
+        `}</style>
         <p className="leading-[2]">
           Student in{" "}
           <a href="https://www.iut-velizy-rambouillet.uvsq.fr/">

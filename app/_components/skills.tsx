@@ -54,13 +54,17 @@ export const Skills = () => {
             <p className="text-lg font-semibold">React</p>
             <p className="text-sm text-muted-foreground leading[20]">
               My main framework is{" "}
-              <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
-                React
-              </Code>
+              <a href="https://www.react.dev">
+                <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
+                  React
+                </Code>
+              </a>
               , sometimes I also use{" "}
-              <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
-                Vue.js
-              </Code>{" "}
+              <a href="https://vuejs.org/">
+                <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
+                  Vue.js
+                </Code>{" "}
+              </a>
               for building personal project.
             </p>
           </div>
