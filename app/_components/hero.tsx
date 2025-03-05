@@ -87,7 +87,7 @@ export const Hero = () => {
           </a>
           . I like to design modern and efficient interfaces while exploring
           best practices in the field. I am looking for a{" "}
-          <a href="documents/my-cv.pdf">
+          <a href="documents/Michel-DJOUMESSI-CV-ATS.pdf">
             <Code className="inline-flex items-center gap-1 bg-gray-500 text-white hover:underline cursor-pointer">
               <WorkIcon />
               internship
