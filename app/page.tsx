@@ -7,19 +7,21 @@ import { Skills } from "./_components/skills";
 import { Projects } from "./_components/Projects";
 import { ContactMe } from "./_components/contactMe";
 import { SnakeGame } from "./_components/snakeGame";
+import Maintenance from "./maintenance/maintenance";
 
 export default function Home() {
   return (
     <main>
       <Background />
-      <Header />
+      {/* <Header />
       <Hero />
       <Social />
       <DoingNow />
       <Skills />
       <Projects />
       <ContactMe />
-      <SnakeGame />
+      <SnakeGame /> */}
+      <Maintenance />
     </main>
   );
 }
