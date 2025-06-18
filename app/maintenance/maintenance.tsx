@@ -14,8 +14,8 @@ export default function Maintenance() {
         />
         <h1 className="text-3xl font-bold">Site en maintenance</h1>
         <p className="text-lg">
-          Mon portfolio se ferait une petite beauté. Revenez plus tard il sera
-          plus beau qu'avant.
+          Mon portfolio se refait une beauté. Revenez plus tard, il sera plus
+          beau qu'auparavant.
         </p>
         <Link
           href="https://github.com/michel-DC"
