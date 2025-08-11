@@ -6,7 +6,7 @@ export default function Maintenance() {
     <div className="flex flex-col items-center justify-center min-h-screen text-white p-4">
       <div className="max-w-md text-center space-y-6">
         <Image
-          src="/maintenance/maintenance.webp"
+          src="/maintenance/maintenance.svg"
           alt="Maintenance"
           width={300}
           height={300}
@@ -14,8 +14,9 @@ export default function Maintenance() {
         />
         <h1 className="text-3xl font-bold">Site en maintenance</h1>
         <p className="text-lg">
-          Mon portfolio se refait une beauté. Revenez plus tard, il sera plus
-          beau qu&apos;auparavant.
+          Mon portfolio est actuellement en maintenance. Merci de votre
+          patience, il sera bientôt de retour en ligne avec de nombreuses
+          nouveautés.
         </p>
         <Link
           href="https://github.com/michel-DC"

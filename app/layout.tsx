@@ -3,8 +3,8 @@ import cn from "classnames";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://michel-portfolio.com"),
-  title: "Michel portfolio",
+  metadataBase: new URL("https://onlinemichel.dev"),
+  title: "Découvrez l'ensemble de mes projets",
   description:
     "Explore Michel  portfolio showcasing innovative web development projects, internships, and front-end works.",
   keywords: [
@@ -64,6 +64,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full bg-background text-foreground">
+      <head>
+        <link rel="shortcut icon" href="/images/pfp.png" type="image/x-icon" />
+      </head>
       <body className={cn("font-sans h-full")}>{children}</body>
     </html>
   );
