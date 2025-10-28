@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: null
-
-# Sitemaps
-Sitemap: null/sitemap.xml
