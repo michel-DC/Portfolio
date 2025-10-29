@@ -1,11 +1,17 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import { Bricolage_Grotesque, Playfair_Display } from "next/font/google";
 import "../styles/globals.css";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-bricolage-grotesque",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
@@ -69,7 +75,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full bg-background text-foreground ${bricolageGrotesque.variable}`}>
+    <html lang="en" className={`h-full bg-background text-foreground ${bricolageGrotesque.variable} ${playfair.variable}`}>
       <head>
         <link rel="shortcut icon" href="/images/logo/favicon.png" type="image/x-icon" />
       </head>
