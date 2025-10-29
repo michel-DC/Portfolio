@@ -53,7 +53,7 @@ export function Header() {
           <Button
             onClick={toggleTheme}
             aria-label="Basculer le thème"
-            className="relative inline-flex items-center justify-center h-7 w-7 rounded-full border border-border bg-background text-black dark:text-white hover:bg-foreground/10 transition"
+            className="relative inline-flex items-center justify-center h-7 w-7 border border-border bg-background text-black dark:text-white hover:bg-foreground/10 transition"
             title={theme === "dark" ? "Passer en clair" : "Passer en sombre"}
           >
             {theme === "dark" ? (

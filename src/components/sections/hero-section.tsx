@@ -21,7 +21,7 @@ export function HeroSection() {
         </div>
         <div className="flex flex-col justify-center">
           <h1 className="text-foreground italic text-[28px] leading-tight mb-0 font-normal">
-            Michel DJOUMESSI
+            Michel Djoumessi
           </h1>
           <div className="text-foreground text-[18px]">Dévéloppeur Fullstack</div>
         </div>
@@ -44,14 +44,14 @@ export function HeroSection() {
           {/* Textes desktop */}
           <div className="flex flex-col items-start text-left flex-1">
             <h1 className="text-foreground italic text-[35px] sm:text-[40px] leading-tight tracking-normal mb-1 font-normal">
-              Michel DJOUMESSI
+              Michel Djoumessi
             </h1>
             <h4 className="text-foreground text-[18px]">Dévéloppeur Fullstack | NextJS</h4>
           </div>
         </div>
         <div className="flex flex-col gap-0 mt-4">
           <p className="text-[15px] text-foreground/70 font-normal italic max-w-4xl mb-4 leading-relaxed">
-              Étudiant en deuxième année de BUT Métier du multimédia et de l'internet. Développeur Fullstack en freelance spécialisé dans l'écosystème TypeScript. Passionné par le développement web et l'intéligence artificielle.
+              Étudiant en deuxième année de BUT Métier du multimédia et de l&apos;internet. Développeur Fullstack en freelance spécialisé dans l&apos;écosystème TypeScript. Passionné par le développement web et l&apos;intéligence artificielle.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-start gap-3">
             <Button
@@ -100,7 +100,7 @@ export function HeroSection() {
       {/* Bio et boutons sur mobile  */}
       <div className="sm:hidden flex flex-col w-full items-start mt-2">
         <p className="text-[15px] text-foreground/60 font-normal italic max-w-xl mb-5 leading-relaxed">
-          Étudiant en deuxième année de BUT Métier du multimédia et de l'internet. Développeur Fullstack en freelance spécialisé dans l'écosystème TypeScript. Passionné par le développement web et l'intéligence artificielle.
+          Étudiant en deuxième année de BUT Métier du multimédia et de l&apos;internet. Développeur Fullstack en freelance spécialisé dans l&apos;écosystème TypeScript. Passionné par le développement web et l&apos;intéligence artificielle.
         </p>
         <div className="flex flex-wrap justify-start gap-2 w-full">
           <Button
