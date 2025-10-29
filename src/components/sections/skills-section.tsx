@@ -82,7 +82,7 @@ export function SkillsSection() {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 hover:text-foreground transition-colors group"
                         >
-                          <Icon className="w-4 h-4 shrink-0 text-black dark:text-white" />
+                          <Icon className="w-4 h-4 shrink-0 text-foreground" />
                         </Link>
                       </Button>
                       <span className="font-medium">{skill.name}</span>
