@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Galada } from "next/font/google";
-import "../styles/globals.css";
+import "@/styles/globals.css";
+import { LenisProvider } from "@/components/lenis/lenis-provider";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -79,7 +80,9 @@ export default function RootLayout({
       <head>
         <link rel="shortcut icon" href="/images/logo/favicon.png" type="image/x-icon" />
       </head>
+      <LenisProvider>
       <body className="font-bricolage-grotesque h-full">{children}</body>
+      </LenisProvider>
     </html>
   );
 }

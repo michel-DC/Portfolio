@@ -3,8 +3,8 @@ import { Background } from "@/components/background/background";
 
 export const metadata: Metadata = {
 
-  title: "Landing Page",
-  description: "Landing Page",
+  title: "Développement",
+  description: "Développement",
 };
 
 export const viewport: Viewport = {

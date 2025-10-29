@@ -16,7 +16,7 @@ const experiences = [
   {
     company: "Bumps Agency",
     url: "https://www.bumps-agency.ch/",
-    title: "Développeur Fullstack Freelance",
+    title: "Développeur Fullstack en Freelance",
     period: "Juillet 2025 - Aujourd'hui",
     description:
       "Développement web principalement en React, TypeScript et Next.js pour plusieurs entreprises. Intégration d'IA via les assistants OpenAI et Perplexity via des fonctions serverless supabase. Réalisation d'intégrations front-end à partir de maquettes Figma.",
@@ -34,7 +34,7 @@ const experiences = [
   {
     company: "Maison Vatier",
     url: "https://github.com/Vatier",
-    title: "Développeur Front-end ",
+    title: "Développeur Front-end en Freelance ",
     period: "Décembre 2024 - Mars 2025",
     description:
       "Site vitrine interactif conçu avec React.js et Tailwind CSS : maquettage sous Figma, intégration responsive, routage optimisé avec React Router, SEO soigné et déploiement cloud sur Vercel. Optimisation des performances et gestion du projet via Git/GitHub.",

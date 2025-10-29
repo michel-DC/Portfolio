@@ -23,7 +23,7 @@ export function HeroSection() {
           <h1 className="text-foreground italic text-[28px] leading-tight mb-0 font-normal">
             Michel Djoumessi
           </h1>
-          <div className="text-foreground text-[18px]">Dévéloppeur Fullstack</div>
+          <div className="text-foreground text-[18px]">Dévéloppeur Fullstack Junior</div>
         </div>
       </div>
 
@@ -46,7 +46,7 @@ export function HeroSection() {
             <h1 className="text-foreground italic text-[35px] sm:text-[40px] leading-tight tracking-normal mb-1 font-normal">
               Michel Djoumessi
             </h1>
-            <h4 className="text-foreground text-[18px]">Dévéloppeur Fullstack | NextJS</h4>
+            <h4 className="text-foreground text-[18px]">Dévéloppeur Fullstack Juinior</h4>
           </div>
         </div>
         <div className="flex flex-col gap-0 mt-4">
