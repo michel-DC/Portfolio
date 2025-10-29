@@ -117,6 +117,6 @@
     @apply bg-background text-foreground;
   }
   h1, h2, h3 {
-    font-family: var(--font-playfair), ui-serif, Georgia, "Times New Roman", serif;
+    font-family: var(--font-galada);
   }
 }

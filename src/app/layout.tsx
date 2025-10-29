@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Playfair_Display } from "next/font/google";
+import { Bricolage_Grotesque, Galada } from "next/font/google";
 import "../styles/globals.css";
 
 const bricolageGrotesque = Bricolage_Grotesque({
@@ -8,10 +8,10 @@ const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-bricolage-grotesque",
 });
 
-const playfair = Playfair_Display({
+const playfair = Galada({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-playfair",
+  weight: ["400"],
+  variable: "--font-galada",
 });
 
 export const metadata: Metadata = {

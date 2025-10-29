@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Section from "../section";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import { Sun, Moon } from "lucide-react";
 
 export function Header() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
@@ -14,7 +15,8 @@ export function Header() {
       setTheme(saved);
     } else {
       const prefersDark = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-      setTheme(prefersDark ? "dark" : "light");
+      const detected = prefersDark ? "dark" : "light";
+      setTheme(detected as "dark" | "light");
     }
   }, []);
 
@@ -29,7 +31,12 @@ export function Header() {
     }
   }, [theme]);
 
-  const toggleTheme = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
+  const toggleTheme = () => {
+    setTheme((t) => {
+      const next = t === "dark" ? "light" : "dark";
+      return next;
+    });
+  };
 
   return (
     <Section>
@@ -46,13 +53,15 @@ export function Header() {
           <Button
             onClick={toggleTheme}
             aria-label="Basculer le thème"
-            className="inline-flex items-center justify-center h-7 w-7 rounded-full border border-border bg-background text-foreground hover:bg-foreground/10 transition"
+            className="relative inline-flex items-center justify-center h-7 w-7 rounded-full border border-border bg-background text-black dark:text-white hover:bg-foreground/10 transition"
             title={theme === "dark" ? "Passer en clair" : "Passer en sombre"}
           >
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
-            </svg>
-          </Button>
+            {theme === "dark" ? (
+              <Sun size={20} strokeWidth={2} color="#ffffff" className="z-10 drop-shadow-[0_1px_1px_rgba(0,0,0,0.45)] w-5 h-5 shrink-0" />
+            ) : (
+              <Moon size={20} strokeWidth={2} color="#000000" className="z-10 drop-shadow-[0_1px_1px_rgba(0,0,0,0.25)] w-5 h-5 shrink-0" />
+            )}
+          </Button> 
         </div>
       </div>
     </header>
