@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, Galada } from "next/font/google";
 import "@/styles/globals.css";
-import { LenisProvider } from "@/components/lenis/lenis-provider";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
+import { Background } from "@/components/background/background";
 
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
@@ -76,13 +78,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`h-full bg-background text-foreground ${bricolageGrotesque.variable} ${playfair.variable}`}>
+    <html
+      lang="en"
+      className={`h-full bg-background text-foreground ${bricolageGrotesque.variable} ${playfair.variable}`}
+    >
       <head>
-        <link rel="shortcut icon" href="/images/logo/favicon.png" type="image/x-icon" />
+        <link
+          rel="shortcut icon"
+          href="/images/logo/favicon.png"
+          type="image/x-icon"
+        />
       </head>
-      <LenisProvider>
-      <body className="font-bricolage-grotesque h-full">{children}</body>
-      </LenisProvider>
+      <body className="font-bricolage-grotesque h-full">
+        <Background>
+          <Header />
+          {children}
+          <Footer />
+        </Background>
+      </body>
     </html>
   );
 }

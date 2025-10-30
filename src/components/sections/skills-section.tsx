@@ -1,7 +1,17 @@
-import Link from "next/link"
-import Section from "@/components/section"
-import { Layers, FileCode2, Atom, Database, Paintbrush, Hexagon, CircleDot, Code, Triangle } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import Section from "@/components/section";
+import {
+  Layers,
+  FileCode2,
+  Atom,
+  Database,
+  Paintbrush,
+  Hexagon,
+  CircleDot,
+  Code,
+  Triangle,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const skills = [
   {
@@ -26,7 +36,7 @@ const skills = [
     name: "PHP",
     url: "https://www.php.net",
     icon: Code,
-    description: "Langage backend pour projets legacy",
+    description: "Langage backend, parfait en combinaison avec Apache et MySQL",
   },
   {
     name: "Tailwind CSS",
@@ -56,9 +66,10 @@ const skills = [
     name: "Vercel",
     url: "https://vercel.com",
     icon: Triangle,
-    description: "Plateforme de déploiement et hosting",
+    description:
+      "Plateforme de déploiement et hosting parfaite pour des projets NextJS",
   },
-]
+];
 
 export function SkillsSection() {
   return (
@@ -67,7 +78,7 @@ export function SkillsSection() {
         <h2 className="text-foreground/80 italic text-[22px] sm:text-[30px] leading-tight font-normal tracking-wider mb-1">
           Mes outils du quotidien
         </h2>
-        <div className="flex-1 ml-8 pt-2">
+        <div className="flex-1 ml-4 pt-2">
           <ul className="list-disc text-foreground/70">
             {skills.map((skill) => {
               const Icon = skill.icon;
@@ -103,5 +114,5 @@ export function SkillsSection() {
         </div>
       </div>
     </Section>
-  )
+  );
 }
