@@ -75,7 +75,7 @@ export function SkillsSection() {
   return (
     <Section className="flex flex-col items-start justify-center pt-8 pb-8 px-4 sm:px-8">
       <div className="flex flex-col justify-center">
-        <h2 className="text-foreground/80 italic text-[22px] sm:text-[30px] leading-tight font-normal tracking-wider mb-1">
+        <h2 className="text-foreground/80 italic text-[25px] sm:text-[30px] leading-tight font-normal tracking-wider mb-1">
           Mes outils du quotidien
         </h2>
         <div className="flex-1 ml-4 pt-2">

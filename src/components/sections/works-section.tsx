@@ -51,7 +51,7 @@ export function WorksSection() {
   return (
     <Section className="flex flex-col items-start justify-center pt-8 pb-8 px-4 sm:px-8">
       <div className="w-full flex flex-col justify-center">
-        <h2 className="text-foreground/80 italic text-[22px] sm:text-[30px] leading-tight font-normal tracking-wider mb-2">
+        <h2 className="text-foreground/80 italic text-[25px] sm:text-[30px] leading-tight font-normal tracking-wider mb-2">
           Mes expériences professionnelles
         </h2>
         <div className="ml-2">

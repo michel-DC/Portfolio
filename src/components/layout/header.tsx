@@ -5,9 +5,6 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { Sun, Moon, Menu as MenuIcon } from "lucide-react";
 
-/**
- * Header component with floating glassmorphism bubble, always visible during scroll.
- */
 export function Header() {
   const [theme, setTheme] = useState<"dark" | "light">(() => {
     if (typeof window !== "undefined") {
@@ -66,20 +63,40 @@ export function Header() {
     { label: "Expériences", href: "#works" },
     { label: "Projets", href: "#projects" },
     { label: "Article de blog", href: "#blog" },
-    { label: "Contact", href: "mailto:micheldjoumessi.contact@gmail.com" },
+    { label: "Contact", href: "#contact" },
   ];
 
-  // --- Floating Glass Morph Header Bubble ---
+  // Handler pour scroll avec offset de 20px vers le bas
+  const handleSectionClick = (e: React.MouseEvent, href: string) => {
+    // Pour mailto ou liens externes on laisse le comportement par défaut
+    if (!href.startsWith("#")) return;
+
+    e.preventDefault();
+    const id = href.slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      const rect = el.getBoundingClientRect();
+      // Scroll vers l'id en soustrayant 20px après le top relatif à la fenêtre
+      const scrollTarget = window.scrollY + rect.top - 40;
+      window.scrollTo({
+        top: scrollTarget,
+        behavior: "smooth",
+      });
+      setMenuOpen(false);
+    }
+  };
+
   return (
     <div className="fixed top-2 left-0 w-full z-99 flex justify-center pointer-events-none sm:top-4">
       <header
         className="
           pointer-events-auto
           flex items-center
-          w-[95vw] max-w-[340px] xs:max-w-[370px] sm:w-full sm:max-w-3xl
+          w-[99vw] max-w-[380px] xs:max-w-[420px] sm:w-full sm:max-w-3xl
           mx-auto
           px-2 py-1 sm:px-4 sm:py-2 gap-1 sm:gap-2
-          rounded-xl sm:rounded-3xl shadow-lg
+          rounded-3xl
+          shadow-lg
           bg-white/80 dark:bg-white/10
           backdrop-blur-[8px] sm:backdrop-blur-[10px]
           border border-white/60 dark:border-white/15
@@ -104,7 +121,7 @@ export function Header() {
         </div>
         <div className="flex items-center gap-2 sm:gap-3 relative">
           <div className="relative">
-            {/* <Button
+            <Button
               ref={menuBtnRef}
               onClick={() => setMenuOpen((menu) => !menu)}
               aria-label="Ouvrir le menu"
@@ -121,28 +138,63 @@ export function Header() {
                 size={20}
                 className="w-5 h-5 shrink-0 text-foreground dark:text-foreground"
               />
-            </Button> */}
+            </Button>
             {menuOpen && (
               <div
                 ref={menuRef}
                 className={`
-                  absolute right-0 mt-3 min-w-[145px] xs:min-w-[165px] sm:min-w-[180px] rounded-2xl sm:rounded-3xl z-50 p-1.5 sm:p-2
+                  absolute right-0 mt-3 min-w-[145px] xs:min-w-[165px] sm:min-w-[190px] rounded-2xl sm:rounded-3xl z-50 p-1.5 sm:p-2
                   flex flex-col gap-1
-                  bg-white/95 dark:bg-white/15
-                  backdrop-blur-md shadow-lg transition-all
-                  border border-white/70 dark:border-white/10
-                  sm:bg-white/80
+                  ${
+                    menuOpen
+                      ? `
+                        bg-background backdrop-blur-none! shadow-none! border-transparent!
+                        sm:bg-white/40 
+                        sm:backdrop-blur-[18px] 
+                        sm:shadow-[0_10px_40px_0_rgba(80,80,180,0.14),0_1.5px_0.5px_0_rgba(255,255,255,0.23)_inset,0_2px_8px_rgba(255,255,255,0.13)_inset] 
+                        sm:border sm:border-white/45
+                        sm:dark:bg-white/10 sm:dark:border-white/7
+                      `
+                      : `
+                        bg-white/95 dark:bg-white/15 backdrop-blur-md shadow-lg border border-white/70 dark:border-white/10 
+                        sm:bg-white/40 
+                        sm:backdrop-blur-[18px] 
+                        sm:shadow-[0_10px_40px_0_rgba(80,80,180,0.14),0_1.5px_0.5px_0_rgba(255,255,255,0.23)_inset,0_2px_8px_rgba(255,255,255,0.13)_inset] 
+                        sm:border sm:border-white/45
+                        sm:dark:bg-white/10 sm:dark:border-white/7
+                      `
+                  }
+                  transition-all
                 `}
                 style={{
                   boxShadow:
-                    "0 8px 32px 0 rgba(0,0,0,0.09), inset 0 1px 0 rgba(255,255,255,0.35)",
+                    // sm: glass effect - strong blur + layered shadows and insets
+                    "0 10px 40px 0 rgba(80,80,180,0.14), 0 1.5px 0.5px 0 rgba(255,255,255,0.23) inset, 0 2px 8px rgba(255,255,255,0.13) inset",
+                  backdropFilter:
+                    // Enable maximum blur, contrast, and (on desktop) slight brightness
+                    "blur(18px) saturate(1.3) brightness(1.13)",
+                  WebkitBackdropFilter:
+                    "blur(18px) saturate(1.3) brightness(1.13)",
+                  border: "1px solid rgba(255,255,255,0.45)",
+                  ...(window.innerWidth < 640 && {
+                    // On mobile, override glassmorphism to be minimal
+                    boxShadow:
+                      "0 8px 32px 0 rgba(0,0,0,0.09), inset 0 1px 0 rgba(255,255,255,0.15)",
+                    backdropFilter: "blur(4px)",
+                    WebkitBackdropFilter: "blur(4px)",
+                    border: "1px solid transparent",
+                  }),
                 }}
               >
                 {sections.map((section) => (
                   <Link
                     key={section.href}
                     href={section.href}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={(e) => {
+                      handleSectionClick(e, section.href);
+                      // Pour les liens autres que hash
+                      if (!section.href.startsWith("#")) setMenuOpen(false);
+                    }}
                     className="flex items-center gap-2 sm:gap-3 px-2.5 py-2 sm:px-4 rounded-xl text-sm font-medium text-foreground/90 hover:bg-white/25 dark:hover:bg-white/15 transition focus:outline-none focus:ring-2 focus:ring-white/30"
                     tabIndex={0}
                   >

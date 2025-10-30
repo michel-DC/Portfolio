@@ -40,7 +40,7 @@ export function BlogSection() {
   return (
     <Section className="flex flex-col items-start justify-center pt-8 pb-8 px-4 sm:px-8 w-full">
       <div className="flex flex-col justify-center w-full">
-        <h2 className="text-foreground/80 italic text-[22px] sm:text-[30px] mb-1 leading-tight font-normal tracking-wider w-full">
+        <h2 className="text-foreground/80 italic text-[25px] sm:text-[30px] mb-1 leading-tight font-normal tracking-wider w-full">
           Mes articles favoris
         </h2>
         <div className="pt-2 flex-1 w-full">
