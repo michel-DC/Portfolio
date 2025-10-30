@@ -11,12 +11,18 @@ export function Background({ children }: BackgroundProps) {
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const saved = typeof window !== "undefined" ? window.localStorage.getItem("bgTheme") : null;
+    const saved =
+      typeof window !== "undefined"
+        ? window.localStorage.getItem("bgTheme")
+        : null;
     if (saved === "dark" || saved === "light") {
       setTheme(saved);
       return;
     }
-    const prefersDark = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDark =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
     setTheme(prefersDark ? "dark" : "light");
   }, []);
 
@@ -42,9 +48,10 @@ export function Background({ children }: BackgroundProps) {
     };
   }, []);
 
-  const backgroundUrl = theme === "dark" ? "/images/background/dark.png" : "/images/background/light.png";
-
-  
+  const backgroundUrl =
+    theme === "dark"
+      ? "/images/background/dark.png"
+      : "/images/background/light.png";
 
   useEffect(() => {
     if (typeof document === "undefined") return;
@@ -70,9 +77,7 @@ export function Background({ children }: BackgroundProps) {
         }}
       />
 
-      <div className="relative z-10">
-        {children}
-      </div>
+      <div className="relative z-10">{children}</div>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useLayoutEffect, useState, useRef } from "react";
-import Section from "../section";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Sun, Moon, Menu as MenuIcon } from "lucide-react";
@@ -70,20 +69,22 @@ export function Header() {
     { label: "Contact", href: "mailto:micheldjoumessi.contact@gmail.com" },
   ];
 
-  // --- Floating Glass Morph Header Bubble  ---
+  // --- Floating Glass Morph Header Bubble ---
   return (
-    <div className="fixed top-4 left-0 w-full z-99 flex justify-center pointer-events-none">
+    <div className="fixed top-2 left-0 w-full z-99 flex justify-center pointer-events-none sm:top-4">
       <header
         className="
-        pointer-events-auto
-        flex items-center w-full max-w-3xl
-        mx-auto px-4 py-2 gap-2
-        rounded-3xl shadow-lg
-        bg-white/55 dark:bg-white/10
-        backdrop-blur-[10px]
-        border border-white/60 dark:border-white/15
-        transition-all
-      "
+          pointer-events-auto
+          flex items-center
+          w-[95vw] max-w-[340px] xs:max-w-[370px] sm:w-full sm:max-w-3xl
+          mx-auto
+          px-2 py-1 sm:px-4 sm:py-2 gap-1 sm:gap-2
+          rounded-xl sm:rounded-3xl shadow-lg
+          bg-white/80 dark:bg-white/10
+          backdrop-blur-[8px] sm:backdrop-blur-[10px]
+          border border-white/60 dark:border-white/15
+          transition-all
+        "
         style={{
           boxShadow:
             "0 2px 16px 0 rgba(30,30,30,0.12), 0 1.5px 0.5px 0 rgba(255,255,255,0.12) inset",
@@ -92,7 +93,7 @@ export function Header() {
         <div className="flex flex-1 items-center min-w-0">
           <Link
             href="/"
-            className="ml-2 text-base font-bold text-foreground hover:opacity-90 transition whitespace-nowrap tracking-wide"
+            className="ml-1 sm:ml-2 text-xs sm:text-base font-bold text-foreground hover:opacity-90 transition whitespace-nowrap tracking-wide max-w-[110px] xs:max-w-[140px] sm:max-w-none truncate"
             style={{
               letterSpacing: "0.03em",
               textShadow: "0 1px 4px rgba(180,180,180,0.04)",
@@ -101,13 +102,13 @@ export function Header() {
             onlinemichel.dev
           </Link>
         </div>
-        <div className="flex items-center gap-3 relative">
+        <div className="flex items-center gap-2 sm:gap-3 relative">
           <div className="relative">
-            <Button
+            {/* <Button
               ref={menuBtnRef}
               onClick={() => setMenuOpen((menu) => !menu)}
               aria-label="Ouvrir le menu"
-              className="relative inline-flex items-center justify-center h-8 w-9 bg-white/25 dark:bg-white/20 backdrop-blur-lg text-foreground hover:bg-white/35 dark:hover:bg-white/25 transition-all shadow border border-transparent"
+              className="relative inline-flex items-center justify-center h-9 w-9 sm:h-8 sm:w-9 bg-white/25 dark:bg-white/20 backdrop-blur-lg text-foreground hover:bg-white/35 dark:hover:bg-white/25 transition-all shadow border border-transparent"
               title="Menu"
               type="button"
               tabIndex={0}
@@ -120,11 +121,18 @@ export function Header() {
                 size={20}
                 className="w-5 h-5 shrink-0 text-foreground dark:text-foreground"
               />
-            </Button>
+            </Button> */}
             {menuOpen && (
               <div
                 ref={menuRef}
-                className="absolute right-0 mt-3 min-w-[180px] rounded-3xl z-50 p-2 flex flex-col gap-1 bg-white/80 dark:bg-white/15 backdrop-blur-md shadow-lg transition-all border border-white/70 dark:border-white/10"
+                className={`
+                  absolute right-0 mt-3 min-w-[145px] xs:min-w-[165px] sm:min-w-[180px] rounded-2xl sm:rounded-3xl z-50 p-1.5 sm:p-2
+                  flex flex-col gap-1
+                  bg-white/95 dark:bg-white/15
+                  backdrop-blur-md shadow-lg transition-all
+                  border border-white/70 dark:border-white/10
+                  sm:bg-white/80
+                `}
                 style={{
                   boxShadow:
                     "0 8px 32px 0 rgba(0,0,0,0.09), inset 0 1px 0 rgba(255,255,255,0.35)",
@@ -135,7 +143,7 @@ export function Header() {
                     key={section.href}
                     href={section.href}
                     onClick={() => setMenuOpen(false)}
-                    className="flex items-center gap-3 px-4 py-2 rounded-xl text-sm font-medium text-foreground/90 hover:bg-white/25 dark:hover:bg-white/15 transition focus:outline-none focus:ring-2 focus:ring-white/30"
+                    className="flex items-center gap-2 sm:gap-3 px-2.5 py-2 sm:px-4 rounded-xl text-sm font-medium text-foreground/90 hover:bg-white/25 dark:hover:bg-white/15 transition focus:outline-none focus:ring-2 focus:ring-white/30"
                     tabIndex={0}
                   >
                     {section.label}
@@ -148,7 +156,7 @@ export function Header() {
           <Button
             onClick={toggleTheme}
             aria-label="Basculer le thème"
-            className="relative inline-flex items-center justify-center h-8 w-8 border border-border bg-background text-black dark:text-white hover:bg-foreground/10 transition rounded-full"
+            className="relative inline-flex items-center justify-center h-9 w-9 sm:h-8 sm:w-8 border border-border bg-background text-black dark:text-white hover:bg-foreground/10 transition rounded-full"
             title={theme === "dark" ? "Passer en clair" : "Passer en sombre"}
           >
             {theme === "dark" ? (

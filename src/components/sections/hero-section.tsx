@@ -6,7 +6,7 @@ import Section from "@/components/section";
 
 export function HeroSection() {
   return (
-    <Section className="w-full min-h-[280px] flex flex-col items-start justify-center pt-30 pb-10 px-4 sm:px-8">
+    <Section className="w-full min-h-[280px] flex flex-col items-start justify-center pt-20 sm:pt-30 pb-10 px-4 sm:px-8">
       {/* Bloc avatar + infos sur mobile */}
       <div className="flex flex-row items-center gap-4 mb-2 sm:hidden w-full">
         <div className="shrink-0">
@@ -21,7 +21,7 @@ export function HeroSection() {
         </div>
         <div className="flex flex-col justify-center">
           <h1 className="text-foreground italic text-[28px] leading-tight mb-0 font-normal">
-            Michel Christ Djoumessi
+            Michel Djoumessi
           </h1>
           <div className="text-foreground text-[18px]">
             Dévéloppeur Fullstack Junior
@@ -46,7 +46,7 @@ export function HeroSection() {
           {/* Textes desktop */}
           <div className="flex flex-col items-start text-left flex-1">
             <h1 className="text-foreground italic text-[35px] sm:text-[40px] leading-tight tracking-normal mb-1 font-normal">
-              Michel Christ Djoumessi
+              Michel Djoumessi
             </h1>
             <h4 className="text-foreground text-[18px]">
               Dévéloppeur Fullstack Juinior
@@ -129,58 +129,57 @@ export function HeroSection() {
           l&apos;écosystème TypeScript. Passionné par le développement web et
           l&apos;intéligence artificielle.
         </p>
-        <div className="flex flex-wrap justify-start gap-2 w-full">
+        <div className="flex flex-wrap justify-start gap-1.5 w-full">
           <Button
             asChild
-            className="text-foreground font-semibold gap-1.5 px-3 py-1 shadow text-[13px]"
+            className="text-foreground font-semibold gap-1 px-2.5 py-0.5 shadow text-[12px]"
           >
             <Link
               href="https://github.com/michel-DC"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github className="size-3.5 text-foreground" />
+              <Github className="size-3 text-foreground" />
               <span className="text-foreground">GitHub</span>
             </Link>
           </Button>
           <Button
             asChild
-            className="text-foreground font-semibold gap-1.5 px-3 py-1 shadow text-[13px]"
+            className="text-foreground font-semibold gap-1 px-2.5 py-0.5 shadow text-[12px]"
           >
             <Link
               href="https://linkedin.com/in/micheldjoumessi"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Linkedin className="size-3.5 text-foreground" />
+              <Linkedin className="size-3 text-foreground" />
               <span className="text-foreground">LinkedIn</span>
             </Link>
           </Button>
           {/* Malt */}
           <Button
             asChild
-            className="bg-white hover:bg-[#FA2742]/10 text-foreground font-semibold gap-1.5 px-3 py-1 shadow border border-[#FA2742]/20 text-[13px]"
+            className="bg-white hover:bg-[#FA2742]/10 text-foreground font-semibold gap-1 px-2.5 py-0.5 shadow border border-[#FA2742]/20 text-[12px]"
           >
             <Link
               href="https://www.malt.fr/profile/micheldjoumessi1"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <BriefcaseBusiness className="size-3.5 text-foreground" />
+              <BriefcaseBusiness className="size-3 text-foreground" />
               <span className="text-foreground">Malt</span>
             </Link>
           </Button>
           <Button
             asChild
-            className="bg-[#222] hover:bg-[#444] text-black dark:text-foreground font-semibold gap-1.5 px-3 py-1 shadow text-[13px]"
+            className="bg-[#222] hover:bg-[#444] text-black dark:text-foreground font-semibold gap-1 px-2.5 py-0.5 shadow text-[12px]"
           >
             <Link
               href="mailto:micheldjoumessi.contact@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Mail className="size-3.5 text-black dark:text-foreground" />{" "}
-              Gmail
+              <Mail className="size-3 text-black dark:text-foreground" /> Gmail
             </Link>
           </Button>
         </div>

@@ -30,7 +30,7 @@ const projects = [
     slugName: "framix",
     description: `Framix est une landing page moderne et animée, conçue autour d’un outil fictif no-code permettant de construire des landing pages modulaires à partir de blocs visuels. L’objectif était de démontrer comment on peut orchestrer une expérience utilisateur fluide, élégante, pensée pour la conversion et l’accessibilité, avec une mise en avant d’animations et d’optimisations front-end avancées.`,
     date: " 2025",
-    theme: ["Frontend", "Astro.JS"],
+    theme: ["Frontend", "Astro.JS", "React.JS"],
     icon: Palette,
   },
   {
@@ -64,6 +64,8 @@ export function ProjectsSection() {
           <ul className="list-disc pl-2 flex flex-col gap-6 pt-2 w-full">
             {projects.map((project) => {
               const Icon = project.icon;
+              // Définition d'une longueur seuil pour sauter une ligne sur mobile (ex: 35 caractères)
+              const isLongName = project.name.length > 35;
               return (
                 <li key={project.slugName} className="relative w-full">
                   <div className="flex items-center gap-2 w-full sm:w-auto">
@@ -88,9 +90,26 @@ export function ProjectsSection() {
                       {/* Carte projet au hover du nom du projet */}
                       <div className="relative flex flex-col sm:flex-row sm:items-center sm:gap-x-2 flex-wrap gap-y-1">
                         <div className="relative">
+                          {/* Sur mobile, si le nom est trop long, forcer le saut de ligne */}
                           <Link
                             href={`/project/${project.slugName}`}
-                            className="text-[17px] font-semibold text-foreground hover:underline underline-offset-4 hover:text-primary transition-colors truncate"
+                            className={`text-[17px] font-semibold text-foreground hover:underline underline-offset-4 hover:text-primary transition-colors ${
+                              // Sur mobile, wrap si trop long
+                              isLongName
+                                ? "truncate sm:truncate whitespace-normal max-w-full sm:max-w-none block"
+                                : "truncate"
+                            }`}
+                            style={
+                              isLongName
+                                ? {
+                                    // Sur mobile, force un maxWidth en px et wrap si nécessaire
+                                    maxWidth: "230px", // largeur typique mobile, ajustable
+                                    whiteSpace: "normal",
+                                    wordBreak: "break-word",
+                                    display: "block",
+                                  }
+                                : undefined
+                            }
                             onMouseEnter={() =>
                               setHoveredProject(project.slugName)
                             }

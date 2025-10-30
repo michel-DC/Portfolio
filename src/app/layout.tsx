@@ -90,11 +90,9 @@ export default function RootLayout({
         />
       </head>
       <body className="font-bricolage-grotesque h-full">
-        <Background>
-          <Header />
-          {children}
-          <Footer />
-        </Background>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
