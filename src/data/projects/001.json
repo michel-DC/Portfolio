@@ -25,7 +25,7 @@
     "Cypress",
     "Vercel"
   ],
-  "context": "Développement d'une plateforme SaaS complète de gestion collaborative d’événements en équipe (création, pilotage, notifications, messagerie temps réel, gestion des rôles, emails transactionnels, tests e2e…). Projet mené sur plusieurs mois en binôme, dans un contexte d’innovation/expérimentation en MMI, en visant robustesse, sécurité et expérience utilisateur moderne. Stack Next.js fullstack, architecture modulaire et extensible, base PostgreSQL, déploiement cloud.",
+  "context": "Développement d'une plateforme SaaS complète de gestion collaborative d’événements en équipe (création, pilotage, notifications, messagerie temps réel, gestion des rôles, emails transactionnels, tests e2e…). Projet mené sur plusieurs mois en solo, dans un contexte d’innovation/expérimentation en MMI, en visant robustesse, sécurité et expérience utilisateur moderne. Stack Next.js fullstack, architecture modulaire et extensible, base PostgreSQL, déploiement cloud.",
   "task": [
     "Formalisation du besoin, cadrage UX, choix techniques",
     "Mise en place du socle Next.js, architecture du projet, configuration TypeScript, Tailwind & Prisma",

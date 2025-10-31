@@ -2,7 +2,10 @@ import Section from "@/components/section";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import ProjectImagesCarousel from "@/components/project-images-carousel";
+import { Github, ExternalLink } from "lucide-react";
 
 interface ProjectData {
   name: string;
@@ -47,11 +50,11 @@ export default async function ProjectPage(props: Props) {
 
   if (!project) {
     return (
-      <Section className="pt-20 pb-8 px-4 sm:px-8">
-        <h1 className="text-2xl font-semibold text-foreground">
+      <Section className="flex flex-1 flex-col justify-center items-center min-h-[60vh] pt-20 pb-8 px-4 sm:px-8">
+        <h1 className="text-2xl font-semibold text-foreground text-center">
           Projet introuvable
         </h1>
-        <p className="mt-2 text-foreground/50">
+        <p className="mt-2 text-foreground/50 text-center">
           Aucun projet ne correspond à ce slug.
         </p>
       </Section>
@@ -59,98 +62,184 @@ export default async function ProjectPage(props: Props) {
   }
 
   return (
-    <Section className="flex flex-col items-center pt-30 pb-10 px-4 sm:px-8">
-      {/* Header + meta infos*/}
-      <div className="w-full max-w-4xl flex flex-col items-center justify-start text-center mb-8">
-        <h1 className="text-foreground text-[28px] sm:text-[35px] font-bold italic mb-2">
-          {project.name}
-        </h1>
-        <div className="text-foreground/50 text-sm mb-3">{project.date}</div>
-        <div className="flex flex-row flex-wrap items-center gap-2 justify-center mb-3">
-          {project.themes?.map((theme, idx) => (
-            <span
-              key={theme + idx}
-              className="inline-block px-2 py-0.5 rounded bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide"
-            >
-              {theme}
-            </span>
-          ))}
+    <>
+      <Section className="flex flex-col items-center pt-30 pb-10 px-4 sm:px-8">
+        {/* Header */}
+        <div className="w-full max-w-4xl flex flex-col items-center text-center mb-10">
+          <h1 className="text-foreground text-3xl sm:text-4xl font-bold mb-3">
+            {project.name}
+          </h1>
+          <h4 className="text-foreground/50 text-sm mb-4">
+            Date de fin : {project.date}
+          </h4>
+
+          {/* Themes */}
+          <div className="flex flex-row flex-wrap items-center gap-3 justify-center mb-6">
+            {project.themes?.map((theme, idx) => (
+              <span
+                key={theme + idx}
+                className="inline-block px-4 py-2 rounded-lg bg-accent text-foreground/80 text-sm font-medium border border-foreground/10 hover:bg-accent/80 transition-colors"
+              >
+                {theme}
+              </span>
+            ))}
+          </div>
         </div>
-        {(project.github || project.url) && (
-          <div className="flex gap-2 flex-wrap justify-center items-center mb-1">
-            {project.github && (
-              <Link
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/70 underline hover:text-primary"
-              >
-                GitHub
-              </Link>
-            )}
-            {project.url && (
-              <Link
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground/70 underline hover:text-primary"
-              >
-                Démo
-              </Link>
-            )}
+
+        {/* Première image du projet */}
+        {project.images && project.images.length > 0 && (
+          <div className="w-full mb-12 flex justify-center items-center">
+            <Image
+              src={project.images[0]}
+              alt={`${project.name} - Image principale`}
+              width={1200}
+              height={800}
+              className="shadow-lg rounded-sm"
+              style={{
+                width: "100%",
+                height: "auto",
+                maxWidth: "100%",
+              }}
+              priority
+            />
           </div>
         )}
-      </div>
-      {/* Images RESPONSIVES, carousel auto (client) ou image unique */}
-      <ProjectImagesCarousel images={project.images} name={project.name} />
-      {/* Description principale */}
-      <div className="w-full max-w-4xl text-left mb-8">
-        <h2 className="text-foreground/90 text-xl font-semibold mb-2 mt-2">
-          Résumé
-        </h2>
-        <p className="text-foreground/70 mb-2 italic text-lg">
-          {project.description}
-        </p>
-        <h3 className="mt-6 mb-1 text-foreground/90 font-semibold">Contexte</h3>
-        <p className="text-foreground/60 mb-4">{project.context}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.technologies?.map((tech) => (
-            <span
-              key={tech}
-              className="inline-block px-2 py-0.5 rounded bg-accent text-foreground/80 text-xs font-medium border"
-            >
-              {tech}
-            </span>
-          ))}
+
+        {/* Description & Context */}
+        <div className="w-full max-w-4xl mb-12">
+          <h2 className="text-foreground text-2xl font-semibold mb-4">
+            À propos du projet
+          </h2>
+
+          <p className="text-foreground/80 text-base leading-relaxed mb-6">
+            {project.description}
+          </p>
+
+          <h3 className="text-foreground text-2xl font-semibold mb-3">
+            Contexte
+          </h3>
+          <p className="text-foreground/70 text-base leading-relaxed">
+            {project.context}
+          </p>
         </div>
-      </div>
-      {/* Tâches, résultats, apprentissages */}
-      <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div>
-          <h4 className="text-foreground font-semibold mb-1">Mes tâches</h4>
-          <ul className="list-disc list-inside text-foreground/60 text-sm pl-2">
-            {project.task?.map((tache, idx) => (
-              <li key={idx}>{tache}</li>
+
+        {/* Technologies Stack */}
+        <div className="w-full max-w-4xl mb-12">
+          <h3 className="text-foreground text-2xl font-semibold mb-4">
+            Stack Technique
+          </h3>
+          <div className="flex flex-wrap gap-3">
+            {project.technologies?.map((tech) => (
+              <span
+                key={tech}
+                className="inline-block px-4 py-2 rounded-lg bg-accent text-foreground/80 text-sm font-medium border border-foreground/10 hover:bg-accent/80 transition-colors"
+              >
+                {tech}
+              </span>
             ))}
-          </ul>
+          </div>
         </div>
-        <div>
-          <h4 className="text-foreground font-semibold mb-1">Résultats</h4>
-          <ul className="list-disc list-inside text-foreground/60 text-sm pl-2">
-            {project.results?.map((result, idx) => (
-              <li key={idx}>{result}</li>
-            ))}
-          </ul>
+
+        {/* Tasks, Results, Learning */}
+        <div className="w-full max-w-4xl space-y-8">
+          <div>
+            <h3 className="text-foreground text-2xl font-semibold mb-4">
+              Mes tâches
+            </h3>
+            <ul className="space-y-3">
+              {project.task?.map((tache, idx) => (
+                <li
+                  key={idx}
+                  className="text-foreground/70 text-base leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-primary"
+                >
+                  {tache}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-foreground text-2xl font-semibold mb-4">
+              Résultats obtenus
+            </h3>
+            <ul className="space-y-3">
+              {project.results?.map((result, idx) => (
+                <li
+                  key={idx}
+                  className="text-foreground/70 text-base leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-primary"
+                >
+                  {result}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-foreground text-2xl font-semibold mb-4">
+              Apprentissages
+            </h3>
+            <ul className="space-y-3">
+              {project.learningOutcomes?.map((appr, idx) => (
+                <li
+                  key={idx}
+                  className="text-foreground/70 text-base leading-relaxed pl-4 relative before:content-['•'] before:absolute before:left-0 before:text-primary"
+                >
+                  {appr}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Link */}
+          {(project.github || project.url) && (
+            <div className="w-full flex justify-start items-center mt-16">
+              <div className="flex justify-start items-center gap-4">
+                {project.github && (
+                  <Link
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors"
+                  >
+                    <Button
+                      type="button"
+                      className="bg-primary text-primary-foreground hover:bg-primary/80 font-medium px-6 py-3 text-base shadow-lg border border-primary/30 rounded-2xl flex items-center gap-2 cursor-pointer"
+                    >
+                      <Github className="w-5 h-5" />
+                      GitHub
+                    </Button>
+                  </Link>
+                )}
+                {project.url && (
+                  <Link
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors"
+                  >
+                    <Button
+                      type="button"
+                      className="bg-primary text-primary-foreground hover:bg-primary/80 font-medium px-6 py-3 text-base shadow-lg border border-primary/30 rounded-2xl flex items-center gap-2 cursor-pointer"
+                    >
+                      <ExternalLink className="w-5 h-5" />
+                      Démo
+                    </Button>
+                  </Link>
+                )}
+              </div>
+            </div>
+          )}
         </div>
-        <div>
-          <h4 className="text-foreground font-semibold mb-1">Apprentissages</h4>
-          <ul className="list-disc list-inside text-foreground/60 text-sm pl-2">
-            {project.learningOutcomes?.map((appr, idx) => (
-              <li key={idx}>{appr}</li>
-            ))}
-          </ul>
+      </Section>
+
+      {project.images && project.images.length > 1 && (
+        <div className="w-full max-w-4xl mx-auto mt-10 mb-16">
+          <h2 className="text-foreground text-2xl font-semibold mb-4 ml-8">
+            Gallerie d&apos;images
+          </h2>
+          <ProjectImagesCarousel images={project.images} name={""} />
         </div>
-      </div>
-    </Section>
+      )}
+    </>
   );
 }

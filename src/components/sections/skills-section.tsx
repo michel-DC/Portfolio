@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 
 const skills = [
   {
-    name: "Next.js",
+    name: "Next.JS",
     url: "https://nextjs.org",
     icon: Layers,
     description: "Framework fullstack pour mes projets web",
@@ -27,7 +27,7 @@ const skills = [
     description: "Typage statique pour un code robuste",
   },
   {
-    name: "React",
+    name: "React.JS",
     url: "https://react.dev",
     icon: Atom,
     description: "Librairie javascript via un système de composants",

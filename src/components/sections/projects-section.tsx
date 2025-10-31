@@ -11,7 +11,7 @@ import { useState } from "react";
 const projects = [
   {
     json: "/src/data/projects/001.json",
-    name: "Teamify • Application de gestion événementielle",
+    name: "Teamify • Gestion événementielle",
     slugName: "teamify",
     description: `Teamify est une plateforme collaborative permettant de créer, d'organiser et de gérer des événements en un seul endroit. Conçue pour les équipes et les particuliers, elle simplifie la planification grâce à des outils intuitifs de gestion des participants, de coordination en temps réel et de notifications personnalisées. Dotée d'une interface responsive et accessible, Teamify facilite la collaboration pour tous types d'événements, qu'ils soient professionnels ou personnels.`,
     date: "Octobre 2025",
