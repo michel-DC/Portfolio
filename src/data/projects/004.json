@@ -1,0 +1,38 @@
+{
+  "name": "Lexi AI • Landing page",
+  "slugName": "lexi-ai",
+  "description": "Lexi AI est une landing page moderne et animée, imaginée pour un outil fictif d’écriture assistée par intelligence artificielle. Le projet met en avant une expérience utilisateur fluide, un design soigné et des animations interactives pour capter l’attention des visiteurs.",
+  "date": "Juillet 2025",
+  "themes": ["FRONTEND", "INTEGRATION"],
+  "images": [
+    "/images/projects/lexi-ai/001.png",
+    "/images/projects/lexi-ai/002.png",
+    "/images/projects/lexi-ai/003.png",
+    "/images/projects/lexi-ai/004.png",
+    "/images/projects/lexi-ai/005.png"
+  ],
+  "technologies": ["React.JS", "TailwindCSS", "Shadcn UI", "Vercel"],
+  "context": "Lexi AI est une landing page moderne et animée, conçue autour d’un outil fictif d’écriture assistée par intelligence artificielle. Le projet met l’accent sur une expérience utilisateur fluide, un design élégant, des animations dynamiques et une intégration pixel-perfect.",
+  "task": [
+    "Initialisation React avec Tailwind",
+    "Mise en place du design system (typographie, couleurs, variables CSS, radius)",
+    "Intégration des sections: Hero, How it works, Features, Testimonials, Pricing, FAQ, Final CTA",
+    "Création du layout global avec Header/Footer et pattern de fond",
+    "Composants UI réutilisables (boutons, cartes)",
+    "Animations légères (Framer Motion, typed), lissage du scroll",
+    "Optimisations de performance (hydratation sélective, assets optimisés)",
+    "Gestion des assets: images, SVG, favicon, polices locales",
+    "Configuration Tailwind (plugins forms/typography/aspect-ratio/animate)",
+    "Déploiement sur Vercel et vérification basique d’accessibilité/SEO"
+  ],
+  "results": [
+    "Landing page statique, rapide et responsive, conforme aux objectifs d’intégration",
+    "Expérience utilisateur fluide: sections structurées, animations discrètes, navigation agréable",
+    "Design system cohérent et composants réutilisables facilitant l’évolution",
+    "Structure de code claire (React + Shadcn UI) favorisant la maintenabilité",
+    "Performances solides grâce à l’hydratation sélective et à l’optimisation des assets",
+    "Déploiement fiable sur Vercel avec routing etc..."
+  ],
+  "github": "https://github.com/michel-DC/Lexi-AI",
+  "url": "https://lexi-ai.onlinemichel.dev"
+}

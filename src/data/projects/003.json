@@ -12,7 +12,13 @@
     "/images/projects/framix/005.png",
     "/images/projects/framix/006.png"
   ],
-  "technologies": ["Astro.JS", "React.JS", "TailwindCSS", "Vercel"],
+  "technologies": [
+    "Astro.JS",
+    "React.JS",
+    "TailwindCSS",
+    "Shadcn UI",
+    "Vercel"
+  ],
   "context": "Création d’une landing page moderne et responsive visant à présenter un outil fictif de création de pages en no-code. Projet focalisé sur l’intégration pixel-perfect, la performance et l’accessibilité, en s’appuyant sur Astro (îlots React), TailwindCSS, animations légères (Framer Motion) et un design system cohérent. Architecture simple et maintenable, déploiement statique sur Vercel, sans backend applicatif.",
   "task": [
     "Initialisation Astro avec intégrations React et Tailwind",

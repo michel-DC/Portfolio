@@ -28,6 +28,15 @@ const projects = [
     icon: Server,
   },
   {
+    json: "/src/data/projects/005.json",
+    name: "Flow Media • Agence web fictive",
+    slugName: "flow-media",
+    description: `Ce projet consiste en la création du site internet de Flow Media, une agence fictive de communication basée à Paris. Réalisé dans le cadre d'un projet universitaire, il m'a permis d'appliquer mes compétences en développement web tout en répondant à un cahier des charges professionnel.`,
+    date: "Mai 2025",
+    theme: ["Fullstack", "PHP", "MySQL"],
+    icon: Globe,
+  },
+  {
     json: "/src/data/projects/004.json",
     name: "Framix • Landing page",
     slugName: "framix",
@@ -44,15 +53,6 @@ const projects = [
     date: "Juillet 2025",
     theme: ["Frontend", "React.JS"],
     icon: Sparkles,
-  },
-  {
-    json: "/src/data/projects/005.json",
-    name: "Flow Media • Agence web fictive",
-    slugName: "flow-media",
-    description: `Ce projet consiste en la création du site internet de Flow Media, une agence fictive de communication basée à Paris. Réalisé dans le cadre d'un projet universitaire, il m'a permis d'appliquer mes compétences en développement web tout en répondant à un cahier des charges professionnel.`,
-    date: "Mai 2025",
-    theme: ["Fullstack", "PHP", "MySQL"],
-    icon: Globe,
   },
 ];
 
