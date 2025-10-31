@@ -97,7 +97,7 @@ export function ProjectsSection() {
                         <div className="relative">
                           {/* Sur mobile, si le nom est trop long, forcer le saut de ligne */}
                           <Link
-                            href={`/project/${project.slugName}`}
+                            href={`/projets/${project.slugName}`}
                             className={`text-[17px] font-semibold text-foreground hover:underline underline-offset-4 hover:text-primary transition-colors ${
                               // Sur mobile, wrap si trop long
                               isLongName

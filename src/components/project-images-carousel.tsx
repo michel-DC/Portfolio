@@ -212,7 +212,10 @@ export default function ProjectImagesCarousel({
           }
         }
         .portfolio-animate-infinite-scroll {
-          animation: portfolio-infinite-scroll 50s linear infinite;
+          animation: portfolio-infinite-scroll 70s linear infinite;
+        }
+        .overflow-hidden:hover .portfolio-animate-infinite-scroll {
+          animation-play-state: paused;
         }
         @media (min-width: 1024px) {
           .max-w-7xl {

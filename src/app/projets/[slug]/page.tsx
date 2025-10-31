@@ -203,7 +203,7 @@ export default async function ProjectPage(props: Props) {
                   >
                     <Button
                       type="button"
-                      className="bg-primary text-primary-foreground hover:bg-primary/80 font-medium px-6 py-3 text-base shadow-lg border border-primary/30 rounded-2xl flex items-center gap-2 cursor-pointer"
+                      className="bg-primary text-foreground dark:text-foreground hover:bg-primary/80 font-medium px-6 py-3 text-base shadow-lg border border-primary/30 rounded-2xl flex items-center gap-2 cursor-pointer"
                     >
                       <Github className="w-5 h-5" />
                       GitHub
@@ -219,7 +219,7 @@ export default async function ProjectPage(props: Props) {
                   >
                     <Button
                       type="button"
-                      className="bg-primary text-primary-foreground hover:bg-primary/80 font-medium px-6 py-3 text-base shadow-lg border border-primary/30 rounded-2xl flex items-center gap-2 cursor-pointer"
+                      className="bg-primary text-foregroun dark:text-foreground hover:bg-primary/80 font-medium px-6 py-3 text-base shadow-lg border border-primary/30 rounded-2xl flex items-center gap-2 cursor-pointer"
                     >
                       <ExternalLink className="w-5 h-5" />
                       Démo
@@ -234,7 +234,7 @@ export default async function ProjectPage(props: Props) {
 
       {project.images && project.images.length > 1 && (
         <div className="w-full max-w-4xl mx-auto mt-10 mb-16">
-          <h2 className="text-foreground text-2xl font-semibold mb-4 ml-8">
+          <h2 className="text-foreground text-2xl font-semibold mb-4 ml-4 sm:ml-8">
             Gallerie d&apos;images
           </h2>
           <ProjectImagesCarousel images={project.images} name={""} />
