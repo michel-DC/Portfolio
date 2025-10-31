@@ -21,7 +21,7 @@ const projects = [
     name: "App Analyzer • Audit de site web",
     slugName: "app-analyzer",
     description: `API Next.js complète pour l’audit automatique de sites web (Puppeteer & Lighthouse) : analyse HTML, métriques de performance, scores SEO, accessibilité, extraction des titres, rapport JSON détaillé, gestion d’erreurs robuste et typage TypeScript strict.`,
-    date: "Octobre 2024",
+    date: "Octobre 2025",
     theme: ["Backend", "Next.JS"],
     icon: Server,
   },
@@ -29,7 +29,7 @@ const projects = [
     name: "Framix • Landing page",
     slugName: "framix",
     description: `Framix est une landing page moderne et animée, conçue autour d’un outil fictif no-code permettant de construire des landing pages modulaires à partir de blocs visuels. L’objectif était de démontrer comment on peut orchestrer une expérience utilisateur fluide, élégante, pensée pour la conversion et l’accessibilité, avec une mise en avant d’animations et d’optimisations front-end avancées.`,
-    date: " 2025",
+    date: "Août 2025",
     theme: ["Frontend", "Astro.JS", "React.JS"],
     icon: Palette,
   },
@@ -103,7 +103,7 @@ export function ProjectsSection() {
                               isLongName
                                 ? {
                                     // Sur mobile, force un maxWidth en px et wrap si nécessaire
-                                    maxWidth: "230px", // largeur typique mobile, ajustable
+                                    maxWidth: "230px",
                                     whiteSpace: "normal",
                                     wordBreak: "break-word",
                                     display: "block",

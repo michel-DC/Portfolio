@@ -10,7 +10,7 @@ export function ContactSection() {
         </h2>
         <div>
           <Link
-            href="mailto:micheldjoumessi.contact@gmail.com"
+            href="mailto:&#x6d;&#x69;&#x63;&#x68;&#x65;&#x6c;&#x64;&#x6a;&#x6f;&#x75;&#x6d;&#x65;&#x73;&#x73;&#x69;&#x2e;&#x63;&#x6f;&#x6e;&#x74;&#x61;&#x63;&#x74;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex underline items-center gap-2 group hover:text-foreground transition-colors"

@@ -1,0 +1,58 @@
+{
+  "name": "Teamify • Application de gestion événementielle",
+  "slugName": "teamify",
+  "description": "Teamify est une plateforme collaborative permettant de créer, d'organiser et de gérer des événements en un seul endroit. Conçue pour les équipes et les particuliers, elle simplifie la planification grâce à des outils intuitifs de gestion des participants, de coordination en temps réel et de notifications personnalisées. Dotée d'une interface responsive et accessible, Teamify facilite la collaboration pour tous types d'événements, qu'ils soient professionnels ou personnels.",
+  "date": "Octobre 2025",
+  "themes": ["FULLSTACK"],
+  "images": [
+    "/images/projects/teamify/001.png",
+    "/images/projects/teamify/002.png",
+    "/images/projects/teamify/003.png",
+    "/images/projects/teamify/004.png",
+    "/images/projects/teamify/005.png",
+    "/images/projects/teamify/006.png",
+    "/images/projects/teamify/007.png"
+  ],
+  "technologies": [
+    "Next.JS",
+    "TypeScript",
+    "Prisma",
+    "Pusher",
+    "Resend",
+    "CloudFlare",
+    "Cypress",
+    "Vercel"
+  ],
+  "context": "Développement d'une plateforme SaaS complète de gestion collaborative d’événements en équipe (création, pilotage, notifications, messagerie temps réel, gestion des rôles, emails transactionnels, tests e2e…). Projet mené sur plusieurs mois en binôme, dans un contexte d’innovation/expérimentation en MMI, en visant robustesse, sécurité et expérience utilisateur moderne. Stack Next.js fullstack, architecture modulaire et extensible, base PostgreSQL, déploiement cloud.",
+  "task": [
+    "Formalisation du besoin, cadrage UX, choix techniques",
+    "Mise en place du socle Next.js, architecture du projet, configuration TypeScript, Tailwind & Prisma",
+    "Développement de l'authentification (email/mdp, Google OAuth, cookies JWT, gestion sécurisée côté serveur)",
+    "Gestion des événements: modèles, création, édition, statuts, uploads Cloudflare",
+    "Implémentation du système d’organisations : rôles (OWNER/ADMIN/MEMBER), invitations, onboarding",
+    "Messagerie temps réel avec Pusher, conversations privées/groupes, synchronisation automatique membres",
+    "Emails transactionnels via Resend (invitations, notifications, onboarding...) avec templates custom",
+    "Système de listes de tâches (todos) et préparation d’événements",
+    "Gestion de la persistance de données (stores, vidage automatique selon navigation)",
+    "Sécurisation globale de l’API, validation (Zod), tests robustes (Cypress)",
+    "Documentation technique détaillée et plans de test",
+    "Déploiement Cloud (Vercel), intégrations CDN, configuration sécurisée"
+  ],
+  "results": [
+    "Plateforme fonctionnelle exploitée en conditions réelles, robuste et évolutive",
+    "Sécurisation totale des flux (auth, rôles, données, cookies), conformité aux bonnes pratiques",
+    "Expérience utilisateur moderne : responsive, notifications temps réel, onboarding fluide",
+    "Architecture fullstack Next.js scalable documentée, réutilisable pour d’autres projets ambitieux",
+    "Système E2E de tests, taux de couverture élevé, documentation exhaustive",
+    "Gestion fine des événements, organisations, membres, rôles & invitations avec auditabilité",
+    "Réduction du temps et de la charge de planification d’événements en équipe"
+  ],
+  "learningOutcomes": [
+    "Approfondissement des architectures fullstack modernes (Next.js/Prisma)",
+    "Montée en compétence sur la sécurité applicative (hash, JWT, scopes, RBAC)",
+    "Gestion d’un projet web cloud-ready de bout en bout",
+    "Découverte des tests e2e (Cypress)"
+  ],
+  "github": "https://github.com/michel-DC/Teamify",
+  "url": "https://teamify.onlinemichel.dev"
+}

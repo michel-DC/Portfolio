@@ -55,10 +55,10 @@ export function HeroSection() {
         </div>
         <div className="flex flex-col gap-0 mt-4">
           <p className="text-[15px] text-foreground/70 font-normal italic max-w-4xl mb-4 leading-relaxed">
-            Étudiant en deuxième année de BUT Métier du multimédia et de
+            Étudiant en deuxième année de BUT Métiers du multimédia et de
             l&apos;internet. Développeur Fullstack en freelance spécialisé dans
             l&apos;écosystème TypeScript. Passionné par le développement web et
-            l&apos;intéligence artificielle.
+            l&apos;intélligence artificielle.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-start gap-3">
             <Button
@@ -110,7 +110,7 @@ export function HeroSection() {
               className="rounded-xl bg-[#222] hover:bg-[#444] text-black dark:text-foreground font-semibold gap-2 px-4 py-1.5 shadow"
             >
               <Link
-                href="mailto:micheldjoumessi.contact@gmail.com"
+                href="mailto:&#x6d;&#x69;&#x63;&#x68;&#x65;&#x6c;&#x64;&#x6a;&#x6f;&#x75;&#x6d;&#x65;&#x73;&#x73;&#x69;&#x2e;&#x63;&#x6f;&#x6e;&#x74;&#x61;&#x63;&#x74;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -124,10 +124,10 @@ export function HeroSection() {
       {/* Bio et boutons sur mobile  */}
       <div className="sm:hidden flex flex-col w-full items-start mt-2">
         <p className="text-[15px] text-foreground/60 font-normal italic max-w-xl mb-5 leading-relaxed">
-          Étudiant en deuxième année de BUT Métier du multimédia et de
+          Étudiant en deuxième année de BUT Métiers du multimédia et de
           l&apos;internet. Développeur Fullstack en freelance spécialisé dans
           l&apos;écosystème TypeScript. Passionné par le développement web et
-          l&apos;intéligence artificielle.
+          l&apos;intélligence artificielle.
         </p>
         <div className="flex flex-wrap justify-start gap-1.5 w-full">
           <Button
@@ -175,7 +175,7 @@ export function HeroSection() {
             className="bg-[#222] hover:bg-[#444] text-black dark:text-foreground font-semibold gap-1 px-2.5 py-0.5 shadow text-[12px]"
           >
             <Link
-              href="mailto:micheldjoumessi.contact@gmail.com"
+              href="mailto:&#x6d;&#x69;&#x63;&#x68;&#x65;&#x6c;&#x64;&#x6a;&#x6f;&#x75;&#x6d;&#x65;&#x73;&#x73;&#x69;&#x2e;&#x63;&#x6f;&#x6e;&#x74;&#x61;&#x63;&#x74;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;"
               target="_blank"
               rel="noopener noreferrer"
             >
