@@ -10,6 +10,7 @@ import { useState } from "react";
 
 const projects = [
   {
+    json: "/src/data/projects/001.json",
     name: "Teamify • Application de gestion événementielle",
     slugName: "teamify",
     description: `Teamify est une plateforme collaborative permettant de créer, d'organiser et de gérer des événements en un seul endroit. Conçue pour les équipes et les particuliers, elle simplifie la planification grâce à des outils intuitifs de gestion des participants, de coordination en temps réel et de notifications personnalisées. Dotée d'une interface responsive et accessible, Teamify facilite la collaboration pour tous types d'événements, qu'ils soient professionnels ou personnels.`,
@@ -18,6 +19,7 @@ const projects = [
     icon: Users,
   },
   {
+    json: "/src/data/projects/002.json",
     name: "App Analyzer • Audit de site web",
     slugName: "app-analyzer",
     description: `API Next.js complète pour l’audit automatique de sites web (Puppeteer & Lighthouse) : analyse HTML, métriques de performance, scores SEO, accessibilité, extraction des titres, rapport JSON détaillé, gestion d’erreurs robuste et typage TypeScript strict.`,
@@ -26,6 +28,7 @@ const projects = [
     icon: Server,
   },
   {
+    json: "/src/data/projects/004.json",
     name: "Framix • Landing page",
     slugName: "framix",
     description: `Framix est une landing page moderne et animée, conçue autour d’un outil fictif no-code permettant de construire des landing pages modulaires à partir de blocs visuels. L’objectif était de démontrer comment on peut orchestrer une expérience utilisateur fluide, élégante, pensée pour la conversion et l’accessibilité, avec une mise en avant d’animations et d’optimisations front-end avancées.`,
@@ -34,6 +37,7 @@ const projects = [
     icon: Palette,
   },
   {
+    json: "/src/data/projects/004.json",
     name: "Lexi AI • Landing page",
     slugName: "lexi-ai",
     description: `Lexi AI est une landing page moderne et animée, imaginée pour un outil fictif d’écriture assistée par intelligence artificielle. Le projet met en avant une expérience utilisateur fluide, un design soigné et des animations interactives pour capter l’attention des visiteurs.`,
@@ -42,6 +46,7 @@ const projects = [
     icon: Sparkles,
   },
   {
+    json: "/src/data/projects/005.json",
     name: "Flow Media • Agence web fictive",
     slugName: "flow-media",
     description: `Ce projet consiste en la création du site internet de Flow Media, une agence fictive de communication basée à Paris. Réalisé dans le cadre d'un projet universitaire, il m'a permis d'appliquer mes compétences en développement web tout en répondant à un cahier des charges professionnel.`,

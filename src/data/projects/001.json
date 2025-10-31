@@ -16,6 +16,7 @@
   "technologies": [
     "Next.JS",
     "TypeScript",
+    "TailwindCSS",
     "Prisma",
     "Pusher",
     "Resend",

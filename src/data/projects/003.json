@@ -1,0 +1,40 @@
+{
+  "name": "Framix • Landing page",
+  "slugName": "framix",
+  "description": "Teamify est une plateforme collaborative permettant de créer, d'organiser et de gérer des événements en un seul endroit. Conçue pour les équipes et les particuliers, elle simplifie la planification grâce à des outils intuitifs de gestion des participants, de coordination en temps réel et de notifications personnalisées. Dotée d'une interface responsive et accessible, Teamify facilite la collaboration pour tous types d'événements, qu'ils soient professionnels ou personnels.",
+  "date": "Août 2025",
+  "themes": ["FRONTEND", "INTEGRATION", "FIGMA"],
+  "images": [
+    "/images/projects/framix/001.png",
+    "/images/projects/framix/002.png",
+    "/images/projects/framix/003.png",
+    "/images/projects/framix/004.png",
+    "/images/projects/framix/005.png",
+    "/images/projects/framix/006.png"
+  ],
+  "technologies": ["Astro.JS", "React.JS", "TailwindCSS", "Vercel"],
+  "context": "Création d’une landing page moderne et responsive visant à présenter un outil fictif de création de pages en no-code. Projet focalisé sur l’intégration pixel-perfect, la performance et l’accessibilité, en s’appuyant sur Astro (îlots React), TailwindCSS, animations légères (Framer Motion) et un design system cohérent. Architecture simple et maintenable, déploiement statique sur Vercel, sans backend applicatif.",
+  "task": [
+    "Initialisation Astro avec intégrations React et Tailwind",
+    "Mise en place du design system (typographie, couleurs, variables CSS, radius)",
+    "Intégration des sections: Hero, How it works, Features, Testimonials, Pricing, FAQ, Final CTA",
+    "Création du layout global avec Header/Footer et pattern de fond",
+    "Composants UI réutilisables (boutons, cartes)",
+    "Animations légères (Framer Motion, typed), lissage du scroll",
+    "Optimisations de performance (hydratation sélective, assets optimisés)",
+    "Gestion des assets: images, SVG, favicon, polices locales",
+    "Page 404 dédiée et configuration des réécritures Vercel",
+    "Configuration Tailwind (plugins forms/typography/aspect-ratio/animate)",
+    "Déploiement sur Vercel et vérification basique d’accessibilité/SEO"
+  ],
+  "results": [
+    "Landing page statique, rapide et responsive, conforme aux objectifs d’intégration",
+    "Expérience utilisateur fluide: sections structurées, animations discrètes, navigation agréable",
+    "Design system cohérent et composants réutilisables facilitant l’évolution",
+    "Structure de code claire (Astro + îlots React) favorisant la maintenabilité",
+    "Performances solides grâce à l’hydratation sélective et à l’optimisation des assets",
+    "Déploiement fiable sur Vercel avec routing et 404 fonctionnels"
+  ],
+  "github": "https://github.com/michel-DC/Framix",
+  "url": "https://framix.onlinemichel.dev"
+}
