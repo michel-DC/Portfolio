@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Michel DJOUMESSI - Front-End Developer Portfolio",
     description:
-      "Explore cutting-edge web projects and internships by Michel DJOUMESSI.",
+      "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
     type: "website",
     url: "https://onlinemichel.dev",
     siteName: "Michel Portfolio",
