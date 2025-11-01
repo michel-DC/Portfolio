@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "null",
+        url: "/images/logo/og-image.png",
         width: 1200,
         height: 630,
         alt: "Michel DJOUMESSI working on a web project",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     creator: "@Michel",
     title: "Michel DJOUMESSI - Web Developer Portfolio",
     description: "Check out innovative web projects by Michel DJOUMESSI.",
-    images: ["null"],
+    images: ["/images/logo/og-image.png"],
   },
 };
 
