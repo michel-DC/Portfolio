@@ -1,10 +1,9 @@
-import Maintenance from "../components/maintenance-page";
+import { LandingPage } from "@/components/sections";
 
 export default function Home() {
   return (
     <>
-    <Maintenance />
+      <LandingPage />
     </>
   );
 }
-

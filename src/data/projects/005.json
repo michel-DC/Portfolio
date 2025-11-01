@@ -1,0 +1,46 @@
+{
+  "name": "Flow Media • Agence web fictive",
+  "slugName": "flow-media",
+  "description": "Ce projet consiste en la création du site internet de Flow Media, une agence fictive de communication basée à Paris. Le développement a nécessité l'intégration de maquettes Figma, la conception d'une base de données MySQL et la mise en œuvre d'un back-office sécurisé pour la gestion des contenus. Ce projet m'a permis de suivre un cycle complet de production web, du recueil du besoin jusqu’au déploiement final.",
+  "date": "Mai 2025",
+  "themes": ["FULLSTACK", "INTEGRATION", "FIGMA", "BDD"],
+  "images": [
+    "/images/projects/flow-media/001.png",
+    "/images/projects/flow-media/002.png",
+    "/images/projects/flow-media/003.png",
+    "/images/projects/flow-media/004.png",
+    "/images/projects/flow-media/005.png",
+    "/images/projects/flow-media/006.png"
+  ],
+  "technologies": ["PHP", "JavaScript", "CSS", "MySQL", "Apache"],
+  "context": "Ce projet a été réalisé dans le cadre d'un exercice universitaire visant à simuler une prestation pour une agence réelle. J'ai été impliqué dans toutes les étapes principales du développement web : analyse et interprétation du brief client, intégration fidèle de maquettes Figma, choix et mise en place de la stack technique (PHP, MySQL, JavaScript), modélisation de la base de données, puis développement front-end comme back-end, incluant la sécurité du back-office pour la gestion des contenus éditoriaux. Le projet a nécessité un échange itératif avec l'encadrement pour valider chaque phase, depuis la rédaction du cahier des charges jusqu'au recettage et à la mise en ligne. Ce contexte m'a permis d’acquérir une expérience concrète des exigences du développement web professionnel, du respect des délais à la qualité du livrable.",
+  "task": [
+    "Analyse du besoin client et rédaction du cahier des charges",
+    "Intégration des maquettes Figma en HTML, CSS et JavaScript",
+    "Conception et modélisation de la base de données MySQL",
+    "Développement from scratch du site vitrine en PHP côté front et back-end",
+    "Mise en œuvre d'un système de gestion de contenus via un back-office sécurisé (authentification, droits d’accès)",
+    "Intégration et contrôle des contenus dynamiques (projets, réalisations, équipe…) par le back-office",
+    "Mise en place d’un système d’administration simple pour modifications récurrentes",
+    "Déploiement du site sur un serveur Apache universitaire, gestion des DNS et du HTTPS"
+  ],
+  "results": [
+    "Site web complet en ligne représentant fidèlement une agence professionnelle",
+    "Back-office fonctionnel permettant la gestion autonome des contenus par l’agence",
+    "Respect des contraintes graphiques et d’accessibilité issues des maquettes Figma",
+    "Livraison dans les délais malgré les itérations et retours de l'encadrement",
+    "Mise en production sans incidents (installation, configuration, sécurité de base assurée)",
+    "Amélioration progressive de l’ergonomie sur la base des retours utilisateurs",
+    "Documentation synthétique remis au client et à l’équipe pédagogique"
+  ],
+  "learningOutcomes": [
+    "Approfondissement de l’intégration web à partir de maquettes Figma",
+    "Renforcement des compétences en PHP procédural et bases du MVC",
+    "Pratique concrète de la modélisation et de l’administration d’une BDD MySQL",
+    "Expérience en conception de back-office et gestion de l’authentification",
+    "Gestion globale d’un projet web : du recueil du besoin au déploiement",
+    "Découverte des enjeux de sécurité basiques pour la gestion de contenus"
+  ],
+  "github": "https://github.com/michel-DC/Flow-Media",
+  "url": "https://flowmedia.michel.djoumessi.mmi-velizy.fr"
+}

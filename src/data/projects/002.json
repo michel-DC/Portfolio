@@ -1,0 +1,40 @@
+{
+  "name": "App Analyzer • Audit de site web",
+  "slugName": "app-analyzer",
+  "description": "API Next.js complète pour l’audit automatique de sites web (Puppeteer & Lighthouse) : analyse HTML, métriques de performance, scores SEO, accessibilité, extraction des titres, rapport JSON détaillé, gestion d’erreurs robuste et typage TypeScript strict.",
+  "date": "Octobre 2025",
+  "themes": ["BACKEND"],
+  "images": ["/images/projects/app-analyzer/001.png"],
+  "technologies": ["Next.JS", "TypeScript", "Puppeteer", "Lighthouse"],
+  "context": "Projet conçu dans le cadre de la prospection d’entreprise en tant que développeur freelance, afin d’automatiser l’audit technique de sites web pour mes clients potentiels. Développement d’une API back-end Next.js intégrant Puppeteer et Lighthouse, avec pour objectif d’offrir un service fiable d’analyse SEO, de performance, d’accessibilité et de structure HTML. Ce système a été intégré et utilisé directement dans mon workflow d’automatisation sur n8n pour générer des rapports automatisés, détecter des axes d’amélioration, synthétiser des recommandations et industrialiser la démarche de diagnostic web. L’accent a été mis sur la qualité du typage TypeScript, la gestion avancée des erreurs, la modularité et la compatibilité cloud.",
+  "task": [
+    "Étude du besoin : cadrage de l’automatisation d’audits web",
+    "Mise en place du socle Next.js et configuration TypeScript stricte",
+    "Développement d’une API POST `/api/analyze` pour audits unitaires",
+    "Développement du mode batch avec `/api/analyze/batch` (analyse séquentielle, options map par site)",
+    "Intégration Puppeteer : navigation headless, extraction d’infos, configuration avancée",
+    "Intégration Lighthouse : analyse multi-dimensionnelle, wrapper sécurisé",
+    "Extraction automatisée des scores SEO, performance, accessibilité, bonnes pratiques",
+    "Génération d’issues détaillées et recommandations contextuelles",
+    "Gestion centralisée des erreurs, timeouts robustes, fallback intelligent",
+    "Déploiement compatible cloud & documentation technique"
+  ],
+  "results": [
+    "API d’audit web automatisé, accessible en local et déployable sur le cloud",
+    "Analyse complète en un appel : scores, détails de structure, recommandations actionnables",
+    "Haute fiabilité grâce à la gestion fine des erreurs et timeout",
+    "Rapport JSON standardisé pour intégration dans d’autres systèmes",
+    "Stack stable, scalable, strictement typée, adaptée aux projets professionnels",
+    "Documentation d’usage (README), exemples d’intégration, payloads variés",
+    "Contribution potentielle à l’amélioration de la qualité des sites web audités"
+  ],
+  "learningOutcomes": [
+    "Maîtrise avancée des audits automatisés via Puppeteer & Lighthouse",
+    "Approfondissement de l'intégration Next.js côté API/serverless",
+    "Renforcement des compétences en sécurité & validation (Zod, gestion des entrées, timeouts)",
+    "Structuration de projets back-end modulaires et maintenables",
+    "Entraînement à l’écriture de rapports techniques automatisés et exploitables"
+  ],
+  "github": "https://github.com/michel-DC/App-Analyzer",
+  "url": "https://app-analyzer.netlify.app"
+}
