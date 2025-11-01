@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
 
   openGraph: {
-    title: "Michel DJOUMESSI - Front-End Developer Portfolio",
+    title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
     description:
       "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
     type: "website",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
         url: "/images/logo/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Michel DJOUMESSI working on a web project",
+        alt: "Bannière de Michel Djoumessi",
       },
     ],
   },
@@ -61,9 +61,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@Michel",
     creator: "@Michel",
-    title: "Michel DJOUMESSI - Web Developer Portfolio",
-    description: "Check out innovative web projects by Michel DJOUMESSI.",
-    images: ["/images/logo/og-image.png"],
+    title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
+    description:
+      "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
+    images: ["/images/logo/avatar.png"],
   },
 };
 
