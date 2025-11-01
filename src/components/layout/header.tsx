@@ -4,6 +4,7 @@ import React, { useLayoutEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { Sun, Moon, Menu as MenuIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function Header() {
   const [theme, setTheme] = useState<"dark" | "light">(() => {
@@ -86,8 +87,22 @@ export function Header() {
     }
   };
 
+  const headerVariants = {
+    hidden: { y: -50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const },
+    },
+  };
+
   return (
-    <div className="fixed top-2 left-0 w-full z-99 flex justify-center pointer-events-none sm:top-4">
+    <motion.div
+      className="fixed top-2 left-0 w-full z-99 flex justify-center pointer-events-none sm:top-4"
+      initial="hidden"
+      animate="visible"
+      variants={headerVariants}
+    >
       <header
         className="
           pointer-events-auto
@@ -98,7 +113,7 @@ export function Header() {
           rounded-3xl
           shadow-lg
           bg-white/80 dark:bg-white/10
-          backdrop-blur-[8px] sm:backdrop-blur-[10px]
+          backdrop-blur-sm sm:backdrop-blur-md
           border border-white/60 dark:border-white/15
           transition-all
         "
@@ -147,16 +162,14 @@ export function Header() {
                   flex flex-col gap-1
                   ${
                     menuOpen
-                      ? `
-                        bg-background backdrop-blur-none! shadow-none! border-transparent!
+                      ? `bg-background backdrop-blur-none! shadow-none! border-transparent!
                         sm:bg-white/40 
                         sm:backdrop-blur-[18px] 
                         sm:shadow-[0_10px_40px_0_rgba(80,80,180,0.14),0_1.5px_0.5px_0_rgba(255,255,255,0.23)_inset,0_2px_8px_rgba(255,255,255,0.13)_inset] 
                         sm:border sm:border-white/45
                         sm:dark:bg-white/10 sm:dark:border-white/7
                       `
-                      : `
-                        bg-white/95 dark:bg-white/15 backdrop-blur-md shadow-lg border border-white/70 dark:border-white/10 
+                      : `bg-white/95 dark:bg-white/15 backdrop-blur-md shadow-lg border border-white/70 dark:border-white/10 
                         sm:bg-white/40 
                         sm:backdrop-blur-[18px] 
                         sm:shadow-[0_10px_40px_0_rgba(80,80,180,0.14),0_1.5px_0.5px_0_rgba(255,255,255,0.23)_inset,0_2px_8px_rgba(255,255,255,0.13)_inset] 
@@ -229,6 +242,6 @@ export function Header() {
           </Button>
         </div>
       </header>
-    </div>
+    </motion.div>
   );
 }

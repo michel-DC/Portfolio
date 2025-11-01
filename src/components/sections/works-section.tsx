@@ -1,3 +1,5 @@
+"use client";
+
 import Section from "@/components/section";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -7,6 +9,7 @@ import {
   Code2,
   Building,
 } from "lucide-react";
+import { motion } from "framer-motion";
 
 const experiences = [
   {
@@ -48,18 +51,50 @@ const experiences = [
 ];
 
 export function WorksSection() {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 15 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+  };
+
   return (
     <Section className="flex flex-col items-start justify-center pt-8 pb-8 px-4 sm:px-8">
-      <div className="w-full flex flex-col justify-center">
-        <h2 className="text-foreground/80 italic text-[25px] sm:text-[30px] leading-tight font-normal tracking-wider mb-2">
+      <motion.div
+        className="w-full flex flex-col justify-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+      >
+        <motion.h2
+          className="text-foreground/80 italic text-[25px] sm:text-[30px] leading-tight font-normal tracking-wider mb-2"
+          variants={fadeInUp}
+        >
           Mes expériences professionnelles
-        </h2>
+        </motion.h2>
         <div className="ml-2">
-          <ul className="list-disc pl-2 flex flex-col gap-6 pt-2 w-full">
+          <motion.ul
+            className="list-disc pl-2 flex flex-col gap-6 pt-2 w-full"
+            variants={containerVariants}
+          >
             {experiences.map((exp) => {
               const Icon = exp.icon;
               return (
-                <li key={exp.company} className="relative w-full">
+                <motion.li key={exp.company} className="relative w-full" variants={itemVariants}>
                   <div className="flex items-center gap-2 w-full sm:w-auto">
                     {/* Desktop+: affiche le bouton avec l'icône */}
                     <div className="hidden sm:block">
@@ -116,12 +151,12 @@ export function WorksSection() {
                       </span>
                     </div>
                   </div>
-                </li>
+                </motion.li>
               );
             })}
-          </ul>
+          </motion.ul>
         </div>
-      </div>
+      </motion.div>
     </Section>
   );
 }

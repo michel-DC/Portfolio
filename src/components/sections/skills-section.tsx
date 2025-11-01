@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Section from "@/components/section";
 import {
@@ -12,6 +14,7 @@ import {
   Triangle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const skills = [
   {
@@ -72,18 +75,50 @@ const skills = [
 ];
 
 export function SkillsSection() {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -10 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+  };
+
   return (
     <Section className="flex flex-col items-start justify-center pt-8 pb-8 px-4 sm:px-8">
-      <div className="flex flex-col justify-center">
-        <h2 className="text-foreground/80 italic text-[25px] sm:text-[30px] leading-tight font-normal tracking-wider mb-1">
+      <motion.div
+        className="flex flex-col justify-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+      >
+        <motion.h2
+          className="text-foreground/80 italic text-[25px] sm:text-[30px] leading-tight font-normal tracking-wider mb-1"
+          variants={fadeInUp}
+        >
           Mes outils du quotidien
-        </h2>
+        </motion.h2>
         <div className="flex-1 ml-4 pt-2">
-          <ul className="list-disc text-foreground/70">
+          <motion.ul
+            className="list-disc text-foreground/70"
+            variants={containerVariants}
+          >
             {skills.map((skill) => {
               const Icon = skill.icon;
               return (
-                <li key={skill.name} className="mb-3">
+                <motion.li key={skill.name} className="mb-3" variants={itemVariants}>
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-0 sm:gap-2">
                     <div className="flex flex-row items-center gap-2">
                       <Button asChild className="p-2! h-8! min-w-0! w-auto!">
@@ -107,12 +142,12 @@ export function SkillsSection() {
                       {skill.description}
                     </span>
                   </div>
-                </li>
+                </motion.li>
               );
             })}
-          </ul>
+          </motion.ul>
         </div>
-      </div>
+      </motion.div>
     </Section>
   );
 }

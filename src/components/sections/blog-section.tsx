@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Section from "@/components/section";
+import { motion } from "framer-motion";
 
 const articles = [
   {
@@ -37,16 +40,48 @@ const articles = [
 ];
 
 export function BlogSection() {
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 15 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+  };
+
   return (
     <Section className="flex flex-col items-start justify-center pt-8 pb-8 px-4 sm:px-8 w-full">
-      <div className="flex flex-col justify-center w-full">
-        <h2 className="text-foreground/80 italic text-[25px] sm:text-[30px] mb-1 leading-tight font-normal tracking-wider w-full">
+      <motion.div
+        className="flex flex-col justify-center w-full"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        variants={containerVariants}
+      >
+        <motion.h2
+          className="text-foreground/80 italic text-[25px] sm:text-[30px] mb-1 leading-tight font-normal tracking-wider w-full"
+          variants={fadeInUp}
+        >
           Mes articles favoris
-        </h2>
+        </motion.h2>
         <div className="pt-2 flex-1 w-full">
-          <ul className="list-disc text-foreground/70 pl-4 w-full">
+          <motion.ul
+            className="list-disc text-foreground/70 pl-4 w-full"
+            variants={containerVariants}
+          >
             {articles.map((article) => (
-              <li key={article.url} className="mb-5 w-full">
+              <motion.li key={article.url} className="mb-5 w-full" variants={itemVariants}>
                 <div className="flex flex-col items-start w-full">
                   <Link
                     href={article.url}
@@ -64,11 +99,11 @@ export function BlogSection() {
                     {`Par ${article.author} (${article.year})`}
                   </span>
                 </div>
-              </li>
+              </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
-      </div>
+      </motion.div>
     </Section>
   );
 }
