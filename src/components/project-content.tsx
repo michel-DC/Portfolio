@@ -201,7 +201,7 @@ export function ProjectContent({ project }: ProjectContentProps) {
 
       {project.images && project.images.length > 1 && (
         <div className="w-full max-w-4xl mx-auto mt-10 mb-16">
-          <h2 className="text-foreground text-2xl font-semibold mb-4 ml-4 sm:ml-8">
+          <h2 className="text-foreground text-center text-2xl font-semibold mb-4">
             Gallerie d&apos;images
           </h2>
           <ProjectImagesCarousel images={project.images} name={""} />
