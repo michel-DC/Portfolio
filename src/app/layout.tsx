@@ -80,7 +80,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full bg-background text-foreground ${bricolageGrotesque.variable} ${playfair.variable}`}
+      className={`h-full text-foreground ${bricolageGrotesque.variable} ${playfair.variable}`}
     >
       <head>
         <link
@@ -90,9 +90,11 @@ export default function RootLayout({
         />
       </head>
       <body className="font-bricolage-grotesque h-full">
-        <Header />
-        {children}
-        <Footer />
+        <Background>
+          <Header />
+          {children}
+          <Footer />
+        </Background>
       </body>
     </html>
   );

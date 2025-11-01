@@ -65,15 +65,16 @@ export function Background({ children }: BackgroundProps) {
   }, [theme]);
 
   return (
-    <div ref={rootRef} data-theme={theme} className={`min-h-screen relative`}>
+    <div ref={rootRef} data-theme={theme} className="min-h-screen relative">
       <div
         key={theme}
-        className="absolute inset-0 -z-10 pointer-events-none"
+        className="fixed inset-0 -z-10 pointer-events-none"
         style={{
           backgroundImage: `url(${backgroundUrl}?v=${theme})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
+          backgroundAttachment: "fixed",
         }}
       />
 

@@ -55,10 +55,10 @@ export function HeroSection() {
         </div>
         <div className="flex flex-col gap-0 mt-4">
           <p className="text-[15px] text-foreground/70 font-normal italic max-w-4xl mb-4 leading-relaxed">
-            Étudiant en deuxième année de BUT Métiers du multimédia et de
-            l&apos;internet. Développeur Fullstack en freelance spécialisé dans
-            l&apos;écosystème TypeScript. Passionné par le développement web et
-            l&apos;intélligence artificielle.
+            Étudiant en deuxième année de BUT Métiers du Multimédia et de
+            l&#39;Internet. Développeur Fullstack freelance spécialisé dans
+            l&#39;écosystème TypeScript. Passionné par le développement web et
+            l&#39;intelligence artificielle.
           </p>
           <div className="flex flex-wrap justify-center sm:justify-start gap-3">
             <Button
@@ -104,7 +104,7 @@ export function HeroSection() {
                 <span className="text-foreground">Malt</span>
               </Link>
             </Button>
-            <Button
+            {/* <Button
               asChild
               size="sm"
               className="rounded-xl bg-[#222] hover:bg-[#444] text-black dark:text-foreground font-semibold gap-2 px-4 py-1.5 shadow"
@@ -117,17 +117,17 @@ export function HeroSection() {
                 <Mail className="size-4 text-black dark:text-foreground" />{" "}
                 Gmail
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>
       {/* Bio et boutons sur mobile  */}
       <div className="sm:hidden flex flex-col w-full items-start mt-2">
         <p className="text-[15px] text-foreground/60 font-normal italic max-w-xl mb-5 leading-relaxed">
-          Étudiant en deuxième année de BUT Métiers du multimédia et de
-          l&apos;internet. Développeur Fullstack en freelance spécialisé dans
-          l&apos;écosystème TypeScript. Passionné par le développement web et
-          l&apos;intélligence artificielle.
+          Étudiant en deuxième année de BUT Métiers du Multimédia et de
+          l&#39;Internet. Développeur Fullstack freelance spécialisé dans
+          l&#39;écosystème TypeScript. Passionné par le développement web et
+          l&#39;intelligence artificielle.
         </p>
         <div className="flex flex-wrap justify-start gap-1.5 w-full">
           <Button
