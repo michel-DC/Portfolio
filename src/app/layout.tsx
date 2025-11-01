@@ -19,9 +19,9 @@ const playfair = Galada({
 });
 export const metadata: Metadata = {
   metadataBase: new URL("https://onlinemichel.dev"),
-  title: "Michel DJOUMESSI • Développeur fullstack junior",
+  title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
   description:
-    "Explore Michel  portfolio showcasing innovative web development projects, internships, and front-end works.",
+    "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
   keywords: [
     "Michel DJOUMESSI",
     "Michel DJOUMESSI portfolio",

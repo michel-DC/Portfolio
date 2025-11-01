@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Server, Globe, Palette, Users, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -60,52 +59,20 @@ const projects = [
 export function ProjectsSection() {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
 
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const } },
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 15 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const } },
-  };
-
   return (
     <Section className="flex flex-col items-start justify-center pt-8 pb-8 px-4 sm:px-8">
-      <motion.div
-        className="flex flex-col justify-center w-full"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={containerVariants}
-      >
-        <motion.h2
-          className="text-foreground/80 italic text-[25px] sm:text-[30px] leading-tight font-normal tracking-wider mb-2"
-          variants={fadeInUp}
-        >
+      <div className="flex flex-col justify-center w-full">
+        <h2 className="text-foreground/80 italic text-[25px] sm:text-[30px] leading-tight font-normal tracking-wider mb-2">
           Ma sélection de projets
-        </motion.h2>
+        </h2>
         <div className="ml-2">
-          <motion.ul
-            className="list-disc pl-2 flex flex-col gap-6 pt-2 w-full"
-            variants={containerVariants}
-          >
+          <ul className="list-disc pl-2 flex flex-col gap-6 pt-2 w-full">
             {projects.map((project) => {
               const Icon = project.icon;
               // Définition d'une longueur seuil pour sauter une ligne sur mobile (ex: 35 caractères)
               const isLongName = project.name.length > 35;
               return (
-                <motion.li key={project.slugName} className="relative w-full" variants={itemVariants}>
+                <li key={project.slugName} className="relative w-full">
                   <div className="flex items-center gap-2 w-full sm:w-auto">
                     {/* Icône et bouton seulement sur desktop+ */}
                     <div className="hidden sm:block">
@@ -199,12 +166,12 @@ export function ProjectsSection() {
                       </span>
                     </div>
                   </div>
-                </motion.li>
+                </li>
               );
             })}
-          </motion.ul>
+          </ul>
         </div>
-      </motion.div>
+      </div>
     </Section>
   );
 }
