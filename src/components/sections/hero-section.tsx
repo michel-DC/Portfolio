@@ -10,12 +10,19 @@ import { motion } from "framer-motion";
 export function HeroSection() {
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const },
+    },
   };
 
   const fadeIn = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] as const },
+    },
   };
 
   const containerVariants = {
@@ -31,7 +38,11 @@ export function HeroSection() {
 
   const buttonVariants = {
     hidden: { opacity: 0, y: 10 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] as const },
+    },
   };
 
   return (
@@ -53,7 +64,10 @@ export function HeroSection() {
             priority
           />
         </motion.div>
-        <motion.div className="flex flex-col justify-center" variants={fadeInUp}>
+        <motion.div
+          className="flex flex-col justify-center"
+          variants={fadeInUp}
+        >
           <h1 className="text-foreground italic text-[28px] leading-tight mb-0 font-normal">
             Michel Djoumessi
           </h1>
@@ -70,7 +84,10 @@ export function HeroSection() {
         animate="visible"
         variants={containerVariants}
       >
-        <motion.div className="flex flex-row items-center gap-6 w-full" variants={fadeInUp}>
+        <motion.div
+          className="flex flex-row items-center gap-6 w-full"
+          variants={fadeInUp}
+        >
           {/* Avatar */}
           <motion.div className="shrink-0" variants={fadeIn}>
             <Image
@@ -232,20 +249,6 @@ export function HeroSection() {
               >
                 <BriefcaseBusiness className="size-3 text-foreground" />
                 <span className="text-foreground">Malt</span>
-              </Link>
-            </Button>
-          </motion.div>
-          <motion.div variants={buttonVariants}>
-            <Button
-              asChild
-              className="bg-[#222] hover:bg-[#444] text-black dark:text-foreground font-semibold gap-1 px-2.5 py-0.5 shadow text-[12px]"
-            >
-              <Link
-                href="mailto:&#x6d;&#x69;&#x63;&#x68;&#x65;&#x6c;&#x64;&#x6a;&#x6f;&#x75;&#x6d;&#x65;&#x73;&#x73;&#x69;&#x2e;&#x63;&#x6f;&#x6e;&#x74;&#x61;&#x63;&#x74;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Mail className="size-3 text-black dark:text-foreground" /> Gmail
               </Link>
             </Button>
           </motion.div>

@@ -10,7 +10,7 @@ import {
 
 const experiences = [
   {
-    company: "IUT de Vélizy-Villacoublay",
+    company: "IUT de Vélizy-Villacoublay - UVSQ",
     url: "https://www.iut-velizy-rambouillet.uvsq.fr/",
     title: "Étudiant BUT MMI",
     period: "2024 - Aujourd'hui",
