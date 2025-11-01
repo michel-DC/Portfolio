@@ -16,10 +16,9 @@ const playfair = Galada({
   weight: ["400"],
   variable: "--font-galada",
 });
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://onlinemichel.dev"),
-  title: "Découvrez l'ensemble de mes projets",
+  title: "Michel DJOUMESSI • Développeur fullstack junior",
   description:
     "Explore Michel  portfolio showcasing innovative web development projects, internships, and front-end works.",
   keywords: [
@@ -44,9 +43,9 @@ export const metadata: Metadata = {
     description:
       "Explore cutting-edge web projects and internships by Michel DJOUMESSI.",
     type: "website",
-    url: "null",
+    url: "https://onlinemichel.dev",
     siteName: "Michel Portfolio",
-    locale: "en_US",
+    locale: "fr_FR",
     images: [
       {
         url: "/images/logo/og-image.png",
@@ -59,7 +58,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    site: "null",
+    site: "@Michel",
     creator: "@Michel",
     title: "Michel DJOUMESSI - Web Developer Portfolio",
     description: "Check out innovative web projects by Michel DJOUMESSI.",
@@ -67,6 +66,11 @@ export const metadata: Metadata = {
   },
 };
 
+// Helper for templates / routes that need the absolute site URL
+const SITE_URL =
+  metadata.metadataBase instanceof URL
+    ? metadata.metadataBase.href
+    : String(metadata.metadataBase);
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -79,7 +83,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="fr"
       className={`h-full text-foreground ${bricolageGrotesque.variable} ${playfair.variable}`}
     >
       <head>
@@ -87,6 +91,29 @@ export default function RootLayout({
           rel="shortcut icon"
           href="/images/logo/favicon.png"
           type="image/x-icon"
+        />
+        {/* Canonical and JSON-LD for improved SEO */}
+        <link rel="canonical" href={SITE_URL} />
+        <link
+          rel="sitemap"
+          type="application/xml"
+          href={`${SITE_URL}sitemap.xml`}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Michel DJOUMESSI",
+              url: SITE_URL,
+              jobTitle: "Front-End / Full-Stack Developer",
+              sameAs: [
+                "https://github.com/michel-DC",
+                "https://www.linkedin.com/in/micheldjoumessi",
+              ],
+            }),
+          }}
         />
       </head>
       <body className="font-bricolage-grotesque h-full">

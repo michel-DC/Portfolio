@@ -20,28 +20,7 @@ export default function ProjectImagesCarousel({
 
   useEffect(() => {
     try {
-      // Log des propriétés initiales
-      console.log("[ProjectImagesCarousel] Initialisation", {
-        images,
-        imagesCount: images?.length || 0,
-        name,
-        className,
-      });
-
-      // Log des chemins d'images
-      console.log(
-        "[ProjectImagesCarousel] Chemins des images:",
-        images?.map((img, idx) => ({
-          index: idx,
-          path: img,
-        }))
-      );
-
       if (!outerRef.current || !trackRef.current) {
-        console.warn("[ProjectImagesCarousel] Références manquantes", {
-          outerExists: !!outerRef.current,
-          trackExists: !!trackRef.current,
-        });
         return;
       }
 
@@ -50,60 +29,16 @@ export default function ProjectImagesCarousel({
       const trackStyles = getComputedStyle(track);
       const trackChildren = track.children;
 
-      // Log des informations détaillées du DOM
-      console.log("[ProjectImagesCarousel] État du DOM", {
-        outer: {
-          width: outer.clientWidth,
-          height: outer.clientHeight,
-          classes: outer.className,
-        },
-        track: {
-          width: track.clientWidth,
-          height: track.clientHeight,
-          childrenCount: trackChildren.length,
-          animation: trackStyles.animationName,
-          transform: trackStyles.transform,
-        },
-        viewport: {
-          width: window.innerWidth,
-          scrollX: window.scrollX,
-        },
-      });
-
-      // Vérification des images chargées
       const imageElements = track.getElementsByTagName("img");
-      console.log("[ProjectImagesCarousel] État des images", {
-        totalImages: imageElements.length,
-        loadedImages: Array.from(imageElements).map((img: any) => ({
-          src: img.src,
-          complete: img.complete,
-          naturalWidth: img.naturalWidth,
-          naturalHeight: img.naturalHeight,
-          currentWidth: img.offsetWidth,
-          currentHeight: img.offsetHeight,
-        })),
-      });
 
       if (!trackStyles.animationName || trackStyles.animationName === "none") {
-        console.warn(
-          "[ProjectImagesCarousel] Animation non détectée - Vérification des styles"
-        );
       }
-    } catch (err) {
-      console.error("[ProjectImagesCarousel] Erreur lors du debug:", err);
-    }
+    } catch (err) {}
   }, [images, name, className]);
 
   if (!images || images.length === 0) {
-    console.warn("[ProjectImagesCarousel] Aucune image fournie");
     return null;
   }
-
-  console.log("[ProjectImagesCarousel] Préparation du rendu", {
-    nombreImages: images.length,
-    modeAffichage: images.length === 1 ? "Image unique" : "Carousel",
-    imagesDoublées: images.length > 1 ? [...images, ...images].length : "N/A",
-  });
 
   if (images.length === 1) {
     return (
@@ -167,37 +102,8 @@ export default function ProjectImagesCarousel({
               className="shadow-lg rounded-sm object-contain"
               sizes="800px"
               priority={idx === 0}
-              onLoad={(e) => {
-                const target = e.target as HTMLImageElement;
-                console.log(
-                  `[ProjectImagesCarousel] Image chargée (${idx + 1}/${
-                    images.length
-                  })`,
-                  {
-                    src: img,
-                    naturalSize: {
-                      width: target.naturalWidth,
-                      height: target.naturalHeight,
-                    },
-                    currentSize: {
-                      width: target.width,
-                      height: target.height,
-                    },
-                    complete: target.complete,
-                  }
-                );
-              }}
-              onError={(e) => {
-                console.error(
-                  `[ProjectImagesCarousel] Erreur de chargement (${idx + 1}/${
-                    images.length
-                  })`,
-                  {
-                    src: img,
-                    error: e,
-                  }
-                );
-              }}
+              onLoad={() => {}}
+              onError={() => {}}
             />
           </div>
         ))}
