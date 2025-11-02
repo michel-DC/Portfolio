@@ -19,7 +19,7 @@ const playfair = Galada({
 });
 export const metadata: Metadata = {
   metadataBase: new URL("https://onlinemichel.dev"),
-  title: "Michel DJOUMESSI - Développeur Fullstack Junior",
+  title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
   description:
     "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
   keywords: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
 
   openGraph: {
-    title: "Michel DJOUMESSI - Développeur Fullstack Junior",
+    title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
     description:
       "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
     type: "website",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@Michel",
     creator: "@Michel",
-    title: "Michel DJOUMESSI - Développeur Fullstack Junior",
+    title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
     description:
       "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
     images: ["/images/logo/og-image.png"],
