@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     images: [
       {
-        url: "/images/logo/og-image.png",
+        url: "/images/logo/avatar.png",
         width: 1200,
         height: 630,
         alt: "Bannière de Michel Djoumessi",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "Michel DJOUMESSI - Développeur Fullstack Junior",
     description:
       "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
-    images: ["/images/logo/avatar.png"],
+    images: ["/images/logo/og-image.png"],
   },
 };
 
