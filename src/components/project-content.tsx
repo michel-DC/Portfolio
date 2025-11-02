@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Github, ExternalLink, ArrowRight } from "lucide-react";
 import Section from "@/components/section";
 import ProjectImagesCarousel from "@/components/project-images-carousel";
 
@@ -25,9 +26,10 @@ interface ProjectData {
 
 interface ProjectContentProps {
   project: ProjectData;
+  suggestedProjects?: ProjectData[];
 }
 
-export function ProjectContent({ project }: ProjectContentProps) {
+export function ProjectContent({ project, suggestedProjects = [] }: ProjectContentProps) {
   return (
     <>
       <Section className="flex flex-col items-center pt-30 pb-10 px-4 sm:px-8">
@@ -206,6 +208,84 @@ export function ProjectContent({ project }: ProjectContentProps) {
           </h2>
           <ProjectImagesCarousel images={project.images} name={""} />
         </div>
+      )}
+
+      {/* Projets suggérés */}
+      {suggestedProjects && suggestedProjects.length > 0 && (
+        <Section className="flex flex-col items-center pt-20 pb-16 px-4 sm:px-8">
+          <div className="w-full max-w-6xl">
+            <h2 className="text-foreground text-2xl sm:text-3xl font-semibold mb-8 text-center">
+              Autres projets
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {suggestedProjects.map((suggestedProject) => (
+                <Link
+                  key={suggestedProject.slugName}
+                  href={`/projets/${suggestedProject.slugName}`}
+                  className="group block h-full"
+                >
+                  <Card className="h-full overflow-hidden border border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
+                    <CardContent className="p-0 relative w-full h-full flex flex-col">
+                      {/* Image container */}
+                      <div className="relative w-full h-[220px] overflow-hidden">
+                        <Image
+                          src={
+                            suggestedProject.images && suggestedProject.images.length > 0
+                              ? suggestedProject.images[0]
+                              : `/images/project-hover/${suggestedProject.slugName}.png`
+                          }
+                          alt={suggestedProject.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                          sizes="(max-width: 768px) 100vw, 50vw"
+                        />
+                        {/* Date badge */}
+                        <div className="absolute bottom-4 left-4 z-10">
+                          <span className="bg-background/90 backdrop-blur-sm text-foreground/70 text-xs font-medium px-3 py-1.5 rounded-full border border-border/50 shadow-sm">
+                            {suggestedProject.date}
+                          </span>
+                        </div>
+                      </div>
+
+                      {/* Content section */}
+                      <div className="flex flex-col flex-1 p-5 sm:p-6 bg-background/50 backdrop-blur-sm">
+                        {/* Project name */}
+                        <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                          {suggestedProject.name}
+                        </h3>
+
+                        {/* Description */}
+                        <p className="text-sm sm:text-base text-foreground/60 mb-4 line-clamp-3 leading-relaxed">
+                          {suggestedProject.description}
+                        </p>
+
+                        {/* Tech stack badges */}
+                        <div className="flex flex-wrap items-center gap-2 mb-4">
+                          {suggestedProject.themes?.slice(0, 3).map((theme, idx) => (
+                            <span
+                              key={theme + idx}
+                              className="inline-block px-2.5 py-1 rounded-md bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide border border-primary/20 group-hover:bg-primary/15 group-hover:border-primary/30 transition-all duration-300"
+                            >
+                              {theme}
+                            </span>
+                          ))}
+                        </div>
+
+                        {/* CTA Link */}
+                        <div className="flex items-center text-foreground/70 group-hover:text-primary transition-colors duration-300 mt-auto pt-2 border-t border-border/50">
+                          <span className="text-sm font-medium mr-2">
+                            Voir le projet
+                          </span>
+                          <ArrowRight className="w-4 h-4 transition-colors duration-300" />
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </Section>
       )}
     </>
   );

@@ -24,6 +24,14 @@ const projects = [
     theme: ["Backend", "Next.JS"],
   },
   {
+    json: "/src/data/projects/006.json",
+    name: "Lookaroun • Application de networking",
+    slugName: "lookaroun",
+    description: `Lookaroun est une application de networking événementielle, créé par Ioana Marcoux, pour permettre aux utilisateurs de créer, de gérer et de participer des événements dans le but de créer des relations professionnelles.`,
+    date: "Juin 2025",
+    theme: ["Frontend", "React.JS"],
+  },
+  {
     json: "/src/data/projects/005.json",
     name: "Flow Media • Agence web fictive",
     slugName: "flow-media",
@@ -32,7 +40,7 @@ const projects = [
     theme: ["Fullstack", "PHP", "MySQL"],
   },
   {
-    json: "/src/data/projects/004.json",
+    json: "/src/data/projects/003.json",
     name: "Framix • Landing page",
     slugName: "framix",
     description: `Framix est une landing page moderne et animée, conçue autour d'un outil fictif no-code permettant de construire des landing pages modulaires à partir de blocs visuels. L'objectif était de démontrer comment on peut orchestrer une expérience utilisateur fluide, élégante, pensée pour la conversion et l'accessibilité, avec une mise en avant d'animations et d'optimisations front-end avancées.`,
@@ -73,14 +81,18 @@ export function ProjectsSection() {
                       <CardContent className="p-0 relative w-full h-full flex flex-col sm:flex-row">
                         {/* Image container avec overlay - côté gauche sur desktop */}
                         <div className="relative w-full sm:w-[400px] sm:min-w-[400px] h-[220px] sm:h-full overflow-hidden">
-                          <Image
-                            src={`/images/project-hover/${project.slugName}.png`}
-                            alt={project.name}
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 640px) 100vw, 400px"
-                            priority={index < 2}
-                          />
+                          <div className="w-full h-full flex items-center justify-center">
+                            <div className="w-full h-full relative">
+                              <Image
+                                src={`/images/project-hover/${project.slugName}.png`}
+                                alt={project.name}
+                                fill
+                                className="object-contain scale-95"
+                                sizes="(max-width: 640px) 100vw, 340px"
+                                priority={index < 2}
+                              />
+                            </div>
+                          </div>
                           {/* Gradient overlay - visible uniquement sur mobile */}
                           <div className="absolute inset-0" />
 

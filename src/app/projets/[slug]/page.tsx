@@ -57,5 +57,53 @@ export default async function ProjectPage(props: Props) {
     );
   }
 
-  return <ProjectContent project={project} />;
+  // Charger tous les projets pour les suggestions
+  const allProjects: ProjectData[] = [];
+  for (const file of files) {
+    if (!file.endsWith(".json")) continue;
+    const fullPath = path.join(dataDir, file);
+    const content = fs.readFileSync(fullPath, "utf-8");
+    try {
+      const data = JSON.parse(content);
+      if (data.slugName !== slug) {
+        allProjects.push(data);
+      }
+    } catch {}
+  }
+
+  // Fonction de hash simple basée sur le slug pour générer un seed pseudo-aléatoire
+  const hashString = (str: string): number => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      const char = str.charCodeAt(i);
+      hash = (hash << 5) - hash + char;
+      hash = hash & hash; // Convert to 32bit integer
+    }
+    return Math.abs(hash);
+  };
+
+  // Générer un seed basé sur le slug pour un mélange pseudo-aléatoire déterministe
+  const seed = hashString(slug);
+
+  // Générer des valeurs pseudo-aléatoires pour chaque paire de projets à comparer
+  const generateRandomValue = (index: number): number => {
+    // Utiliser l'index pour générer une valeur différente à chaque appel
+    const value = ((seed + index) * 9301 + 49297) % 233280;
+    return value / 233280;
+  };
+
+  // Mélanger les projets de manière pseudo-aléatoire avec un comparateur déterministe
+  const shuffledProjects = [...allProjects].sort((a, b) => {
+    // Utiliser une combinaison des noms pour générer un index unique
+    const comparisonKey = a.slugName + b.slugName;
+    const comparisonHash = hashString(comparisonKey);
+    const randomValue = generateRandomValue(comparisonHash);
+    return randomValue - 0.5;
+  });
+
+  const suggestedProjects = shuffledProjects.slice(0, 2);
+
+  return (
+    <ProjectContent project={project} suggestedProjects={suggestedProjects} />
+  );
 }
