@@ -158,39 +158,30 @@ export function Header() {
               <div
                 ref={menuRef}
                 className={`
-                  absolute right-0 mt-3 min-w-[145px] xs:min-w-[165px] sm:min-w-[190px] rounded-2xl sm:rounded-3xl z-50 p-1.5 sm:p-2
-                  flex flex-col gap-1
-                  ${
-                    menuOpen
-                      ? `bg-background backdrop-blur-none! shadow-none! border-transparent!
-                        sm:bg-white/40 
-                        sm:backdrop-blur-[18px] 
-                        sm:shadow-[0_10px_40px_0_rgba(80,80,180,0.14),0_1.5px_0.5px_0_rgba(255,255,255,0.23)_inset,0_2px_8px_rgba(255,255,255,0.13)_inset] 
-                        sm:border sm:border-white/45
-                        sm:dark:bg-white/10 sm:dark:border-white/7
-                      `
-                      : `bg-white/95 dark:bg-white/15 backdrop-blur-md shadow-lg border border-white/70 dark:border-white/10 
-                        sm:bg-white/40 
-                        sm:backdrop-blur-[18px] 
-                        sm:shadow-[0_10px_40px_0_rgba(80,80,180,0.14),0_1.5px_0.5px_0_rgba(255,255,255,0.23)_inset,0_2px_8px_rgba(255,255,255,0.13)_inset] 
-                        sm:border sm:border-white/45
-                        sm:dark:bg-white/10 sm:dark:border-white/7
-                      `
-                  }
-                  transition-all
-                `}
+      absolute right-0 mt-3 min-w-[145px] xs:min-w-[165px] sm:min-w-[190px] 
+      rounded-2xl sm:rounded-3xl z-50 p-1.5 sm:p-2
+      flex flex-col gap-1
+      ${
+        menuOpen
+          ? `bg-background backdrop-blur-none! shadow-none! border-transparent!
+            sm:bg-neutral-100sm:dark:bg-neutral-900
+            sm:border sm:border-white/45 sm:dark:border-white/7
+          `
+          : `bg-white/95 dark:bg-white/15 backdrop-blur-md shadow-lg border border-white/70 dark:border-white/10 
+            sm:bg-white/95 sm:dark:bg-white/15 
+            sm:border sm:border-white/45 sm:dark:border-white/7
+          `
+      }
+      transition-all
+    `}
                 style={{
                   boxShadow:
-                    // sm: glass effect - strong blur + layered shadows and insets
                     "0 10px 40px 0 rgba(80,80,180,0.14), 0 1.5px 0.5px 0 rgba(255,255,255,0.23) inset, 0 2px 8px rgba(255,255,255,0.13) inset",
-                  backdropFilter:
-                    // Enable maximum blur, contrast, and (on desktop) slight brightness
-                    "blur(18px) saturate(1.3) brightness(1.13)",
+                  backdropFilter: "blur(18px) saturate(1.3) brightness(1.13)",
                   WebkitBackdropFilter:
                     "blur(18px) saturate(1.3) brightness(1.13)",
                   border: "1px solid rgba(255,255,255,0.45)",
                   ...(window.innerWidth < 640 && {
-                    // On mobile, override glassmorphism to be minimal
                     boxShadow:
                       "0 8px 32px 0 rgba(0,0,0,0.09), inset 0 1px 0 rgba(255,255,255,0.15)",
                     backdropFilter: "blur(4px)",
@@ -205,7 +196,6 @@ export function Header() {
                     href={section.href}
                     onClick={(e) => {
                       handleSectionClick(e, section.href);
-                      // Pour les liens autres que hash
                       if (!section.href.startsWith("#")) setMenuOpen(false);
                     }}
                     className="flex items-center gap-2 sm:gap-3 px-2.5 py-2 sm:px-4 rounded-xl text-sm font-medium text-foreground/90 hover:bg-white/25 dark:hover:bg-white/15 transition focus:outline-none focus:ring-2 focus:ring-white/30"
