@@ -60,30 +60,34 @@ export function Header() {
 
   // Sections à visiter
   const sections = [
-    { label: "Compétences", href: "#skills" },
-    { label: "Expériences", href: "#works" },
-    { label: "Projets", href: "#projects" },
-    { label: "Article de blog", href: "#blog" },
-    { label: "Contact", href: "#contact" },
+    { label: "Compétences", href: "/#skills" },
+    { label: "Expériences", href: "/#works" },
+    { label: "Projets", href: "/#projects" },
+    { label: "Article de blog", href: "/#blog" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   // Handler pour scroll avec offset de 20px vers le bas
   const handleSectionClick = (e: React.MouseEvent, href: string) => {
-    // Pour mailto ou liens externes on laisse le comportement par défaut
-    if (!href.startsWith("#")) return;
+    // Vérifie si c’est un lien interne vers une section (avec ou sans "/")
+    if (!href.startsWith("#") && !href.startsWith("/#")) return;
 
     e.preventDefault();
-    const id = href.slice(1);
+    const id = href.replace("/#", ""); // enlève le "/#" au début
     const el = document.getElementById(id);
     if (el) {
       const rect = el.getBoundingClientRect();
-      // Scroll vers l'id en soustrayant 20px après le top relatif à la fenêtre
-      const scrollTarget = window.scrollY + rect.top - 40;
+      const scrollTarget = window.scrollY + rect.top - 40; // ← offset de 40px
       window.scrollTo({
         top: scrollTarget,
         behavior: "smooth",
       });
       setMenuOpen(false);
+    } else {
+      // Si on est sur une autre page que l’accueil, redirige puis scroll après chargement
+      if (window.location.pathname !== "/") {
+        window.location.href = `/#${id}`;
+      }
     }
   };
 

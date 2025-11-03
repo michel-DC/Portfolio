@@ -20,7 +20,7 @@ export default function NotFound() {
         ci-dessous.
       </p>
       <Button>
-        <Link href="/" className="">
+        <Link href="/" className="text-foreground">
           Retour à l&apos;accueil
         </Link>
       </Button>
