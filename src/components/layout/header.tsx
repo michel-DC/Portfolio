@@ -116,7 +116,7 @@ export function Header() {
           px-2 py-1 sm:px-4 sm:py-2 gap-1 sm:gap-2
           rounded-3xl
           shadow-lg
-          bg-white/80 dark:bg-white/10
+          bg-black/10 dark:bg-white/10
           backdrop-blur-sm sm:backdrop-blur-md
           border border-white/60 dark:border-white/15
           transition-all
@@ -165,18 +165,18 @@ export function Header() {
       absolute right-0 mt-3 min-w-[145px] xs:min-w-[165px] sm:min-w-[190px] 
       rounded-2xl sm:rounded-3xl z-50 p-1.5 sm:p-2
       flex flex-col gap-1
-      ${
-        menuOpen
-          ? `bg-background backdrop-blur-none! shadow-none! border-transparent!
-            sm:bg-neutral-100sm:dark:bg-neutral-900
-            sm:border sm:border-white/45 sm:dark:border-white/7
-          `
-          : `bg-white/95 dark:bg-white/15 backdrop-blur-md shadow-lg border border-white/70 dark:border-white/10 
-            sm:bg-white/95 sm:dark:bg-white/15 
-            sm:border sm:border-white/45 sm:dark:border-white/7
-          `
-      }
-      transition-all
+            ${
+              menuOpen
+                ? `bg-background backdrop-blur-none! shadow-none! border-transparent!
+                  sm:bg-neutral-100 sm:dark:bg-neutral-900
+                  sm:border sm:border-white/45 sm:dark:border-white/7
+                `
+                : `bg-black/10 dark:bg-white/15 backdrop-blur-md shadow-lg border border-white/70 dark:border-white/10
+                  sm:bg-black/10 sm:dark:bg-white/15
+                  sm:border sm:border-white/45 sm:dark:border-white/7
+                `
+            }
+            transition-all
     `}
                 style={{
                   boxShadow:
@@ -215,7 +215,7 @@ export function Header() {
           <Button
             onClick={toggleTheme}
             aria-label="Basculer le thème"
-            className="relative inline-flex items-center justify-center h-9 w-9 sm:h-8 sm:w-8 border border-border bg-background text-black dark:text-white hover:bg-foreground/10 transition rounded-full"
+            className="relative inline-flex items-center justify-center h-9 w-9 sm:h-8 sm:w-8 border border-border bg-white/25 dark:bg-white/20 backdrop-blur-lg text-foreground hover:bg-white/35 dark:hover:bg-white/25 transition-all shadow border border-transparent transition rounded-full"
             title={theme === "dark" ? "Passer en clair" : "Passer en sombre"}
           >
             {theme === "dark" ? (

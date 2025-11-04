@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer className="w-full z-30 flex flex-col items-center justify-center px-4 pt-6 pb-4 mt-14">
       <div
-        className="w-full max-w-4xl mx-auto flex flex-col gap-y-4 rounded-2xl shadow-lg bg-white/60 dark:bg-white/10 backdrop-blur-lg border border-white/50 dark:border-white/15 px-6 py-4"
+        className="w-full max-w-4xl mx-auto flex flex-col gap-y-4 rounded-2xl shadow-lg bg-black/10 dark:bg-white/10 backdrop-blur-lg border border-white/50 dark:border-white/15 px-6 py-4"
         style={{
           boxShadow:
             "0 1px 12px 0 rgba(30,30,30,0.11), 0 1.5px 0.5px 0 rgba(255,255,255,0.11) inset",
@@ -19,8 +19,7 @@ export function Footer() {
             <Button
               asChild
               size="sm"
-              variant="ghost"
-              className="rounded-xl text-foreground font-semibold gap-2 px-3 py-1.5"
+              className="rounded-xl text-foreground font-semibold gap-2 px-4 py-1.5 shadow"
             >
               <Link
                 href="https://github.com/michel-DC"
@@ -34,8 +33,7 @@ export function Footer() {
             <Button
               asChild
               size="sm"
-              variant="ghost"
-              className="rounded-xl text-foreground font-semibold gap-2 px-3 py-1.5"
+              className="rounded-xl text-foreground font-semibold gap-2 px-4 py-1.5 shadow"
             >
               <Link
                 href="https://linkedin.com/in/micheldjoumessi"
@@ -49,7 +47,7 @@ export function Footer() {
             <Button
               asChild
               size="sm"
-              className="rounded-xl bg-white hover:bg-[#FA2742]/10 text-foreground font-semibold gap-2 px-4 py-1.5 shadow border border-[#FA2742]/20"
+              className="text-foreground font-semibold gap-1 px-5 py-0.5 shadow text-[12px]"
             >
               <Link
                 href="https://www.malt.fr/profile/micheldjoumessi1"

@@ -29,7 +29,10 @@ interface ProjectContentProps {
   suggestedProjects?: ProjectData[];
 }
 
-export function ProjectContent({ project, suggestedProjects = [] }: ProjectContentProps) {
+export function ProjectContent({
+  project,
+  suggestedProjects = [],
+}: ProjectContentProps) {
   return (
     <>
       <Section className="flex flex-col items-center pt-30 pb-10 px-4 sm:px-8">
@@ -164,36 +167,36 @@ export function ProjectContent({ project, suggestedProjects = [] }: ProjectConte
             <div className="w-full flex justify-start items-center mt-16">
               <div className="flex justify-start items-center gap-4">
                 {project.github && (
-                  <Link
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-colors"
+                  <Button
+                    asChild
+                    size="sm"
+                    className="rounded-xl text-foreground font-semibold gap-2 px-8 py-5 shadow"
                   >
-                    <Button
-                      type="button"
-                      className="bg-primary text-foreground dark:text-foreground hover:bg-primary/80 font-medium px-6 py-3 text-base shadow-lg border border-primary/30 rounded-2xl flex items-center gap-2 cursor-pointer"
+                    <Link
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <Github className="w-5 h-5" />
-                      GitHub
-                    </Button>
-                  </Link>
+                      <Github className="size-4 text-foreground" />
+                      <span className="text-foreground">GitHub</span>
+                    </Link>
+                  </Button>
                 )}
                 {project.url && (
-                  <Link
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-colors"
+                  <Button
+                    asChild
+                    size="sm"
+                    className="rounded-xl text-foreground font-semibold gap-2 px-8 py-5 shadow"
                   >
-                    <Button
-                      type="button"
-                      className="bg-primary text-foreground dark:text-foreground hover:bg-primary/80 font-medium px-6 py-3 text-base shadow-lg border border-primary/30 rounded-2xl flex items-center gap-2 cursor-pointer"
+                    <Link
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <ExternalLink className="w-5 h-5" />
-                      Démo
-                    </Button>
-                  </Link>
+                      <ExternalLink className="size-4 text-foreground" />
+                      <span className="text-foreground">Démo</span>
+                    </Link>
+                  </Button>
                 )}
               </div>
             </div>
@@ -230,7 +233,8 @@ export function ProjectContent({ project, suggestedProjects = [] }: ProjectConte
                       <div className="relative w-full h-[220px] overflow-hidden">
                         <Image
                           src={
-                            suggestedProject.images && suggestedProject.images.length > 0
+                            suggestedProject.images &&
+                            suggestedProject.images.length > 0
                               ? suggestedProject.images[0]
                               : `/images/project-hover/${suggestedProject.slugName}.png`
                           }
@@ -261,14 +265,16 @@ export function ProjectContent({ project, suggestedProjects = [] }: ProjectConte
 
                         {/* Tech stack badges */}
                         <div className="flex flex-wrap items-center gap-2 mb-4">
-                          {suggestedProject.themes?.slice(0, 3).map((theme, idx) => (
-                            <span
-                              key={theme + idx}
-                              className="inline-block px-2.5 py-1 rounded-md bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide border border-primary/20 group-hover:bg-primary/15 group-hover:border-primary/30 transition-all duration-300"
-                            >
-                              {theme}
-                            </span>
-                          ))}
+                          {suggestedProject.themes
+                            ?.slice(0, 3)
+                            .map((theme, idx) => (
+                              <span
+                                key={theme + idx}
+                                className="inline-block px-2.5 py-1 rounded-md bg-primary/10 text-primary text-xs font-semibold uppercase tracking-wide border border-primary/20 group-hover:bg-primary/15 group-hover:border-primary/30 transition-all duration-300"
+                              >
+                                {theme}
+                              </span>
+                            ))}
                         </div>
 
                         {/* CTA Link */}

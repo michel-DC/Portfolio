@@ -157,7 +157,7 @@ export function HeroSection() {
               <Button
                 asChild
                 size="sm"
-                className="rounded-xl bg-white hover:bg-[#FA2742]/10 text-foreground font-semibold gap-2 px-4 py-1.5 shadow border border-[#FA2742]/20"
+                className="text-foreground font-semibold gap-1 px-5 py-0.5 shadow text-[12px]"
               >
                 <Link
                   href="https://www.malt.fr/profile/micheldjoumessi1"
@@ -240,7 +240,7 @@ export function HeroSection() {
           <motion.div variants={buttonVariants}>
             <Button
               asChild
-              className="bg-white hover:bg-[#FA2742]/10 text-foreground font-semibold gap-1 px-2.5 py-0.5 shadow border border-[#FA2742]/20 text-[12px]"
+              className="text-foreground font-semibold gap-1 px-2.5 py-0.5 shadow text-[12px]"
             >
               <Link
                 href="https://www.malt.fr/profile/micheldjoumessi1"
