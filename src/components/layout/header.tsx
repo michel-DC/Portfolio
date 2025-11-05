@@ -167,27 +167,22 @@ export function Header() {
       flex flex-col gap-1
             ${
               menuOpen
-                ? `bg-background backdrop-blur-none! shadow-none! border-transparent!
-                  sm:bg-neutral-100 sm:dark:bg-neutral-900
-                  sm:border sm:border-white/45 sm:dark:border-white/7
-                `
-                : `bg-black/10 dark:bg-white/15 backdrop-blur-md shadow-lg border border-white/70 dark:border-white/10
+                ? `backdrop-blur-md ${
+                    theme === "dark" ? "bg-black/90" : "bg-white/90"
+                  }`
+                : `bg-black/10 dark:bg-white/15 backdrop-blur-md  dark:border-white/10
                   sm:bg-black/10 sm:dark:bg-white/15
-                  sm:border sm:border-white/45 sm:dark:border-white/7
+                  sm:border sm:dark:border-white/7
                 `
             }
             transition-all
     `}
                 style={{
-                  boxShadow:
-                    "0 10px 40px 0 rgba(80,80,180,0.14), 0 1.5px 0.5px 0 rgba(255,255,255,0.23) inset, 0 2px 8px rgba(255,255,255,0.13) inset",
                   backdropFilter: "blur(18px) saturate(1.3) brightness(1.13)",
                   WebkitBackdropFilter:
                     "blur(18px) saturate(1.3) brightness(1.13)",
-                  border: "1px solid rgba(255,255,255,0.45)",
+                  border: "none",
                   ...(window.innerWidth < 640 && {
-                    boxShadow:
-                      "0 8px 32px 0 rgba(0,0,0,0.09), inset 0 1px 0 rgba(255,255,255,0.15)",
                     backdropFilter: "blur(4px)",
                     WebkitBackdropFilter: "blur(4px)",
                     border: "1px solid transparent",
@@ -215,7 +210,7 @@ export function Header() {
           <Button
             onClick={toggleTheme}
             aria-label="Basculer le thème"
-            className="relative inline-flex items-center justify-center h-9 w-9 sm:h-8 sm:w-8 border border-border bg-white/25 dark:bg-white/20 backdrop-blur-lg text-foreground hover:bg-white/35 dark:hover:bg-white/25 transition-all shadow border border-transparent transition rounded-full"
+            className="relative inline-flex items-center justify-center h-9 w-9 sm:h-8 sm:w-8 border border-border bg-white/25 dark:bg-white/20 backdrop-blur-lg text-foreground hover:bg-white/35 dark:hover:bg-white/25 transition-all shadow transition rounded-full"
             title={theme === "dark" ? "Passer en clair" : "Passer en sombre"}
           >
             {theme === "dark" ? (
