@@ -1,60 +1,107 @@
-import React from "react";
+"use client";
+
+import React, { useRef, useLayoutEffect } from "react";
 import { Github, Linkedin, File } from "lucide-react";
 import Link from "next/link";
+import gsap from "gsap";
 
 export default function HeroSection() {
+  const comp = useRef(null);
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ delay: 2.2 });
+
+      tl.from(".hero-text-element", {
+        y: 40,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        stagger: 0.2,
+      }).from(
+        ".hero-fixed-element",
+        {
+          opacity: 0,
+          y: 20,
+          duration: 1,
+          ease: "power3.out",
+          stagger: 0.1,
+        },
+        "-=1"
+      );
+    }, comp);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <>
-      <div className="fixed left-4 bottom-4 z-10 flex flex-col items-center space-y-4">
-        <div className="flex flex-col items-center space-y-4">
+    <div ref={comp}>
+      <div className="hero-fixed-element hidden md:flex fixed left-6 bottom-20 z-10 flex-col items-center space-y-8">
+        <div className="flex flex-col items-center space-y-8">
           <Link
             href="https://linkedin.com/in/micheldjoumessi"
             aria-label="LinkedIn"
+            className="hover:text-[#0077b5] transition-colors duration-300"
           >
-            <Linkedin size={20} />
+            <Linkedin size={25} />
           </Link>
-          <Link href="https://github.com/michel-DC" aria-label="GitHub">
-            <Github size={20} />
+          <Link
+            href="https://github.com/michel-DC"
+            aria-label="GitHub"
+            className="hover:text-black transition-colors duration-300"
+          >
+            <Github size={25} />
           </Link>
-          <Link href="/documents/CV-MICHEL.pdf" aria-label="CV">
-            <File size={20} />
+          <Link
+            href="/documents/CV-MICHEL.pdf"
+            aria-label="CV"
+            className="hover:text-red-500 transition-colors duration-300"
+          >
+            <File size={25} />
           </Link>
         </div>
       </div>
 
-      <div className="fixed left-8 top-1/2 z-10 h-96 w-px -translate-y-1/2 bg-black"></div>
-      <div className="fixed bottom-4 right-1/2 z-10 flex translate-x-1/2 items-center space-x-2">
-        <span className="font-bricolage-grotesque text-sm">
+      <div className="hero-fixed-element hidden md:block fixed left-8 top-1/2 z-10 h-96 w-px -translate-y-1/2 bg-black">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
+      </div>
+      <div className="hero-fixed-element fixed bottom-4 right-1/2 z-10 flex translate-x-1/2 items-center space-x-2">
+        <span className="font-bricolage-grotesque text-lg">
           défiler vers le bas
         </span>
       </div>
-      <div className="fixed bottom-8 right-8 z-10">
+      <div className="hero-fixed-element fixed bottom-8 right-8 z-10">
         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black">
           <div className="h-px w-4 bg-white"></div>
         </div>
       </div>
 
       <main className="relative flex min-h-screen items-center justify-center">
-        <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
           <video
-            className="absolute top-1/2 left-1/2 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover"
+            className="absolute top-1/2 left-1/2 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none"
             autoPlay
             loop
             muted
             playsInline
           >
-            <source src="/video/home-bg-video.mp4" type="video/mp4" />
+            <source src="/video/home-bg.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="relative z-10 text-center">
-          <p className="text-4xl font-bricolage-grotesque">
+        <div className="relative z-10 text-center px-4 md:px-0">
+          <p className="hero-text-element text-xl md:text-4xl font-bricolage-grotesque mb-4">
             Salut! Je suis Michel
           </p>
-          <h1 className="text-8xl leading-tight">Développeur Full-stack</h1>
-          <h2 className="text-8xl leading-tight">Designer UI & UX.</h2>
+          <h1 className="hero-text-element text-4xl md:text-8xl leading-tight">
+            Développeur Full-stack
+          </h1>
+          <h2 className="hero-text-element text-4xl md:text-8xl leading-tight">
+            UX & UI Designer.
+          </h2>
         </div>
       </main>
-    </>
+    </div>
   );
 }

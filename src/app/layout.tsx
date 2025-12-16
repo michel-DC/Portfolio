@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Script from "next/script";
 import EntryAnimation from "@/animations/entry-animation";
+import CustomCursor from "@/components/ui/custom-cursor";
+
+import SmoothScroll from "@/components/ui/smooth-scroll";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://onlinemichel.dev"),
@@ -81,7 +84,7 @@ export default function RootLayout({
         </Script>
         <link
           rel="shortcut icon"
-          href="/images/logo/favicon.png"
+          href="/images/profile/favicon.png"
           type="image/x-icon"
         />
         {/* Canonical and JSON-LD for improved SEO */}
@@ -118,6 +121,8 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         <EntryAnimation />
+        <CustomCursor />
+        <SmoothScroll />
         {children}
       </body>
     </html>
