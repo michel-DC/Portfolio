@@ -149,7 +149,7 @@ export default function ServicesSection() {
               <h3 className="text-2xl lg:text-3xl font-bold mb-4 font-bricolage-grotesque leading-tight w-[95%]">
                 {service.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed text-base mt-auto">
+              <p className="text-gray-600 leading-relaxed text-base">
                 {service.description}
               </p>
             </div>

@@ -54,7 +54,7 @@ const EntryAnimation: React.FC = () => {
       ref={comp}
       className="entry-container fixed inset-0 z-100 pointer-events-none"
     >
-      <div className="entry-overlay absolute inset-0 flex items-center justify-center bg-black pointer-events-auto">
+      <div className="entry-overlay absolute inset-0 flex items-center justify-center bg-[#1E1E1E] pointer-events-auto">
         <p className="entry-text text-7xl font-bold text-white font-bricolage-grotesque">
           Hey🙃
         </p>
