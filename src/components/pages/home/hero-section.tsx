@@ -41,7 +41,7 @@ export default function HeroSection() {
           <Link
             href="https://linkedin.com/in/micheldjoumessi"
             aria-label="LinkedIn"
-            className="group relative hover:text-[#0077b5] text-white transition-colors duration-300"
+            className="group relative hover:text-[#0077b5] transition-colors duration-300"
           >
             <Linkedin
               size={25}
@@ -51,7 +51,7 @@ export default function HeroSection() {
           <Link
             href="https://github.com/michel-DC"
             aria-label="GitHub"
-            className="group relative hover:text-gray-300 text-white transition-colors duration-300"
+            className="group relative hover:text-gray-300 transition-colors duration-300"
           >
             <Github
               size={25}
@@ -61,7 +61,7 @@ export default function HeroSection() {
           <Link
             href="/documents/CV-MICHEL.pdf"
             aria-label="CV"
-            className="group relative hover:text-green-500 text-white transition-colors duration-300"
+            className="group relative hover:text-green-500 transition-colors duration-300"
           >
             <File
               size={25}
@@ -71,7 +71,7 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="hero-fixed-element hidden md:block fixed left-8 top-1/2 z-10 h-96 w-px -translate-y-1/2 bg-white mix-blend-difference">
+      <div className="hero-fixed-element hidden md:block fixed left-8 top-1/2 z-10 h-96 w-px -translate-y-1/2 bg-black mix-blend-difference">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-white"></div>
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-white"></div>
       </div>
