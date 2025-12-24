@@ -56,7 +56,7 @@ const EntryAnimation: React.FC = () => {
     >
       <div className="entry-overlay absolute inset-0 flex items-center justify-center bg-black pointer-events-auto">
         <p className="entry-text text-7xl font-bold text-white font-bricolage-grotesque">
-          papacito
+          Hey🙃
         </p>
       </div>
     </div>

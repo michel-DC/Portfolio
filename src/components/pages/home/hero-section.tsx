@@ -41,30 +41,39 @@ export default function HeroSection() {
           <Link
             href="https://linkedin.com/in/micheldjoumessi"
             aria-label="LinkedIn"
-            className="hover:text-[#0077b5] transition-colors duration-300"
+            className="group relative hover:text-[#0077b5] text-[#1E1E1E] transition-colors duration-300"
           >
-            <Linkedin size={25} />
+            <Linkedin
+              size={25}
+              className="transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-rotate-6"
+            />
           </Link>
           <Link
             href="https://github.com/michel-DC"
             aria-label="GitHub"
-            className="hover:text-black transition-colors duration-300"
+            className="group relative hover:text-black text-[#1E1E1E] transition-colors duration-300"
           >
-            <Github size={25} />
+            <Github
+              size={25}
+              className="transition-transform duration-200 ease-out group-hover:-translate-x-0.5 group-hover:rotate-6"
+            />
           </Link>
           <Link
             href="/documents/CV-MICHEL.pdf"
             aria-label="CV"
-            className="hover:text-red-500 transition-colors duration-300"
+            className="group relative hover:text-green-500 text-[#1E1E1E] transition-colors duration-300"
           >
-            <File size={25} />
+            <File
+              size={25}
+              className="transition-transform duration-200 ease-out group-hover:translate-y-0.5 group-hover:scale-105"
+            />
           </Link>
         </div>
       </div>
 
-      <div className="hero-fixed-element hidden md:block fixed left-8 top-1/2 z-10 h-96 w-px -translate-y-1/2 bg-black">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
+      <div className="hero-fixed-element hidden md:block fixed left-8 top-1/2 z-10 h-96 w-px -translate-y-1/2 bg-[#1E1E1E]">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-[#1E1E1E]"></div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-[#1E1E1E]"></div>
       </div>
       <div className="hero-fixed-element fixed bottom-4 right-1/2 z-10 flex translate-x-1/2 items-center space-x-2">
         <span className="font-bricolage-grotesque text-lg">
@@ -72,25 +81,13 @@ export default function HeroSection() {
         </span>
       </div>
       <div className="hero-fixed-element fixed bottom-8 right-8 z-10">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black">
+        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1E1E1E]">
           <div className="h-px w-4 bg-white"></div>
         </div>
       </div>
 
       <main className="relative flex min-h-screen items-center justify-center">
-        <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
-          <video
-            className="absolute top-1/2 left-1/2 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src="/video/home-bg.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <div className="relative z-10 text-center px-4 md:px-0">
+        <div className="relative z-10 text-center px-4 md:px-0 drop-shadow-xl">
           <p className="hero-text-element text-xl md:text-4xl font-bricolage-grotesque mb-4">
             Salut! Je suis Michel
           </p>

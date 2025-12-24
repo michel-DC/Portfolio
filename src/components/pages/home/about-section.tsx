@@ -33,16 +33,16 @@ export default function AboutSection() {
   return (
     <section
       ref={container}
-      className="relative z-20 w-full bg-[#1E1E1E] pb-24 pt-32 text-white"
-      style={{
-        borderTopLeftRadius: "50% 200px",
-        borderTopRightRadius: "50% 200px",
-      }}
+      className="relative z-20 w-full bg-[#1E1E1E] pb-24 pt-32 text-white mt-60"
     >
-      <div className="container mx-auto flex min-h-[80vh] flex-col items-center justify-center px-4 text-center">
+      <div className="absolute -top-[240px] left-0 right-0 h-[242px] overflow-hidden pointer-events-none">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-full bg-[#1E1E1E] rounded-[50%_50%_0_0/100%_100%_0_0]" />
+      </div>
+
+      <div className="container mx-auto flex min-h-[80vh] flex-col items-center justify-center px-4 text-center relative z-10">
         <h2 className="about-text mb-12 max-w-5xl text-5xl font-medium leading-tight md:text-5xl">
           Je suis Michel, développeur full stack, spécialisé dans la création
-          d’expériences digitales performantes et scalables.
+          d'expériences digitales performantes et scalables.
         </h2>
 
         <p className="about-text mb-16 max-w-6xl text-3xl md:text-3xl">
@@ -63,7 +63,7 @@ export default function AboutSection() {
           </button>
         </div>
 
-        <div className="about-text mt-auto hidden w-full max-w-5xl justify-between text-md md:flex">
+        <div className="about-text mt-auto mb-40 hidden w-full max-w-5xl justify-between text-md md:flex">
           <div>↓ Scrollez pour explorer</div>
           <div>Ma petite histoire</div>
         </div>
