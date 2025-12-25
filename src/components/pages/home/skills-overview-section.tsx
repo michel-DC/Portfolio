@@ -3,16 +3,7 @@
 import React, { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  Code,
-  Palette,
-  Laptop,
-  Search,
-  Map,
-  Layout,
-  Server,
-  Database,
-} from "lucide-react";
+import { Map, Layout, Server, Database } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,28 +13,28 @@ const services = [
     icon: <Map size={24} />,
     title: "Développement Full Stack",
     description:
-      "Conception d'applications web scalables et performantes avec Next.js, React, Node.js et TypeScript, reposant sur des architectures robustes.",
+      "Conception et développement d’applications web modernes et performantes avec React, Next.js, Node.js et TypeScript. Mise en place d’architectures claires, maintenables et adaptées à des projets évolutifs.",
   },
   {
     id: "02",
     icon: <Layout size={24} />,
-    title: "UI/UX Design & Frontend",
+    title: "UI / UX Design",
     description:
-      "Création d'interfaces modernes et réactives avec Figma, Tailwind CSS et Framer Motion. Conception d'expériences intuitives et épurées.",
+      "Conception d’interfaces modernes, accessibles et responsives à partir de maquettes Figma. Attention portée à l’ergonomie, aux parcours utilisateurs et à l’intégration fidèle des designs.",
   },
   {
     id: "03",
-    icon: <Server size={24} />,
-    title: "Développement SaaS",
-    description:
-      "Développement de solutions SaaS complètes avec gestion d'abonnements, intégration Stripe et architecture multi-tenant.",
-  },
-  {
-    id: "04",
     icon: <Database size={24} />,
     title: "API & Architecture",
     description:
-      "Conception d'API performantes et sécurisées avec PostgreSQL, Prisma et MongoDB. Optimisation technique et scalabilité.",
+      "Conception et intégration d’API robustes et sécurisées avec PostgreSQL, Prisma et TypeScript. Gestion des données, logique métier et optimisation des échanges entre le front-end et le back-end.",
+  },
+  {
+    id: "04",
+    icon: <Server size={24} />,
+    title: "Performance & Qualité Web",
+    description:
+      "Optimisation des performances, du référencement et de l’accessibilité des applications web. Mise en œuvre des bonnes pratiques front-end pour garantir des interfaces rapides, fiables et durables.",
   },
 ];
 
@@ -69,7 +60,7 @@ export default function ServicesSection() {
 
     const titleLeft = title.getBoundingClientRect().left;
 
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       const scrollDistance = trackWidth + titleLeft;
 
       gsap.fromTo(
@@ -112,23 +103,39 @@ export default function ServicesSection() {
   return (
     <section
       ref={container}
-      className="relative w-full bg-white text-black overflow-hidden"
+      className="relative w-full text-black overflow-hidden pt-20"
     >
-      <div className="pt-20 px-6">
-        <div className="container mx-auto">
-          <div className="flex flex-col items-start gap-4 md:gap-6">
-            <h2
-              ref={titleRef}
-              className="section-title text-5xl md:text-7xl font-bricolage-grotesque leading-[0.9]"
+      <div className="max-w-7xl mx-auto">
+        {/* Header Section */}
+        <div className="mb-20">
+          <div className="inline-block mb-6">
+            <span
+              className="text-sm uppercase tracking-[0.2em] font-light"
+              style={{ color: "#008366" }}
             >
-              Mes Services
-            </h2>
-            <p className="section-title text-lg md:text-xl text-gray-600 max-w-xl leading-relaxed">
-              J'accompagne les entreprises et les startups dans la création de
-              produits digitaux d'exception, alliant performance technique et
-              design impactant.
-            </p>
+              Services
+            </span>
           </div>
+
+          <h2
+            className="text-5xl md:text-7xl font-light leading-[1.1] mb-8"
+            style={{ color: "#008366" }}
+            ref={titleRef}
+          >
+            Mes Compétences
+          </h2>
+
+          <div
+            className="w-20 h-px mb-8"
+            style={{ backgroundColor: "#008366" }}
+          ></div>
+
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl font-light leading-relaxed">
+            De la conception à la mise en production, j&apos;accorde autant
+            d&apos;importance à la logique, à l&apos;interface qu&apos;à la
+            performance. Ces compétences traduisent ma façon de concevoir des
+            solutions web fiables, claires et centrées sur l&apos;utilisateur.
+          </p>
         </div>
       </div>
 
@@ -137,13 +144,13 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="service-item relative flex flex-col p-8 md:p-10 lg:p-12 min-h-[400px] w-[500px] border-y border-r border-gray-300 bg-white hover:bg-gray-50 transition-colors duration-500 group"
+              className="service-item relative flex flex-col p-8 md:p-10 lg:p-12 min-h-[400px] w-[500px] border-y border-r border-gray-300 hover:bg-gray-50 transition-colors duration-500 group"
             >
               {/* Number, Icon, Title, Description */}
               <div className="absolute top-4 right-4 text-gray-400 font-light text-xl group-hover:text-black transition-colors">
                 {service.id}
               </div>
-              <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-full bg-[#D1F840] border border-[#bce325] text-black transition-transform duration-500 group-hover:scale-105 group-hover:rotate-12">
+              <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-full bg-[#008366] border border-[#008366] text-white transition-transform duration-500 group-hover:scale-105 group-hover:rotate-12">
                 {service.icon}
               </div>
               <h3 className="text-2xl lg:text-3xl font-bold mb-4 font-bricolage-grotesque leading-tight w-[95%]">

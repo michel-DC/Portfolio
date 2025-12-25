@@ -36,8 +36,8 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div ref={comp}>
-      <div className="hero-fixed-element hidden md:flex fixed left-6 bottom-20 z-10 flex-col items-center space-y-8">
+    <div ref={comp} className="relative">
+      <div className="hero-fixed-element hidden md:flex absolute left-6 bottom-20 z-10 flex-col items-center space-y-8">
         <div className="flex flex-col items-center space-y-8">
           <motion.div
             whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
@@ -70,7 +70,7 @@ export default function HeroSection() {
             <Link
               href="/documents/CV-MICHEL.pdf"
               aria-label="CV"
-              className="text-black hover:text-[#008366] transition-colors duration-300"
+              className="text-black fill-black hover:text-[#008366] transition-colors duration-300"
             >
               <File size={25} />
             </Link>
@@ -78,12 +78,12 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="hero-fixed-element hidden md:block fixed left-8 top-1/2 z-10 h-96 w-px -translate-y-1/2 bg-black">
+      <div className="hero-fixed-element hidden md:block absolute left-8 top-1/2 z-10 h-96 w-px -translate-y-1/2 bg-black">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
       </div>
-      <div className="hero-fixed-element fixed bottom-4 right-1/2 z-10 flex translate-x-1/2 items-center space-x-2">
-        <span className="font-bricolage-grotesque text-lg text-white">
+      <div className="hero-fixed-element absolute bottom-4 right-1/2 z-10 flex translate-x-1/2 items-center space-x-2">
+        <span className="font-bricolage-grotesque text-lg text-black">
           défiler vers le bas
         </span>
       </div>

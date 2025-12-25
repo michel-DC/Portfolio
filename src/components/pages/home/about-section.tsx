@@ -5,6 +5,9 @@ import { ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,31 +44,37 @@ export default function AboutSection() {
 
       <div className="container mx-auto flex min-h-[80vh] flex-col items-center justify-center px-4 text-center relative z-10">
         <h2 className="about-text mb-12 max-w-5xl text-5xl font-medium leading-tight md:text-5xl">
-          Je suis Michel, développeur full stack, spécialisé dans la création
-          d&apos;expériences digitales performantes et scalables.
+          Je suis Michel, développeur Full Stack junior spécialisé dans la
+          création d&apos;expériences digitales performantes et scalables.
         </h2>
 
         <p className="about-text mb-16 max-w-6xl text-3xl md:text-3xl">
-          Je me spécialise dans le développement de plateformes SaaS, de
-          produits pilotés par l&apos;IA et d&apos;expériences web interactives
-          3D en utilisant des technologies comme Next.js, Node.js et Three.js.
+          Je me spécialise dans le développement de solutions web complètes qui
+          allient performance, scalabilité et design centré sur
+          l&apos;utilisateur. Je travaille principalement avec des technologies
+          telles que Next.JS et TypeScript.
         </p>
 
         <div className="about-text flex items-center">
-          <button className="flex h-12 items-center gap-2 rounded-l-full bg-[#D1F840] pl-8 pr-4 text-black font-semibold transition-transform hover:scale-105 hover:z-10">
-            À propos de moi
-          </button>
-          <button
-            className="flex h-12 w-12 items-center justify-center rounded-r-full bg-[#D1F840] text-black transition-transform hover:scale-110 hover:z-10"
-            aria-label="En savoir plus"
+          <motion.div
+            whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
+            transition={{ duration: 0.4 }}
           >
-            <ArrowUpRight size={24} />
-          </button>
+            <Button className="h-14 px-16 text-lg rounded-full">
+              À propos de moi
+              <ArrowUpRight className="ml-2 size-6" />
+            </Button>
+          </motion.div>
         </div>
 
         <div className="about-text mt-auto mb-40 hidden w-full max-w-5xl justify-between text-md md:flex">
           <div>↓ Scrollez pour explorer</div>
-          <div>Ma petite histoire</div>
+          <div>
+            <Link href="/about" className="flex items-center">
+              Ma petite histoire ?
+              <ArrowUpRight className="ml-2 size-6" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

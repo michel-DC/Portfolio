@@ -22,13 +22,13 @@ export default function Header() {
         <motion.div
           whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
           transition={{ duration: 0.4 }}
-          className="text-4xl font-light "
+          className="text-4xl font-light mr-4"
         >
           <Link href="/">M</Link>
         </motion.div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center space-x-8 font-extralight mr-12">
+        <nav className="hidden md:flex items-center space-x-8 font-extralight">
           {menuItems.map((item) => (
             <motion.div
               key={item.label}
@@ -37,7 +37,7 @@ export default function Header() {
             >
               <Link
                 href={item.href}
-                className="hover:text-gray-400 transition-colors text-lg "
+                className="hover:text-[#008366] transition-colors text-lg "
               >
                 {item.label}
               </Link>
@@ -51,7 +51,7 @@ export default function Header() {
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X size={32} /> : <Menu size={32} />}
+          {isOpen ? <X size={32} className="text-white" /> : <Menu size={32} />}
         </button>
 
         {/* Mobile Nav Overlay */}
@@ -62,7 +62,7 @@ export default function Header() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: "100%" }}
               transition={{ type: "tween", duration: 0.3 }}
-              className="fixed inset-0 bg-black/5 text-white flex flex-col items-center justify-center space-y-8 text-4xl z-40"
+              className="fixed inset-0 bg-black text-white flex flex-col items-center justify-center space-y-8 text-4xl z-40"
             >
               {menuItems.map((item) => (
                 <motion.a
