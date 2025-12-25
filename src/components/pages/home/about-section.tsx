@@ -42,13 +42,13 @@ export default function AboutSection() {
       <div className="container mx-auto flex min-h-[80vh] flex-col items-center justify-center px-4 text-center relative z-10">
         <h2 className="about-text mb-12 max-w-5xl text-5xl font-medium leading-tight md:text-5xl">
           Je suis Michel, développeur full stack, spécialisé dans la création
-          d'expériences digitales performantes et scalables.
+          d&apos;expériences digitales performantes et scalables.
         </h2>
 
         <p className="about-text mb-16 max-w-6xl text-3xl md:text-3xl">
           Je me spécialise dans le développement de plateformes SaaS, de
-          produits pilotés par l'IA et d'expériences web interactives 3D en
-          utilisant des technologies comme Next.js, Node.js et Three.js.
+          produits pilotés par l&apos;IA et d&apos;expériences web interactives
+          3D en utilisant des technologies comme Next.js, Node.js et Three.js.
         </p>
 
         <div className="about-text flex items-center">

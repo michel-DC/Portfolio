@@ -13,24 +13,35 @@ export default function Header() {
   const menuItems = [
     { label: "Accueil", href: "#" },
     { label: "À propos", href: "#" },
-    { label: "Projets", href: "#" },
+    { label: "Mes projets", href: "#" },
   ];
 
   return (
-    <header className="fixed top-2 left-0 right-0 z-50 mix-blend-difference text-white">
-      <div className="px-8 py-6 flex justify-between items-center w-full">
-        <div className="text-4xl font-light ">M</div>
+    <header className="fixed top-2 left-0 right-0 z-50 text-black">
+      <div className="px-8 py-6 mr-4 flex justify-between items-center w-full">
+        <motion.div
+          whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
+          transition={{ duration: 0.4 }}
+          className="text-4xl font-light "
+        >
+          <Link href="/">M</Link>
+        </motion.div>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-8 font-extralight mr-12">
           {menuItems.map((item) => (
-            <Link
+            <motion.div
               key={item.label}
-              href={item.href}
-              className="hover:text-gray-400 transition-colors text-lg "
+              whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
+              transition={{ duration: 0.4 }}
             >
-              {item.label}
-            </Link>
+              <Link
+                href={item.href}
+                className="hover:text-gray-400 transition-colors text-lg "
+              >
+                {item.label}
+              </Link>
+            </motion.div>
           ))}
         </nav>
 
@@ -54,14 +65,16 @@ export default function Header() {
               className="fixed inset-0 bg-black/5 text-white flex flex-col items-center justify-center space-y-8 text-4xl z-40"
             >
               {menuItems.map((item) => (
-                <a
+                <motion.a
                   key={item.label}
                   href={item.href}
                   onClick={toggleMenu}
+                  whileHover={{ x: [0, -4, 4, -4, 4, 0] }}
+                  transition={{ duration: 0.4 }}
                   className="hover:text-gray-400 transition-colors"
                 >
                   {item.label}
-                </a>
+                </motion.a>
               ))}
             </motion.div>
           )}

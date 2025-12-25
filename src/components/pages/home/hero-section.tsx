@@ -4,6 +4,7 @@ import React, { useRef, useLayoutEffect } from "react";
 import { Github, Linkedin, File } from "lucide-react";
 import Link from "next/link";
 import gsap from "gsap";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const comp = useRef(null);
@@ -36,57 +37,70 @@ export default function HeroSection() {
 
   return (
     <div ref={comp}>
-      <div className="hero-fixed-element hidden md:flex fixed left-6 bottom-20 z-10 flex-col items-center space-y-8 mix-blend-difference">
+      <div className="hero-fixed-element hidden md:flex fixed left-6 bottom-20 z-10 flex-col items-center space-y-8">
         <div className="flex flex-col items-center space-y-8">
-          <Link
-            href="https://linkedin.com/in/micheldjoumessi"
-            aria-label="LinkedIn"
-            className="group relative hover:text-[#0077b5] transition-colors duration-300"
+          <motion.div
+            whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
+            transition={{ duration: 0.4 }}
           >
-            <Linkedin
-              size={25}
-              className="transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-rotate-6"
-            />
-          </Link>
-          <Link
-            href="https://github.com/michel-DC"
-            aria-label="GitHub"
-            className="group relative hover:text-gray-300 transition-colors duration-300"
+            <Link
+              href="https://linkedin.com/in/micheldjoumessi"
+              aria-label="LinkedIn"
+              className="text-black hover:text-[#0A66C2] transition-colors duration-300"
+            >
+              <Linkedin size={25} />
+            </Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
+            transition={{ duration: 0.4 }}
           >
-            <Github
-              size={25}
-              className="transition-transform duration-200 ease-out group-hover:-translate-x-0.5 group-hover:rotate-6"
-            />
-          </Link>
-          <Link
-            href="/documents/CV-MICHEL.pdf"
-            aria-label="CV"
-            className="group relative hover:text-green-500 transition-colors duration-300"
+            <Link
+              href="https://github.com/michel-DC"
+              aria-label="GitHub"
+              className="text-black hover:text-[#181717] transition-colors duration-300"
+            >
+              <Github size={25} />
+            </Link>
+          </motion.div>
+          <motion.div
+            whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
+            transition={{ duration: 0.4 }}
           >
-            <File
-              size={25}
-              className="transition-transform duration-200 ease-out group-hover:translate-y-0.5 group-hover:scale-105"
-            />
-          </Link>
+            <Link
+              href="/documents/CV-MICHEL.pdf"
+              aria-label="CV"
+              className="text-black hover:text-[#008366] transition-colors duration-300"
+            >
+              <File size={25} />
+            </Link>
+          </motion.div>
         </div>
       </div>
 
-      <div className="hero-fixed-element hidden md:block fixed left-8 top-1/2 z-10 h-96 w-px -translate-y-1/2 bg-black mix-blend-difference">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-white"></div>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-white"></div>
+      <div className="hero-fixed-element hidden md:block fixed left-8 top-1/2 z-10 h-96 w-px -translate-y-1/2 bg-black">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
       </div>
-      <div className="hero-fixed-element fixed bottom-4 right-1/2 z-10 flex translate-x-1/2 items-center space-x-2 mix-blend-difference">
+      <div className="hero-fixed-element fixed bottom-4 right-1/2 z-10 flex translate-x-1/2 items-center space-x-2">
         <span className="font-bricolage-grotesque text-lg text-white">
           défiler vers le bas
         </span>
       </div>
-      <div className="hero-fixed-element fixed bottom-8 right-8 z-10 mix-blend-difference">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
-          <div className="h-px w-4 bg-black"></div>
-        </div>
-      </div>
 
       <main className="relative flex min-h-screen items-center justify-center">
+        <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
+          <video
+            className="absolute top-1/2 left-1/2 min-h-full min-w-full -translate-x-1/2 -translate-y-1/2 object-cover pointer-events-none"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src="/video/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <div className="relative z-10 text-center px-4 md:px-0 drop-shadow-xl">
           <p className="hero-text-element text-xl text-white md:text-4xl font-bricolage-grotesque mb-4">
             Salut! Je suis Michel
