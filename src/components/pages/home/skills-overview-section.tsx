@@ -66,7 +66,7 @@ export default function ServicesSection() {
       gsap.fromTo(
         track,
         {
-          x: window.innerWidth * 1.5, // Start further to the right
+          x: window.innerWidth * 0.5, // Start closer to viewport
         },
         {
           x: () => -(trackWidth - window.innerWidth + titleLeft), // End aligned with title
@@ -107,7 +107,7 @@ export default function ServicesSection() {
     >
       <div className="max-w-7xl relative px-40 mb-12">
         {/* Header Section */}
-        <div className="mb-20">
+        <div>
           <div className="inline-block mb-6">
             <span
               className="text-sm uppercase tracking-[0.2em] font-light"
@@ -156,7 +156,7 @@ export default function ServicesSection() {
                 {service.title}
               </h3>
 
-              <div className="w-full h-px bg-gray-300 mb-8"></div>
+              <div className="w-full h-px bg-gray-300 mb-12"></div>
 
               <p className="text-gray-600 leading-relaxed text-base">
                 {service.description}

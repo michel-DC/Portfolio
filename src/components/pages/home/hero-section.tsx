@@ -43,7 +43,7 @@ export default function HeroSection() {
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
       </div>
       <motion.div
-        className="hero-fixed-element absolute bottom-4 right-1/2 z-10 flex translate-x-1/2 items-center space-x-2"
+        className="hero-fixed-element absolute bottom-4 right-1/2 z-10 flex translate-x-1/2 items-center space-x-2 justify-center"
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 1, repeat: Infinity }}
       >
@@ -89,7 +89,7 @@ export default function HeroSection() {
                   href="https://linkedin.com/in/micheldjoumessi"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-[#0A66C2]"
+                  className="hover:text-[#0A66C2] font-bold"
                 >
                   <Linkedin size={20} className="mr-2" />
                   LinkedIn

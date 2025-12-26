@@ -60,7 +60,7 @@ export default function AboutSection() {
             whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
             transition={{ duration: 0.4 }}
           >
-            <Button className="h-14 px-16 text-lg rounded-full">
+            <Button className="rounded-full">
               À propos de moi
               <ArrowUpRight className="ml-2 size-6" />
             </Button>

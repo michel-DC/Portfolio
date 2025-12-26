@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const baseButtonStyles =
-  "flex transition-[border-color,color,background-color] duration-[500ms] ease-[cubic-bezier(0.39,0.575,0.565,1)] [transition-property:border-color,color,background-color] [transition-timing-function:cubic-bezier(0.39,0.575,0.565,1),cubic-bezier(0.39,0.575,0.565,1),cubic-bezier(0.47,0,0.745,0.715)] [transition-duration:0.5s,0.5s,0.5s] [box-shadow:rgba(220,220,220,0.25)_0px_4px_16px_inset,rgba(255,255,255,0.3)_0px_2px_6px_inset]";
+  "flex transition-[border-color,color,background-color] duration-[500ms] ease-[cubic-bezier(0.39,0.575,0.565,1)] [transition-property:border-color,color,background-color] [transition-timing-function:cubic-bezier(0.39,0.575,0.565,1),cubic-bezier(0.39,0.575,0.565,1),cubic-bezier(0.47,0,0.745,0.715)] [transition-duration:0.5s,0.5s,0.5s] [box-shadow:rgba(220,220,220,0.25)_0px_4px_16px_inset,rgba(255,255,255,0.3)_0px_2px_6px_inset] cursor-pointer";
 const buttonVariants = cva(
   [
     baseButtonStyles,
