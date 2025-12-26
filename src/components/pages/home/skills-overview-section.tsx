@@ -10,28 +10,28 @@ gsap.registerPlugin(ScrollTrigger);
 const services = [
   {
     id: "01",
-    icon: <Map size={24} />,
+    icon: <Map size={32} />,
     title: "Développement Full Stack",
     description:
       "Conception et développement d’applications web modernes et performantes avec React, Next.js, Node.js et TypeScript. Mise en place d’architectures claires, maintenables et adaptées à des projets évolutifs.",
   },
   {
     id: "02",
-    icon: <Layout size={24} />,
+    icon: <Layout size={32} />,
     title: "UI / UX Design",
     description:
       "Conception d’interfaces modernes, accessibles et responsives à partir de maquettes Figma. Attention portée à l’ergonomie, aux parcours utilisateurs et à l’intégration fidèle des designs.",
   },
   {
     id: "03",
-    icon: <Database size={24} />,
+    icon: <Database size={32} />,
     title: "API & Architecture",
     description:
       "Conception et intégration d’API robustes et sécurisées avec PostgreSQL, Prisma et TypeScript. Gestion des données, logique métier et optimisation des échanges entre le front-end et le back-end.",
   },
   {
     id: "04",
-    icon: <Server size={24} />,
+    icon: <Server size={32} />,
     title: "Performance & Qualité Web",
     description:
       "Optimisation des performances, du référencement et de l’accessibilité des applications web. Mise en œuvre des bonnes pratiques front-end pour garantir des interfaces rapides, fiables et durables.",
@@ -105,7 +105,7 @@ export default function ServicesSection() {
       ref={container}
       className="relative w-full text-black overflow-hidden pt-20"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl relative px-40 mb-12">
         {/* Header Section */}
         <div className="mb-20">
           <div className="inline-block mb-6">
@@ -119,7 +119,6 @@ export default function ServicesSection() {
 
           <h2
             className="text-6xl md:text-7xl font-semibold leading-[1.1] mb-8"
-            style={{ color: "#008366" }}
             ref={titleRef}
           >
             Mes Compétences
@@ -139,23 +138,26 @@ export default function ServicesSection() {
         </div>
       </div>
 
-      <div className="w-full h-[500px] flex items-center">
+      <div className="w-full h-[600px] flex items-center">
         <div ref={servicesTrack} className="flex">
           {services.map((service, index) => (
             <div
               key={index}
-              className="service-item relative flex flex-col p-8 md:p-10 lg:p-12 min-h-[400px] w-[500px] border-y border-r border-gray-300 hover:bg-gray-50 transition-colors duration-500 group"
+              className="service-item relative flex flex-col p-8 md:p-10 lg:p-12 min-h-[500px] w-[500px] border-y border-r border-gray-300 hover:bg-gray-50 transition-colors duration-500 group"
             >
               {/* Number, Icon, Title, Description */}
               <div className="absolute top-4 right-4 text-gray-400 font-light text-xl group-hover:text-black transition-colors">
                 {service.id}
               </div>
-              <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-full bg-[#008366] border border-[#008366] text-white transition-transform duration-500 group-hover:scale-105 group-hover:rotate-12">
+              <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-[#008366] border border-[#008366] text-white transition-transform duration-500 group-hover:scale-105 group-hover:rotate-12">
                 {service.icon}
               </div>
               <h3 className="text-2xl lg:text-3xl font-bold mb-4 font-bricolage-grotesque leading-tight w-[95%]">
                 {service.title}
               </h3>
+
+              <div className="w-full h-px bg-gray-300 mb-8"></div>
+
               <p className="text-gray-600 leading-relaxed text-base">
                 {service.description}
               </p>

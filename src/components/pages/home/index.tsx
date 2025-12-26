@@ -8,7 +8,7 @@ import TextSlider from "./text-slider";
 
 export default function Home() {
   return (
-    <div className="bg-[#e6e6e6] ">
+    <div className="bg-white">
       <HeroSection />
       <AboutSection />
       <TextSlider />
