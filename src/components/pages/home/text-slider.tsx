@@ -3,6 +3,7 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Star } from "lucide-react";
 
 export default function TextSlider() {
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -33,9 +34,14 @@ export default function TextSlider() {
 const TextItem = () => {
   return (
     <div className="flex items-center">
-      <h2 className="px-4 text-[12vw] font-black leading-none tracking-tighter text-[#181717] uppercase">
-        Full-Stack Developer &bull; UI & UX Designer &bull;
-      </h2>
+      <span className="px-4 text-[12vw] font-black leading-none tracking-tighter text-[#181717] uppercase">
+        Développeur Fullstack
+      </span>
+      <Star className="mx-4 h-[6vw] w-[6vw] fill-[#008366] text-[#008366]" />
+      <span className="px-4 text-[12vw] font-black leading-none tracking-tighter text-[#181717] uppercase">
+        UI & UX Designer
+      </span>
+      <Star className="mx-4 h-[6vw] w-[6vw] fill-[#008366] text-[#008366]" />
     </div>
   );
 };

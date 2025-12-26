@@ -1,10 +1,11 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
-import { Github, Linkedin, File } from "lucide-react";
+import { Github, Linkedin, File, BriefcaseBusiness } from "lucide-react";
 import Link from "next/link";
 import gsap from "gsap";
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button-liquid";
 
 export default function HeroSection() {
   const comp = useRef(null);
@@ -37,56 +38,19 @@ export default function HeroSection() {
 
   return (
     <div ref={comp} className="relative">
-      <div className="hero-fixed-element hidden md:flex absolute left-6 bottom-20 z-10 flex-col items-center space-y-8">
-        <div className="flex flex-col items-center space-y-8">
-          <motion.div
-            whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
-            transition={{ duration: 0.4 }}
-          >
-            <Link
-              href="https://linkedin.com/in/micheldjoumessi"
-              aria-label="LinkedIn"
-              className="text-black hover:text-[#0A66C2] transition-colors duration-300"
-            >
-              <Linkedin size={25} />
-            </Link>
-          </motion.div>
-          <motion.div
-            whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
-            transition={{ duration: 0.4 }}
-          >
-            <Link
-              href="https://github.com/michel-DC"
-              aria-label="GitHub"
-              className="text-black hover:text-[#181717] transition-colors duration-300"
-            >
-              <Github size={25} />
-            </Link>
-          </motion.div>
-          <motion.div
-            whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
-            transition={{ duration: 0.4 }}
-          >
-            <Link
-              href="/documents/CV-MICHEL.pdf"
-              aria-label="CV"
-              className="text-black fill-black hover:text-[#008366] transition-colors duration-300"
-            >
-              <File size={25} />
-            </Link>
-          </motion.div>
-        </div>
-      </div>
-
-      <div className="hero-fixed-element hidden md:block absolute left-8 top-1/2 z-10 h-96 w-px -translate-y-1/2 bg-black">
+      <div className="hero-fixed-element hidden md:block absolute left-8 top-1/2 z-10 h-1/2 w-px -translate-y-1/2 bg-black">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
       </div>
-      <div className="hero-fixed-element absolute bottom-4 right-1/2 z-10 flex translate-x-1/2 items-center space-x-2">
+      <motion.div
+        className="hero-fixed-element absolute bottom-4 right-1/2 z-10 flex translate-x-1/2 items-center space-x-2"
+        animate={{ y: [0, -10, 0] }}
+        transition={{ duration: 1, repeat: Infinity }}
+      >
         <span className="font-bricolage-grotesque text-lg text-black">
           défiler vers le bas
         </span>
-      </div>
+      </motion.div>
 
       <main className="relative flex min-h-screen items-center justify-center">
         <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
@@ -102,15 +66,97 @@ export default function HeroSection() {
           </video>
         </div>
         <div className="relative z-10 text-center px-4 md:px-0 drop-shadow-xl">
-          <p className="hero-text-element text-xl text-white md:text-4xl font-bricolage-grotesque mb-4">
+          <p className="hero-text-element text-xl text-black md:text-4xl font-bricolage-grotesque mb-4">
             Salut! Je suis Michel
           </p>
-          <h1 className="hero-text-element text-4xl text-white md:text-8xl leading-tight">
+          <h1 className="hero-text-element text-4xl text-black md:text-8xl leading-tight">
             Développeur Full-stack
           </h1>
-          <h2 className="hero-text-element text-4xl text-white md:text-8xl leading-tight">
+          <h2 className="hero-text-element text-4xl text-black md:text-8xl leading-tight">
             UX & UI Designer.
           </h2>
+          <div className="hero-text-element flex flex-wrap justify-center gap-4 mt-8">
+            <motion.div
+              whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
+              transition={{ duration: 0.4 }}
+            >
+              <Button
+                variant="glass"
+                asChild
+                className="text-black font-bricolage-grotesque"
+              >
+                <Link
+                  href="https://linkedin.com/in/micheldjoumessi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#0A66C2]"
+                >
+                  <Linkedin size={20} className="mr-2" />
+                  LinkedIn
+                </Link>
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
+              transition={{ duration: 0.4 }}
+            >
+              <Button
+                variant="glass"
+                asChild
+                className="text-black font-bricolage-grotesque"
+              >
+                <Link
+                  href="https://github.com/michel-DC"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#181717]"
+                >
+                  <Github size={20} className="mr-2" />
+                  GitHub
+                </Link>
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
+              transition={{ duration: 0.4 }}
+            >
+              <Button
+                variant="glass"
+                asChild
+                className="text-black font-bricolage-grotesque"
+              >
+                <Link
+                  href="https://www.malt.fr/profile/micheldjoumessi1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#FC5757]"
+                >
+                  <BriefcaseBusiness size={20} className="mr-2" />
+                  Malt
+                </Link>
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
+              transition={{ duration: 0.4 }}
+            >
+              <Button
+                variant="glass"
+                asChild
+                className="text-black font-bricolage-grotesque"
+              >
+                <Link
+                  href="/documents/CV-MICHEL.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#008366] "
+                >
+                  <File size={20} className="mr-2" />
+                  Mon CV
+                </Link>
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </main>
     </div>

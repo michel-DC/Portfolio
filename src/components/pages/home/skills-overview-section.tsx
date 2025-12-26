@@ -113,12 +113,12 @@ export default function ServicesSection() {
               className="text-sm uppercase tracking-[0.2em] font-light"
               style={{ color: "#008366" }}
             >
-              Services
+              Skills
             </span>
           </div>
 
           <h2
-            className="text-5xl md:text-7xl font-light leading-[1.1] mb-8"
+            className="text-6xl md:text-7xl font-semibold leading-[1.1] mb-8"
             style={{ color: "#008366" }}
             ref={titleRef}
           >

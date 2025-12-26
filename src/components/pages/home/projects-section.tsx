@@ -1,199 +1,195 @@
 "use client";
 
-import React, { useRef, useLayoutEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowUpRight, Github } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
-gsap.registerPlugin(ScrollTrigger);
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  tags: string[];
+  image: string;
+  demoUrl?: string;
+  repoUrl?: string;
+}
 
-const projects = [
+const PROJECTS: Project[] = [
   {
-    id: "01",
+    id: 1,
     title: "E-Commerce Dashboard",
-    category: "Web Application",
     description:
-      "Un tableau de bord analytique complet pour les plateformes e-commerce, permettant de suivre les ventes en temps réel, la gestion des stocks et les performances marketing.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Recharts"],
-    links: {
-      demo: "#",
-      github: "#",
-    },
-    color: "bg-blue-600",
+      "Une plateforme d'administration complète pour gérer les produits, les commandes et les clients. Intégration de graphiques en temps réel et gestion des stocks.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma"],
+    image: "/images/video/video-bg.mp4", // Using a placeholder video/image path that exists or generic
+    demoUrl: "#",
+    repoUrl: "#",
   },
   {
-    id: "02",
-    title: "AI Content Generator",
-    category: "SaaS Platform",
+    id: 2,
+    title: "Task Management App",
     description:
-      "Une application SaaS utilisant l'intelligence artificielle pour générer du contenu marketing optimisé pour le SEO, avec une interface éditoriale riche.",
-    tags: ["React", "Node.js", "OpenAI API", "Stripe"],
-    links: {
-      demo: "#",
-      github: "#",
-    },
-    color: "bg-purple-600",
+      "Application de gestion de tâches collaborative avec fonctionnalités de glisser-déposer (Kanban), notifications en temps réel et assignation d'équipe.",
+    tags: ["React", "Redux", "Node.js", "Socket.io"],
+    image: "/images/video/home-bg.mp4",
+    demoUrl: "#",
+    repoUrl: "#",
   },
   {
-    id: "03",
-    title: "Immersive Portfolio",
-    category: "Creative Development",
+    id: 3,
+    title: "Portfolio v2",
     description:
-      "Un portfolio personnel interactif mettant en œuvre des animations 3D et des transitions fluides pour une expérience utilisateur immersive.",
-    tags: ["Three.js", "GSAP", "React Fiber", "WebGL"],
-    links: {
-      demo: "#",
-      github: "#",
-    },
-    color: "bg-orange-500",
+      "La version précédente de mon portfolio, axée sur le minimalisme et la performance. Optimisé pour le SEO et l'accessibilité.",
+    tags: ["Gatsby", "Styled Components", "GraphQL"],
+    image: "/images/video/home-bg-video.mp4",
+    demoUrl: "#",
+    repoUrl: "#",
+  },
+  {
+    id: 4,
+    title: "SaaS Landing Page",
+    description:
+      "Page d'atterrissage haute conversion pour un produit SaaS fictif. Animations fluides au défilement et formulaires intégrés.",
+    tags: ["Vue.js", "Nuxt", "GSAP", "Sass"],
+    image: "/images/video/video.mp4",
+    demoUrl: "#",
+    repoUrl: "#",
   },
 ];
 
-export default function ProjectsSection() {
-  const container = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      // Title Animation
-      gsap.from(titleRef.current, {
-        scrollTrigger: {
-          trigger: titleRef.current,
-          start: "top 80%",
-        },
-        y: 50,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-      });
-
-      // Projects Animation
-      const projectCards = gsap.utils.toArray(".project-card");
-      projectCards.forEach((card: any, index) => {
-        gsap.from(card, {
-          scrollTrigger: {
-            trigger: card,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-          y: 100,
-          opacity: 0,
-          duration: 0.8,
-          delay: index * 0.1,
-          ease: "power3.out",
-        });
-      });
-    }, container);
-
-    return () => ctx.revert();
-  }, []);
-
+const ProjectCard = ({
+  project,
+  index,
+}: {
+  project: Project;
+  index: number;
+}) => {
   return (
-    <section
-      ref={container}
-      className="relative w-full bg-[#1E1E1E] text-white py-24 px-6 md:px-12 overflow-hidden"
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true, margin: "-100px" }}
+      className="group relative flex flex-col gap-4"
     >
-      {/* Decorative background element */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-b from-[#D1F840]/5 to-transparent pointer-events-none" />
-
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <div>
-            <h2
-              ref={titleRef}
-              className="text-5xl md:text-7xl font-bricolage-grotesque leading-[0.9] mb-6"
-            >
-              Projets <br />
-              <span className="text-[#D1F840]">Sélectionnés</span>
-            </h2>
-          </div>
-          <div className="md:w-1/3">
-            <p className="text-gray-400 text-lg">
-              Une collection de travaux récents mettant en avant mes compétences
-              en développement full-stack et en design d'interface.
-            </p>
-          </div>
+      {/* Image Container */}
+      <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-muted">
+        <div className="absolute inset-0 bg-neutral-100 dark:bg-neutral-800 transition-transform duration-500 group-hover:scale-105 flex items-center justify-center">
+          {/* Fallback visual if no image */}
+          <span className="text-4xl font-bold text-neutral-300 dark:text-neutral-700 select-none">
+            {project.title.charAt(0)}
+          </span>
         </div>
 
-        <div className="grid grid-cols-1 gap-y-16 md:gap-y-32">
-          {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className={`project-card group flex flex-col ${
-                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-              } gap-8 md:gap-16 items-center`}
+        {/* Overlay with buttons on hover (Desktop) */}
+        <div className="absolute inset-0 flex items-center justify-center gap-4 bg-black/40 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
+          {project.demoUrl && (
+            <Button asChild variant="default" className="rounded-full">
+              <Link href={project.demoUrl} target="_blank">
+                Voir le site <ArrowUpRight className="ml-2 size-4" />
+              </Link>
+            </Button>
+          )}
+          {project.repoUrl && (
+            <Button
+              asChild
+              variant="outline"
+              className="rounded-full border-white text-white hover:bg-white hover:text-black"
             >
-              {/* Project Visual (Placeholder) */}
-              <div className="w-full md:w-3/5 aspect-video relative rounded-2xl overflow-hidden bg-gray-800 border border-gray-700 group-hover:border-[#D1F840]/50 transition-colors duration-500">
-                <div
-                  className={`absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500 ${project.color}`}
-                ></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-gray-500 font-light text-xl">
-                    Aperçu du projet {project.id}
-                  </span>
-                </div>
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
-                  <Link
-                    href={project.links.demo}
-                    className="p-4 bg-[#D1F840] text-black rounded-full hover:scale-110 transition-transform duration-200"
-                    aria-label="Voir la démo"
-                  >
-                    <ArrowUpRight size={24} />
-                  </Link>
-                  <Link
-                    href={project.links.github}
-                    className="p-4 bg-white text-black rounded-full hover:scale-110 transition-transform duration-200"
-                    aria-label="Voir le code"
-                  >
-                    <Github size={24} />
-                  </Link>
-                </div>
-              </div>
+              <Link href={project.repoUrl} target="_blank">
+                Code <Github className="ml-2 size-4" />
+              </Link>
+            </Button>
+          )}
+        </div>
+      </div>
 
-              {/* Project Info */}
-              <div className="w-full md:w-2/5 flex flex-col items-start">
-                <span className="text-[#D1F840] font-mono mb-4 text-sm tracking-wider">
-                  {project.category}
-                </span>
-                <h3 className="text-3xl md:text-4xl font-bold mb-6 font-bricolage-grotesque group-hover:text-[#D1F840] transition-colors duration-300">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 mb-8 leading-relaxed">
-                  {project.description}
-                </p>
+      {/* Content */}
+      <div className="flex flex-col gap-2">
+        <div className="flex items-center justify-between">
+          <h3 className="text-2xl font-medium text-foreground">
+            {project.title}
+          </h3>
+        </div>
 
-                <div className="flex flex-wrap gap-3 mb-8">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 rounded-full border border-gray-700 text-sm text-gray-300"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+        <p className="text-muted-foreground line-clamp-2">
+          {project.description}
+        </p>
 
-                <Link
-                  href={project.links.demo}
-                  className="inline-flex items-center gap-2 text-white hover:text-[#D1F840] transition-colors duration-300 border-b border-transparent hover:border-[#D1F840] pb-1"
-                >
-                  Voir le projet <ArrowUpRight size={18} />
-                </Link>
-              </div>
-            </div>
+        <div className="flex flex-wrap gap-2 mt-2">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-border px-3 py-1 text-xs font-medium text-muted-foreground"
+            >
+              {tag}
+            </span>
           ))}
         </div>
+      </div>
+    </motion.div>
+  );
+};
 
-        <div className="mt-24 text-center">
-          <Link
-            href="#"
-            className="inline-block px-8 py-4 bg-transparent border border-[#D1F840] text-[#D1F840] rounded-full hover:bg-[#D1F840] hover:text-black transition-all duration-300 font-semibold"
-          >
-            Voir tous les projets
-          </Link>
+export default function ProjectsSection() {
+  return (
+    <section className="w-full py-24 md:py-32 bg-background" id="projects">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex flex-col gap-12">
+          {/* Header */}
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="flex flex-col gap-2">
+              <motion.span
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="text-sm font-medium uppercase tracking-wider text-[#008366]"
+              >
+                Portfolio
+              </motion.span>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 }}
+                className="text-4xl md:text-5xl lg:text-6xl font-medium leading-tight tracking-tight"
+              >
+                Projets Sélectionnés
+              </motion.h2>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+            >
+              <Button variant="outline" className="hidden md:flex" asChild>
+                <Link href="https://github.com/michel-DC" target="_blank">
+                  Voir tous les projets <ArrowUpRight className="ml-2 size-4" />
+                </Link>
+              </Button>
+            </motion.div>
+          </div>
+
+          {/* Grid */}
+          <div className="grid grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 lg:gap-x-12">
+            {PROJECTS.map((project, index) => (
+              <ProjectCard key={project.id} project={project} index={index} />
+            ))}
+          </div>
+
+          <div className="mt-8 flex justify-center md:hidden">
+            <Button variant="outline" asChild>
+              <Link href="https://github.com/michel-DC" target="_blank">
+                Voir tous les projets <ArrowUpRight className="ml-2 size-4" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
