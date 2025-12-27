@@ -69,12 +69,7 @@ export default function AboutSection() {
 
         <div className="about-text mt-auto mb-40 hidden w-full max-w-5xl justify-between text-md md:flex">
           <div>↓ Scrollez pour explorer</div>
-          <div>
-            <Link href="/about" className="flex items-center">
-              Ma petite histoire ?
-              <ArrowUpRight className="ml-2 size-6" />
-            </Link>
-          </div>
+          <div>↓ Scrollez pour explorer</div>
         </div>
       </div>
     </section>

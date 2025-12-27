@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,6 +44,9 @@ export default function Header() {
               </Link>
             </motion.div>
           ))}
+          <Button asChild className="rounded-full px-6 ml-4">
+            <Link href="#contact">Me contacter</Link>
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}

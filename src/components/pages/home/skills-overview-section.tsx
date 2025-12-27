@@ -61,7 +61,8 @@ export default function ServicesSection() {
     const titleLeft = title.getBoundingClientRect().left;
 
     const ctx = gsap.context(() => {
-      const scrollDistance = trackWidth + titleLeft;
+      // Use trackWidth for the scroll duration to ensure it feels natural
+      const scrollDuration = trackWidth;
 
       gsap.fromTo(
         track,
@@ -75,7 +76,9 @@ export default function ServicesSection() {
             trigger: container.current,
             pin: true,
             scrub: 1,
-            end: () => `+=${scrollDistance}`,
+            // Use a fixed distance based on track width for the scroll interaction duration
+            end: () => `+=${scrollDuration}`,
+            anticipatePin: 1,
             invalidateOnRefresh: true,
           },
         }
@@ -108,17 +111,8 @@ export default function ServicesSection() {
       <div className="max-w-7xl relative px-40 mb-12">
         {/* Header Section */}
         <div>
-          <div className="inline-block mb-6">
-            <span
-              className="text-sm uppercase tracking-[0.2em] font-light"
-              style={{ color: "#008366" }}
-            >
-              Skills
-            </span>
-          </div>
-
           <h2
-            className="text-6xl md:text-7xl font-semibold leading-[1.1] mb-8"
+            className=" text-4xl text-black md:text-8xl leading-tight"
             ref={titleRef}
           >
             Mes Compétences
@@ -138,27 +132,31 @@ export default function ServicesSection() {
         </div>
       </div>
 
-      <div className="w-full h-[600px] flex items-center">
+      <div className="w-full h-150 flex items-center">
         <div ref={servicesTrack} className="flex">
           {services.map((service, index) => (
             <div
               key={index}
-              className="service-item relative flex flex-col p-8 md:p-10 lg:p-12 min-h-[500px] w-[500px] border-y border-r border-gray-300 hover:bg-gray-50 transition-colors duration-500 group"
+              className={`service-item relative flex flex-col p-8 md:p-10 lg:p-12 min-h-125 w-125 border-y border-r border-gray-400 hover:bg-gray-50 transition-colors duration-500 group ${
+                index === 0 ? "border-l" : ""
+              }`}
             >
               {/* Number, Icon, Title, Description */}
               <div className="absolute top-4 right-4 text-gray-400 font-light text-xl group-hover:text-black transition-colors">
                 {service.id}
               </div>
-              <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-[#008366] border border-[#008366] text-white transition-transform duration-500 group-hover:scale-105 group-hover:rotate-12">
+              <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-[#008366] border border-[#008366] text-white transition-transform duration-500">
                 {service.icon}
               </div>
-              <h3 className="text-2xl lg:text-3xl font-bold mb-4 font-bricolage-grotesque leading-tight w-[95%]">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-4 font-bricolage-grotesque leading-tight w-[95%] min-h-20">
                 {service.title}
               </h3>
 
-              <div className="w-full h-px bg-gray-300 mb-12"></div>
+              <div className="flex-1 flex">
+                <div className="w-full h-px bg-gray-500"></div>
+              </div>
 
-              <p className="text-gray-600 leading-relaxed text-base">
+              <p className="text-gray-600 leading-relaxed text-lg">
                 {service.description}
               </p>
             </div>

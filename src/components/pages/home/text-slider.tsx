@@ -12,9 +12,9 @@ export default function TextSlider() {
     () => {
       // Animation de défilement infini
       gsap.to(sliderRef.current, {
-        xPercent: -50, // Déplace de 50% (car on a 2 copies du texte)
+        xPercent: -50,
         ease: "none",
-        duration: 20, // Vitesse du défilement (plus grand = plus lent)
+        duration: 20,
         repeat: -1,
       });
     },
@@ -22,7 +22,7 @@ export default function TextSlider() {
   );
 
   return (
-    <div className="w-full overflow-hidden bg-[#E5E5E5] py-12 md:py-20">
+    <div className="w-full overflow-hidden bg-[#E5E5E5] py-24 md:py-32">
       <div ref={sliderRef} className="flex w-fit whitespace-nowrap">
         <TextItem />
         <TextItem />

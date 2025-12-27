@@ -4,7 +4,7 @@ import HeroSection from "./hero-section";
 import AboutSection from "./about-section";
 import ServicesSection from "./skills-overview-section";
 import TextSlider from "./text-slider";
-// import ProjectsSection from "./projects-section";
+import ProjectsSection from "./projects-section";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <AboutSection />
       <TextSlider />
       <ServicesSection />
-      {/* <ProjectsSection /> */}
+      <ProjectsSection />
     </div>
   );
 }
