@@ -42,15 +42,6 @@ export default function HeroSection() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-black"></div>
       </div>
-      <motion.div
-        className="hero-fixed-element absolute bottom-4 right-1/2 z-10 flex translate-x-1/2 items-center space-x-2 justify-center"
-        animate={{ y: [0, -10, 0] }}
-        transition={{ duration: 1, repeat: Infinity }}
-      >
-        <span className="font-bricolage-grotesque text-lg text-black">
-          défiler vers le bas
-        </span>
-      </motion.div>
 
       <main className="relative flex min-h-screen items-center justify-center">
         <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden">
