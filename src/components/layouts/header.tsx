@@ -61,22 +61,25 @@ export default function Header() {
                 </Link>
               </motion.div>
             ))}
-            <Button asChild className="">
-              <Link href="/#contact">Me contacter</Link>
-            </Button>
           </nav>
         )}
 
         {/* Mobile/Burger Menu Button - Visible on mobile OR when scrolled */}
         <button
           className={cn(
-            "z-50 relative focus:outline-none",
+            "z-50 relative focus:outline-none cursor-pointer",
+            "flex items-center justify-center",
+            "w-12 h-12 rounded-full bg-black",
             !isScrolled && "md:hidden"
           )}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          {isOpen ? <X size={32} className="text-white" /> : <Menu size={32} />}
+          {isOpen ? (
+            <X size={24} className="text-white" />
+          ) : (
+            <Menu size={24} className="text-white" />
+          )}
         </button>
 
         {/* Mobile Nav Overlay */}

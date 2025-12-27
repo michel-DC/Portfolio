@@ -10,8 +10,8 @@ interface Project {
   id: number;
   title: string;
   category: string;
-  image: string; // Can be image path or video path
-  link: string;
+  image: string;
+  slug: string;
 }
 
 const PROJECTS: Project[] = [
@@ -20,34 +20,34 @@ const PROJECTS: Project[] = [
     title: "Teamify • Application de gestion événementielle",
     category: "Application Web",
     image: "/images/projects/teamify/001.png",
-    link: "/projects/e-commerce-dashboard",
+    slug: "teamify",
   },
   {
     id: 2,
     title: "App Analyzer • Audit de site web",
     category: "Service Backend",
     image: "/images/projects/app-analyzer/001.png",
-    link: "/projects/task-management",
+    slug: "app-analyzer",
   },
   {
     id: 3,
     title: "Lookaroun • Application de networkings",
     category: "Application Web",
     image: "/images/projects/lookaroun/001.png",
-    link: "/projects/portfolio-v2",
+    slug: "lookaroun",
   },
   {
     id: 4,
     title: "Flow Media • Agence web fictive",
     category: "Application Web",
     image: "/images/projects/flow-media/001.png",
-    link: "/projects/saas-landing",
+    slug: "flow-media",
   },
 ];
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <Link href={project.link} className="block w-full group cursor-pointer">
+    <Link href={`/mes-projets/${project.slug}`} className="block w-full group cursor-pointer">
       <motion.div
         className="relative w-full aspect-4/3 overflow-hidden rounded-sm"
         initial="rest"
@@ -57,9 +57,11 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <Image
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-700"
-          width={640}
-          height={427}
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+          quality={90}
+          priority={project.id <= 2}
         />
 
         <motion.div
@@ -94,7 +96,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                       hover: { opacity: 1, y: 0 },
                     }}
                     transition={{ duration: 0.2 }}
-                    className="text-2xl md:text-4xl text-white"
+                    className="text-2xl md:text-4xl text-white font-bold"
                   >
                     {char}
                   </motion.span>
@@ -119,10 +121,10 @@ export default function ProjectsSection() {
       <div className="w-full px-4 md:px-12 lg:px-16">
         <div className="flex flex-col gap-16">
           {/* Minimal Header */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 max-w-450 mx-auto w-full">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight max-w-4xl text-black">
-              Chaque projet est une réponse technique à un besoin précis, de la
-              conception à la mise en ligne.
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-left gap-6 max-w-4xl w-full">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight text-black text-left md:w-full">
+              Pour moi chaque projet est une réponse technique à un besoin
+              précis, de la conception à la mise en ligne.
             </h2>
           </div>
 
@@ -134,8 +136,8 @@ export default function ProjectsSection() {
 
           <div className="flex justify-center">
             <Button asChild size="lg" className="rounded-full px-8">
-              <Link href="https://github.com/michel-DC" target="_blank">
-                Voir tous les projets <ArrowUpRight className="ml-2 size-5" />
+              <Link href="/mes-projets">
+                Voir tous mes projets <ArrowUpRight className="ml-2 size-5" />
               </Link>
             </Button>
           </div>
