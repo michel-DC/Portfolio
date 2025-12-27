@@ -12,41 +12,36 @@ interface Project {
   category: string;
   image: string; // Can be image path or video path
   link: string;
-  isVideo?: boolean;
 }
 
 const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Dashboard",
-    category: "Web Application",
+    title: "Teamify • Application de gestion événementielle",
+    category: "Application Web",
     image: "/images/projects/teamify/001.png",
     link: "/projects/e-commerce-dashboard",
-    isVideo: false,
   },
   {
     id: 2,
-    title: "Task Management App",
-    category: "Productivity Tool",
-    image: "/images/projects/teamify/001.png",
+    title: "App Analyzer • Audit de site web",
+    category: "Service Backend",
+    image: "/images/projects/app-analyzer/001.png",
     link: "/projects/task-management",
-    isVideo: true,
   },
   {
     id: 3,
-    title: "Portfolio v2",
-    category: "Personal Website",
-    image: "/images/projects/teamify/001.png",
+    title: "Lookaroun • Application de networkings",
+    category: "Application Web",
+    image: "/images/projects/lookaroun/001.png",
     link: "/projects/portfolio-v2",
-    isVideo: true,
   },
   {
     id: 4,
-    title: "SaaS Landing Page",
-    category: "Marketing Site",
-    image: "/images/projects/teamify/001.png",
+    title: "Flow Media • Agence web fictive",
+    category: "Application Web",
+    image: "/images/projects/flow-media/001.png",
     link: "/projects/saas-landing",
-    isVideo: true,
   },
 ];
 

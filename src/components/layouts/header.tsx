@@ -23,9 +23,9 @@ export default function Header() {
   }, []);
 
   const menuItems = [
-    { label: "Accueil", href: "#" },
-    { label: "À propos", href: "#" },
-    { label: "Mes projets", href: "#" },
+    { label: "Accueil", href: "/" },
+    { label: "À propos", href: "/a-propos" },
+    { label: "Mes projets", href: "/mes-projets" },
   ];
 
   return (
@@ -61,8 +61,8 @@ export default function Header() {
                 </Link>
               </motion.div>
             ))}
-            <Button asChild className="rounded-full px-6 ml-4">
-              <Link href="#contact">Me contacter</Link>
+            <Button asChild className="">
+              <Link href="/#contact">Me contacter</Link>
             </Button>
           </nav>
         )}
