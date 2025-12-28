@@ -1,31 +1,22 @@
 "use client";
 
-import { Linkedin, Github, Mail, BriefcaseBusiness, File } from "lucide-react";
-import { toast } from "sonner";
+import { Linkedin, Github, BriefcaseBusiness, File } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button-liquid";
 import { motion } from "framer-motion";
 
 export function Footer() {
-  const handleSupportClick = (service: string) => {
-    toast.info(`Service ${service} bientôt disponible !`, {
-      description:
-        "Cette fonctionnalité sera ajoutée dans une prochaine mise à jour.",
-      duration: 3000,
-    });
-  };
-
   return (
     <footer className="bg-black text-white border-t border-black rounded-t-3xl shadow-lg">
       <div className="max-w-7xl mx-auto px-6 pt-12 pb-4">
         <div className="text-left sm:text-center mb-12">
           <div className="flex justify-center mb-4">
             <Image
-              src="/images/logo/favicon-text-light.svg"
+              src="/images/svg/logo-blanc.svg"
               alt="Teamify"
-              width={180}
-              height={180}
+              width={100}
+              height={100}
             />
           </div>
           <p className="text-base sm:text-lg text-gray-300 mb-2 text-center">

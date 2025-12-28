@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-import { Button } from "../ui/button";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export default function Header() {
@@ -29,24 +29,35 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 left-0 right-0 z-50 h-full text-black transition-all duration-300">
+    <header className="fixed top-0 left-0 right-0 z-50 text-black transition-all duration-300">
       <div
         className={cn(
-          "px-8 mr-4 flex justify-between items-center w-full transition-all duration-300",
-          isScrolled ? "py-4 bg-transparent" : "py-4 bg-white"
+          "px-8 flex items-center w-full transition-all duration-300",
+          isScrolled
+            ? "py-4 bg-transparent justify-end"
+            : "py-8 bg-white justify-between"
         )}
       >
-        <motion.div
-          whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
-          transition={{ duration: 0.4 }}
-          className="text-4xl font-light mr-4"
-        >
-          <Link href="/">M</Link>
-        </motion.div>
+        {!isScrolled && (
+          <motion.div
+            whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
+            transition={{ duration: 0.4 }}
+            className="text-4xl font-light"
+          >
+            <Link href="/">
+              <Image
+                src="/images/svg/logo-noir.svg"
+                alt="Teamify"
+                width={35}
+                height={35}
+              />
+            </Link>
+          </motion.div>
+        )}
 
         {/* Desktop Nav - Hidden when scrolled */}
         {!isScrolled && (
-          <nav className="hidden md:flex items-center space-x-8 font-normal">
+          <nav className="hidden md:flex items-center space-x-8 font-medium">
             {menuItems.map((item) => (
               <motion.div
                 key={item.label}
@@ -115,6 +126,14 @@ export default function Header() {
               transition={{ type: "tween", duration: 0.3 }}
               className="fixed top-0 right-0 bottom-0 w-1/2 bg-black text-white flex flex-col items-center justify-center space-y-8 text-4xl z-40 shadow-2xl"
             >
+              <div className="absolute top-10">
+                <Image
+                  src="/images/svg/logo-blanc.svg"
+                  alt="Logo"
+                  width={50}
+                  height={50}
+                />
+              </div>
               {menuItems.map((item) => (
                 <motion.a
                   key={item.label}
@@ -127,18 +146,32 @@ export default function Header() {
                   {item.label}
                 </motion.a>
               ))}
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
+              <Link
+                href="/#contact"
+                onClick={toggleMenu}
+                className="flex items-center mt-4 group"
               >
-                <Link
-                  href="#contact"
-                  onClick={toggleMenu}
-                  className="text-2xl mt-4 px-8 py-3 border border-white rounded-full hover:bg-white hover:text-black transition-colors"
+                <motion.div
+                  whileHover={{ x: [0, -3, 3, -3, 0] }}
+                  transition={{ duration: 0.4 }}
+                  className="relative overflow-hidden bg-white text-black px-8 py-3 rounded-full font-bold text-xl border border-white"
                 >
-                  Me contacter
-                </Link>
-              </motion.div>
+                  <span className="absolute inset-0 bg-black translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
+                  <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
+                    Contact
+                  </span>
+                </motion.div>
+                <motion.div
+                  whileHover={{ x: [0, -3, 3, -3, 0] }}
+                  transition={{ duration: 0.4 }}
+                  className="relative overflow-hidden bg-white text-black p-3 rounded-full flex items-center justify-center border border-white"
+                >
+                  <span className="absolute inset-0 bg-black translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
+                  <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
+                    <ArrowUpRight size={20} />
+                  </span>
+                </motion.div>
+              </Link>
             </motion.div>
           )}
         </AnimatePresence>

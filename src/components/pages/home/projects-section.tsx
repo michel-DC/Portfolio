@@ -120,7 +120,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
 export default function ProjectsSection() {
   return (
-    <section className="w-full py-40 md:py-48" id="projects">
+    <section className="w-full py-24 md:py-32" id="projects">
       <div className="w-full ">
         <div className="flex flex-col gap-16">
           <div className="max-w-7xl relative px-16">
