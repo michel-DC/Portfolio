@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "../ui/button";
@@ -33,7 +33,7 @@ export default function Header() {
       <div
         className={cn(
           "px-8 mr-4 flex justify-between items-center w-full transition-all duration-300",
-          isScrolled ? "py-1 bg-transparent" : "py-2 bg-white"
+          isScrolled ? "py-4 bg-transparent" : "py-4 bg-white"
         )}
       >
         <motion.div
@@ -46,7 +46,7 @@ export default function Header() {
 
         {/* Desktop Nav - Hidden when scrolled */}
         {!isScrolled && (
-          <nav className="hidden md:flex items-center space-x-8 font-extralight">
+          <nav className="hidden md:flex items-center space-x-8 font-normal">
             {menuItems.map((item) => (
               <motion.div
                 key={item.label}
@@ -61,6 +61,29 @@ export default function Header() {
                 </Link>
               </motion.div>
             ))}
+
+            <Link href="/#contact" className="flex items-center group">
+              <motion.div
+                whileHover={{ x: [0, -3, 3, -3, 0] }}
+                transition={{ duration: 0.4 }}
+                className="relative overflow-hidden bg-black text-white px-5 py-2 rounded-full font-bold text-sm"
+              >
+                <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
+                <span className="relative z-10 transition-colors duration-500 group-hover:text-[#008366]">
+                  Contact
+                </span>
+              </motion.div>
+              <motion.div
+                whileHover={{ x: [0, -3, 3, -3, 0] }}
+                transition={{ duration: 0.4 }}
+                className="relative overflow-hidden bg-black text-white p-2 rounded-full flex items-center justify-center"
+              >
+                <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
+                <span className="relative z-10 transition-colors duration-500 group-hover:text-[#008366]">
+                  <ArrowUpRight size={16} />
+                </span>
+              </motion.div>
+            </Link>
           </nav>
         )}
 

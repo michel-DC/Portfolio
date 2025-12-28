@@ -123,6 +123,7 @@ export default function RootLayout({
         <EntryAnimation />
         <CustomCursor />
         <SmoothScroll />
+
         {children}
       </body>
     </html>

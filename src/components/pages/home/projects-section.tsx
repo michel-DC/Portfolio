@@ -124,12 +124,20 @@ export default function ProjectsSection() {
       <div className="w-full ">
         <div className="flex flex-col gap-16">
           <div className="max-w-7xl relative px-16">
-            {/* Header Section */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 max-w-450 mx-auto w-full">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight max-w-4xl text-black">
-                Chaque projet est une réponse technique à un besoin précis, de
-                la conception à la mise en ligne.
-              </h2>
+              <motion.h2
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="text-3xl md:text-5xl font-medium tracking-tight font-bricolage-grotesque"
+              >
+                Chaque projet est une réponse technique à{" "}
+                <span className="text-[#008366] italic font-serif">
+                  un besoin précis
+                </span>{" "}
+                de la conception à la mise en ligne.
+              </motion.h2>
             </div>
           </div>
           {/* <div className="flex flex-col md:flex-row justify-between items-start md:items-left gap-6 max-w-4xl w-full">

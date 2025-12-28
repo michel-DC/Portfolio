@@ -61,6 +61,19 @@ export default function ServicesSection() {
     const titleLeft = title.getBoundingClientRect().left;
 
     const ctx = gsap.context(() => {
+      // Animation d'entrée du titre
+      gsap.from(title, {
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: title,
+          start: "top 90%",
+          toggleActions: "play none none reverse",
+        },
+      });
+
       // Use trackWidth for the scroll duration to ensure it feels natural
       const scrollDuration = trackWidth;
 
@@ -108,12 +121,18 @@ export default function ServicesSection() {
       ref={container}
       className="relative w-full text-black overflow-hidden pt-20"
     >
-      <div className="max-w-7xl relative px-50 mb-12">
+      <div className="max-w-7xl relative px-16 mb-12">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 max-w-450 mx-auto w-full">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight max-w-4xl text-black">
-            J&apos;aborde chaque projet avec la même exigence : logique solide,
-            interface claire et performance maîtrisée.
+          <h2
+            className="text-3xl md:text-5xl font-medium tracking-tight font-bricolage-grotesque"
+            ref={titleRef}
+          >
+            Ces compétences traduisent ma façon de concevoir des{" "}
+            <span className="text-[#008366] italic font-serif">
+              solutions web fiables
+            </span>{" "}
+            claires et centrées sur l&apos;utilisateur.
           </h2>
         </div>
       </div>
@@ -123,7 +142,7 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`service-item relative flex flex-col p-8 md:p-10 lg:p-12 min-h-125 w-125 border-y border-r border-gray-400 hover:bg-gray-50 transition-colors duration-500 group ${
+              className={`service-item relative flex flex-col p-8 md:p-10 lg:p-12 min-h-125 w-125 border-y border-r border-b border-gray-400 hover:bg-gray-50 transition-colors duration-500 group ${
                 index === 0 ? "border-l" : ""
               }`}
             >

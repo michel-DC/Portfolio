@@ -11,6 +11,10 @@
 }
 
 @layer base {
+  ::selection {
+    background-color: #1e1e1e;
+    color: white;
+  }
   * {
     @apply border-border outline-ring/50;
   }
