@@ -108,27 +108,13 @@ export default function ServicesSection() {
       ref={container}
       className="relative w-full text-black overflow-hidden pt-20"
     >
-      <div className="max-w-7xl relative px-40 mb-12">
+      <div className="max-w-7xl relative px-50 mb-12">
         {/* Header Section */}
-        <div>
-          <h2
-            className=" text-4xl text-black md:text-8xl leading-tight"
-            ref={titleRef}
-          >
-            Mes Compétences
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 max-w-450 mx-auto w-full">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight max-w-4xl text-black">
+            J&apos;aborde chaque projet avec la même exigence : logique solide,
+            interface claire et performance maîtrisée.
           </h2>
-
-          <div
-            className="w-20 h-px mb-8"
-            style={{ backgroundColor: "#008366" }}
-          ></div>
-
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl font-light leading-relaxed">
-            De la conception à la mise en production, j&apos;accorde autant
-            d&apos;importance à la logique, à l&apos;interface qu&apos;à la
-            performance. Ces compétences traduisent ma façon de concevoir des
-            solutions web fiables, claires et centrées sur l&apos;utilisateur.
-          </p>
         </div>
       </div>
 

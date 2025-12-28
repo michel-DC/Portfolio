@@ -31,7 +31,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: 3,
-    title: "Lookaroun • Application de networkings",
+    title: "Lookaroun • Application de networking",
     category: "Application Web",
     image: "/images/projects/lookaroun/001.png",
     slug: "lookaroun",
@@ -47,7 +47,10 @@ const PROJECTS: Project[] = [
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
-    <Link href={`/mes-projets/${project.slug}`} className="block w-full group cursor-pointer">
+    <Link
+      href={`/mes-projets/${project.slug}`}
+      className="block w-full group cursor-pointer"
+    >
       <motion.div
         className="relative w-full aspect-4/3 overflow-hidden rounded-sm"
         initial="rest"
@@ -118,28 +121,37 @@ const ProjectCard = ({ project }: { project: Project }) => {
 export default function ProjectsSection() {
   return (
     <section className="w-full py-40 md:py-48" id="projects">
-      <div className="w-full px-4 md:px-12 lg:px-16">
+      <div className="w-full ">
         <div className="flex flex-col gap-16">
-          {/* Minimal Header */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-left gap-6 max-w-4xl w-full">
+          <div className="max-w-7xl relative px-16">
+            {/* Header Section */}
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 max-w-450 mx-auto w-full">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight max-w-4xl text-black">
+                Chaque projet est une réponse technique à un besoin précis, de
+                la conception à la mise en ligne.
+              </h2>
+            </div>
+          </div>
+          {/* <div className="flex flex-col md:flex-row justify-between items-start md:items-left gap-6 max-w-4xl w-full">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight tracking-tight text-black text-left md:w-full">
               Pour moi chaque projet est une réponse technique à un besoin
               précis, de la conception à la mise en ligne.
             </h2>
-          </div>
+          </div> */}
+          <div className="px-4 md:px-12 lg:px-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 lg:gap-x-12 lg:gap-y-16">
+              {PROJECTS.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 lg:gap-x-12 lg:gap-y-16">
-            {PROJECTS.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
-
-          <div className="flex justify-center">
-            <Button asChild size="lg" className="rounded-full px-8">
-              <Link href="/mes-projets">
-                Voir tous mes projets <ArrowUpRight className="ml-2 size-5" />
-              </Link>
-            </Button>
+            <div className="flex justify-center mt-12">
+              <Button asChild size="lg" className="rounded-full px-8">
+                <Link href="/mes-projets">
+                  Voir tous mes projets <ArrowUpRight className="ml-2 size-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
