@@ -53,7 +53,7 @@ export default function EducationSection() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-8 relative">
+        <div className="grid grid-cols-1 gap-12 md:gap-8 relative">
           {/* Vertical line for desktop */}
           <div className="hidden md:block absolute left-[30%] top-0 bottom-0 w-px bg-gray-200" />
 
@@ -63,25 +63,25 @@ export default function EducationSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="flex flex-col md:flex-row gap-6 md:gap-12 relative"
+              className="flex flex-col md:flex-row gap-4 md:gap-12 relative"
             >
               {/* Year column */}
               <div className="md:w-[30%] shrink-0 flex items-start md:justify-end md:pr-12 relative">
                 <div className="hidden md:block absolute right-[-6.5px] top-2 w-3 h-3 rounded-full bg-[#008366] ring-4 ring-white" />
-                <span className="text-xl font-bold text-[#008366] font-bricolage-grotesque">
+                <span className="text-xl md:text-2xl font-bold text-[#008366] font-bricolage-grotesque">
                   {item.year}
                 </span>
               </div>
 
               {/* Content column */}
-              <div className="md:w-[70%] pb-12 md:pb-16 border-b border-gray-200 md:border-0 last:pb-0">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2 font-bricolage-grotesque">
+              <div className="md:w-[70%] pb-8 md:pb-16 border-b border-gray-100 md:border-0 last:border-0 last:pb-0">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 font-bricolage-grotesque">
                   {item.degree}
                 </h3>
-                <h4 className="text-lg font-medium text-gray-500 mb-4">
+                <h4 className="text-lg md:text-xl font-medium text-gray-500 mb-4">
                   {item.school}
                 </h4>
-                <p className="text-gray-600 leading-relaxed max-w-2xl">
+                <p className="text-gray-600 leading-relaxed max-w-2xl text-base md:text-lg">
                   {item.description}
                 </p>
               </div>

@@ -42,7 +42,7 @@ export default function IntroSection() {
                 mais aussi visuellement impactant.
               </p>
               <p>
-                Adept de l&apos;intelligence artificielle, je l&apos;intègre
+                Adepte de l&apos;intelligence artificielle, je l&apos;intègre
                 naturellement dans mon processus de développement afin
                 d&apos;optimiser mes méthodes de travail, accélérer la
                 résolution de problèmes et améliorer la qualité des solutions

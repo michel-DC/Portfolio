@@ -99,7 +99,7 @@ export default function ExperienceSection(): JSX.Element {
         {/* Timeline Container */}
         <div className="relative max-w-5xl mx-auto">
           {/* Vertical Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-200 top-0">
+          <div className="absolute left-2 md:left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-200 top-0">
             <div
               ref={lineRef}
               className="w-full bg-[#008366] absolute top-0 left-0"
@@ -108,43 +108,41 @@ export default function ExperienceSection(): JSX.Element {
           </div>
 
           {/* Items */}
-          <div className="space-y-24">
+          <div className="space-y-16 md:space-y-24">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className={`timeline-item flex flex-col md:flex-row items-center justify-between w-full relative ${
+                className={`timeline-item flex flex-col md:flex-row items-start md:items-center justify-between w-full relative ${
                   index % 2 === 0 ? "" : "md:flex-row-reverse"
                 }`}
               >
                 {/* Content Side */}
                 <div
-                  className={`w-full md:w-[45%] ${
+                  className={`w-full md:w-[45%] pl-10 md:pl-0 ${
                     index % 2 === 0 ? "md:text-right" : "md:text-left"
-                  } mb-8 md:mb-0`}
+                  } text-left mb-4 md:mb-0`}
                 >
-                  <h3 className="text-4xl md:text-5xl font-bold font-bricolage-grotesque mb-2">
+                  <h3 className="text-3xl md:text-5xl font-bold font-bricolage-grotesque mb-2">
                     {exp.company}
                   </h3>
-                  <p className="text-lg text-gray-500 font-light mb-4">
+                  <p className="text-base md:text-lg text-gray-500 font-light mb-4">
                     {exp.role}
                   </p>
-                  <p className="text-gray-700 leading-relaxed text-lg max-w-lg mx-auto md:mx-0 inline-block">
+                  <p className="text-gray-700 leading-relaxed text-base md:text-lg">
                     {exp.description}
                   </p>
-                  <div
-                    className={`mt-4 text-sm font-medium text-[#008366] uppercase tracking-wider`}
-                  >
+                  <div className="mt-4 text-sm font-medium text-[#008366] uppercase tracking-wider">
                     {exp.date}
                   </div>
                 </div>
 
                 {/* Center Dot */}
-                <div className="absolute left-1/2 top-0 transform -translate-x-1/2 flex items-center justify-center">
+                <div className="absolute left-2 md:left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center">
                   <div className="w-4 h-4 rounded-full bg-[#008366] border-4 border-[#F3F4F6] z-10 shadow-sm"></div>
                 </div>
 
                 {/* Empty Side (for balance) */}
-                <div className="w-full md:w-[45%]"></div>
+                <div className="hidden md:block md:w-[45%]"></div>
               </div>
             ))}
           </div>

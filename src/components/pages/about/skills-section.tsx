@@ -137,60 +137,60 @@ export default function SkillsSection() {
         </motion.div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-6">
           {/* NextJS - Large */}
           <BentoSkillCard
             skill={skills[0]}
             index={0}
-            className="col-span-2 row-span-1"
+            className="md:col-span-2 row-span-1"
           />
 
           {/* TypeScript */}
           <BentoSkillCard
             skill={skills[1]}
             index={1}
-            className="col-span-1 row-span-1"
+            className="md:col-span-1 row-span-1"
           />
 
           {/* PostgreSQL */}
           <BentoSkillCard
             skill={skills[2]}
             index={2}
-            className="col-span-1 row-span-1"
+            className="md:col-span-1 row-span-1"
           />
 
           {/* Quote Card - Tall Right */}
           <BentoQuoteCard
             index={3}
-            className="col-span-2 md:col-span-1 md:row-span-2 md:col-start-5 md:row-start-1 h-full"
+            className="md:col-span-1 md:row-span-2 md:col-start-5 md:row-start-1 h-full min-h-[250px] md:min-h-0"
           />
 
           {/* Tailwind CSS */}
           <BentoSkillCard
             skill={skills[3]}
             index={4}
-            className="col-span-1 row-span-1"
+            className="md:col-span-1 row-span-1"
           />
 
           {/* PHP */}
           <BentoSkillCard
             skill={skills[4]}
             index={5}
-            className="col-span-1 row-span-1"
+            className="md:col-span-1 row-span-1"
           />
 
           {/* Figma */}
           <BentoSkillCard
             skill={skills[5]}
             index={6}
-            className="col-span-1 row-span-1"
+            className="md:col-span-1 row-span-1"
           />
 
           {/* Framer */}
           <BentoSkillCard
             skill={skills[6]}
             index={7}
-            className="col-span-1 row-span-1"
+            className="md:col-span-1 row-span-1"
           />
         </div>
       </div>

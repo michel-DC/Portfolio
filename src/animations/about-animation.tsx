@@ -55,7 +55,7 @@ const AboutAnimation: React.FC = () => {
       className="projects-entry-container fixed inset-0 z-100 pointer-events-none"
     >
       <div className="projects-entry-overlay absolute inset-0 flex items-center justify-center bg-black pointer-events-auto">
-        <p className="projects-entry-text text-7xl font-bold text-white font-bricolage-grotesque">
+        <p className="projects-entry-text text-5xl lg:text-7xl font-bold text-white font-bricolage-grotesque">
           À propos de moi
         </p>
       </div>
