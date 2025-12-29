@@ -1,14 +1,12 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme {
-  --color-background: hsl(0 0% 94.1%);
-  --color-foreground: hsl(0 0% 0%);
-  --color-border: hsl(240 5.9% 90%);
-  --color-ring: hsl(240 5.9% 10%);
+  --color-white: #e6e6e6;
+  --color-black: #1e1e1e;
 }
+
+@custom-variant dark (&:is(.dark *));
 
 @layer base {
   ::selection {

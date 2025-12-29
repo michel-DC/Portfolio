@@ -198,7 +198,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="https://v1.micheldjoumessi.com"
+                  href="https://v1.onlinemichel.dev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-[#008366] transition-colors"
@@ -208,7 +208,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="https://v2.micheldjoumessi.com"
+                  href="https://v2.onlinemichel.dev"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-[#008366] transition-colors"
