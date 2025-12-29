@@ -6,6 +6,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   firstname: z.string().min(2, "Le prénom est requis"),
@@ -29,11 +30,32 @@ export default function ContactSection() {
   });
 
   const onSubmit = async (data: FormData) => {
-    // Simulate form submission
-    console.log("Form data:", data);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    reset();
-    alert("Message envoyé !");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Erreur lors de l'envoi");
+      }
+
+      toast.success("Message envoyé avec succès !", {
+        description: "Je vous répondrai dans les plus brefs délais.",
+      });
+      reset();
+    } catch (error) {
+      console.error(error);
+      toast.error("Une erreur est survenue.", {
+        description:
+          "Veuillez réessayer plus tard ou me contacter directement par email.",
+      });
+    }
   };
 
   return (

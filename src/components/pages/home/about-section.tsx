@@ -38,7 +38,7 @@ export default function AboutSection() {
       ref={container}
       className="relative z-20 w-full bg-black pb-24 md:pt-32 text-white md:mt-60"
     >
-      <div className="absolute -top-60 left-0 right-0 h-60.5 overflow-hidden pointer-events-none">
+      <div className="absolute md:-top-60 top-40 left-0 right-0 h-60.5 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-full bg-black rounded-[50%_50%_0_0/100%_100%_0_0]" />
       </div>
 
@@ -60,10 +60,12 @@ export default function AboutSection() {
             whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
             transition={{ duration: 0.4 }}
           >
-            <Button className="rounded-full" size="lg">
-              <Link href="/a-propos">À propos de moi</Link>
-              <ArrowUpRight className="ml-2 size-5 md:size-6" />
-            </Button>
+            <Link href="/a-propos">
+              <Button className="rounded-full" size="lg">
+                À propos de moi
+                <ArrowUpRight className="ml-2 size-5 md:size-6" />
+              </Button>
+            </Link>
           </motion.div>
         </div>
 
