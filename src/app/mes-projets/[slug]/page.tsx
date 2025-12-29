@@ -33,6 +33,8 @@ interface ProjectData {
   learningOutcomes?: string[];
   github?: string;
   url?: string;
+  clientName?: string;
+  clientLogo?: string;
 }
 
 // Helper to get all projects
@@ -240,56 +242,94 @@ export default async function ProjectPage({
 
             {/* Sidebar Details */}
             <div className="space-y-8">
-              <div className="p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 space-y-8 sticky top-32">
-                <div>
-                  <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 uppercase tracking-wider mb-4 flex items-center gap-2">
-                    <Calendar className="w-4 h-4" /> Date
-                  </h3>
-                  <p className="text-neutral-600 dark:text-neutral-400">
-                    {project.date}
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 uppercase tracking-wider mb-4">
-                    Technologies
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 text-sm bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-md text-neutral-700 dark:text-neutral-300"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+              <div className="sticky top-32 space-y-8">
+                {/* Mobile Mockup - 2nd Image */}
+                {project.images.length > 1 && (
+                  <div className="relative aspect-9/16 w-full max-w-70 mx-auto overflow-hidden rounded-3xl  shadow-xl">
+                    <Image
+                      src={project.images[1]}
+                      alt={`${project.name} mobile view`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 300px"
+                    />
                   </div>
-                </div>
+                )}
 
-                <div className="pt-4 border-t border-neutral-200 dark:border-neutral-800">
-                  <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 uppercase tracking-wider mb-4">
-                    Liens
-                  </h3>
-                  <div className="flex flex-col gap-3">
-                    {project.url && (
-                      <Link
-                        href={project.url}
-                        target="_blank"
-                        className="text-sm font-medium hover:text-emerald-600 transition-colors flex items-center gap-2"
-                      >
-                        <ArrowUpRight className="w-4 h-4" /> Voir le projet en
-                        ligne
-                      </Link>
-                    )}
-                    {project.github && (
-                      <Link
-                        href={project.github}
-                        target="_blank"
-                        className="text-sm font-medium hover:text-emerald-600 transition-colors flex items-center gap-2"
-                      >
-                        <Github className="w-4 h-4" /> Voir le code source
-                      </Link>
-                    )}
+                <div className="p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 space-y-8">
+                  {project.clientName && (
+                    <div>
+                      <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 uppercase tracking-wider mb-4">
+                        Client
+                      </h3>
+                      <div className="flex items-center gap-3">
+                        {project.clientLogo && (
+                          <div className="relative w-10 h-10 rounded-full overflow-hidden bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700">
+                            <Image
+                              src={project.clientLogo}
+                              alt={project.clientName}
+                              fill
+                              className="object-contain p-1"
+                            />
+                          </div>
+                        )}
+                        <p className="font-medium text-neutral-900 dark:text-neutral-100 italic">
+                          {project.clientName}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  <div>
+                    <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 uppercase tracking-wider mb-4 flex items-center gap-2">
+                      <Calendar className="w-4 h-4" /> Date
+                    </h3>
+                    <p className="text-neutral-600 dark:text-neutral-400">
+                      {project.date}
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 uppercase tracking-wider mb-4">
+                      Technologies
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 text-sm bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-md text-neutral-700 dark:text-neutral-300"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-neutral-200 dark:border-neutral-800">
+                    <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 uppercase tracking-wider mb-4">
+                      Liens
+                    </h3>
+                    <div className="flex flex-col gap-3">
+                      {project.url && (
+                        <Link
+                          href={project.url}
+                          target="_blank"
+                          className="text-sm font-medium hover:text-emerald-600 transition-colors flex items-center gap-2"
+                        >
+                          <ArrowUpRight className="w-4 h-4" /> Voir le projet en
+                          ligne
+                        </Link>
+                      )}
+                      {project.github && (
+                        <Link
+                          href={project.github}
+                          target="_blank"
+                          className="text-sm font-medium hover:text-emerald-600 transition-colors flex items-center gap-2"
+                        >
+                          <Github className="w-4 h-4" /> Voir le code source
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -300,7 +340,7 @@ export default async function ProjectPage({
         {/* Discover More Section */}
         <div className="w-full px-4 md:px-24 mt-32 border-t border-neutral-200 dark:border-neutral-800 pt-16">
           <h2 className="text-3xl font-bold mb-12">
-            Découvrir d'autres projets
+            Découvrir d&apos;autres projets
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {randomProjects.map((p) => (

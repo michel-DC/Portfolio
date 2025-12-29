@@ -110,7 +110,7 @@ export function Footer() {
 
         <div className="border-t border-[#2a2a2a] my-8" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">
               Michel DJOUMESSI
@@ -187,6 +187,33 @@ export function Footer() {
                   className="text-gray-400 hover:text-[#008366] transition-colors"
                 >
                   Flow Media
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Section Anciennes Versions */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Versions</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link
+                  href="https://v1.micheldjoumessi.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                >
+                  Portfolio v1
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://v2.micheldjoumessi.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                >
+                  Portfolio v2
                 </Link>
               </li>
             </ul>
