@@ -36,19 +36,19 @@ export default function AboutSection() {
   return (
     <section
       ref={container}
-      className="relative z-20 w-full bg-black pb-24 pt-32 text-white mt-60"
+      className="relative z-20 w-full bg-black pb-24 md:pt-32 text-white md:mt-60"
     >
       <div className="absolute -top-60 left-0 right-0 h-60.5 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-full bg-black rounded-[50%_50%_0_0/100%_100%_0_0]" />
       </div>
 
-      <div className="container mx-auto flex min-h-[80vh] flex-col items-center justify-center px-4 text-center relative z-10">
-        <h2 className="about-text mb-12 max-w-5xl text-5xl font-medium leading-tight md:text-5xl">
+      <div className="container mx-auto flex min-h-[80vh] flex-col items-center justify-center px-6 md:px-4 text-center relative z-10">
+        <h2 className="about-text mb-8 md:mb-12 max-w-5xl text-3xl md:text-5xl font-medium leading-tight">
           Je suis Michel, développeur Full Stack junior spécialisé dans la
           création d&apos;expériences digitales performantes et scalables.
         </h2>
 
-        <p className="about-text mb-16 max-w-6xl text-3xl md:text-3xl">
+        <p className="about-text mb-12 md:mb-16 max-w-6xl text-xl md:text-3xl text-gray-300 md:text-white">
           Je me spécialise dans le développement de solutions web complètes qui
           allient performance, scalabilité et design centré sur
           l&apos;utilisateur. Je travaille principalement avec des technologies
@@ -60,9 +60,9 @@ export default function AboutSection() {
             whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
             transition={{ duration: 0.4 }}
           >
-            <Button className="rounded-full">
+            <Button className="rounded-full" size="lg">
               <Link href="/a-propos">À propos de moi</Link>
-              <ArrowUpRight className="ml-2 size-6" />
+              <ArrowUpRight className="ml-2 size-5 md:size-6" />
             </Button>
           </motion.div>
         </div>

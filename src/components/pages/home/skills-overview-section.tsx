@@ -46,22 +46,12 @@ export default function ServicesSection() {
   useLayoutEffect(() => {
     const track = servicesTrack.current;
     const title = titleRef.current;
+    const containerEl = container.current;
 
-    if (!track || !title) return;
-
-    const services = Array.from(track.children);
-    if (services.length === 0) return;
-
-    const trackWidth = services.reduce(
-      (acc, service) => acc + (service as HTMLElement).offsetWidth,
-      0
-    );
-    track.style.width = `${trackWidth}px`;
-
-    const titleLeft = title.getBoundingClientRect().left;
+    if (!track || !title || !containerEl) return;
 
     const ctx = gsap.context(() => {
-      // Animation d'entrée du titre
+      // Animation d'entrée du titre (toujours actif)
       gsap.from(title, {
         y: 50,
         opacity: 0,
@@ -74,43 +64,71 @@ export default function ServicesSection() {
         },
       });
 
-      // Use trackWidth for the scroll duration to ensure it feels natural
-      const scrollDuration = trackWidth;
+      const mm = gsap.matchMedia();
 
-      gsap.fromTo(
-        track,
-        {
-          x: window.innerWidth * 0.5, // Start closer to viewport
-        },
-        {
-          x: () => -(trackWidth - window.innerWidth + titleLeft), // End aligned with title
-          ease: "none",
-          scrollTrigger: {
-            trigger: container.current,
-            pin: true,
-            scrub: 1,
-            // Use a fixed distance based on track width for the scroll interaction duration
-            end: () => `+=${scrollDuration}`,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-          },
-        }
-      );
+      // Desktop : Horizontal Scroll
+      mm.add("(min-width: 768px)", () => {
+        const services = Array.from(track.children);
+        if (services.length === 0) return;
 
-      services.forEach((service) => {
-        gsap.from(service, {
-          y: 100,
-          opacity: 0,
-          duration: 1,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: service,
-            containerAnimation: gsap.getTweensOf(track)[0],
-            start: "left 90%",
-            toggleActions: "play none none reverse",
+        const trackWidth = services.reduce(
+          (acc, service) => acc + (service as HTMLElement).offsetWidth,
+          0
+        );
+        track.style.width = `${trackWidth}px`;
+        track.style.flexDirection = "row"; // Force row on desktop
+
+        const titleLeft = title.getBoundingClientRect().left;
+        const scrollDuration = trackWidth;
+
+        gsap.fromTo(
+          track,
+          {
+            x: window.innerWidth * 0.5,
           },
+          {
+            x: () => -(trackWidth - window.innerWidth + titleLeft),
+            ease: "none",
+            scrollTrigger: {
+              trigger: containerEl,
+              pin: true,
+              scrub: 1,
+              end: () => `+=${scrollDuration}`,
+              anticipatePin: 1,
+              invalidateOnRefresh: true,
+            },
+          }
+        );
+
+        services.forEach((service) => {
+          gsap.from(service, {
+            y: 100,
+            opacity: 0,
+            duration: 1,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: service,
+              containerAnimation: gsap.getTweensOf(track)[0],
+              start: "left 90%",
+              toggleActions: "play none none reverse",
+            },
+          });
         });
       });
+
+      // Mobile : Vertical Stack (No animations, purely static layout)
+      mm.add("(max-width: 767px)", () => {
+        track.style.width = "100%";
+        track.style.transform = "none";
+        track.style.flexDirection = "column";
+        
+        // Reset any properties GSAP might have set if resizing from desktop
+        const services = Array.from(track.children);
+        services.forEach((service) => {
+             gsap.set(service, { clearProps: "all" });
+        });
+      });
+
     }, container);
 
     return () => ctx.revert();
@@ -121,7 +139,7 @@ export default function ServicesSection() {
       ref={container}
       className="relative w-full text-black overflow-hidden pt-20"
     >
-      <div className="max-w-7xl relative px-16 mb-12">
+      <div className="max-w-7xl relative px-6 md:px-16 mb-12">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 max-w-450 mx-auto w-full">
           <h2
@@ -137,31 +155,31 @@ export default function ServicesSection() {
         </div>
       </div>
 
-      <div className="w-full h-150 flex items-center">
-        <div ref={servicesTrack} className="flex">
+      <div className="w-full md:h-150 flex items-start md:items-center">
+        <div ref={servicesTrack} className="flex flex-col md:flex-row w-full md:w-auto">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`service-item relative flex flex-col p-8 md:p-10 lg:p-12 min-h-125 w-125 border-y border-r border-b border-gray-400 hover:bg-gray-50 transition-colors duration-500 group ${
-                index === 0 ? "border-l" : ""
+              className={`service-item relative flex flex-col p-8 md:p-10 lg:p-12 min-h-auto md:min-h-125 w-full md:w-125 border-b border-gray-400 md:border-y md:border-r md:border-b hover:bg-gray-50 transition-colors duration-500 group ${
+                index === 0 ? "md:border-l border-t" : ""
               }`}
             >
               {/* Number, Icon, Title, Description */}
               <div className="absolute top-4 right-4 text-gray-400 font-light text-xl group-hover:text-black transition-colors">
                 {service.id}
               </div>
-              <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-[#008366] border border-[#008366] text-white transition-transform duration-500">
+              <div className="mb-8 flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-[#008366] border border-[#008366] text-white transition-transform duration-500 shrink-0">
                 {service.icon}
               </div>
-              <h3 className="text-2xl lg:text-3xl font-bold mb-4 font-bricolage-grotesque leading-tight w-[95%] min-h-20">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-4 font-bricolage-grotesque leading-tight w-[95%] min-h-auto md:min-h-20">
                 {service.title}
               </h3>
 
-              <div className="flex-1 flex">
+              <div className="flex-1 flex mb-4 md:mb-0">
                 <div className="w-full h-px bg-gray-500"></div>
               </div>
 
-              <p className="text-gray-600 leading-relaxed text-lg">
+              <p className="text-gray-600 leading-relaxed text-base md:text-lg">
                 {service.description}
               </p>
             </div>

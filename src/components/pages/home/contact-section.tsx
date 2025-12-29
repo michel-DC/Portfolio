@@ -37,11 +37,11 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="w-full py-20" id="contact">
-      <div className="w-full px-4 md:px-12 lg:px-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+    <section className="w-full py-16 md:py-20" id="contact">
+      <div className="w-full px-6 md:px-12 lg:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
           {/* Left Column: Typography */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -49,16 +49,16 @@ export default function ContactSection() {
               transition={{ duration: 0.6 }}
               className="flex flex-col select-none"
             >
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter leading-[0.8] text-foreground">
+              <h2 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter leading-[0.9] md:leading-[0.8] text-foreground">
                 Alors{" "}
-                <span className="font-serif italic font-light text-[#008366] lowercase tracking-normal">
+                <span className="font-serif italic font-light text-[#008366] lowercase tracking-normal block md:inline">
                   convaincu ?
                 </span>
               </h2>
-              <div className="mt-8 md:mt-12">
-                <p className="text-3xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-foreground">
+              <div className="mt-6 md:mt-12">
+                <p className="text-2xl md:text-5xl lg:text-6xl font-normal leading-tight tracking-tight text-foreground">
                   et si on travaillait{" "}
-                  <span className="font-serif italic font-light lowercase block md:inline mt-2 md:mt-0">
+                  <span className="font-serif italic font-light lowercase block md:inline mt-1 md:mt-0">
                     ensemble?
                   </span>
                 </p>

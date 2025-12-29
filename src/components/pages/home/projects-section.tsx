@@ -123,7 +123,7 @@ export default function ProjectsSection() {
     <section className="w-full py-24 md:py-32" id="projects">
       <div className="w-full ">
         <div className="flex flex-col gap-16">
-          <div className="max-w-7xl relative px-16">
+          <div className="max-w-7xl relative px-6 md:px-16">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 max-w-450 mx-auto w-full">
               <motion.h2
                 initial={{ opacity: 0, y: 50 }}
@@ -146,7 +146,7 @@ export default function ProjectsSection() {
               précis, de la conception à la mise en ligne.
             </h2>
           </div> */}
-          <div className="px-4 md:px-12 lg:px-16">
+          <div className="px-6 md:px-12 lg:px-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 lg:gap-x-12 lg:gap-y-16">
               {PROJECTS.map((project) => (
                 <ProjectCard key={project.id} project={project} />
