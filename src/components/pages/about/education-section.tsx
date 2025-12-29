@@ -14,27 +14,19 @@ interface Education {
 const educationData: Education[] = [
   {
     id: 1,
-    degree: "Bachelor Concepteur Développeur d'Applications",
-    school: "MyDigitalSchool, Marseille",
+    degree: "BUT Métiers du Multimédia et de l'Internet (MMI)",
+    school: "Université de Versailles Saint-Quentin-en-Yvelines",
     year: "2024 - Présent",
     description:
-      "Spécialisation en développement web full-stack et architecture logicielle.",
+      "Spécialisation en développement web et dispositifs interactifs. Apprentissage des technologies front-end et back-end.",
   },
   {
     id: 2,
-    degree: "BTS SIO (Services Informatiques aux Organisations)",
-    school: "Lycée Marie Curie, Marseille",
+    degree: "Baccalauréat Technologique",
+    school: "Lycée Clément Ader",
     year: "2022 - 2024",
     description:
-      "Option Solutions Logicielles et Applications Métiers (SLAM). Bases solides en algorithmique et développement.",
-  },
-  {
-    id: 3,
-    degree: "Baccalauréat STI2D",
-    school: "Lycée Jean Perrin, Marseille",
-    year: "2022",
-    description:
-      "Sciences et Technologies de l'Industrie et du Développement Durable, option SIN (Systèmes d'Information et Numérique).",
+      "Développement de solutions en Python, C++ et PHP. Modélisation et impression 3D.",
   },
 ];
 
@@ -51,9 +43,13 @@ export default function EducationSection() {
           transition={{ duration: 0.8 }}
           className="mb-16 md:mb-24"
         >
-          <h2 className="text-3xl md:text-5xl font-medium tracking-tight font-bricolage-grotesque">
-            Mon parcours{" "}
-            <span className="text-[#008366] italic font-serif">scolaire</span>
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tight font-bricolage-grotesque">
+            Un parcours scolaire guidé par la.{" "}
+            <span className="text-[#008366] italic font-serif">curiosité</span>{" "}
+            et l&apos;envie de{" "}
+            <span className="text-[#008366] italic font-serif">
+              comprendre le numérique.
+            </span>
           </h2>
         </motion.div>
 
@@ -70,7 +66,7 @@ export default function EducationSection() {
               className="flex flex-col md:flex-row gap-6 md:gap-12 relative"
             >
               {/* Year column */}
-              <div className="md:w-[30%] flex-shrink-0 flex items-start md:justify-end md:pr-12 relative">
+              <div className="md:w-[30%] shrink-0 flex items-start md:justify-end md:pr-12 relative">
                 <div className="hidden md:block absolute right-[-6.5px] top-2 w-3 h-3 rounded-full bg-[#008366] ring-4 ring-white" />
                 <span className="text-xl font-bold text-[#008366] font-bricolage-grotesque">
                   {item.year}

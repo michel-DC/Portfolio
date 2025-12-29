@@ -84,11 +84,15 @@ export default function ExperienceSection(): JSX.Element {
       ref={sectionRef}
       className="relative w-full py-30 bg-white text-black overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-16 relative">
+      <div className="max-w-8xl mx-auto px-6 md:px-16 relative">
         {/* Header */}
-        <div className="text-center mb-20 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-6 font-bricolage-grotesque">
-            Mon expérience <span className="text-[#008366] italic font-serif">professionnelle</span>
+        <div className="text-center mb-20 max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-medium tracking-tight font-bricolage-grotesque">
+            Des expériences qui traduisent une{" "}
+            <span className="text-[#008366] italic font-serif">
+              montée en compétences
+            </span>
+            progressive et orientée terrain.
           </h2>
         </div>
 

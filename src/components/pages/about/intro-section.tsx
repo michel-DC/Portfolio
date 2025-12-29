@@ -12,7 +12,7 @@ export default function IntroSection() {
       <div className="max-w-450 mx-auto px-6 md:px-12 lg:px-16">
         <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
           {/* Text Content */}
-          <div className="w-full md:w-1/2 space-y-8">
+          <div className="w-full md:w-[60%] space-y-8">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -41,6 +41,13 @@ export default function IntroSection() {
                 m&apos;assure que chaque projet soit non seulement fonctionnel,
                 mais aussi visuellement impactant.
               </p>
+              <p>
+                Adept de l&apos;intelligence artificielle, je l&apos;intègre
+                naturellement dans mon processus de développement afin
+                d&apos;optimiser mes méthodes de travail, accélérer la
+                résolution de problèmes et améliorer la qualité des solutions
+                livrées.
+              </p>
             </motion.div>
 
             <motion.div
@@ -61,7 +68,7 @@ export default function IntroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="w-full md:w-1/2"
+            className="w-full md:w-[40%]"
           >
             <Image
               src="/images/profile/avatar.png"
