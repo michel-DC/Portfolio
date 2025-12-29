@@ -10,6 +10,7 @@ interface Project {
   category: string;
   image: string;
   slug: string;
+  json: string;
 }
 
 const PROJECTS: Project[] = [
@@ -19,6 +20,7 @@ const PROJECTS: Project[] = [
     category: "Application Web",
     image: "/images/projects/teamify/001.png",
     slug: "teamify",
+    json: "/data/projects/001.json",
   },
   {
     id: 2,
@@ -26,6 +28,7 @@ const PROJECTS: Project[] = [
     category: "Service Backend",
     image: "/images/projects/app-analyzer/001.png",
     slug: "app-analyzer",
+    json: "/data/projects/002.json",
   },
   {
     id: 3,
@@ -33,6 +36,7 @@ const PROJECTS: Project[] = [
     category: "Application Web (STAGE)",
     image: "/images/projects/lookaroun/001.png",
     slug: "lookaroun",
+    json: "/data/projects/005.json",
   },
   {
     id: 4,
@@ -40,6 +44,7 @@ const PROJECTS: Project[] = [
     category: "Application Web",
     image: "/images/projects/flow-media/001.png",
     slug: "flow-media",
+    json: "/data/projects/004.json",
   },
   {
     id: 5,
@@ -47,6 +52,7 @@ const PROJECTS: Project[] = [
     category: "Site Vitrine (FREELANCE)",
     image: "/images/projects/elecsud-energies/001.png",
     slug: "elecsud-energies",
+    json: "/data/projects/007.json",
   },
   {
     id: 6,
@@ -54,6 +60,7 @@ const PROJECTS: Project[] = [
     category: "Site Vitrine",
     image: "/images/projects/framix/001.png",
     slug: "framix",
+    json: "/data/projects/002.json",
   },
   {
     id: 7,
@@ -61,6 +68,7 @@ const PROJECTS: Project[] = [
     category: "Site Vitrine",
     image: "/images/projects/lexi-ai/001.png",
     slug: "lexi-ai",
+    json: "/data/projects/003.json",
   },
 ];
 

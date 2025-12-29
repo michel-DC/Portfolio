@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     images: [
       {
-        url: "/images/logo/avatar.png",
+        url: "/images/profile/og-image.png",
         width: 1200,
         height: 630,
         alt: "Bannière de Michel Djoumessi",
@@ -51,7 +51,12 @@ export const metadata: Metadata = {
     title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
     description:
       "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
-    images: ["/images/logo/og-image.png"],
+    images: ["/images/profile/og-image.png"],
+  },
+  icons: {
+    icon: "/images/svg/logo-noir.svg",
+    shortcut: "/images/svg/favicon.svg",
+    apple: "/images/svg/favicon.svg",
   },
 };
 
@@ -80,11 +85,6 @@ export default function RootLayout({
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-5QMDFMGS');`}
         </Script>
-        <link
-          rel="shortcut icon"
-          href="/images/svg/logo-blanc.svg"
-          type="image/x-icon"
-        />
         {/* Canonical and JSON-LD for improved SEO */}
         <link rel="canonical" href={SITE_URL} />
         <link

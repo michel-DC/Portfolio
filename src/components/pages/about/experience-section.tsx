@@ -91,7 +91,7 @@ export default function ExperienceSection(): JSX.Element {
             Des expériences qui traduisent une{" "}
             <span className="text-[#008366] italic font-serif">
               montée en compétences
-            </span>
+            </span>{" "}
             progressive et orientée terrain.
           </h2>
         </div>
