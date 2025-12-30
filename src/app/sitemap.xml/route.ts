@@ -4,13 +4,7 @@ import path from "path";
 const SITE_URL = "https://onlinemichel.dev";
 
 export async function GET() {
-  const pages = [
-    "/",
-    "/a-propos",
-    "/mes-projets",
-    "/mentions-legales",
-    "/politique-confidentialite",
-  ];
+  const pages = ["/", "/a-propos", "/mes-projets"];
 
   const projectsDir = path.join(process.cwd(), "src", "data", "projects");
   const projectUrls: string[] = [];
