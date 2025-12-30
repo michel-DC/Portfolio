@@ -32,7 +32,7 @@ export async function GET() {
               .toLowerCase()
               .replace(/[^a-z0-9]+/gi, "-")
               .replace(/(^-|-$)/g, ""));
-        if (slug) projectUrls.push(`/projets/${slug}`);
+        if (slug) projectUrls.push(`/mes-projets/${slug}`);
       } catch {}
     }
   } catch {}
@@ -69,7 +69,7 @@ export async function GET() {
         if (!slug) continue;
         const stat = await fs.promises.stat(full);
         const lastmod = stat.mtime.toISOString();
-        const loc = `${SITE_URL}/projets/${slug}`;
+        const loc = `${SITE_URL}/mes-projets/${slug}`;
         urlEntries.push(
           `  <url><loc>${loc}</loc><lastmod>${lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>`
         );
