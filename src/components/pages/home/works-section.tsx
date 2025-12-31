@@ -88,8 +88,11 @@ export default function WorksSection(): JSX.Element {
         {/* Header */}
         <div className="text-center mb-20 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-6 font-bricolage-grotesque">
-            Découvrez mon parcours et les technologies qui définissent mon{" "}
-            <span className="text-[#008366] italic font-serif">métier.</span>
+            Des expériences qui traduisent une{" "}
+            <span className="text-[#008366] italic font-serif">
+              montée en compétences
+            </span>{" "}
+            progressive et orientée terrain.
           </h2>
         </div>
 
