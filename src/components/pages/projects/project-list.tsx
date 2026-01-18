@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
+import ProjectRow from "./project-row";
 
 interface Project {
   id: number;
@@ -11,6 +10,8 @@ interface Project {
   image: string;
   slug: string;
   json: string;
+  year?: string;
+  tags?: string[];
 }
 
 const PROJECTS: Project[] = [
@@ -21,6 +22,8 @@ const PROJECTS: Project[] = [
     image: "/images/projects/teamify/001.png",
     slug: "teamify",
     json: "/data/projects/001.json",
+    year: "2025",
+    tags: ["Next.js", "Prisma", "Pusher"],
   },
   {
     id: 2,
@@ -29,6 +32,8 @@ const PROJECTS: Project[] = [
     image: "/images/projects/app-analyzer/001.png",
     slug: "app-analyzer",
     json: "/data/projects/002.json",
+    year: "2025",
+    tags: ["Next.js", "Puppeteer", "Lighthouse"],
   },
   {
     id: 3,
@@ -36,7 +41,9 @@ const PROJECTS: Project[] = [
     category: "Application Web (STAGE)",
     image: "/images/projects/lookaroun/001.png",
     slug: "lookaroun",
-    json: "/data/projects/005.json",
+    json: "/data/projects/006.json",
+    year: "2025",
+    tags: ["React", "Firebase", "Shadcn UI"],
   },
   {
     id: 4,
@@ -44,7 +51,9 @@ const PROJECTS: Project[] = [
     category: "Application Web",
     image: "/images/projects/flow-media/001.png",
     slug: "flow-media",
-    json: "/data/projects/004.json",
+    json: "/data/projects/005.json",
+    year: "2025",
+    tags: ["PHP", "MySQL", "JavaScript"],
   },
   {
     id: 5,
@@ -53,6 +62,8 @@ const PROJECTS: Project[] = [
     image: "/images/projects/elecsud-energies/001.png",
     slug: "elecsud-energies",
     json: "/data/projects/007.json",
+    year: "2025",
+    tags: ["Next.js", "GSAP", "Tailwind"],
   },
   {
     id: 6,
@@ -60,7 +71,9 @@ const PROJECTS: Project[] = [
     category: "Site Vitrine",
     image: "/images/projects/framix/001.png",
     slug: "framix",
-    json: "/data/projects/002.json",
+    json: "/data/projects/003.json",
+    year: "2025",
+    tags: ["Astro", "React", "Tailwind"],
   },
   {
     id: 7,
@@ -68,126 +81,57 @@ const PROJECTS: Project[] = [
     category: "Site Vitrine",
     image: "/images/projects/lexi-ai/001.png",
     slug: "lexi-ai",
-    json: "/data/projects/003.json",
+    json: "/data/projects/004.json",
+    year: "2025",
+    tags: ["React", "Tailwind", "Framer"],
   },
 ];
 
-const ProjectCard = ({ project }: { project: Project }) => {
-  return (
-    <Link
-      href={`/mes-projets/${project.slug}`}
-      className="block w-full group cursor-pointer"
-    >
-      <motion.div
-        className="relative w-full aspect-4/3 overflow-hidden rounded-sm"
-        initial="rest"
-        whileHover="hover"
-        animate="rest"
-      >
-        <Image
-          src={project.image}
-          alt={project.title}
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          quality={90}
-          priority={project.id <= 2}
-        />
-
-        <motion.div
-          variants={{
-            rest: { opacity: 0 },
-            hover: { opacity: 1 },
-          }}
-          transition={{ duration: 0.3 }}
-          className="absolute inset-0 bg-black/80"
-        />
-
-        <div className="absolute inset-0 flex items-center justify-center p-6 text-center">
-          <motion.div
-            className="flex flex-wrap justify-center gap-x-[0.3em]"
-            variants={{
-              rest: { opacity: 0 },
-              hover: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.03,
-                },
-              },
-            }}
-          >
-            {project.title.split(" ").map((word, i) => (
-              <span key={i} className="flex whitespace-nowrap">
-                {word.split("").map((char, j) => (
-                  <motion.span
-                    key={j}
-                    variants={{
-                      rest: { opacity: 0, y: 10 },
-                      hover: { opacity: 1, y: 0 },
-                    }}
-                    transition={{ duration: 0.2 }}
-                    className="text-2xl md:text-4xl text-white font-bold"
-                  >
-                    {char}
-                  </motion.span>
-                ))}
-              </span>
-            ))}
-          </motion.div>
-        </div>
-      </motion.div>
-      <div className="mt-4 flex justify-between items-start opacity-60 group-hover:opacity-100 transition-opacity duration-300">
-        <span className="text-sm font-medium text-black uppercase tracking-wide">
-          {project.category}
-        </span>
-      </div>
-    </Link>
-  );
-};
-
 export default function ProjectsList() {
   return (
-    <section className="w-full py-32 md:py-48">
-      <div className="w-full">
-        <div className="flex flex-col gap-16">
-          <div className="max-w-7xl relative px-4 md:px-12 lg:px-16">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 max-w-450 mx-auto w-full">
-              <motion.h1
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                className="text-4xl md:text-6xl font-medium tracking-tight font-bricolage-grotesque"
-              >
-                Parce que chaque projet est bien plus que du code, il raconte{" "}
-                <span className="text-[#008366] italic font-serif">
-                  une intention et une solution.
-                </span>
-              </motion.h1>
-            </div>
-          </div>
+    <section className="w-full pt-24 pb-24 md:pt-28 md:pb-32 bg-white min-h-screen">
+      <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
+        <div className="flex flex-col items-start mt-6 mb-24 md:mb-32">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="text-3xl md:text-5xl font-medium leading-[1.1] font-bricolage-grotesque text-black max-w-4xl"
+          >
+            Parce que chaque projet est bien plus que du code, il raconte{" "}
+            <span className="text-[#008366] italic font-serif">
+              une intention et une solution.
+            </span>
+          </motion.h2>
+        </div>
 
-          <div className="px-4 md:px-12 lg:px-16">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 lg:gap-x-12 lg:gap-y-16">
-              {PROJECTS.map((project) => (
-                <ProjectCard key={project.id} project={project} />
-              ))}
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center items-center md:items-end gap-6 max-w-450 mx-auto w-full">
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
+        <div className="flex flex-col border-t border-black">
+          {PROJECTS.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="text-4xl md:text-6xl font-medium tracking-tight font-bricolage-grotesque text-center"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              Une intention et une solution, pensées pour répondre à{" "}
-              <span className="text-[#008366] italic font-serif">
-                des besoins concrets et durables.
-              </span>
-            </motion.h1>
-          </div>
+              <ProjectRow project={project} index={index} />
+            </motion.div>
+          ))}
+        </div>
+
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 max-w-4xl mx-auto w-full mt-24 md:mt-32">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-3xl md:text-5xl font-medium tracking-tight font-bricolage-grotesque text-center"
+          >
+            Une intention et une solution, pensées pour répondre à{" "}
+            <span className="text-[#008366] italic font-serif">
+              des besoins concrets et durables.
+            </span>
+          </motion.h2>
         </div>
       </div>
     </section>

@@ -1,151 +1,109 @@
 "use client";
 
-import React, { useRef, useLayoutEffect, JSX } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 interface Experience {
   company: string;
   role: string;
   date: string;
   description: string;
+  tags: string[];
 }
 
 const experiences: Experience[] = [
   {
     company: "Freelance",
-    role: "Développeur Front-End (Freelance)",
-    date: "Décembre 2025 – Aujourd'hui",
+    role: "Développeur Front-End",
+    date: "2025 – Présent",
     description:
-      "Analyse du brief client, échanges réguliers avec le client pour cadrer et ajuster le projet. Conception et développement de mini-sites front-end sans back-end, intégration d'interfaces visuelles soignées, responsives et optimisées. Livraison des projets finalisés avec remise des livrables et accompagnement client.",
+      "Conception de sites web sur mesure et développement d'interfaces réactives. Accompagnement client de la phase de design à la mise en production.",
+    tags: ["React", "Next.js", "Tailwind", "GSAP"],
   },
   {
     company: "BUMPS Agency",
-    role: "Développeur Full-Stack (Freelance)",
-    date: "Juillet 2025 – Septembre 2025",
+    role: "Développeur Full-Stack",
+    date: "Juillet 2025 – Sept. 2025",
     description:
-      "Développement web principalement en React, TypeScript et Next.js pour plusieurs entreprises. Intégration d'IA via les assistants OpenAI et Perplexity via des fonctions serverless supabase. Réalisation d'intégrations front-end à partir de maquettes Figma.",
+      "Développement d'applications web complexes et intégration d'IA. Collaboration étroite avec les équipes design pour une fidélité pixel-perfect.",
+    tags: ["TypeScript", "Supabase", "OpenAI", "Figma"],
   },
   {
     company: "Lookaroun",
-    role: "Stage Développeur Front-End",
+    role: "Stage Développeur Front",
     date: "Juin 2025 – Aout 2025",
     description:
-      "Intégration de maquettes Figma en React.JS, développement d'interfaces dynamiques, design responsive, optimisation du référencement naturel et des performances, collaboration avec l'équipe de développement.",
+      "Intégration de maquettes et optimisation SEO. Participation active aux rituels agiles et amélioration de la performance web.",
+    tags: ["React", "SEO", "Performance", "Agile"],
   },
 ];
 
-export default function WorksSection(): JSX.Element {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const lineRef = useRef<HTMLDivElement>(null);
-
-  useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      // Animation de la ligne verticale qui descend
-      gsap.fromTo(
-        lineRef.current,
-        { height: "0%" },
-        {
-          height: "100%",
-          ease: "none",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top center",
-            end: "bottom center",
-            scrub: 1,
-          },
-        }
-      );
-
-      // Animation des items (fade in + slide)
-      const items = gsap.utils.toArray<Element>(".timeline-item");
-      items.forEach((item) => {
-        gsap.from(item, {
-          y: 50,
-          opacity: 0,
-          duration: 0.8,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 85%",
-            toggleActions: "play none none reverse",
-          },
-        });
-      });
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
+export default function WorksSection() {
+  const containerRef = useRef(null);
+  const isInView = useInView(containerRef, { once: true, margin: "-10%" });
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative w-full py-30 bg-white text-black overflow-hidden"
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-16 relative">
-        {/* Header */}
-        <div className="text-center mb-20 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-medium tracking-tight mb-6 font-bricolage-grotesque">
-            Des expériences qui traduisent une{" "}
-            <span className="text-[#008366] italic font-serif">
-              montée en compétences
-            </span>{" "}
-            progressive et orientée terrain.
-          </h2>
-        </div>
-
-        {/* Timeline Container */}
-        <div className="relative max-w-5xl mx-auto">
-          {/* Vertical Line */}
-          <div className="absolute left-2 md:left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-200 top-0">
-            <div
-              ref={lineRef}
-              className="w-full bg-[#008366] absolute top-0 left-0"
-              style={{ height: "0%" }}
-            ></div>
-          </div>
-
-          {/* Items */}
-          <div className="space-y-16 md:space-y-24">
-            {experiences.map((exp, index) => (
-              <div
-                key={index}
-                className={`timeline-item flex flex-col md:flex-row items-start md:items-center justify-between w-full relative ${
-                  index % 2 === 0 ? "" : "md:flex-row-reverse"
-                }`}
-              >
-                {/* Content Side */}
-                <div
-                  className={`w-full md:w-[45%] pl-10 md:pl-0 ${
-                    index % 2 === 0 ? "md:text-right" : "md:text-left"
-                  } text-left mb-4 md:mb-0`}
+    <section ref={containerRef} className="w-full py-24 bg-white text-black">
+            <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
+              {/* Header */}
+              <div className="mb-16 md:mb-24 max-w-4xl">
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} 
+                  className="text-4xl md:text-6xl font-medium tracking-tight font-bricolage-grotesque"
                 >
-                  <h3 className="text-3xl md:text-5xl font-bold font-bricolage-grotesque mb-2">
+                  Des expériences qui traduisent une{" "}
+                  <span className="text-[#008366] italic font-serif">     
+                    montée en compétences
+                  </span>{" "}
+                  progressive et orientée terrain.
+                </motion.h2>
+              </div>
+      
+              {/* List Container */}
+        <div className="flex flex-col border-t border-black">
+          {experiences.map((exp, index) => (
+            <div key={index} className="group relative border-b border-black/20 transition-colors duration-500 hover:border-black">
+              <div className="py-10 md:py-16 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start relative z-10">
+
+                {/* Date - Col 1 */}
+                <div className="md:col-span-3">
+                  <span className="text-lg md:text-2xl font-medium text-[#008366] md:text-gray-400 md:group-hover:text-[#008366] transition-colors duration-300">
+                    {exp.date}
+                  </span>
+                </div>
+
+                {/* Company & Role - Col 2 */}
+                <div className="md:col-span-5">
+                  <h3 className="text-2xl md:text-5xl font-bold font-bricolage-grotesque mb-1 md:mb-2 md:group-hover:translate-x-2 transition-transform duration-300">
                     {exp.company}
                   </h3>
-                  <p className="text-base md:text-lg text-gray-500 font-light mb-4">
-                    {exp.role}
-                  </p>
-                  <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                  <p className="text-lg md:text-xl text-gray-600 md:group-hover:text-black transition-colors">{exp.role}</p>
+                </div>
+
+                {/* Description - Col 3 */}
+                <div className="md:col-span-4 flex flex-col justify-between h-full gap-4 md:gap-6">
+                  <p className="text-gray-600 text-base md:text-lg leading-relaxed md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500">
                     {exp.description}
                   </p>
-                  <div className="mt-4 text-sm font-medium text-[#008366] uppercase tracking-wider">
-                    {exp.date}
+                  <div className="flex flex-wrap gap-2 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                    {exp.tags.map((tag, i) => (
+                      <span key={i} className="px-3 py-1 bg-gray-50 md:bg-white border border-gray-200 rounded-full text-[10px] md:text-xs uppercase tracking-wide font-medium">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
                 </div>
 
-                {/* Center Dot */}
-                <div className="absolute left-2 md:left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 md:-translate-y-1/2 flex items-center justify-center">
-                  <div className="w-4 h-4 rounded-full bg-[#008366] border-4 border-[#F3F4F6] z-10 shadow-sm"></div>
+                {/* Mobile Arrow */}
+                <div className="absolute top-10 right-0 md:hidden">       
+                    <ArrowUpRight className="size-6 text-[#008366]/40" /> 
                 </div>
-
-                {/* Empty Side (for balance) */}
-                <div className="hidden md:block md:w-[45%]"></div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

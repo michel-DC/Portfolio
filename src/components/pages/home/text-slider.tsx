@@ -18,11 +18,11 @@ export default function TextSlider() {
         repeat: -1,
       });
     },
-    { scope: sliderRef }
+    { scope: sliderRef },
   );
 
   return (
-    <div className="w-full overflow-hidden bg-[#E5E5E5] py-24 md:py-32">
+    <div className="w-full overflow-hidden bg-white py-24 md:py-32">
       <div ref={sliderRef} className="flex w-fit whitespace-nowrap">
         <TextItem />
         <TextItem />

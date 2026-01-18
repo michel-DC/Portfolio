@@ -165,7 +165,7 @@ export default function Header() {
                     <Link
                       href={item.href}
                       onClick={toggleMenu}
-                      className="hover:text-gray-400 transition-colors font-bold text-3xl md:text-5xl"
+                      className="hover:text-gray-400 transition-colors text-3xl md:text-5xl"
                     >
                       {item.label}
                     </Link>
@@ -179,7 +179,7 @@ export default function Header() {
                   <motion.div
                     whileHover={{ x: [0, -3, 3, -3, 0] }}
                     transition={{ duration: 0.4 }}
-                    className="relative overflow-hidden bg-white text-black px-8 py-3 md:px-10 md:py-4 rounded-full font-bold text-xl md:text-2xl border border-white"
+                    className="relative overflow-hidden bg-white text-black px-8 py-3 md:px-10 md:py-4 rounded-full text-xl md:text-2xl border border-white"
                   >
                     <span className="absolute inset-0 bg-black translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
                     <span className="relative z-10 transition-colors duration-500 group-hover:text-white">
