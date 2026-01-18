@@ -1,127 +1,92 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowUpRight, Download } from "lucide-react";
-import { useRef } from "react";
+import { Download } from "lucide-react";
 
 export default function IntroSection() {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-
   return (
-    <section ref={containerRef} className="relative w-full min-h-[90vh] flex flex-col justify-center overflow-hidden bg-white">
-      {/* Background Video/Texture */}
-      <div className="absolute inset-0 w-full h-full z-0">
-        <div className="absolute inset-0 bg-white/80 z-10" />
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-50"
-        >
-          <source src="/video/video-bg.mp4" type="video/mp4" />
-        </video>
-      </div>
-
-      <div className="relative z-10 w-full max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 pt-20">
-        {/* Main Title Area */}
-        <div className="flex flex-col gap-2 mb-16 md:mb-24">
+    <section className="relative w-full pt-32 pb-24 md:pt-48 md:pb-32 bg-[#ffffff] overflow-hidden">
+      <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
+        {/* En-tête Typographique Géant */}
+        <div className="flex flex-col items-start mb-24 md:mb-32">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden"
+            className="overflow-hidden w-full border-b border-black pb-8 md:pb-12"
           >
-            <h1 className="text-[12vw] leading-[0.85] font-bold tracking-tighter text-black uppercase font-bricolage-grotesque">
+            <h1 className="text-[13vw] leading-[0.8] font-bold tracking-tighter text-black uppercase font-bricolage-grotesque">
               Creative
             </h1>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden flex items-center gap-4 md:gap-8"
-          >
-            <div className="h-[2px] w-12 md:w-24 bg-black/20" />
-            <h1 className="text-[12vw] leading-[0.85] font-bold tracking-tighter text-[#008366] uppercase italic font-serif">
-              Developer
-            </h1>
+            <div className="flex items-center gap-4 md:gap-8 ml-[5vw] mt-2 md:mt-4">
+              <span className="text-[13vw] leading-[0.8] font-bold tracking-tighter text-[#008366] uppercase italic font-serif">
+                Developer
+              </span>
+            </div>
           </motion.div>
         </div>
 
-        {/* Bio Split Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
-          {/* Left: Quick Stats / Role */}
-          <motion.div 
+        {/* Layout Contenu : Bio + Image */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-start">
+          {/* Colonne Gauche : Intro + CTA */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="lg:col-span-4 space-y-8"
+            className="lg:col-span-9 space-y-10"
           >
-            <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl bg-gray-100">
-               <Image
-                src="/images/profile/avatar.png"
-                alt="Michel Djoumessi"
-                fill
-                className="object-cover object-top transition-transform duration-700"
-                priority
-              />
+            <h2 className="text-3xl md:text-5xl font-medium leading-[1.1] font-bricolage-grotesque text-black max-w-4xl">
+              Je conçois des{" "}
+              <span className="text-[#008366] italic font-serif">
+                écosystèmes digitaux
+              </span>{" "}
+              où la performance rencontre l'émotion.
+            </h2>
+
+            <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
+              <p>
+                Ma double compétence en design et développement me permet de
+                créer des produits complets, sans friction entre la vision
+                créative et la réalité technique.
+              </p>
+              <p>
+                Basé sur une approche minimaliste, je privilégie la clarté et
+                l'impact. Chaque animation, chaque interaction a un but précis :
+                servir l'utilisateur.
+              </p>
             </div>
-            <div className="flex items-center gap-4">
-              <Button asChild className="rounded-full bg-black text-white hover:bg-[#008366] transition-colors duration-300" size="lg">
+
+            <div className="pt-4">
+              <Button
+                asChild
+                className="rounded-full bg-[#008366] text-white transition-colors duration-300 px-8 py-6 text-lg shadow-sm"
+                size="lg"
+              >
                 <Link href="/documents/CV-MICHEL.pdf" target="_blank">
-                  Télécharger CV <Download className="ml-2 size-4" />
+                  Télécharger mon CV <Download className="ml-3 size-5" />
                 </Link>
               </Button>
             </div>
           </motion.div>
 
-          {/* Right: Detailed Bio */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="lg:col-span-8 space-y-8 lg:pt-12"
+          {/* Colonne Droite : Image Minimaliste */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="lg:col-span-3 relative flex justify-end pt-2"
           >
-            <h2 className="text-3xl md:text-5xl font-medium leading-tight font-bricolage-grotesque">
-              Je transforme des concepts complexes en <span className="text-[#008366]">interfaces fluides</span> et performantes.
-            </h2>
-            
-            <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
-              <p>
-                Passionné par le développement web et l&apos;expérience utilisateur, je conçois des écosystèmes digitaux modernes. Mon approche combine rigueur technique et sensibilité créative.
-              </p>
-              <p>
-                Avec une double compétence en design et en développement, je m&apos;assure que chaque pixel a sa raison d&apos;être et que chaque interaction sert l&apos;utilisateur.
-              </p>
-              <p>
-                Toujours en veille sur les nouvelles technologies (IA, Next.js, Motion), j&apos;intègre ces outils pour pousser les limites de ce qui est possible sur le web.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-gray-100">
-              <div>
-                <span className="block text-4xl font-bold font-bricolage-grotesque">3+</span>
-                <span className="text-sm text-gray-500 uppercase tracking-wide">Années d&apos;exp.</span>
-              </div>
-              <div>
-                <span className="block text-4xl font-bold font-bricolage-grotesque">15+</span>
-                <span className="text-sm text-gray-500 uppercase tracking-wide">Projets livrés</span>
-              </div>
-              <div>
-                <span className="block text-4xl font-bold font-bricolage-grotesque">100%</span>
-                <span className="text-sm text-gray-500 uppercase tracking-wide">Satisfaction</span>
-              </div>
+            <div className="relative aspect-[3/4] w-full max-w-[280px] overflow-hidden">
+              <Image
+                src="/images/profile/avatar.png"
+                alt="Michel Djoumessi"
+                fill
+                className="object-contain object-top"
+                priority
+              />
             </div>
           </motion.div>
         </div>
