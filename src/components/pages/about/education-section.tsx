@@ -35,7 +35,10 @@ export default function EducationSection() {
   const isInView = useInView(containerRef, { once: true, margin: "-10%" });
 
   return (
-    <section ref={containerRef} className="w-full py-24 md:py-32 bg-[#ffffff] text-black">
+    <section
+      ref={containerRef}
+      className="w-full py-24 md:py-32 bg-[#ffffff] text-black"
+    >
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
         {/* Header */}
         <div className="mb-16 md:mb-24 max-w-5xl">
@@ -61,7 +64,11 @@ export default function EducationSection() {
               key={item.id}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.2, ease: [0.16, 1, 0.3, 1] }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.2,
+                ease: [0.16, 1, 0.3, 1],
+              }}
               className={`group flex flex-col col-span-1 lg:col-span-5 ${
                 index % 2 !== 0 ? "lg:col-start-8" : ""
               }`}
@@ -72,7 +79,7 @@ export default function EducationSection() {
                 </span>
                 <div className="h-px grow bg-gray-100" />
               </div>
-              
+
               <div className="space-y-4">
                 <h3 className="text-3xl md:text-4xl font-bold font-bricolage-grotesque leading-tight">
                   {item.degree}
