@@ -8,7 +8,7 @@ import { Download } from "lucide-react";
 
 export default function IntroSection() {
   return (
-    <section className="relative w-full pt-24 pb-24 md:pt-28 md:pb-32 bg-[#ffffff] overflow-hidden">
+    <section className="relative w-full pt-12 pb-24 md:pt-28 md:pb-32 bg-[#ffffff] overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
         {/*<div className="flex flex-col items-start mb-24 md:mb-32">
           <motion.div
