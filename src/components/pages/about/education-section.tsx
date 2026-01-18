@@ -14,7 +14,7 @@ interface Education {
 const educationData: Education[] = [
   {
     id: 1,
-    degree: "BUT MMI (Métiers du Multimédia)",
+    degree: "BUT MMI (Métiers du Multimédia et de l'Internet)",
     school: "UVSQ - Vélizy",
     year: "2024 — Présent",
     description:
@@ -22,7 +22,7 @@ const educationData: Education[] = [
   },
   {
     id: 2,
-    degree: "Baccalauréat Technologique",
+    degree: "Baccalauréat Technologique STI2D",
     school: "Lycée Clément Ader",
     year: "2022 — 2024",
     description:

@@ -171,7 +171,7 @@ export default function ContactSection() {
                 type="submit"
                 disabled={isSubmitting}
                 size="lg"
-                className="rounded-full px-12 py-6 text-lg bg-black text-white hover:bg-[#008366] transition-colors"
+                className="rounded-full px-12 py-6 text-lg transition-colors"
               >
                 {isSubmitting ? "ENVOI..." : "ENVOYER"}
                 {!isSubmitting && (
