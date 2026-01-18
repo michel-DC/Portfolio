@@ -29,7 +29,7 @@ export default function HeroSection() {
           ease: "power3.out",
           stagger: 0.1,
         },
-        "-=1"
+        "-=1",
       );
     }, comp);
 
@@ -64,7 +64,7 @@ export default function HeroSection() {
             Développeur Full-stack
           </h1>
           <h2 className="hero-text-element text-4xl text-black md:text-8xl leading-tight">
-            UX & UI Designer.
+            en formation
           </h2>
           <div className="hero-text-element flex flex-wrap justify-center gap-4 mt-8">
             <motion.div

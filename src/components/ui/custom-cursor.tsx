@@ -71,7 +71,7 @@ const CustomCursor: React.FC = () => {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-[9999] border border-black bg-transparent"
+      className="fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none z-[9999] border border-black bg-transparent hidden md:block"
       style={{ willChange: "transform" }}
     />
   );
