@@ -8,26 +8,25 @@ import { Download } from "lucide-react";
 
 export default function IntroSection() {
   return (
-    <section className="relative w-full pt-32 pb-24 md:pt-48 md:pb-32 bg-[#ffffff] overflow-hidden">
+    <section className="relative w-full pt-24 pb-24 md:pt-28 md:pb-32 bg-[#ffffff] overflow-hidden">
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
-        {/* En-tête Typographique Géant */}
-        <div className="flex flex-col items-start mb-24 md:mb-32">
+        {/*<div className="flex flex-col items-start mb-24 md:mb-32">
           <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden w-full border-b border-black pb-8 md:pb-12"
           >
-            <h1 className="text-[13vw] leading-[0.8] font-bold tracking-tighter text-black uppercase font-bricolage-grotesque">
+            <h1 className="text-[13vw] md:text-[7vw] leading-[0.8] font-bold tracking-tighter text-black uppercase font-bricolage-grotesque">
               Creative
             </h1>
             <div className="flex items-center gap-4 md:gap-8 ml-[5vw] mt-2 md:mt-4">
-              <span className="text-[13vw] leading-[0.8] font-bold tracking-tighter text-[#008366] uppercase italic font-serif">
+              <span className="text-[13vw] md:text-[7vw] leading-[0.8] font-bold tracking-tighter text-[#008366] uppercase italic font-serif">
                 Developer
               </span>
             </div>
           </motion.div>
-        </div>
+        </div>*/}
 
         {/* Layout Contenu : Bio + Image */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-start">

@@ -23,7 +23,7 @@ const PROJECTS: Project[] = [
     slug: "teamify",
     json: "/data/projects/001.json",
     year: "2025",
-    tags: ["Next.js", "Prisma", "Pusher"]
+    tags: ["Next.js", "Prisma", "Pusher"],
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const PROJECTS: Project[] = [
     slug: "app-analyzer",
     json: "/data/projects/002.json",
     year: "2025",
-    tags: ["Next.js", "Puppeteer", "Lighthouse"]
+    tags: ["Next.js", "Puppeteer", "Lighthouse"],
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const PROJECTS: Project[] = [
     slug: "lookaroun",
     json: "/data/projects/006.json",
     year: "2025",
-    tags: ["React", "Firebase", "Shadcn UI"]
+    tags: ["React", "Firebase", "Shadcn UI"],
   },
   {
     id: 4,
@@ -53,7 +53,7 @@ const PROJECTS: Project[] = [
     slug: "flow-media",
     json: "/data/projects/005.json",
     year: "2025",
-    tags: ["PHP", "MySQL", "JavaScript"]
+    tags: ["PHP", "MySQL", "JavaScript"],
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ const PROJECTS: Project[] = [
     slug: "elecsud-energies",
     json: "/data/projects/007.json",
     year: "2025",
-    tags: ["Next.js", "GSAP", "Tailwind"]
+    tags: ["Next.js", "GSAP", "Tailwind"],
   },
   {
     id: 6,
@@ -73,7 +73,7 @@ const PROJECTS: Project[] = [
     slug: "framix",
     json: "/data/projects/003.json",
     year: "2025",
-    tags: ["Astro", "React", "Tailwind"]
+    tags: ["Astro", "React", "Tailwind"],
   },
   {
     id: 7,
@@ -83,47 +83,56 @@ const PROJECTS: Project[] = [
     slug: "lexi-ai",
     json: "/data/projects/004.json",
     year: "2025",
-    tags: ["React", "Tailwind", "Framer"]
+    tags: ["React", "Tailwind", "Framer"],
   },
 ];
 
 export default function ProjectsList() {
   return (
-    <section className="w-full pt-24 pb-24 md:pt-36 md:pb-32 bg-white min-h-screen">
+    <section className="w-full pt-24 pb-24 md:pt-28 md:pb-32 bg-white min-h-screen">
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
-        
         <div className="flex flex-col items-start mb-24 md:mb-32">
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden w-full border-b border-black pb-8 md:pb-12"
+            className="text-3xl md:text-5xl font-medium leading-[1.1] font-bricolage-grotesque text-black max-w-4xl"
           >
-            <h1 className="text-[13vw] md:text-[7vw] leading-[0.8] md:leading-[0.9] font-bold tracking-tighter text-black uppercase font-bricolage-grotesque">
-              Selected
-            </h1>
-            <div className="flex items-center gap-4 md:gap-8 ml-[5vw] mt-2 md:mt-4">
-              <span className="text-[13vw] md:text-[7vw] leading-[0.8] md:leading-[0.9] font-bold tracking-tighter text-[#008366] uppercase italic font-serif">
-                Works
-              </span>
-            </div>
-          </motion.div>
+            Parce que chaque projet est bien plus que du code, il raconte{" "}
+            <span className="text-[#008366] italic font-serif">
+              une intention et une solution.
+            </span>
+          </motion.h2>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col border-t border-black">
           {PROJECTS.map((project, index) => (
             <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+              key={project.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-                <ProjectRow project={project} index={index} />
+              <ProjectRow project={project} index={index} />
             </motion.div>
           ))}
         </div>
 
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 max-w-4xl mx-auto w-full mt-24 md:mt-32">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="text-3xl md:text-5xl font-medium tracking-tight font-bricolage-grotesque text-center"
+          >
+            Une intention et une solution, pensées pour répondre à{" "}
+            <span className="text-[#008366] italic font-serif">
+              des besoins concrets et durables.
+            </span>
+          </motion.h2>
+        </div>
       </div>
     </section>
   );
