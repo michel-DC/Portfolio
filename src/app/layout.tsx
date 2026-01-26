@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     images: [
       {
-        url: "/images/profile/favicon.svg",
+        url: "/images/svg/favicon.png",
         width: 32,
         height: 32,
         alt: "Bannière de Michel Djoumessi",
