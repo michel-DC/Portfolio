@@ -20,7 +20,7 @@ export default function AboutPage() {
   return (
     <div>
       <AboutAnimation />
-      <div className="bg-white min-h-screen flex flex-col">
+      <div className="bg-transparent min-h-screen flex flex-col">
         <Header />
         <main className="grow pt-20">
           <IntroSection />

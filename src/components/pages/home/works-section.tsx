@@ -44,7 +44,7 @@ export default function WorksSection() {
   const isInView = useInView(containerRef, { once: true, margin: "-10%" });
 
   return (
-    <section ref={containerRef} className="w-full py-24 bg-white text-black">
+    <section ref={containerRef} className="w-full py-24 bg-transparent text-black">
             <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
               {/* Header */}
               <div className="mb-16 md:mb-24 max-w-4xl">

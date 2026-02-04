@@ -89,7 +89,7 @@ const PROJECTS: Project[] = [
 
 export default function ProjectsList() {
   return (
-    <section className="w-full pt-24 pb-24 md:pt-28 md:pb-32 bg-white min-h-screen">
+    <section className="w-full pt-24 pb-24 md:pt-28 md:pb-32 bg-transparent min-h-screen">
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
         <div className="flex flex-col items-start mt-6 mb-24 md:mb-32">
           <motion.h2

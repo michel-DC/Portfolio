@@ -120,7 +120,7 @@ const BentoQuoteCard = ({
 
 export default function SkillsSection() {
   return (
-    <section className="w-full py-24 md:py-32 bg-white">
+    <section className="w-full py-24 md:py-32 bg-transparent">
       <div className="max-w-500 px-8 md:px-16 lg:px-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

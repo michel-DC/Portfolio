@@ -8,11 +8,12 @@ import { Button } from "@/components/ui/button";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen w-full bg-white flex items-center justify-center p-6 md:p-12 lg:p-24 overflow-hidden text-[#1A1A1A] font-amoria select-none pt-32 md:pt-48">
+    <section className="relative h-screen w-full bg-transparent flex items-center justify-center p-6 md:p-12 lg:p-24 overflow-hidden text-[#1A1A1A] font-amoria select-none pt-32 md:pt-48">
       {/* Orbe verte diffuse au centre */}
+
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 0.25, scale: 1 }}
+        animate={{ opacity: 0.3, scale: 1 }}
         transition={{ duration: 2, ease: "easeOut" }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full pointer-events-none blur-[100px]"
         style={{

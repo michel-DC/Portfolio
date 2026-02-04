@@ -14,7 +14,7 @@ export default function ProjectsPage() {
   return (
     <div>
       <ProjectsAnimation />
-      <div className="bg-white min-h-screen flex flex-col">
+      <div className="bg-transparent min-h-screen flex flex-col">
         <Header />
         <main className="grow">
           <ProjectsList />

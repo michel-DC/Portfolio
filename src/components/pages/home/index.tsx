@@ -10,7 +10,7 @@ import WorksSection from "./works-section";
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div>
       <HeroSection />
       <AboutSection />
       <TextSlider />

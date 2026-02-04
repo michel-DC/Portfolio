@@ -22,7 +22,7 @@ export default function TextSlider() {
   );
 
   return (
-    <div className="w-full overflow-hidden bg-white py-24 md:py-32">
+    <div className="w-full overflow-hidden bg-transparent py-24 md:py-32">
       <div ref={sliderRef} className="flex w-fit whitespace-nowrap">
         <TextItem />
         <TextItem />

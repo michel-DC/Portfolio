@@ -113,7 +113,7 @@ export default async function ProjectPage({
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-transparent">
       <ProjectEntryAnimation projectName={project.name.split(" • ")[0]} />
       <Header />
       <main className="grow pb-24 pt-32">
