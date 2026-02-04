@@ -28,7 +28,7 @@ export default function HeroSection() {
             <motion.span
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.8, delay: 2.1, ease: "easeOut" }}
               className="meta-inner italic block text-sm md:text-base opacity-60 tracking-tight"
             >
               Disponible en freelance pour vous
@@ -45,7 +45,7 @@ export default function HeroSection() {
               <motion.h1
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
-                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 1.2, delay: 2.2, ease: [0.16, 1, 0.3, 1] }}
                 className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.06em] flex items-baseline uppercase font-medium"
               >
                 M<span className="text-[#008366] italic mr-[0.1em]">I</span>CHEL
@@ -62,7 +62,7 @@ export default function HeroSection() {
                 animate={{ y: 0 }}
                 transition={{
                   duration: 1.2,
-                  delay: 0.1,
+                  delay: 2.3,
                   ease: [0.16, 1, 0.3, 1],
                 }}
                 className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.06em] flex items-baseline uppercase font-medium"
@@ -77,7 +77,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.8, delay: 2.6 }}
             className="flex flex-wrap justify-center gap-4 mt-12 md:mt-20 w-full"
           >
             <motion.div
@@ -184,7 +184,7 @@ export default function HeroSection() {
               <motion.span
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+                transition={{ duration: 0.8, delay: 2.5, ease: "easeOut" }}
                 className="meta-inner block text-xs md:text-sm opacity-50 tracking-tighter"
               >
                 48.85° N, 2.35° E

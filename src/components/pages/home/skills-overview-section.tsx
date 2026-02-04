@@ -160,10 +160,18 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`service-item relative flex flex-col p-8 md:p-10 lg:p-12 min-h-auto md:min-h-125 w-full md:w-125 border-b border-gray-400 md:border-y md:border-r md:border-b hover:bg-gray-50 transition-colors duration-500 group ${
+              className={`service-item relative flex flex-col p-8 md:p-10 lg:p-12 min-h-auto md:min-h-125 w-full md:w-125 border-b border-gray-400 md:border-y md:border-r md:border-b transition-colors duration-500 group overflow-hidden ${
                 index === 0 ? "md:border-l border-t" : ""
               }`}
             >
+              {/* Rayures par défaut */}
+              <div 
+                className="absolute inset-0 pointer-events-none opacity-40" 
+                style={{
+                  backgroundImage: `repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.08) 0px, rgba(0, 0, 0, 0.08) 1px, transparent 1px, transparent 10px)`
+                }}
+              />
+              
               {/* Number, Icon, Title, Description */}
               <div className="absolute top-4 right-4 text-gray-400 font-light text-xl group-hover:text-black transition-colors">
                 {service.id}
