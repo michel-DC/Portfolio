@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div>
       <PrivacyAnimation />
-      <div className="bg-white min-h-screen flex flex-col">
+      <div className="bg-transparent min-h-screen flex flex-col">
         <Header />
         <main className="grow pt-32 pb-24 px-4 md:px-24">
           <article className="max-w-4xl mx-auto space-y-16">

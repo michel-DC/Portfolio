@@ -12,7 +12,7 @@ export default function NotFound() {
   return (
     <main>
       <Header />
-      <div className="flex flex-col items-center justify-center min-h-[85vh] w-full px-6 bg-white py-24">
+      <div className="flex flex-col items-center justify-center min-h-[85vh] w-full px-6 bg-transparent py-24">
         <div className="max-w-4xl w-full flex flex-col items-center text-center">
           {/* Image Section */}
           <motion.div

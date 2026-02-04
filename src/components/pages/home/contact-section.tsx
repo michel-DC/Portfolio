@@ -59,7 +59,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="w-full py-16 md:py-24 bg-white text-black" id="contact">
+    <section className="w-full py-16 md:py-24 bg-transparent text-black" id="contact">
       <div className="w-full px-6 md:px-12 lg:px-16">
         {/* Header Centré */}
         <div className="flex flex-col justify-center text-center mb-16 md:mb-24">

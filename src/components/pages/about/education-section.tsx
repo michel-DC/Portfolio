@@ -37,7 +37,7 @@ export default function EducationSection() {
   return (
     <section
       ref={containerRef}
-      className="w-full py-24 md:py-32 bg-[#ffffff] text-black"
+      className="w-full py-24 md:py-32 bg-transparent text-black"
     >
       <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
         {/* Header */}

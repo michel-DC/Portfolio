@@ -46,7 +46,7 @@ export default function Header() {
           "px-8 flex items-center w-full transition-all duration-300",
           isScrolled
             ? "py-4 bg-transparent justify-end"
-            : "py-8 bg-white justify-between"
+            : "py-8 bg-transparent justify-between"
         )}
       >
         {!isScrolled && (
