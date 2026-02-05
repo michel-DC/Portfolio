@@ -4,6 +4,7 @@ import Script from "next/script";
 import CustomCursor from "@/components/ui/custom-cursor";
 import SmoothScroll from "@/components/ui/smooth-scroll";
 import { Toaster } from "sonner";
+import CommandMenu from "@/components/ui/command-menu";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://onlinemichel.dev"),
@@ -121,6 +122,7 @@ export default function RootLayout({
         </noscript>
         <CustomCursor />
         <SmoothScroll />
+        <CommandMenu />
         <Toaster position="bottom-right" richColors />
 
         {children}
