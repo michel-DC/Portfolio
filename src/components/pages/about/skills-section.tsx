@@ -12,7 +12,7 @@ interface Skill {
 
 const skills: Skill[] = [
   {
-    name: "Next.JS",
+    name: "Next.js",
     description: "Framework fullstack pour mes projets web",
     iconPath: "/images/skills/nextjs.svg",
   },
@@ -22,9 +22,14 @@ const skills: Skill[] = [
     iconPath: "/images/skills/typescript.svg",
   },
   {
-    name: "PostgreSQL",
-    description: "Base de données relationnelle performante",
-    iconPath: "/images/skills/postgresql.png",
+    name: "Symfony",
+    description: "Framework PHP puissant pour architectures robustes",
+    iconPath: "/images/skills/symfony.svg",
+  },
+  {
+    name: "Node.js",
+    description: "Environnement d'exécution JavaScript côté serveur",
+    iconPath: "/images/skills/nodejs.svg",
   },
   {
     name: "Tailwind CSS",
@@ -32,19 +37,14 @@ const skills: Skill[] = [
     iconPath: "/images/skills/tailwindcss.svg",
   },
   {
-    name: "PHP",
-    description: "Développement back-end et intégration CMS",
-    iconPath: "/images/skills/php.svg",
+    name: "PostgreSQL",
+    description: "Base de données relationnelle performante",
+    iconPath: "/images/skills/postgresql.png",
   },
   {
     name: "Figma",
     description: "Conception d'interfaces UI/UX et prototypage",
     iconPath: "/images/skills/figma.svg",
-  },
-  {
-    name: "Framer",
-    description: "Outil de prototypage interactif et design",
-    iconPath: "/images/skills/framer.svg",
   },
 ];
 
@@ -65,7 +65,7 @@ const BentoSkillCard = ({
     className={`relative bg-white border border-gray-200 rounded-3xl p-6 md:p-8 shadow-sm ${className}`}
   >
     <div className="flex flex-col h-full">
-      <div className="relative w-16 h-16 md:w-20 md:h-20 mb-4">
+      <div className="relative w-20 h-20 md:w-24 md:h-24 mb-4">
         <Image
           src={skill.iconPath}
           alt={skill.name}
@@ -172,7 +172,7 @@ export default function SkillsSection() {
             className="md:col-span-1 row-span-1"
           />
 
-          {/* PHP */}
+          {/* Node.js */}
           <BentoSkillCard
             skill={skills[4]}
             index={5}
@@ -186,7 +186,7 @@ export default function SkillsSection() {
             className="md:col-span-1 row-span-1"
           />
 
-          {/* Framer */}
+          {/* Symfony */}
           <BentoSkillCard
             skill={skills[6]}
             index={7}

@@ -58,7 +58,7 @@ export default function IntroSection() {
               </p>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-4 flex justify-center lg:justify-start">
               <Button
                 asChild
                 className="rounded-full bg-[#008366] text-white transition-colors duration-300 px-8 py-6 text-lg shadow-sm"
@@ -76,7 +76,7 @@ export default function IntroSection() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-3 relative flex justify-end pt-2"
+            className="lg:col-span-3 relative flex justify-center lg:justify-end pt-2"
           >
             <div className="relative aspect-[3/4] w-full max-w-[280px] overflow-hidden">
               <Image

@@ -45,7 +45,11 @@ export default function HeroSection() {
               <motion.h1
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
-                transition={{ duration: 1.2, delay: 2.2, ease: [0.16, 1, 0.3, 1] }}
+                transition={{
+                  duration: 1.2,
+                  delay: 2.2,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
                 className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.06em] flex items-baseline uppercase font-medium"
               >
                 M<span className="text-[#008366] italic mr-[0.1em]">I</span>CHEL
@@ -65,7 +69,7 @@ export default function HeroSection() {
                   delay: 2.3,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.06em] flex items-baseline uppercase font-medium"
+                className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.06em] flex items-baseline uppercase font-medium mr-2"
               >
                 DJOUMESS
                 <span className="text-[#008366] italic mr-[0.05em]">I</span>
