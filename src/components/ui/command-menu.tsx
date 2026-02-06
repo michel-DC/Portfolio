@@ -3,18 +3,18 @@
 import * as React from "react";
 import { useRouter } from "next/navigation";
 import { Command } from "cmdk";
-import { 
-  Search, 
-  FileText, 
-  User, 
-  Briefcase, 
-  Home, 
-  ShieldCheck, 
+import {
+  Search,
+  FileText,
+  User,
+  Briefcase,
+  Home,
+  ShieldCheck,
   Lock,
   ExternalLink,
   Download,
   Github,
-  Linkedin
+  Linkedin,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -62,8 +62,14 @@ export default function CommandMenu() {
       }
     };
 
+    const toggle = () => setOpen((open) => !open);
+
     document.addEventListener("keydown", down);
-    return () => document.removeEventListener("keydown", down);
+    document.addEventListener("toggle-command-menu", toggle);
+    return () => {
+      document.removeEventListener("keydown", down);
+      document.removeEventListener("toggle-command-menu", toggle);
+    };
   }, []);
 
   const runCommand = React.useCallback((command: () => void) => {
@@ -78,8 +84,12 @@ export default function CommandMenu() {
         onOpenChange={setOpen}
         label="Global Search"
         className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh] p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-300"
+        onClick={() => setOpen(false)}
       >
-        <div className="w-full max-w-[640px] bg-white rounded-2xl border border-gray-200 shadow-2xl overflow-hidden flex flex-col animate-in zoom-in-95 duration-300">
+        <div 
+          className="w-full max-w-[640px] bg-white rounded-2xl border border-gray-200 shadow-2xl overflow-hidden flex flex-col animate-in zoom-in-95 duration-300"
+          onClick={(e) => e.stopPropagation()}
+        >
           <h2 className="sr-only">Menu de commande globale</h2>
           <div className="flex items-center border-b border-gray-100 px-4 py-3">
             <Search className="mr-3 h-5 w-5 text-gray-400" />
@@ -99,10 +109,11 @@ export default function CommandMenu() {
               Aucun résultat trouvé pour "{search}".
             </Command.Empty>
 
-            <Command.Group heading="Navigation" className="px-2 py-3 text-[10px] font-semibold text-gray-400 uppercase tracking-wider">
-              <CommandItem
-                onSelect={() => runCommand(() => router.push("/"))}
-              >
+            <Command.Group
+              heading="Navigation"
+              className="px-2 py-3 text-[10px] font-semibold text-gray-400 uppercase tracking-wider"
+            >
+              <CommandItem onSelect={() => runCommand(() => router.push("/"))}>
                 <Home className="mr-3 h-4 w-4" />
                 <span>Accueil</span>
               </CommandItem>
@@ -125,7 +136,11 @@ export default function CommandMenu() {
                 <span>Me contacter</span>
               </CommandItem>
               <CommandItem
-                onSelect={() => runCommand(() => window.open("/documents/CV-MICHEL.pdf", "_blank"))}
+                onSelect={() =>
+                  runCommand(() =>
+                    window.open("/documents/CV-MICHEL.pdf", "_blank"),
+                  )
+                }
               >
                 <FileText className="mr-3 h-4 w-4" />
                 <span>Mon CV (PDF)</span>
@@ -134,21 +149,42 @@ export default function CommandMenu() {
 
             <Command.Separator className="h-px bg-gray-100 mx-2 my-2" />
 
-            <Command.Group heading="Réseaux" className="px-2 py-3 text-[10px] font-semibold text-gray-400 uppercase tracking-wider">
+            <Command.Group
+              heading="Réseaux"
+              className="px-2 py-3 text-[10px] font-semibold text-gray-400 uppercase tracking-wider"
+            >
               <CommandItem
-                onSelect={() => runCommand(() => window.open("https://linkedin.com/in/micheldjoumessi", "_blank"))}
+                onSelect={() =>
+                  runCommand(() =>
+                    window.open(
+                      "https://linkedin.com/in/micheldjoumessi",
+                      "_blank",
+                    ),
+                  )
+                }
               >
                 <Linkedin className="mr-3 h-4 w-4 text-[#0077b5]" />
                 <span>LinkedIn</span>
               </CommandItem>
               <CommandItem
-                onSelect={() => runCommand(() => window.open("https://github.com/michel-DC", "_blank"))}
+                onSelect={() =>
+                  runCommand(() =>
+                    window.open("https://github.com/michel-DC", "_blank"),
+                  )
+                }
               >
                 <Github className="mr-3 h-4 w-4 text-black" />
                 <span>GitHub</span>
               </CommandItem>
               <CommandItem
-                onSelect={() => runCommand(() => window.open("https://www.malt.fr/profile/micheldjoumessi", "_blank"))}
+                onSelect={() =>
+                  runCommand(() =>
+                    window.open(
+                      "https://www.malt.fr/profile/micheldjoumessi1",
+                      "_blank",
+                    ),
+                  )
+                }
               >
                 <ExternalLink className="mr-3 h-4 w-4 text-[#ff5b5b]" />
                 <span>Malt</span>
@@ -159,11 +195,18 @@ export default function CommandMenu() {
               <>
                 <Command.Separator className="h-px bg-gray-100 mx-2 my-2" />
 
-                <Command.Group heading="Projets" className="px-2 py-3 text-[10px] font-semibold text-gray-400 uppercase tracking-wider">
+                <Command.Group
+                  heading="Projets"
+                  className="px-2 py-3 text-[10px] font-semibold text-gray-400 uppercase tracking-wider"
+                >
                   {PROJECTS.map((project) => (
                     <CommandItem
                       key={project.slug}
-                      onSelect={() => runCommand(() => router.push(`/mes-projets/${project.slug}`))}
+                      onSelect={() =>
+                        runCommand(() =>
+                          router.push(`/mes-projets/${project.slug}`),
+                        )
+                      }
                     >
                       <FileText className="mr-3 h-4 w-4 text-[#008366]" />
                       <span>{project.title}</span>
@@ -173,21 +216,34 @@ export default function CommandMenu() {
 
                 <Command.Separator className="h-px bg-gray-100 mx-2 my-2" />
 
-                <Command.Group heading="Documents & Légal" className="px-2 py-3 text-[10px] font-semibold text-gray-400 uppercase tracking-wider">
+                <Command.Group
+                  heading="Documents & Légal"
+                  className="px-2 py-3 text-[10px] font-semibold text-gray-400 uppercase tracking-wider"
+                >
                   <CommandItem
-                    onSelect={() => runCommand(() => window.open("/documents/CV-MICHEL.pdf", "_blank"))}
+                    onSelect={() =>
+                      runCommand(() =>
+                        window.open("/documents/CV-MICHEL.pdf", "_blank"),
+                      )
+                    }
                   >
                     <Download className="mr-3 h-4 w-4 text-blue-500" />
                     <span>Télécharger mon CV (PDF)</span>
                   </CommandItem>
                   <CommandItem
-                    onSelect={() => runCommand(() => router.push("/mentions-legales"))}
+                    onSelect={() =>
+                      runCommand(() => router.push("/mentions-legales"))
+                    }
                   >
                     <ShieldCheck className="mr-3 h-4 w-4" />
                     <span>Mentions Légales</span>
                   </CommandItem>
                   <CommandItem
-                    onSelect={() => runCommand(() => router.push("/politique-de-confidentialite"))}
+                    onSelect={() =>
+                      runCommand(() =>
+                        router.push("/politique-de-confidentialite"),
+                      )
+                    }
                   >
                     <Lock className="mr-3 h-4 w-4" />
                     <span>Politique de Confidentialité</span>
@@ -200,11 +256,15 @@ export default function CommandMenu() {
           <div className="flex items-center justify-between border-t border-gray-100 px-4 py-3 bg-gray-50/50">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1.5">
-                <kbd className="px-1.5 py-0.5 text-[10px] font-semibold text-gray-500 bg-white border border-gray-200 rounded">↑↓</kbd>
+                <kbd className="px-1.5 py-0.5 text-[10px] font-semibold text-gray-500 bg-white border border-gray-200 rounded">
+                  ↑↓
+                </kbd>
                 <span className="text-[10px] text-gray-400">Naviguer</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <kbd className="px-1.5 py-0.5 text-[10px] font-semibold text-gray-500 bg-white border border-gray-200 rounded">↵</kbd>
+                <kbd className="px-1.5 py-0.5 text-[10px] font-semibold text-gray-500 bg-white border border-gray-200 rounded">
+                  ↵
+                </kbd>
                 <span className="text-[10px] text-gray-400">Sélectionner</span>
               </div>
             </div>
@@ -218,12 +278,12 @@ export default function CommandMenu() {
   );
 }
 
-function CommandItem({ 
-  children, 
-  onSelect, 
-  className 
-}: { 
-  children: React.ReactNode; 
+function CommandItem({
+  children,
+  onSelect,
+  className,
+}: {
+  children: React.ReactNode;
   onSelect?: () => void;
   className?: string;
 }) {
@@ -233,7 +293,7 @@ function CommandItem({
       className={cn(
         "flex items-center px-3 py-2.5 rounded-xl cursor-default select-none outline-none transition-colors",
         "aria-selected:bg-[#008366]/10 aria-selected:text-[#008366] text-gray-700",
-        className
+        className,
       )}
     >
       {children}

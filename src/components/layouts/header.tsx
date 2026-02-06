@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X, ArrowUpRight, Search } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -110,23 +110,38 @@ export default function Header() {
         )}
 
         {/* Mobile/Burger Menu Button - Visible on mobile OR when scrolled */}
-        <button
-          className={cn(
-            "z-50 relative focus:outline-none cursor-pointer",
-            "flex items-center justify-center",
-            "w-12 h-12 rounded-full transition-colors duration-300",
-            isOpen ? "bg-white" : "bg-black",
-            !isScrolled && "md:hidden"
-          )}
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isOpen ? (
-            <X size={24} className="text-black" />
-          ) : (
-            <Menu size={24} className="text-white" />
-          )}
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() =>
+              document.dispatchEvent(new CustomEvent("toggle-command-menu"))
+            }
+            className={cn(
+              "z-50 relative focus:outline-none cursor-pointer flex items-center justify-center w-12 h-12 rounded-full transition-colors duration-300",
+              isOpen ? "bg-white text-black" : "bg-black text-white"
+            )}
+            aria-label="Rechercher"
+          >
+            <Search size={24} />
+          </button>
+
+          <button
+            className={cn(
+              "z-50 relative focus:outline-none cursor-pointer",
+              "flex items-center justify-center",
+              "w-12 h-12 rounded-full transition-colors duration-300",
+              isOpen ? "bg-white" : "bg-black",
+              !isScrolled && "md:hidden"
+            )}
+            onClick={toggleMenu}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? (
+              <X size={24} className="text-black" />
+            ) : (
+              <Menu size={24} className="text-white" />
+            )}
+          </button>
+        </div>
 
         {/* Mobile Nav Overlay */}
         <AnimatePresence>
