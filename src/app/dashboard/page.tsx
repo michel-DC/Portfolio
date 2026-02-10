@@ -1,12 +1,10 @@
 import { prisma } from "@/lib/prisma";
 import { 
   Users, 
-  MousePointer2, 
   Monitor, 
   Smartphone, 
   Globe, 
-  Calendar,
-  ChevronRight
+  Calendar
 } from "lucide-react";
 
 export const dynamic = "force-dynamic";

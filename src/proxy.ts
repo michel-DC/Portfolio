@@ -12,7 +12,7 @@ const COOKIE_NAME = "visitor_source";
 const DEFAULT_SOURCE = "Google/Direct";
 const COOKIE_MAX_AGE = 30 * 24 * 60 * 60; // 30 jours
 
-export function middleware(request: NextRequest): NextResponse {
+export function proxy(request: NextRequest): NextResponse {
   const { pathname } = request.nextUrl;
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-pathname", pathname);

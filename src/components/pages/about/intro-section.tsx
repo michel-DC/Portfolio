@@ -42,7 +42,7 @@ export default function IntroSection() {
               <span className="text-[#008366] italic font-serif">
                 écosystèmes digitaux
               </span>{" "}
-              où la performance rencontre l'émotion.
+              où la performance rencontre l&apos;émotion.
             </h2>
 
             <div className="space-y-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
@@ -53,8 +53,8 @@ export default function IntroSection() {
               </p>
               <p>
                 Basé sur une approche minimaliste, je privilégie la clarté et
-                l'impact. Chaque animation, chaque interaction a un but précis :
-                servir l'utilisateur.
+                l&apos;impact. Chaque animation, chaque interaction a un but précis :
+                servir l&apos;utilisateur.
               </p>
             </div>
 
