@@ -4,6 +4,7 @@ import Script from "next/script";
 import CustomCursor from "@/components/ui/custom-cursor";
 import SmoothScroll from "@/components/ui/smooth-scroll";
 import { Toaster } from "sonner";
+import { trackVisit } from "@/lib/analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://onlinemichel.dev"),
@@ -71,11 +72,13 @@ export const viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  await trackVisit();
+
   return (
     <html lang="fr" className={`h-full text-foreground`}>
       <head>
