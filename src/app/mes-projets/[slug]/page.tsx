@@ -12,7 +12,6 @@ import {
   CheckCircle2,
   Lightbulb,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
 import Header from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
