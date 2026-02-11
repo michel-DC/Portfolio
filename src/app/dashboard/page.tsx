@@ -1,4 +1,15 @@
 import { prisma } from "@/lib/prisma";
+
+interface VisitRecord {
+  id: string;
+  source: string;
+  path: string;
+  browser: string;
+  os: string;
+  device: string;
+  ip?: string | null;
+  createdAt: Date;
+}
 import { 
   Users, 
   Monitor, 
@@ -127,7 +138,7 @@ export default async function DashboardPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/5">
-                  {visits.map((visit) => (
+                  {visits.map((visit: VisitRecord) => (
                     <tr key={visit.id} className="hover:bg-white/[0.02] transition-colors group">
                       <td className="px-6 py-4">
                         <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white/5 border border-white/10">
