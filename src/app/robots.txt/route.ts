@@ -1,7 +1,12 @@
 const SITE_URL = "https://onlinemichel.dev";
 
 export async function GET() {
-  const txt = `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\nHost: ${SITE_URL}`;
+  const txt = `User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/login
+Sitemap: ${SITE_URL}/google-sitemap.xml
+Host: ${SITE_URL}`;
 
   return new Response(txt, {
     status: 200,
