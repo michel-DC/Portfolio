@@ -96,7 +96,7 @@ export default async function DashboardPage() {
             Détails par Source
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {statsBySource.map((s) => (
+            {statsBySource.map((s: { source: string; _count: { source: number } }) => (
               <StatCard 
                 key={s.source}
                 title={s.source} 
@@ -169,7 +169,7 @@ export default async function DashboardPage() {
             <div className="bg-zinc-900/50 border border-white/5 rounded-3xl p-6 backdrop-blur-sm">
               <h3 className="text-lg font-semibold mb-6">Répartition Appareils</h3>
               <div className="space-y-4">
-                {statsByDevice.map((d) => (
+                {statsByDevice.map((d: { device: string; _count: { device: number } }) => (
                   <div key={d.device} className="space-y-2">
                     <div className="flex justify-between text-sm">
                       <span className="text-zinc-400">{d.device}</span>
@@ -189,7 +189,7 @@ export default async function DashboardPage() {
             <div className="bg-zinc-900/50 border border-white/5 rounded-3xl p-6 backdrop-blur-sm">
               <h3 className="text-lg font-semibold mb-6">Répartition Sources</h3>
               <div className="space-y-4">
-                {statsBySource.map((s) => (
+                {statsBySource.map((s: { source: string; _count: { source: number } }) => (
                   <div key={s.source} className="space-y-2">
                     <div className="flex justify-between text-sm">
                       <span className="text-zinc-400">{s.source}</span>
