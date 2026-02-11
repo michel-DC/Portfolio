@@ -15,14 +15,30 @@ export default async function DashboardPage() {
     take: 50,
   });
 
-  const totalVisits = await prisma.visit.count();
-  
-  // Groupement par source
   const statsBySource = await prisma.visit.groupBy({
     by: ['source'],
     _count: { source: true },
     orderBy: { _count: { source: 'desc' } }
   });
+
+  const totalVisits = await prisma.visit.count();
+  
+  const uniqueVisitors = await prisma.visit.groupBy({
+    by: ['ip'],
+    _count: { ip: true }
+  }).then(res => res.length);
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const todayVisits = await prisma.visit.count({
+    where: {
+      createdAt: {
+        gte: today
+      }
+    }
+  });
+
+  const topSource = statsBySource[0]?.source || "N/A";
 
   // Groupement par device
   const statsByDevice = await prisma.visit.groupBy({
@@ -52,16 +68,42 @@ export default async function DashboardPage() {
             title="Total Visites" 
             value={totalVisits} 
             icon={<Users className="w-5 h-5" />} 
-            trend="+12%" 
           />
-          {statsBySource.slice(0, 3).map((s) => (
-            <StatCard 
-              key={s.source}
-              title={`Source: ${s.source}`} 
-              value={s._count.source} 
-              icon={<Globe className="w-5 h-5" />} 
-            />
-          ))}
+          <StatCard 
+            title="Visiteurs Uniques" 
+            value={uniqueVisitors} 
+            icon={<Users className="w-5 h-5" />} 
+          />
+          <StatCard 
+            title={`Top Source: ${topSource}`} 
+            value={statsBySource[0]?._count.source || 0} 
+            icon={<Globe className="w-5 h-5" />} 
+          />
+          <StatCard 
+            title="Visites du jour" 
+            value={todayVisits} 
+            icon={<Calendar className="w-5 h-5" />} 
+            trend={todayVisits > 0 ? "Active" : undefined}
+          />
+        </div>
+
+        {/* Sources Detail Grid */}
+        <div className="space-y-6">
+          <h2 className="text-xl font-semibold flex items-center gap-2">
+            <Globe className="w-5 h-5 text-zinc-500" />
+            Détails par Source
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {statsBySource.map((s) => (
+              <StatCard 
+                key={s.source}
+                title={s.source} 
+                value={s._count.source} 
+                icon={<Globe className="w-5 h-5" />} 
+                trend={`${Math.round((s._count.source / totalVisits) * 100)}%`}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -135,6 +177,26 @@ export default async function DashboardPage() {
                       <div 
                         className="h-full bg-white rounded-full" 
                         style={{ width: `${(d._count.device / totalVisits) * 100}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-zinc-900/50 border border-white/5 rounded-3xl p-6 backdrop-blur-sm">
+              <h3 className="text-lg font-semibold mb-6">Répartition Sources</h3>
+              <div className="space-y-4">
+                {statsBySource.map((s) => (
+                  <div key={s.source} className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-zinc-400">{s.source}</span>
+                      <span className="text-zinc-100 font-medium">{s._count.source}</span>
+                    </div>
+                    <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                      <div 
+                        className="h-full bg-white rounded-full" 
+                        style={{ width: `${(s._count.source / totalVisits) * 100}%` }}
                       />
                     </div>
                   </div>

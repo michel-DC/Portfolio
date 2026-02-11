@@ -6,6 +6,7 @@ const SOURCE_MAP: Record<string, string> = {
   "/gh": "GitHub",
   "/in": "Indeed",
   "/sh": "Share",
+  "/cv": "CV",
 };
 
 const COOKIE_NAME = "visitor_source";
@@ -35,37 +36,38 @@ export function proxy(request: NextRequest): NextResponse {
   let response: NextResponse;
   if (SOURCE_MAP[pathname]) {
     const source = SOURCE_MAP[pathname];
-    response = NextResponse.redirect(new URL("/", request.url), {
-      headers: requestHeaders,
-    });
+    // On redirige vers l'accueil en injectant la source via cookie
+    response = NextResponse.redirect(new URL("/", request.url));
     response.cookies.set(COOKIE_NAME, source, {
       maxAge: COOKIE_MAX_AGE,
       path: "/",
       httpOnly: false,
       sameSite: "lax",
     });
-    // NOTE: On ne pose PAS has_logged_visit ici pour que la cible du redirect puisse tracker
-  } else {
-    response = NextResponse.next({
-      request: {
-        headers: requestHeaders,
-      },
-    });
-
-    // 4. Initialisation du cookie de session uniquement sur les pages réelles
-    if (!hasLoggedCookie) {
-      response.cookies.set("has_logged_visit", "true", {
-        path: "/",
-        sameSite: "lax",
-      });
-    }
+    // On ne pose PAS has_logged_visit ici pour que la cible du redirect puisse tracker
+    return response;
   }
 
-  // 5. Gérer le trafic direct sur la racine
+  // 4. Trafic normal
+  response = NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
+
+  // Initialisation du cookie de session uniquement sur les pages réelles
+  if (!hasLoggedCookie) {
+    response.cookies.set("has_logged_visit", "true", {
+      path: "/",
+      sameSite: "lax",
+    });
+  }
+
+  // 5. Gérer le trafic direct sur la racine (seulement si pas de source existante)
   if (pathname === "/") {
     const existingSource = request.cookies.get(COOKIE_NAME);
 
-    if (!existingSource) {
+    if (!existingSource?.value) {
       response.cookies.set(COOKIE_NAME, DEFAULT_SOURCE, {
         maxAge: COOKIE_MAX_AGE,
         path: "/",
