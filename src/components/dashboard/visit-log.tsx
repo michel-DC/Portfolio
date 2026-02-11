@@ -5,8 +5,7 @@ import {
   Monitor, 
   Smartphone, 
   ChevronLeft, 
-  ChevronRight, 
-  Filter 
+  ChevronRight
 } from "lucide-react";
 
 interface Visit {
@@ -34,7 +33,6 @@ export function VisitLog({ initialVisits, sources, devices, osList }: VisitLogPr
   const [filterDevice, setFilterDevice] = useState("");
   const [filterOs, setFilterOs] = useState("");
 
-  // Filtrage local
   const filteredVisits = useMemo(() => {
     return initialVisits.filter((visit) => {
       const matchSource = !filterSource || visit.source === filterSource;
@@ -44,158 +42,66 @@ export function VisitLog({ initialVisits, sources, devices, osList }: VisitLogPr
     });
   }, [initialVisits, filterSource, filterDevice, filterOs]);
 
-  // Pagination locale
   const totalPages = Math.ceil(filteredVisits.length / ITEMS_PER_PAGE);
   const paginatedVisits = useMemo(() => {
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
     return filteredVisits.slice(start, start + ITEMS_PER_PAGE);
   }, [filteredVisits, currentPage]);
 
-  // Reset page quand on filtre
-  const handleFilterChange = (type: string, value: string) => {
-    if (type === "source") setFilterSource(value);
-    if (type === "device") setFilterDevice(value);
-    if (type === "os") setFilterOs(value);
-    setCurrentPage(1);
-  };
-
-  const clearFilters = () => {
-    setFilterSource("");
-    setFilterDevice("");
-    setFilterOs("");
-    setCurrentPage(1);
-  };
-
   return (
-    <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
-      <div className="p-6 border-b border-gray-200">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <h2 className="text-lg font-semibold text-gray-900">Journal des Visites</h2>
-          
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-xs text-gray-400 font-medium flex items-center gap-1">
-              <Filter className="w-3 h-3" /> Filtres :
-            </span>
-            
-            <select 
-              className="text-xs bg-gray-50 border border-gray-200 rounded px-2 py-1 outline-none focus:border-black transition-colors"
-              value={filterSource}
-              onChange={(e) => handleFilterChange("source", e.target.value)}
-            >
-              <option value="">Toutes les sources</option>
-              {sources.map(s => <option key={s} value={s}>{s}</option>)}
-            </select>
-
-            <select 
-              className="text-xs bg-gray-50 border border-gray-200 rounded px-2 py-1 outline-none focus:border-black transition-colors"
-              value={filterDevice}
-              onChange={(e) => handleFilterChange("device", e.target.value)}
-            >
-              <option value="">Tous les appareils</option>
-              {devices.map(d => <option key={d} value={d}>{d}</option>)}
-            </select>
-
-            <select 
-              className="text-xs bg-gray-50 border border-gray-200 rounded px-2 py-1 outline-none focus:border-black transition-colors"
-              value={filterOs}
-              onChange={(e) => handleFilterChange("os", e.target.value)}
-            >
-              <option value="">Tous les systèmes</option>
-              {osList.map(os => <option key={os} value={os}>{os}</option>)}
-            </select>
-
-            {(filterSource || filterDevice || filterOs) && (
-              <button 
-                onClick={clearFilters}
-                className="text-[10px] text-red-500 hover:underline font-bold uppercase"
-              >
-                Effacer
-              </button>
-            )}
-          </div>
+    <div className="bg-white border border-zinc-200 rounded-3xl overflow-hidden shadow-sm">
+      <div className="p-6 border-b border-zinc-200 bg-zinc-50/30 flex flex-col lg:flex-row justify-between items-center gap-6">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-zinc-900">Journal des Visites</h2>
+        <div className="flex flex-wrap gap-2">
+          <select className="text-[11px] font-bold uppercase bg-white border border-zinc-200 rounded-xl px-3 py-1.5 outline-none focus:border-black shadow-sm" value={filterSource} onChange={(e) => { setFilterSource(e.target.value); setCurrentPage(1); }}>
+            <option value="">Toutes les sources</option>
+            {sources.map(s => <option key={s} value={s}>{s}</option>)}
+          </select>
+          <select className="text-[11px] font-bold uppercase bg-white border border-zinc-200 rounded-xl px-3 py-1.5 outline-none focus:border-black shadow-sm" value={filterDevice} onChange={(e) => { setFilterDevice(e.target.value); setCurrentPage(1); }}>
+            <option value="">Tous les appareils</option>
+            {devices.map(d => <option key={d} value={d}>{d}</option>)}
+          </select>
+          <select className="text-[11px] font-bold uppercase bg-white border border-zinc-200 rounded-xl px-3 py-1.5 outline-none focus:border-black shadow-sm" value={filterOs} onChange={(e) => { setFilterOs(e.target.value); setCurrentPage(1); }}>
+            <option value="">Tous les systèmes</option>
+            {osList.map(os => <option key={os} value={os}>{os}</option>)}
+          </select>
         </div>
       </div>
       
       <div className="overflow-x-auto">
         <table className="w-full text-left">
           <thead>
-            <tr className="text-gray-400 text-[11px] uppercase tracking-wider font-bold bg-gray-50">
-              <th className="px-6 py-4">Source</th>
-              <th className="px-6 py-4">Appareil</th>
-              <th className="px-6 py-4">Système</th>
-              <th className="px-6 py-4 text-right">Date</th>
+            <tr className="text-zinc-400 text-[10px] uppercase tracking-widest font-bold border-b border-zinc-100 bg-zinc-50/20">
+              <th className="px-8 py-5">Source</th>
+              <th className="px-8 py-5">Appareil</th>
+              <th className="px-8 py-5">Système / Browser</th>
+              <th className="px-8 py-5 text-right">Date</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-100">
-            {paginatedVisits.length > 0 ? (
-              paginatedVisits.map((visit) => (
-                <tr key={visit.id} className="hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4">
-                    <span className="text-xs font-semibold text-black px-2 py-1 bg-gray-100 rounded">
-                      {visit.source}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="flex items-center gap-2 text-gray-600">
-                      {visit.device === "Mobile" ? <Smartphone className="w-3.5 h-3.5" /> : <Monitor className="w-3.5 h-3.5" />}
-                      <span className="text-xs font-medium">{visit.device}</span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="text-xs text-gray-500 font-medium">
-                      {visit.os} <span className="text-gray-300 mx-1">/</span> {visit.browser}
-                    </div>
-                  </td>
-                  <td className="px-6 py-4 text-right">
-                    <span className="text-xs text-gray-400 font-medium">
-                      {new Date(visit.createdAt).toLocaleDateString('fr-FR', {
-                        day: '2-digit',
-                        month: 'short',
-                        hour: '2-digit',
-                        minute: '2-digit'
-                      })}
-                    </span>
-                  </td>
-                </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan={4} className="px-6 py-12 text-center text-gray-400 text-sm">
-                  Aucune visite ne correspond à vos filtres.
+          <tbody className="divide-y divide-zinc-100">
+            {paginatedVisits.map((visit) => (
+              <tr key={visit.id} className="hover:bg-zinc-50/50 transition-colors group">
+                <td className="px-8 py-6 text-sm font-bold text-black">{visit.source}</td>
+                <td className="px-8 py-6 flex items-center gap-3 text-sm font-medium text-zinc-600">
+                  {visit.device === "Mobile" ? <Smartphone className="w-4 h-4" /> : <Monitor className="w-4 h-4" />}
+                  {visit.device}
+                </td>
+                <td className="px-8 py-6 text-sm text-zinc-500 font-medium">{visit.os} <span className="text-zinc-300 mx-1">|</span> {visit.browser}</td>
+                <td className="px-8 py-6 text-right text-sm text-zinc-400 font-medium">
+                  {new Date(visit.createdAt).toLocaleDateString('fr-FR', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' })}
                 </td>
               </tr>
-            )}
+            ))}
           </tbody>
         </table>
       </div>
 
-      {/* Pagination Locale */}
-      <div className="p-4 border-t border-gray-100 flex items-center justify-between bg-gray-50/50">
-        <p className="text-xs text-gray-500">
-          Affichage de <span className="font-bold text-black">{paginatedVisits.length}</span> sur <span className="font-bold text-black">{filteredVisits.length}</span> visites
-        </p>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-            disabled={currentPage <= 1}
-            className={`p-1.5 rounded border border-gray-200 transition-colors ${
-              currentPage <= 1 ? 'opacity-30 cursor-not-allowed' : 'hover:bg-white text-black'
-            }`}
-          >
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-          <span className="text-xs font-bold text-black px-2">
-            {currentPage} / {totalPages || 1}
-          </span>
-          <button
-            onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
-            disabled={currentPage >= totalPages}
-            className={`p-1.5 rounded border border-gray-200 transition-colors ${
-              currentPage >= totalPages ? 'opacity-30 cursor-not-allowed' : 'hover:bg-white text-black'
-            }`}
-          >
-            <ChevronRight className="w-4 h-4" />
-          </button>
+      <div className="p-6 border-t border-zinc-100 flex justify-between items-center bg-zinc-50/30">
+        <span className="text-[11px] font-bold text-zinc-400 uppercase">{filteredVisits.length} Entrées</span>
+        <div className="flex items-center gap-3">
+          <button onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))} disabled={currentPage <= 1} className="p-2 border border-zinc-200 rounded-xl bg-white transition-colors disabled:opacity-20"><ChevronLeft className="w-4 h-4 text-black" /></button>
+          <span className="text-[11px] font-bold text-black">{currentPage} / {totalPages || 1}</span>
+          <button onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))} disabled={currentPage >= totalPages} className="p-2 border border-zinc-200 rounded-xl bg-white transition-colors disabled:opacity-20"><ChevronRight className="w-4 h-4 text-black" /></button>
         </div>
       </div>
     </div>
