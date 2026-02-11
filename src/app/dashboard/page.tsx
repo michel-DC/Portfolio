@@ -23,10 +23,12 @@ export default async function DashboardPage() {
 
   const totalVisits = await prisma.visit.count();
   
-  const uniqueVisitors = await prisma.visit.groupBy({
+  // CORRECTION ICI : Ajout du type explicite pour éviter l'erreur au build
+  const uniqueVisitorsData = await prisma.visit.groupBy({
     by: ['ip'],
     _count: { ip: true }
-  }).then(res => res.length);
+  });
+  const uniqueVisitors = uniqueVisitorsData.length;
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
@@ -100,7 +102,7 @@ export default async function DashboardPage() {
                 title={s.source} 
                 value={s._count.source} 
                 icon={<Globe className="w-5 h-5" />} 
-                trend={`${Math.round((s._count.source / totalVisits) * 100)}%`}
+                trend={totalVisits > 0 ? `${Math.round((s._count.source / totalVisits) * 100)}%` : "0%"}
               />
             ))}
           </div>
@@ -176,7 +178,7 @@ export default async function DashboardPage() {
                     <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
                       <div 
                         className="h-full bg-white rounded-full" 
-                        style={{ width: `${(d._count.device / totalVisits) * 100}%` }}
+                        style={{ width: totalVisits > 0 ? `${(d._count.device / totalVisits) * 100}%` : '0%' }}
                       />
                     </div>
                   </div>
@@ -196,7 +198,7 @@ export default async function DashboardPage() {
                     <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
                       <div 
                         className="h-full bg-white rounded-full" 
-                        style={{ width: `${(s._count.source / totalVisits) * 100}%` }}
+                        style={{ width: totalVisits > 0 ? `${(s._count.source / totalVisits) * 100}%` : '0%' }}
                       />
                     </div>
                   </div>
@@ -211,7 +213,7 @@ export default async function DashboardPage() {
                <h3 className="text-lg font-semibold mb-2">Période</h3>
                <p className="text-zinc-500 text-sm mb-4">Statistiques calculées sur les 30 derniers jours.</p>
                <button className="w-full bg-white text-black text-sm font-bold py-3 rounded-xl hover:bg-zinc-200 transition-colors">
-                  Exporter CSV
+                 Exporter CSV
                </button>
             </div>
           </div>
