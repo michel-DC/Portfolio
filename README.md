@@ -1,9 +1,5 @@
 ![Portfolio Michel Djoumessi](public/images/image.png)
 
-# Michel Djoumessi - Portfolio v3
-
-Portfolio personnel axé sur la performance, le design et l'expérience utilisateur. Cette application permet de présenter mes projets, mon parcours et dispose d'un système d'analytics propriétaire.
-
 ## Stack Technique
 
 - Framework : Next.js 16 (App Router)
