@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "prisma generate --no-engine"
+    "postinstall": "prisma generate --no-engine",
+    "purge": "node scripts/purge-unknown-visits.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
