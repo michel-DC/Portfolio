@@ -53,8 +53,8 @@ export default function IntroSection() {
               </p>
               <p>
                 Basé sur une approche minimaliste, je privilégie la clarté et
-                l&apos;impact. Chaque animation, chaque interaction a un but précis :
-                servir l&apos;utilisateur.
+                l&apos;impact. Chaque animation, chaque interaction a un but
+                précis : servir l&apos;utilisateur.
               </p>
             </div>
 
@@ -64,7 +64,10 @@ export default function IntroSection() {
                 className="rounded-full bg-[#008366] text-white transition-colors duration-300 px-8 py-6 text-lg shadow-sm"
                 size="lg"
               >
-                <Link href="/documents/CV-MICHEL.pdf" target="_blank">
+                <Link
+                  href="/documents/MICHEL-DJOUMESSI-ALTERNANCE.pdf"
+                  target="_blank"
+                >
                   Télécharger mon CV <Download className="ml-3 size-5" />
                 </Link>
               </Button>

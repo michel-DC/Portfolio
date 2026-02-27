@@ -11,6 +11,7 @@ const VALID_ROUTES = [
   "/dashboard",
   "/dashboard/login",
   "/documents/CV-MICHEL.pdf",
+  "/documents/MICHEL-DJOUMESSI-ALTERNANCE.pdf",
   "/li",
   "/gh",
   "/in",

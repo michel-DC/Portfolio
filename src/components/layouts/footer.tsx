@@ -94,7 +94,7 @@ export function Footer() {
                   className="text-white font-bricolage-grotesque"
                 >
                   <Link
-                    href="/documents/CV-MICHEL.pdf"
+                    href="/documents/MICHEL-DJOUMESSI-ALTERNANCE.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[#008366] "

@@ -154,7 +154,7 @@ export default function HeroSection() {
                 className="h-10 md:h-11 px-6 md:px-12 text-sm text-black bg-gray-100/30 backdrop-blur-sm border border-gray-200 hover:bg-white/80 rounded-full"
               >
                 <Link
-                  href="/documents/CV-MICHEL.pdf"
+                  href="/documents/MICHEL-DJOUMESSI-ALTERNANCE.pdf"
                   target="_blank"
                   className="hover:text-[#008366] flex items-center"
                 >

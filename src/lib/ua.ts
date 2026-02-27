@@ -51,7 +51,7 @@ const VALID_ROUTES = [
   "/mentions-legales",
   "/dashboard",
   "/dashboard/login",
-  "/documents/CV-MICHEL.pdf",
+  "/documents/MICHEL-DJOUMESSI-ALTERNANCE.pdf",
   "/li",
   "/gh",
   "/in",

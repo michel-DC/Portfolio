@@ -86,7 +86,7 @@ export default function CommandMenu() {
         className="fixed inset-0 z-[100] flex items-start justify-center pt-[15vh] p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-300"
         onClick={() => setOpen(false)}
       >
-        <div 
+        <div
           className="w-full max-w-[640px] bg-white rounded-2xl border border-gray-200 shadow-2xl overflow-hidden flex flex-col animate-in zoom-in-95 duration-300"
           onClick={(e) => e.stopPropagation()}
         >
@@ -138,7 +138,10 @@ export default function CommandMenu() {
               <CommandItem
                 onSelect={() =>
                   runCommand(() =>
-                    window.open("/documents/CV-MICHEL.pdf", "_blank"),
+                    window.open(
+                      "/documents/MICHEL-DJOUMESSI-ALTERNANCE.pdf",
+                      "_blank",
+                    ),
                   )
                 }
               >
@@ -223,7 +226,10 @@ export default function CommandMenu() {
                   <CommandItem
                     onSelect={() =>
                       runCommand(() =>
-                        window.open("/documents/CV-MICHEL.pdf", "_blank"),
+                        window.open(
+                          "/documents/MICHEL-DJOUMESSI-ALTERNANCE.pdf",
+                          "_blank",
+                        ),
                       )
                     }
                   >
