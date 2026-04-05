@@ -30,7 +30,7 @@ export default function AboutSection() {
         ease: "power3.out",
       });
     },
-    { scope: container }
+    { scope: container },
   );
 
   return (
@@ -44,11 +44,21 @@ export default function AboutSection() {
 
       <div className="container mx-auto flex min-h-[80vh] flex-col items-center justify-center px-6 md:px-4 text-center relative z-10">
         <h2 className="about-text mb-8 md:mb-12 max-w-6xl text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
-          Je m&apos;appelle <span className="text-[#008366] font-bold italic font-serif">Michel</span>, développeur spécialisé dans la création d&apos;interfaces <span className="text-[#008366] font-bold">modernes</span> et <span className="text-[#008366] font-bold">performantes</span>.
+          Je suis michel, développeur spécialisé dans la création
+          d&apos;interfaces{" "}
+          <span className="text-[#008366] font-bold">modernes</span> et{" "}
+          <span className="text-[#008366] font-bold">performantes</span>.
         </h2>
 
         <p className="about-text mb-12 md:mb-16 max-w-5xl text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed">
-          Je transforme vos idées en <span className="text-white font-medium">solutions web</span> concrètes, en privilégiant l&apos;<span className="text-[#008366] font-bold">expérience utilisateur</span> et la <span className="text-[#008366] font-bold">qualité technique</span>.
+          Je transforme vos idées en{" "}
+          <span className="text-white font-medium">solutions web</span>{" "}
+          concrètes, en privilégiant l&apos;
+          <span className="text-[#008366] font-bold">
+            expérience utilisateur
+          </span>{" "}
+          et la{" "}
+          <span className="text-[#008366] font-bold">qualité technique</span>.
         </p>
 
         <div className="about-text flex items-center">

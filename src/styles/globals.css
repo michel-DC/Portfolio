@@ -7,6 +7,7 @@
     --font-cabinet-black: "CabinetGrotesk-Black", sans-serif;
     --font-cabinet-bold: "CabinetGrotesk-Bold", sans-serif;
     --font-cabinet-regular: "CabinetGrotesk-Regular", sans-serif;
+    --font-amoria: "Amoria", serif;
 }
 
 @custom-variant dark (&:is(.dark *));
