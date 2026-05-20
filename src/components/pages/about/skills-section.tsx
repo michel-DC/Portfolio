@@ -153,7 +153,7 @@ export default function SkillsSection() {
             className="md:col-span-1 row-span-1"
           />
 
-          {/* PostgreSQL */}
+          {/* Symfony */}
           <BentoSkillCard
             skill={skills[2]}
             index={2}
@@ -166,28 +166,28 @@ export default function SkillsSection() {
             className="md:col-span-1 md:row-span-2 md:col-start-5 md:row-start-1 h-full min-h-[250px] md:min-h-0"
           />
 
-          {/* Tailwind CSS */}
+          {/* Python */}
           <BentoSkillCard
             skill={skills[3]}
             index={4}
             className="md:col-span-1 row-span-1"
           />
 
-          {/* Node.js */}
+          {/* Tailwind CSS */}
           <BentoSkillCard
             skill={skills[4]}
             index={5}
             className="md:col-span-1 row-span-1"
           />
 
-          {/* Figma */}
+          {/* PostgreSQL */}
           <BentoSkillCard
             skill={skills[5]}
             index={6}
             className="md:col-span-1 row-span-1"
           />
 
-          {/* Symfony */}
+          {/* Figma */}
           <BentoSkillCard
             skill={skills[6]}
             index={7}

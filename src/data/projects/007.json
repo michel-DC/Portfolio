@@ -21,28 +21,15 @@
   ],
   "context": "Mission freelance complète pour Elecsud Energies. L'objectif était de créer une identité numérique forte et professionnelle pour se démarquer de la concurrence locale. Le client souhaitait un site rapide, rassurant pour les particuliers et les professionnels, et optimisé pour le référencement local à Marseille.",
   "task": [
-    "Analyse des besoins et définition de l'identité visuelle",
-    "Maquettage UI/UX complet sur Figma (Mobile First)",
-    "Développement Front-End avec Next.js 16+",
-    "Intégration d'un système de design fluide avec TailwindCSS",
-    "Implémentation d'animations avancées (GSAP, Framer Motion)",
-    "Création de formulaires de contact complexes avec validation Zod",
-    "Mise en place de l'envoi d'emails transactionnels via Resend",
-    "Intégration de cartes interactives (Leaflet) pour la zone d'intervention",
-    "Optimisation sémantique et technique pour le SEO local"
+    "Le projet a débuté par une étude de l'identité visuelle et du parcours utilisateur. J'ai conçu des maquettes Mobile First sur **Figma** pour garantir une expérience optimale, puis j'ai intégré un design système fluide avec **TailwindCSS**.",
+    "Le développement technique a porté sur la fluidité. J'ai utilisé **GSAP** et **Framer Motion** pour créer des animations engageantes, tout en implémentant des formulaires de contact complexes avec validation pour sécuriser les demandes de devis.",
+    "L'intégration d'outils tiers comme **Leaflet** pour la géolocalisation et **Resend** pour l'envoi d'emails a permis de créer un outil de conversion complet et autonome pour l'artisan."
   ],
   "results": [
-    "Site web performant avec d'excellents scores Core Web Vitals",
-    "Design moderne et professionnel renforçant la crédibilité de l'artisan",
-    "Expérience utilisateur fluide facilitant la prise de contact",
-    "Architecture technique robuste et facile à maintenir",
-    "Augmentation de la visibilité locale grâce à l'optimisation SEO"
+    "Le résultat est un site vitrine performant affichant d'excellents scores techniques. Le design moderne renforce la crédibilité de l'artisan, facilitant la prise de contact rapide. La stratégie SEO locale a permis une augmentation notable de la visibilité sur la zone de Marseille."
   ],
   "learningOutcomes": [
-    "Gestion intégrale d'un projet client freelance (devis à livraison)",
-    "Perfectionnement sur les animations web complexes et la performance",
-    "Travail approfondi sur l'accessibilité et le SEO local",
-    "Utilisation avancée de l'écosystème Next.js moderne"
+    "Cette mission m'a permis de gérer l'intégralité du cycle de vie d'un projet client, de la négociation à la mise en ligne. J'ai perfectionné mon expertise sur les animations web et sur les enjeux critiques du SEO local."
   ],
   "clientName": "Elecsud Energies",
   "clientLogo": "https://elecsud-energies.com/icons/image.png",

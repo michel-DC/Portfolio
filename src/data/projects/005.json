@@ -9,33 +9,18 @@
     "/images/projects/flow-media/002.png"
   ],
   "technologies": ["PHP", "JavaScript", "CSS", "MySQL", "Apache"],
-  "context": "Ce projet a été réalisé dans le cadre d'un exercice universitaire visant à simuler une prestation pour une agence réelle. J'ai été impliqué dans toutes les étapes principales du développement web : analyse et interprétation du brief client, intégration fidèle de maquettes Figma, choix et mise en place de la stack technique (PHP, MySQL, JavaScript), modélisation de la base de données, puis développement front-end comme back-end, incluant la sécurité du back-office pour la gestion des contenus éditoriaux. Le projet a nécessité un échange itératif avec l'encadrement pour valider chaque phase, depuis la rédaction du cahier des charges jusqu'au recettage et à la mise en ligne. Ce contexte m'a permis d’acquérir une expérience concrète des exigences du développement web professionnel, du respect des délais à la qualité du livrable.",
+  "context": "Ce projet a été réalisé dans le cadre d'un exercice universitaire visant à simuler une prestation pour une agence réelle. J'ai été impliqué dans toutes les étapes principales du développement web : analyse et interprétation du brief client, intégration fidèle de maquettes Figma, choix et mise en place de la stack technique (PHP, MySQL, JavaScript), modélisation de la base de données, puis développement front-end comme back-end.",
   "task": [
-    "Analyse du besoin client et rédaction du cahier des charges",
-    "Intégration des maquettes Figma en HTML, CSS et JavaScript",
-    "Conception et modélisation de la base de données MySQL",
-    "Développement from scratch du site vitrine en PHP côté front et back-end",
-    "Mise en œuvre d'un système de gestion de contenus via un back-office sécurisé (authentification, droits d’accès)",
-    "Intégration et contrôle des contenus dynamiques (projets, réalisations, équipe…) par le back-office",
-    "Mise en place d’un système d’administration simple pour modifications récurrentes",
-    "Déploiement du site sur un serveur Apache universitaire, gestion des DNS et du HTTPS"
+    "Le projet a commencé par une analyse rigoureuse du cahier des charges pour traduire les besoins créatifs en contraintes techniques. J'ai ensuite intégré les maquettes Figma avec une attention particulière portée au respect des espacements et de la typographie, tout en concevant une structure de base de données MySQL optimisée pour la gestion des contenus dynamiques.",
+    "Le cœur technique a consisté à développer 'from scratch' un back-office sécurisé en PHP. J'ai implémenté un système d'authentification et de gestion des droits d'accès pour permettre à l'agence de piloter ses projets et son équipe en toute autonomie, garantissant ainsi une mise à jour fluide des contenus éditoriaux.",
+    "La phase finale s'est concentrée sur le déploiement sur un serveur Apache universitaire. J'ai configuré les DNS, activé le HTTPS et procédé au recettage complet pour m'assurer que le site réponde parfaitement aux exigences initiales du brief client, tout en respectant les délais impartis."
   ],
   "results": [
-    "Site web complet en ligne représentant fidèlement une agence professionnelle",
-    "Back-office fonctionnel permettant la gestion autonome des contenus par l’agence",
-    "Respect des contraintes graphiques et d’accessibilité issues des maquettes Figma",
-    "Livraison dans les délais malgré les itérations et retours de l'encadrement",
-    "Mise en production sans incidents (installation, configuration, sécurité de base assurée)",
-    "Amélioration progressive de l’ergonomie sur la base des retours utilisateurs",
-    "Documentation synthétique remis au client et à l’équipe pédagogique"
+    "Flow Media dispose désormais d'une vitrine numérique complète et fonctionnelle. Le site reflète fidèlement l'image professionnelle d'une agence de communication parisienne, et le back-office permet une gestion éditoriale autonome et sécurisée, sans nécessiter d'intervention technique récurrente."
   ],
   "learningOutcomes": [
-    "Approfondissement de l’intégration web à partir de maquettes Figma",
-    "Renforcement des compétences en PHP procédural et bases du MVC",
-    "Pratique concrète de la modélisation et de l’administration d’une BDD MySQL",
-    "Expérience en conception de back-office et gestion de l’authentification",
-    "Gestion globale d’un projet web : du recueil du besoin au déploiement",
-    "Découverte des enjeux de sécurité basiques pour la gestion de contenus"
+    "Ce projet a été formateur sur l'ensemble du cycle de vie d'un produit web. J'ai considérablement renforcé mes compétences en PHP procédural, en modélisation de bases de données relationnelles et en conception d'outils d'administration personnalisés.",
+    "J'ai également appris à naviguer entre les exigences créatives du design et les impératifs techniques de sécurité et de performance."
   ],
   "github": "https://github.com/michel-DC/Flow-Media",
   "url": "https://flowmedia.michel.djoumessi.mmi-velizy.fr"

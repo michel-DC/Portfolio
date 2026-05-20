@@ -16,25 +16,15 @@
   ],
   "context": "Création d’une landing page moderne et responsive visant à présenter un outil fictif de création de pages en no-code. Projet focalisé sur l’intégration pixel-perfect, la performance et l’accessibilité, en s’appuyant sur Astro (îlots React), TailwindCSS, animations légères (Framer Motion) et un design system cohérent. Architecture simple et maintenable, déploiement statique sur Vercel, sans backend applicatif.",
   "task": [
-    "Initialisation Astro avec intégrations React et Tailwind",
-    "Mise en place du design system (typographie, couleurs, variables CSS, radius)",
-    "Intégration des sections: Hero, How it works, Features, Testimonials, Pricing, FAQ, Final CTA",
-    "Création du layout global avec Header/Footer et pattern de fond",
-    "Composants UI réutilisables (boutons, cartes)",
-    "Animations légères (Framer Motion, typed), lissage du scroll",
-    "Optimisations de performance (hydratation sélective, assets optimisés)",
-    "Gestion des assets: images, SVG, favicon, polices locales",
-    "Page 404 dédiée et configuration des réécritures Vercel",
-    "Configuration Tailwind (plugins forms/typography/aspect-ratio/animate)",
-    "Déploiement sur Vercel et vérification basique d’accessibilité/SEO"
+    "L'intégration a débuté par la mise en place d'une architecture hybride sous Astro, permettant d'allier la légèreté du statique à l'interactivité des îlots React. J'ai défini un design system rigoureux (typographie, couleurs, radius) pour garantir une cohérence visuelle absolue sur l'ensemble des sections.",
+    "Le développement s'est concentré sur la création de composants UI réutilisables et performants. J'ai intégré des animations subtiles via Framer Motion pour fluidifier la navigation, tout en optimisant l'hydratation sélective des composants pour maintenir des temps de chargement records.",
+    "Enfin, j'ai assuré la robustesse du déploiement sur Vercel, en configurant les redirections, les pages d'erreur personnalisées et en validant l'accessibilité globale pour offrir une expérience inclusive et professionnelle."
   ],
   "results": [
-    "Landing page statique, rapide et responsive, conforme aux objectifs d’intégration",
-    "Expérience utilisateur fluide: sections structurées, animations discrètes, navigation agréable",
-    "Design system cohérent et composants réutilisables facilitant l’évolution",
-    "Structure de code claire (Astro + îlots React) favorisant la maintenabilité",
-    "Performances solides grâce à l’hydratation sélective et à l’optimisation des assets",
-    "Déploiement fiable sur Vercel avec routing et 404 fonctionnels"
+    "La landing page finale est une vitrine technologique alliant rapidité et fluidité. Le respect strict des maquettes Figma, couplé à une architecture moderne (Astro), a permis d'obtenir un site extrêmement léger et responsive, offrant une expérience utilisateur sans friction."
+  ],
+  "learningOutcomes": [
+    "Ce projet a été une excellente opportunité pour maîtriser l'hydratation sélective et l'optimisation des performances web. J'ai renforcé ma capacité à créer des design systems maintenables et à intégrer des animations qui servent l'expérience utilisateur sans la surcharger."
   ],
   "github": "https://github.com/michel-DC/Framix",
   "url": "https://framix.onlinemichel.dev"

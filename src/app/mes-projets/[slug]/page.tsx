@@ -61,7 +61,7 @@ function getProject(slug: string): ProjectData | undefined {
 // Helper to get random projects excluding current
 function getRandomProjects(
   currentSlug: string,
-  count: number = 2
+  count: number = 2,
 ): ProjectData[] {
   const allProjects = getAllProjects();
   const otherProjects = allProjects.filter((p) => p.slugName !== currentSlug);
@@ -164,77 +164,82 @@ export default async function ProjectPage({
         <div className="w-full px-4 md:px-24">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-24">
             {/* Main Content */}
-            <div className="lg:col-span-2 space-y-12">
+            <div className="lg:col-span-2 space-y-24">
               {/* Description & Context */}
               <section className="space-y-6">
-                <h2 className="text-2xl font-bold">Contexte et Enjeux</h2>
-                <div className="prose prose-neutral dark:prose-invert max-w-none text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                  <p className="text-lg text-neutral-900 dark:text-neutral-200 font-medium mb-4">
+                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#008366]">
+                  Contexte
+                </h2>
+                <div className="max-w-3xl space-y-6">
+                  <p className="text-xl md:text-2xl text-neutral-900 dark:text-neutral-50 leading-snug font-medium tracking-tight">
                     {project.description}
                   </p>
-                  <p>{project.context}</p>
+                  <p className="text-lg text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                    {project.context}
+                  </p>
                 </div>
               </section>
 
-              {/* Tasks */}
-              <section className="space-y-6">
-                <div className="flex items-center gap-3">
-                  <Layers className="w-6 h-6 text-emerald-600" />
-                  <h2 className="text-2xl font-bold">Missions réalisées</h2>
-                </div>
-                <ul className="grid grid-cols-1 gap-3">
+              {/* Tasks - Narrative Process */}
+              <section className="space-y-10">
+                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#008366]">
+                  Missions
+                </h2>
+                <div className="space-y-12 max-w-3xl">
                   {project.task.map((task, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start gap-3 text-neutral-600 dark:text-neutral-400"
-                    >
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-                      <span>{task}</span>
-                    </li>
+                    <div key={idx} className="space-y-4">
+                      <p
+                        className="text-lg md:text-xl text-neutral-800 dark:text-neutral-200 leading-relaxed"
+                        dangerouslySetInnerHTML={{
+                          __html: task.replace(
+                            /\*\*(.*?)\*\*/g,
+                            '<strong class="font-bold text-neutral-900 dark:text-white">$1</strong>',
+                          ),
+                        }}
+                      />
+                    </div>
                   ))}
-                </ul>
-              </section>
-
-              {/* Results */}
-              <section className="space-y-6">
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-emerald-600" />
-                  <h2 className="text-2xl font-bold">Résultats</h2>
                 </div>
-                <ul className="grid grid-cols-1 gap-3">
-                  {project.results.map((result, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start gap-3 text-neutral-600 dark:text-neutral-400"
-                    >
-                      <span className="mt-2 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-                      <span>{result}</span>
-                    </li>
-                  ))}
-                </ul>
               </section>
 
-              {/* Learning Outcomes */}
+              {/* Results - The Impact */}
+              <section className="space-y-8">
+                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#008366]">
+                  Impact
+                </h2>
+                <div className="max-w-3xl space-y-8">
+                  {project.results.map((result, idx) => (
+                    <p
+                      key={idx}
+                      className="text-2xl md:text-3xl text-neutral-900 dark:text-neutral-50 leading-tight tracking-tight font-semibold"
+                    >
+                      {result}
+                    </p>
+                  ))}
+                </div>
+              </section>
+
+              {/* Learning Outcomes - Reflection */}
               {project.learningOutcomes &&
                 project.learningOutcomes.length > 0 && (
                   <section className="space-y-6">
-                    <div className="flex items-center gap-3">
-                      <Lightbulb className="w-6 h-6 text-amber-500" />
-                      <h2 className="text-2xl font-bold">
-                        Compétences acquises
-                      </h2>
-                    </div>
-                    <ul className="grid grid-cols-1 gap-3">
+                    <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#008366]">
+                      Apprentissage
+                    </h2>
+                    <div className="max-w-3xl space-y-6">
                       {project.learningOutcomes.map((outcome, idx) => (
-                        <li
+                        <p
                           key={idx}
-                          className="flex items-start gap-3 text-neutral-600 dark:text-neutral-400"
-                        >
-                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0" />
-                          <span>{outcome}</span>
-                        </li>
+                          className="text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed italic"
+                          dangerouslySetInnerHTML={{
+                            __html: outcome.replace(
+                              /\*\*(.*?)\*\*/g,
+                              '<strong class="font-semibold text-neutral-800 dark:text-neutral-200">$1</strong>',
+                            ),
+                          }}
+                        />
                       ))}
-                    </ul>
+                    </div>
                   </section>
                 )}
             </div>

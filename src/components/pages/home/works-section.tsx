@@ -60,7 +60,7 @@ const experiences: Experience[] = [
   },
 ];
 
-export default function ExperienceSection(): JSX.Element {
+export default function WorksSection(): React.JSX.Element {
   const containerRef = useRef<HTMLElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-10%" });
 

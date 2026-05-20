@@ -6,34 +6,17 @@
   "themes": ["BACKEND"],
   "images": ["/images/projects/app-analyzer/001.png"],
   "technologies": ["Next.JS", "TypeScript", "Puppeteer", "Lighthouse"],
-  "context": "Projet conçu dans le cadre de la prospection d’entreprise en tant que développeur freelance, afin d’automatiser l’audit technique de sites web pour mes clients potentiels. Développement d’une API back-end Next.js intégrant Puppeteer et Lighthouse, avec pour objectif d’offrir un service fiable d’analyse SEO, de performance, d’accessibilité et de structure HTML. Ce système a été intégré et utilisé directement dans mon workflow d’automatisation sur n8n pour générer des rapports automatisés, détecter des axes d’amélioration, synthétiser des recommandations et industrialiser la démarche de diagnostic web. L’accent a été mis sur la qualité du typage TypeScript, la gestion avancée des erreurs, la modularité et la compatibilité cloud.",
+  "context": "Projet conçu dans le cadre de la prospection d’entreprise en tant que développeur freelance, afin d’automatiser l’audit technique de sites web pour mes clients potentiels. Développement d’une API back-end Next.js intégrant Puppeteer et Lighthouse, avec pour objectif d’offrir un service fiable d’analyse SEO, de performance, d’accessibilité et de structure HTML.",
   "task": [
-    "Étude du besoin : cadrage de l’automatisation d’audits web",
-    "Mise en place du socle Next.js et configuration TypeScript stricte",
-    "Développement d’une API POST `/api/analyze` pour audits unitaires",
-    "Développement du mode batch avec `/api/analyze/batch` (analyse séquentielle, options map par site)",
-    "Intégration Puppeteer : navigation headless, extraction d’infos, configuration avancée",
-    "Intégration Lighthouse : analyse multi-dimensionnelle, wrapper sécurisé",
-    "Extraction automatisée des scores SEO, performance, accessibilité, bonnes pratiques",
-    "Génération d’issues détaillées et recommandations contextuelles",
-    "Gestion centralisée des erreurs, timeouts robustes, fallback intelligent",
-    "Déploiement compatible cloud & documentation technique"
+    "La conception a commencé par le développement d'un moteur d'audit s'appuyant sur **Puppeteer** pour la navigation headless et **Lighthouse** pour l'analyse multi-dimensionnelle. J'ai structuré l'API pour supporter des analyses unitaires ainsi que des traitements par lot.",
+    "L'accent a été mis sur la standardisation des données. J'ai conçu un parseur intelligent capable d'extraire et de synthétiser les scores de performance et de SEO pour générer des recommandations exploitables via un rapport JSON normé.",
+    "Enfin, j'ai implémenté une couche de validation stricte avec **Zod** et une gestion d'erreurs avancée pour garantir la stabilité de l'outil lors de l'analyse de sites aux structures variées."
   ],
   "results": [
-    "API d’audit web automatisé, accessible en local et déployable sur le cloud",
-    "Analyse complète en un appel : scores, détails de structure, recommandations actionnables",
-    "Haute fiabilité grâce à la gestion fine des erreurs et timeout",
-    "Rapport JSON standardisé pour intégration dans d’autres systèmes",
-    "Stack stable, scalable, strictement typée, adaptée aux projets professionnels",
-    "Documentation d’usage (README), exemples d’intégration, payloads variés",
-    "Contribution potentielle à l’amélioration de la qualité des sites web audités"
+    "L'outil permet d'obtenir un diagnostic technique complet en quelques secondes, facilitant grandement la phase d'avant-vente et de conseil. Grâce à sa structure modulaire, l'API est facilement intégrable dans des outils d'automatisation."
   ],
   "learningOutcomes": [
-    "Maîtrise avancée des audits automatisés via Puppeteer & Lighthouse",
-    "Approfondissement de l'intégration Next.js côté API/serverless",
-    "Renforcement des compétences en sécurité & validation (Zod, gestion des entrées, timeouts)",
-    "Structuration de projets back-end modulaires et maintenables",
-    "Entraînement à l’écriture de rapports techniques automatisés et exploitables"
+    "Ce projet m'a permis d'approfondir mes connaissances sur le fonctionnement interne des navigateurs et des outils d'audit Google. J'ai renforcé mes compétences en architecture backend et en gestion des flux asynchrones."
   ],
   "github": "https://github.com/michel-DC/App-Analyzer",
   "url": "https://app-analyzer.netlify.app"

@@ -1,7 +1,7 @@
 {
   "name": "Lookaroun • Application de networking",
   "slugName": "lookaroun",
-  "description": "Lookaroun est une application de networking événementielle, créé par Ioana Marcoux, pour permettre aux utilisateurs de créer, de gérer et de participer des événements dans le but de créer des relations professionnelles.",
+  "description": "Lookaroun est une application de networking événementielle permettant aux utilisateurs de créer, gérer et participer à des événements professionnels pour développer leur réseau de manière intuitive et efficace.",
   "date": "Juin 2025",
   "themes": ["Frontend", "FIGMA", "INTEGRATION"],
   "images": [
@@ -18,35 +18,18 @@
     "Scaleway",
     "Github Actions"
   ],
-  "context": "Ce projet a été réalisé durant mon stage de première année. J'étais assigné au poste de développeur frontend sur Lookaroun, une application de networking événementielle développée par Ioana Marcoux. Dans ce contexte professionnel, j'ai été intégré à une équipe de développement où j'étais responsable de la partie frontend de l'application, utilisant React.js, Firebase, TailwindCSS et Shadcn UI pour créer une interface utilisateur moderne et intuitive pour la gestion et la participation aux événements de networking.",
+  "context": "Projet réalisé lors de mon stage de première année chez Lookaroun. En tant que développeur frontend, j'ai rejoint une équipe dynamique pour concevoir une interface utilisateur moderne dédiée au networking professionnel.",
   "task": [
-    "Intégration des maquettes Figma en composants React réutilisables",
-    "Développement de l'interface utilisateur avec React.js, TailwindCSS et Shadcn UI",
-    "Intégration de l'authentification Firebase côté frontend (affichage des états, gestion des formulaires)",
-    "Implémentation des interfaces de gestion d'événements (création, édition, liste)",
-    "Développement des composants d'interaction utilisateur (inscriptions, profils, networking)",
-    "Intégration d'animations avec Framer Motion pour améliorer l'expérience utilisateur",
-    "Optimisation de l'interface responsive pour mobile et desktop",
-    "Travail en collaboration avec l'équipe backend pour intégrer les API",
-    "Tests et débogage des fonctionnalités frontend",
-    "Intégration continue avec Github Actions et déploiement sur Scaleway"
+    "Ma mission principale a consisté à transformer les maquettes Figma en une architecture React modulaire et performante. J'ai développé une bibliothèque de composants réutilisables avec TailwindCSS et Shadcn UI, en veillant à ce que chaque interaction soit à la fois intuitive et esthétiquement fidèle aux intentions de design de la fondatrice.",
+    "J'ai pris en charge l'intégration complète de l'authentification et de la gestion des données via Firebase. Cela incluait le développement des interfaces de gestion d'événements (création, édition, listes dynamiques) et des profils utilisateurs, tout en enrichissant l'expérience globale avec des animations fluides via Framer Motion.",
+    "Pour garantir la qualité et la pérennité du code, j'ai collaboré étroitement avec l'équipe backend pour l'intégration des API et j'ai mis en place un workflow d'intégration continue via Github Actions pour automatiser les déploiements sur Scaleway."
   ],
   "results": [
-    "Interface utilisateur moderne et intuitive pour la gestion d'événements de networking",
-    "Expérience utilisateur responsive et fluide sur tous les appareils",
-    "Intégration réussie des maquettes Figma avec fidélité au design",
-    "Composants React réutilisables et maintenables pour faciliter l'évolution de l'application",
-    "Animation et interactions utilisateur soignées pour améliorer l'engagement",
-    "Collaboration efficace avec l'équipe backend pour une intégration API réussie"
+    "Lookaroun dispose aujourd'hui d'une interface utilisateur moderne, fluide et entièrement responsive. Le succès de l'intégration des maquettes et la robustesse de l'architecture React ont permis de livrer une application stable, prête à accueillir une communauté grandissante de professionnels."
   ],
   "learningOutcomes": [
-    "Découverte du travail en équipe dans un contexte professionnel de stage",
-    "Approfondissement de React.js et des hooks modernes",
-    "Maîtrise de TailwindCSS et Shadcn UI pour créer des interfaces cohérentes",
-    "Expérience de l'intégration de maquettes Figma dans un projet réel",
-    "Découverte de Firebase pour l'authentification et la gestion des données côté frontend",
-    "Apprentissage de Framer Motion pour créer des animations fluides",
-    "Compréhension du workflow de développement en entreprise (CI/CD, déploiement)"
+    "Ce stage a été une immersion précieuse dans le workflow de développement en entreprise. J'ai approfondi ma maîtrise de React.js et découvert l'importance de la CI/CD pour la stabilité des déploiements.",
+    "J'ai également appris à collaborer efficacement dans une équipe pluridisciplinaire, en assurant le pont entre les exigences du design et les contraintes techniques du backend."
   ],
   "url": "https://lookaroun.com"
 }
