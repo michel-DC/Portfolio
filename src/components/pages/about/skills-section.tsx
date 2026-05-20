@@ -27,9 +27,10 @@ const skills: Skill[] = [
     iconPath: "/images/skills/symfony.svg",
   },
   {
-    name: "Node.js",
-    description: "Environnement d'exécution JavaScript côté serveur",
-    iconPath: "/images/skills/nodejs.svg",
+    name: "Python",
+    description:
+      "Langage de programmation polyvalent, idéal pour le développement backend et la data science",
+    iconPath: "/images/skills/python.svg",
   },
   {
     name: "Tailwind CSS",
