@@ -1,0 +1,35 @@
+{
+  "name": "Zen • Catalogue de films intelligent",
+  "slugName": "zen",
+  "description": "Zen est une application web de découverte de films qui combine une interface moderne, une navigation fluide et une mise en avant visuelle des contenus. Le projet s'appuie sur une architecture front/back séparée pour afficher des films, consulter leurs détails, filtrer les résultats et extraire automatiquement des palettes de couleurs à partir des affiches.",
+  "date": "Mai 2026",
+  "themes": ["FULLSTACK", "API", "DEVOPS"],
+  "images": ["/images/projects/zen/001.png", "/images/projects/zen/002.png"],
+  "technologies": [
+    "Next.js",
+    "TypeScript",
+    "TailwindCSS",
+    "Shadcn UI",
+    "FastAPI",
+    "Python",
+    "Docker",
+    "Prisma",
+    "Vercel"
+  ],
+  "context": "Développement d'une application de découverte de films avec une expérience visuelle forte, un front Next.js moderne et un backend FastAPI chargé de l'extraction et de la synchronisation des palettes de couleurs. Le projet a également servi de terrain d'expérimentation pour fiabiliser les flux de données, structurer les filtres et préparer une mise en production propre via Docker et un déploiement cloud.",
+  "task": [
+    "J'ai d'abord conçu l'interface du catalogue pour qu'elle soit claire, responsive et cohérente avec une direction artistique orientée cinéma. Le front a été structuré avec **Next.js**, **TypeScript** et **Shadcn UI** afin de partir sur une base modulaire et maintenable.",
+    "J'ai ensuite développé la partie fonctionnelle du projet autour de l'API : affichage des listes de films, page de détail, filtres par tendances et genres, ainsi qu'un système de synchronisation des couleurs extraites depuis les affiches. La séparation front/back m'a permis de garder une logique métier nette et évolutive.",
+    "Enfin, j'ai préparé le projet pour la mise en production avec **Docker**, en sécurisant le build du front en mode standalone et en organisant le backend comme un service indépendant. Cette étape m'a permis de transformer le projet en application réellement déployable dans un contexte professionnel."
+  ],
+  "results": [
+    "Le projet aboutit à une application de films stable, agréable à parcourir et techniquement structurée pour évoluer. L'interface met mieux en valeur les contenus, les filtres sont opérationnels, les palettes de couleurs sont synchronisées correctement entre les vues, et l'ensemble est prêt pour un déploiement propre dans un environnement de production.",
+    "Au-delà de l'aspect visuel, le projet m'a permis de consolider ma capacité à diagnostiquer des problèmes d'architecture, à corriger des incohérences de données entre plusieurs couches applicatives et à préparer une livraison fiable avec une configuration de déploiement claire."
+  ],
+  "learningOutcomes": [
+    "Ce projet m'a appris à mieux séparer les responsabilités entre front et back, à fiabiliser les échanges de données et à anticiper les contraintes de production dès la phase de développement.",
+    "J'ai aussi renforcé ma maîtrise de **Next.js**, de l'intégration d'une API Python et des bonnes pratiques de conteneurisation pour rendre une application plus robuste et plus simple à déployer."
+  ],
+  "github": "https://github.com/michel-DC/Zen",
+  "url": "https://zen-movies.vercel.app/"
+}

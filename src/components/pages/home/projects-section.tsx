@@ -38,10 +38,10 @@ const PROJECTS: Project[] = [
   },
   {
     id: 4,
-    title: "Flow Media • Agence web fictive",
+    title: "Zen • Catalogue de films intelligent",
     category: "Application Web",
-    image: "/images/projects/flow-media/001.png",
-    slug: "flow-media",
+    image: "/images/projects/zen/001.png",
+    slug: "zen",
   },
 ];
 

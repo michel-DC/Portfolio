@@ -17,6 +17,16 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     id: 1,
+    title: "Zen • Catalogue de films intelligent",
+    category: "Application Web",
+    image: "/images/projects/zen/001.png",
+    slug: "zen",
+    json: "/data/projects/008.json",
+    year: "2026",
+    tags: ["Next.js", "FastAPI", "Python"],
+  },
+  {
+    id: 2,
     title: "Teamify • Application de gestion événementielle",
     category: "Application Web",
     image: "/images/projects/teamify/001.png",
@@ -26,7 +36,7 @@ const PROJECTS: Project[] = [
     tags: ["Next.js", "Prisma", "Pusher"],
   },
   {
-    id: 2,
+    id: 3,
     title: "App Analyzer • Audit de site web",
     category: "Service Backend",
     image: "/images/projects/app-analyzer/001.png",
@@ -36,7 +46,7 @@ const PROJECTS: Project[] = [
     tags: ["Next.js", "Puppeteer", "Lighthouse"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Lookaroun • Application de networking",
     category: "Application Web (STAGE)",
     image: "/images/projects/lookaroun/001.png",
@@ -46,7 +56,7 @@ const PROJECTS: Project[] = [
     tags: ["React", "Firebase", "Shadcn UI"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Flow Media • Agence web fictive",
     category: "Application Web",
     image: "/images/projects/flow-media/001.png",
@@ -56,7 +66,7 @@ const PROJECTS: Project[] = [
     tags: ["PHP", "MySQL", "JavaScript"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Elecsud Energies • Électricien à Marseille",
     category: "Site Vitrine (FREELANCE)",
     image: "/images/projects/elecsud-energies/001.png",
@@ -66,7 +76,7 @@ const PROJECTS: Project[] = [
     tags: ["Next.js", "GSAP", "Tailwind"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Framix • Landing page",
     category: "Site Vitrine",
     image: "/images/projects/framix/001.png",
@@ -76,7 +86,7 @@ const PROJECTS: Project[] = [
     tags: ["Astro", "React", "Tailwind"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Lexi AI • Landing page",
     category: "Site Vitrine",
     image: "/images/projects/lexi-ai/001.png",
