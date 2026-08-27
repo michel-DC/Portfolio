@@ -2,11 +2,12 @@ import Header from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
 import { Metadata } from "next";
 import LegalAnimation from "@/animations/legal-animation";
+import { CONTACT_EMAIL, SITE_DOMAIN } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Mentions Légales • Michel DJOUMESSI",
   description:
-    "Informations légales et mentions obligatoires du site onlinemichel.dev",
+    `Informations légales et mentions obligatoires du site ${SITE_DOMAIN}`,
 };
 
 export default function MentionsLegalesPage() {
@@ -23,7 +24,7 @@ export default function MentionsLegalesPage() {
                     </h1>
                     <p className="text-xl md:text-2xl italic text-neutral-600">
                       Informations légales et mentions obligatoires du site
-                      onlinemichel.dev
+                      {SITE_DOMAIN}
                     </p>
                   </header>
         
@@ -41,10 +42,10 @@ export default function MentionsLegalesPage() {
                     <br />
                     Email :{" "}
                     <a
-                      href="mailto:contact@onlinemichel.dev"
+                      href={`mailto:${CONTACT_EMAIL}`}
                       className="text-emerald-600 hover:underline underline-offset-4"
                     >
-                      contact@onlinemichel.dev
+                      {CONTACT_EMAIL}
                     </a>
                   </p>
                 </div>
@@ -125,10 +126,10 @@ export default function MentionsLegalesPage() {
                     Pour toute question relative aux mentions légales ou au site,
                     vous pouvez contacter le propriétaire à :{" "}
                     <a
-                      href="mailto:contact@onlinemichel.dev"
+                      href={`mailto:${CONTACT_EMAIL}`}
                       className="text-emerald-600 hover:underline underline-offset-4"
                     >
-                      contact@onlinemichel.dev
+                      {CONTACT_EMAIL}
                     </a>
                     .
                   </p>

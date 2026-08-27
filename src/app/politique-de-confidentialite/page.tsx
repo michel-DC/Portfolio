@@ -2,11 +2,12 @@ import Header from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
 import { Metadata } from "next";
 import PrivacyAnimation from "@/animations/privacy-animation";
+import { CONTACT_EMAIL, SITE_DOMAIN } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Politique de Confidentialité • Michel DJOUMESSI",
   description:
-    "Comment sont collectées, utilisées et protégées vos données sur onlinemichel.dev",
+    `Comment sont collectées, utilisées et protégées vos données sur ${SITE_DOMAIN}`,
 };
 
 export default function PrivacyPolicyPage() {
@@ -23,7 +24,7 @@ export default function PrivacyPolicyPage() {
               </h1>
               <p className="text-xl md:text-2xl italic text-neutral-600">
                 Comment sont collectées, utilisées et protégées vos données sur
-                onlinemichel.dev
+                {SITE_DOMAIN}
               </p>
             </header>
 
@@ -132,10 +133,10 @@ export default function PrivacyPolicyPage() {
                     d&apos;opposition au traitement de vos données. Pour exercer ces droits,
                     contactez :{" "}
                     <a
-                      href="mailto:contact@onlinemichel.dev"
+                      href={`mailto:${CONTACT_EMAIL}`}
                       className="text-emerald-600 hover:underline underline-offset-4"
                     >
-                      contact@onlinemichel.dev
+                      {CONTACT_EMAIL}
                     </a>
                     .
                   </p>

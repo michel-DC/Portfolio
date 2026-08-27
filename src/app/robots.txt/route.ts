@@ -1,4 +1,4 @@
-const SITE_URL = "https://onlinemichel.dev";
+import { SITE_URL } from "@/lib/site";
 
 export async function GET() {
   const txt = `User-agent: *

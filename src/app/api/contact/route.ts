@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { SITE_URL } from "@/lib/site";
 
 const resend: Resend | null = process.env.RESEND_API_KEY
   ? new Resend(process.env.RESEND_API_KEY)
@@ -73,11 +74,11 @@ export async function POST(request: Request) {
           <table role="presentation" width="600" class="container" style="max-width:600px;">
             <tr>
               <td align="left" style="padding:0 16px;">
-                <img src="https://onlinemichel.dev/images/svg/logo-noir.png"
+                <img src="${SITE_URL}/images/svg/logo-noir.png"
                      alt="Michel logo"
                      width="120"
                      class="email-header-image-dark" style="display: block;">
-                <img src="https://onlinemichel.dev/images/svg/logo-noir.png"
+                <img src="${SITE_URL}/images/svg/logo-noir.png"
                      alt="Michel logo"
                      width="120"
                      class="email-header-image-light" style="display: none;">
@@ -130,12 +131,12 @@ export async function POST(request: Request) {
             <!-- Footer -->
             <tr>
               <td align="center" style="padding:32px 32px 20px 32px; font-size:9px; color:#6b7280; background-color:#f9f9f9;">
-                <a href="https://onlinemichel.dev" style="display:inline-block; margin-bottom:16px;">
-                  <img src="https://onlinemichel.dev/images/svg/logo-noir.png"
+                <a href="${SITE_URL}" style="display:inline-block; margin-bottom:16px;">
+                  <img src="${SITE_URL}/images/svg/logo-noir.png"
                        alt="Michel logo"
                        width="80"
                        class="email-footer-image-dark" style="display: inline-block;">
-                  <img src="https://onlinemichel.dev/images/svg/logo-noir.png"
+                  <img src="${SITE_URL}/images/svg/logo-noir.png"
                        alt="Michel logo"
                        width="80"
                        class="email-footer-image-light" style="display: none;">

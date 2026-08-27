@@ -6,9 +6,10 @@ import SmoothScroll from "@/components/ui/smooth-scroll";
 import { Toaster } from "sonner";
 import CommandMenu from "@/components/ui/command-menu";
 import { trackVisit } from "@/lib/analytics";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://onlinemichel.dev"),
+  metadataBase: new URL(SITE_URL),
   title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
   description:
     "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     description:
       "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
     type: "website",
-    url: "https://onlinemichel.dev",
+    url: SITE_URL,
     siteName: "Michel Portfolio",
     locale: "fr_FR",
     images: [
@@ -63,11 +64,6 @@ export const metadata: Metadata = {
   },
 };
 
-// Helper for templates / routes that need the absolute site URL
-const SITE_URL =
-  metadata.metadataBase instanceof URL
-    ? metadata.metadataBase.href
-    : String(metadata.metadataBase);
 export const viewport = {
   width: "device-width",
   initialScale: 1,
@@ -95,7 +91,7 @@ export default async function RootLayout({
         <link
           rel="sitemap"
           type="application/xml"
-          href={`${SITE_URL}sitemap.xml`}
+          href={`${SITE_URL}/google-sitemap.xml`}
         />
         <script
           type="application/ld+json"
