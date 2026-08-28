@@ -12,6 +12,10 @@ const EntryAnimation: React.FC = () => {
     // On ne lance l'animation que sur la page d'accueil
     if (pathname !== "/") return;
 
+    const scope = comp.current;
+
+    if (!scope) return;
+
     // Création du contexte GSAP pour un nettoyage facile
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
@@ -46,8 +50,8 @@ const EntryAnimation: React.FC = () => {
           ease: "power2.inOut",
         })
         // Cache le container pour libérer les clics
-        .set(comp.current, { display: "none" });
-    }, comp.current);
+        .set(scope, { display: "none" });
+    }, scope);
 
     // Nettoyage automatique des animations au démontage du composant
     return () => ctx.revert();

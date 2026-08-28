@@ -4,9 +4,13 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 
 const LegalAnimation: React.FC = () => {
-  const comp = useRef(null);
+  const comp = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
+    const scope = comp.current;
+
+    if (!scope) return;
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
 
@@ -43,8 +47,8 @@ const LegalAnimation: React.FC = () => {
         })
 
         // Nettoyage (display: none pour ne plus bloquer les clics)
-        .set(comp.current, { display: "none" });
-    }, comp.current);
+        .set(scope, { display: "none" });
+    }, scope);
 
     return () => ctx.revert();
   }, []);

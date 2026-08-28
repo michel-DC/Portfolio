@@ -6,9 +6,13 @@ import gsap from "gsap";
 const ProjectEntryAnimation: React.FC<{ projectName: string }> = ({
   projectName,
 }) => {
-  const comp = useRef(null);
+  const comp = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
+    const scope = comp.current;
+
+    if (!scope) return;
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline();
 
@@ -45,8 +49,8 @@ const ProjectEntryAnimation: React.FC<{ projectName: string }> = ({
         })
 
         // Nettoyage (display: none pour ne plus bloquer les clics)
-        .set(comp.current, { display: "none" });
-    }, comp.current);
+        .set(scope, { display: "none" });
+    }, scope);
 
     return () => ctx.revert();
   }, []);

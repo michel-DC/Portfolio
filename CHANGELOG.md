@@ -2,6 +2,7 @@
 
 ## 28-08-2026
 
+- 13:57 Sécurisation du typage des conteneurs d’animations d’entrée afin de permettre la compilation de production.
 - 13:52 Recomposition de la section contact sur le fond granuleux global, avec une seule information de réponse sous 24 heures et sans panneau noir ni structure en deux colonnes ; suppression du texte de positionnement ajouté au hero.
 - 13:45 Refonte complète de la section contact avec une nouvelle hiérarchie en deux panneaux, un formulaire accessible et l’engagement de réponse sous 24 heures ; ajout d’un positionnement métier au hero.
 - 13:08 Correction du ciblage des animations d’entrée afin que leurs voiles se retirent correctement sur les pages concernées.
