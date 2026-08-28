@@ -11,7 +11,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = (): void => setIsOpen((isMenuOpen) => !isMenuOpen);
 
   useEffect(() => {
     if (isOpen) {
@@ -22,6 +22,19 @@ export default function Header() {
     return () => {
       document.body.style.overflow = "unset";
     };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleKeyDown = (event: KeyboardEvent): void => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
 
   useEffect(() => {
@@ -58,7 +71,7 @@ export default function Header() {
             <Link href="/">
               <Image
                 src="/images/svg/logo-noir.svg"
-                alt="Teamify"
+                alt="Michel Djoumessi"
                 width={35}
                 height={35}
               />
@@ -77,7 +90,7 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="hover:text-[#008366] transition-colors text-lg "
+                  className="hover:text-[#4E6471] transition-colors text-lg "
                 >
                   {item.label}
                 </Link>
@@ -91,7 +104,7 @@ export default function Header() {
                 className="relative overflow-hidden bg-black text-white px-5 py-2 rounded-full font-bold text-sm"
               >
                 <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
-                <span className="relative z-10 transition-colors duration-500 group-hover:text-[#008366]">
+                <span className="relative z-10 transition-colors duration-500 group-hover:text-[#4E6471]">
                   Contact
                 </span>
               </motion.div>
@@ -101,7 +114,7 @@ export default function Header() {
                 className="relative overflow-hidden bg-black text-white p-2 rounded-full flex items-center justify-center"
               >
                 <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
-                <span className="relative z-10 transition-colors duration-500 group-hover:text-[#008366]">
+                <span className="relative z-10 transition-colors duration-500 group-hover:text-[#4E6471]">
                   <ArrowUpRight size={16} />
                 </span>
               </motion.div>
@@ -133,7 +146,9 @@ export default function Header() {
               !isScrolled && "md:hidden"
             )}
             onClick={toggleMenu}
-            aria-label="Toggle menu"
+            aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
           >
             {isOpen ? (
               <X size={24} className="text-black" />
@@ -161,6 +176,10 @@ export default function Header() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: "100%" }}
                 transition={{ type: "tween", duration: 0.4, ease: "circOut" }}
+                id="mobile-navigation"
+                role="dialog"
+                aria-modal="true"
+                aria-label="Navigation principale"
                 className="fixed top-0 right-0 bottom-0 w-full md:w-1/2 bg-black text-white flex flex-col items-center justify-center space-y-12 text-5xl z-40 shadow-2xl"
               >
                 <div className="absolute top-10">

@@ -14,7 +14,7 @@ export function Footer() {
           <div className="flex justify-center mb-4">
             <Image
               src="/images/svg/logo-blanc.svg"
-              alt="Teamify"
+              alt="Michel Djoumessi"
               width={100}
               height={100}
             />
@@ -97,7 +97,7 @@ export function Footer() {
                     href="/documents/MICHEL-DJOUMESSI-ALTERNANCE.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-[#008366] "
+                    className="hover:text-[var(--accent-on-dark)] "
                   >
                     <File size={20} className="mr-2" />
                     Mon CV
@@ -129,7 +129,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/"
-                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                  className="text-gray-400 hover:text-[var(--accent-on-dark)] transition-colors"
                 >
                   Accueil
                 </Link>
@@ -137,7 +137,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/a-propos"
-                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                  className="text-gray-400 hover:text-[var(--accent-on-dark)] transition-colors"
                 >
                   À propos
                 </Link>
@@ -145,7 +145,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/mes-projets"
-                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                  className="text-gray-400 hover:text-[var(--accent-on-dark)] transition-colors"
                 >
                   Mes projets
                 </Link>
@@ -160,7 +160,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/mes-projets/teamify"
-                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                  className="text-gray-400 hover:text-[var(--accent-on-dark)] transition-colors"
                 >
                   Teamify
                 </Link>
@@ -168,7 +168,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/mes-projets/app-analyzer"
-                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                  className="text-gray-400 hover:text-[var(--accent-on-dark)] transition-colors"
                 >
                   App Analyzer
                 </Link>
@@ -176,7 +176,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/mes-projets/lookaroun"
-                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                  className="text-gray-400 hover:text-[var(--accent-on-dark)] transition-colors"
                 >
                   Lookaroun
                 </Link>
@@ -184,7 +184,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/mes-projets/flow-media"
-                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                  className="text-gray-400 hover:text-[var(--accent-on-dark)] transition-colors"
                 >
                   Flow Media
                 </Link>
@@ -201,7 +201,7 @@ export function Footer() {
                   href="https://v1.hey-michel.me"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                  className="text-gray-400 hover:text-[var(--accent-on-dark)] transition-colors"
                 >
                   Portfolio v1
                 </Link>
@@ -211,7 +211,7 @@ export function Footer() {
                   href="https://v2.hey-michel.me"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                  className="text-gray-400 hover:text-[var(--accent-on-dark)] transition-colors"
                 >
                   Portfolio v2
                 </Link>
@@ -226,7 +226,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/mentions-legales"
-                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                  className="text-gray-400 hover:text-[var(--accent-on-dark)] transition-colors"
                 >
                   Mentions légales
                 </Link>
@@ -234,7 +234,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/politique-de-confidentialite"
-                  className="text-gray-400 hover:text-[#008366] transition-colors"
+                  className="text-gray-400 hover:text-[var(--accent-on-dark)] transition-colors"
                 >
                   Politique de confidentialité
                 </Link>

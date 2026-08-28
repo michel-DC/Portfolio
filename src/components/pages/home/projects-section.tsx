@@ -133,7 +133,7 @@ export default function ProjectsSection() {
                 className="text-3xl md:text-5xl font-medium tracking-tight font-bricolage-grotesque"
               >
                 Chaque projet est une réponse technique à{" "}
-                <span className="text-[#008366] italic font-serif">
+                <span className="text-[#4E6471] italic font-serif">
                   un besoin précis
                 </span>{" "}
                 de la conception à la mise en ligne.

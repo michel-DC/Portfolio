@@ -98,7 +98,7 @@ const BentoQuoteCard = ({
     whileInView={{ opacity: 1, scale: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay: index * 0.08 }}
-    className={`relative bg-[#008366] rounded-3xl p-6 md:p-8 flex flex-col justify-center items-center text-center shadow-lg ${className}`}
+    className={`relative bg-[#4E6471] rounded-3xl p-6 md:p-8 flex flex-col justify-center items-center text-center shadow-lg ${className}`}
   >
     <svg
       className="w-10 h-10 md:w-12 md:h-12 text-white/30 mb-4"
@@ -133,7 +133,7 @@ export default function SkillsSection() {
           <h2 className="text-4xl md:text-6xl font-medium tracking-tight font-bricolage-grotesque">
             Du code à l&apos;interface, chaque compétence participe à la
             cohérence{" "}
-            <span className="text-[#008366] italic font-serif">du projet.</span>
+            <span className="text-[#4E6471] italic font-serif">du projet.</span>
           </h2>
         </motion.div>
 

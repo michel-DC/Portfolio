@@ -74,11 +74,11 @@ export default function ExperienceSection(): React.JSX.Element {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
             className="text-4xl md:text-6xl font-medium tracking-tight font-bricolage-grotesque"
           >
             Des expériences qui traduisent une{" "}
-            <span className="text-[#008366] italic font-serif">
+            <span className="text-[#4E6471] italic font-serif">
               montée en compétences
             </span>{" "}
             progressive et orientée terrain.
@@ -93,7 +93,7 @@ export default function ExperienceSection(): React.JSX.Element {
             >
               <div className="py-10 md:py-16 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start relative z-10">
                 <div className="md:col-span-3">
-                  <span className="text-lg md:text-2xl font-medium text-[#008366] md:text-gray-400 md:group-hover:text-[#008366] transition-colors duration-300">
+                  <span className="text-lg md:text-2xl font-medium text-[#4E6471] md:text-gray-400 md:group-hover:text-[#4E6471] transition-colors duration-300">
                     {exp.date}
                   </span>
                 </div>
@@ -118,10 +118,10 @@ export default function ExperienceSection(): React.JSX.Element {
                 </div>
 
                 <div className="md:col-span-4 flex flex-col justify-between h-full gap-4 md:gap-6">
-                  <p className="text-gray-600 text-base md:text-lg leading-relaxed md:opacity-0 md:translate-y-4 md:group-hover:opacity-100 md:group-hover:translate-y-0 transition-all duration-500">
+                  <p className="text-gray-700 text-base md:text-lg leading-relaxed md:opacity-100 md:translate-y-0 transition-all duration-300">
                     {exp.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                  <div className="flex flex-wrap gap-2 md:opacity-100 transition-opacity duration-300">
                     {exp.tags.map((tag, i) => (
                       <span
                         key={i}
@@ -134,7 +134,7 @@ export default function ExperienceSection(): React.JSX.Element {
                 </div>
 
                 <div className="absolute top-10 right-0 md:hidden">
-                  <ArrowUpRight className="size-6 text-[#008366]/40" />
+                  <ArrowUpRight className="size-6 text-[#4E6471]/40" />
                 </div>
               </div>
             </div>

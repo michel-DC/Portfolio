@@ -26,7 +26,7 @@ export default function AboutSection() {
         y: 50,
         opacity: 0,
         stagger: 0.1,
-        duration: 1,
+        duration: 0.65,
         ease: "power3.out",
       });
     },
@@ -46,25 +46,25 @@ export default function AboutSection() {
         <h2 className="about-text mb-8 md:mb-12 max-w-6xl text-3xl md:text-4xl lg:text-5xl font-medium leading-tight">
           Je suis michel, développeur spécialisé dans la création
           d&apos;interfaces{" "}
-          <span className="text-[#008366] font-bold">modernes</span> et{" "}
-          <span className="text-[#008366] font-bold">performantes</span>.
+          <span className="text-[var(--accent-on-dark)] font-bold">modernes</span> et{" "}
+          <span className="text-[var(--accent-on-dark)] font-bold">performantes</span>.
         </h2>
 
         <p className="about-text mb-12 md:mb-16 max-w-5xl text-xl md:text-2xl lg:text-3xl text-gray-300 leading-relaxed">
           Je transforme vos idées en{" "}
           <span className="text-white font-medium">solutions web</span>{" "}
           concrètes, en privilégiant l&apos;
-          <span className="text-[#008366] font-bold">
+          <span className="text-[var(--accent-on-dark)] font-bold">
             expérience utilisateur
           </span>{" "}
           et la{" "}
-          <span className="text-[#008366] font-bold">qualité technique</span>.
+          <span className="text-[var(--accent-on-dark)] font-bold">qualité technique</span>.
         </p>
 
         <div className="about-text flex items-center">
           <motion.div
             whileHover={{ x: [0, -2, 2, -2, 2, 0] }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.25 }}
           >
             <Link href="/a-propos">
               <Button className="rounded-full" size="lg">

@@ -27,27 +27,27 @@ const EntryAnimation: React.FC = () => {
         .to(".entry-text", {
           opacity: 1,
           y: 0,
-          duration: 0.8,
+          duration: 0.45,
           ease: "power3.out",
         })
         .to(".entry-text", {
           opacity: 0,
           y: -20,
-          duration: 0.5,
+          duration: 0.25,
           ease: "power3.in",
-          delay: 0.3,
+          delay: 0.15,
         })
         // Animation de sortie (Slide up avec effet courbe)
         .to(".entry-overlay", {
           yPercent: -100,
           borderBottomLeftRadius: "50%",
           borderBottomRightRadius: "50%",
-          duration: 0.8,
+          duration: 0.5,
           ease: "power2.inOut",
         })
         // Cache le container pour libérer les clics
-        .set(".entry-container", { display: "none" });
-    }, comp); // On lie le contexte au ref 'comp'
+        .set(comp.current, { display: "none" });
+    }, comp.current);
 
     // Nettoyage automatique des animations au démontage du composant
     return () => ctx.revert();

@@ -109,7 +109,7 @@ export default function ProjectsList() {
             className="text-3xl md:text-5xl font-medium leading-[1.1] font-bricolage-grotesque text-black max-w-4xl"
           >
             Parce que chaque projet est bien plus que du code, il raconte{" "}
-            <span className="text-[#008366] italic font-serif">
+            <span className="text-[#4E6471] italic font-serif">
               une intention et une solution.
             </span>
           </motion.h2>
@@ -138,7 +138,7 @@ export default function ProjectsList() {
             className="text-3xl md:text-5xl font-medium tracking-tight font-bricolage-grotesque text-center"
           >
             Une intention et une solution, pensées pour répondre à{" "}
-            <span className="text-[#008366] italic font-serif">
+            <span className="text-[#4E6471] italic font-serif">
               des besoins concrets et durables.
             </span>
           </motion.h2>

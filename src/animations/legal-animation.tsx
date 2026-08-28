@@ -22,15 +22,15 @@ const LegalAnimation: React.FC = () => {
         .to(".legal-entry-text", {
           opacity: 1,
           y: 0,
-          duration: 0.8,
+          duration: 0.45,
           ease: "power3.out",
         })
         .to(".legal-entry-text", {
           opacity: 0,
           y: -20,
-          duration: 0.5,
+          duration: 0.25,
           ease: "power3.in",
-          delay: 0.3,
+          delay: 0.15,
         })
 
         // Animation de sortie (Slide up circulaire)
@@ -38,13 +38,13 @@ const LegalAnimation: React.FC = () => {
           yPercent: -100,
           borderBottomLeftRadius: "50%",
           borderBottomRightRadius: "50%",
-          duration: 0.8,
+          duration: 0.45,
           ease: "power2.inOut",
         })
 
         // Nettoyage (display: none pour ne plus bloquer les clics)
-        .set(".legal-entry-container", { display: "none" });
-    }, comp);
+        .set(comp.current, { display: "none" });
+    }, comp.current);
 
     return () => ctx.revert();
   }, []);

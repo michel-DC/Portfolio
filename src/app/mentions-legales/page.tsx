@@ -30,7 +30,7 @@ export default function MentionsLegalesPage() {
         
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-neutral-100">              <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-600" />
+                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
                   Éditeur du site
                 </h2>
                 <div className="text-neutral-600 leading-relaxed space-y-2">
@@ -43,7 +43,7 @@ export default function MentionsLegalesPage() {
                     Email :{" "}
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="text-emerald-600 hover:underline underline-offset-4"
+                      className="text-[#4E6471] hover:underline underline-offset-4"
                     >
                       {CONTACT_EMAIL}
                     </a>
@@ -53,7 +53,7 @@ export default function MentionsLegalesPage() {
 
               <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-600" />
+                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
                   Hébergement
                 </h2>
                 <div className="text-neutral-600 leading-relaxed space-y-2">
@@ -68,7 +68,7 @@ export default function MentionsLegalesPage() {
 
               <section className="space-y-4 md:col-span-2">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-600" />
+                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
                   Propriété intellectuelle
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -85,7 +85,7 @@ export default function MentionsLegalesPage() {
 
               <section className="space-y-4 md:col-span-2">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-600" />
+                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
                   Limitation de responsabilité
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -103,7 +103,7 @@ export default function MentionsLegalesPage() {
 
               <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-600" />
+                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
                   Liens externes
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -118,7 +118,7 @@ export default function MentionsLegalesPage() {
 
               <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-600" />
+                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
                   Contact
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -127,7 +127,7 @@ export default function MentionsLegalesPage() {
                     vous pouvez contacter le propriétaire à :{" "}
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="text-emerald-600 hover:underline underline-offset-4"
+                      className="text-[#4E6471] hover:underline underline-offset-4"
                     >
                       {CONTACT_EMAIL}
                     </a>

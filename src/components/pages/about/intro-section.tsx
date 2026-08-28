@@ -21,7 +21,7 @@ export default function IntroSection() {
               Creative
             </h1>
             <div className="flex items-center gap-4 md:gap-8 ml-[5vw] mt-2 md:mt-4">
-              <span className="text-[13vw] md:text-[7vw] leading-[0.8] font-bold tracking-tighter text-[#008366] uppercase italic font-serif">
+              <span className="text-[13vw] md:text-[7vw] leading-[0.8] font-bold tracking-tighter text-[#4E6471] uppercase italic font-serif">
                 Developer
               </span>
             </div>
@@ -39,7 +39,7 @@ export default function IntroSection() {
           >
             <h2 className="text-3xl md:text-5xl font-medium leading-[1.1] font-bricolage-grotesque text-black max-w-4xl">
               Je conçois des{" "}
-              <span className="text-[#008366] italic font-serif">
+              <span className="text-[#4E6471] italic font-serif">
                 écosystèmes digitaux
               </span>{" "}
               où la performance rencontre l&apos;émotion.
@@ -61,7 +61,7 @@ export default function IntroSection() {
             <div className="pt-4 flex justify-center lg:justify-start">
               <Button
                 asChild
-                className="rounded-full bg-[#008366] text-white transition-colors duration-300 px-8 py-6 text-lg shadow-sm"
+                className="rounded-full bg-[#4E6471] text-white transition-colors duration-300 px-8 py-6 text-lg shadow-sm"
                 size="lg"
               >
                 <Link

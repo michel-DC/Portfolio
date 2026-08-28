@@ -14,10 +14,10 @@ export default function HeroSection() {
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.3, scale: 1 }}
-        transition={{ duration: 2, ease: "easeOut" }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full pointer-events-none blur-[100px]"
         style={{
-          background: "radial-gradient(circle, #008366 0%, transparent 70%)",
+          background: "radial-gradient(circle, #4E6471 0%, transparent 70%)",
         }}
       />
 
@@ -28,8 +28,8 @@ export default function HeroSection() {
             <motion.span
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
-              transition={{ duration: 0.8, delay: 2.1, ease: "easeOut" }}
-              className="meta-inner italic block text-sm md:text-base opacity-60 tracking-tight"
+              transition={{ duration: 0.45, delay: 0.35, ease: "easeOut" }}
+              className="meta-inner italic block text-sm md:text-base opacity-75 tracking-tight"
             >
               Disponible en freelance pour vous
             </motion.span>
@@ -46,13 +46,13 @@ export default function HeroSection() {
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
                 transition={{
-                  duration: 1.2,
-                  delay: 2.2,
+                  duration: 0.7,
+                  delay: 0.4,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.06em] flex items-baseline uppercase font-medium"
+                className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.035em] flex items-baseline uppercase font-medium"
               >
-                M<span className="text-[#008366] italic mr-[0.1em]">I</span>CHEL
+                M<span className="text-[#4E6471] italic mr-[0.1em]">I</span>CHEL
               </motion.h1>
             </div>
 
@@ -65,14 +65,14 @@ export default function HeroSection() {
                 initial={{ y: "110%" }}
                 animate={{ y: 0 }}
                 transition={{
-                  duration: 1.2,
-                  delay: 2.3,
+                  duration: 0.7,
+                  delay: 0.46,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.06em] flex items-baseline uppercase font-medium mr-2"
+                className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.035em] flex items-baseline uppercase font-medium mr-2"
               >
                 DJOUMESS
-                <span className="text-[#008366] italic mr-[0.05em]">I</span>
+                <span className="text-[#4E6471] italic mr-[0.05em]">I</span>
               </motion.h1>
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2.6 }}
+            transition={{ duration: 0.45, delay: 0.7 }}
             className="flex flex-wrap justify-center gap-4 mt-12 md:mt-20 w-full"
           >
             <motion.div
@@ -156,7 +156,7 @@ export default function HeroSection() {
                 <Link
                   href="/documents/MICHEL-DJOUMESSI-ALTERNANCE.pdf"
                   target="_blank"
-                  className="hover:text-[#008366] flex items-center"
+                  className="hover:text-[#4E6471] flex items-center"
                 >
                   <FileDown size={16} className="mr-2" />
                   Mon CV
@@ -173,8 +173,8 @@ export default function HeroSection() {
             <div className="scroll-line w-[1px] h-12 bg-black/10 relative overflow-hidden">
               <motion.div
                 animate={{ y: ["-100%", "100%"] }}
-                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                className="absolute top-0 left-0 w-full h-full bg-[#008366]"
+                transition={{ duration: 1.4, repeat: Infinity, ease: "linear" }}
+                className="absolute top-0 left-0 w-full h-full bg-[#4E6471]"
               />
             </div>
           </div>
@@ -188,8 +188,8 @@ export default function HeroSection() {
               <motion.span
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
-                transition={{ duration: 0.8, delay: 2.5, ease: "easeOut" }}
-                className="meta-inner block text-xs md:text-sm opacity-50 tracking-tighter"
+                transition={{ duration: 0.45, delay: 0.65, ease: "easeOut" }}
+                className="meta-inner block text-xs md:text-sm opacity-65 tracking-tighter"
               >
                 48.85° N, 2.35° E
               </motion.span>

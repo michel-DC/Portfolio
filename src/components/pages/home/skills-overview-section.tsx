@@ -55,7 +55,7 @@ export default function ServicesSection() {
       gsap.from(title, {
         y: 50,
         opacity: 0,
-        duration: 1,
+        duration: 0.65,
         ease: "power3.out",
         scrollTrigger: {
           trigger: title,
@@ -104,7 +104,7 @@ export default function ServicesSection() {
           gsap.from(service, {
             y: 100,
             opacity: 0,
-            duration: 1,
+            duration: 0.65,
             ease: "power4.out",
             scrollTrigger: {
               trigger: service,
@@ -147,7 +147,7 @@ export default function ServicesSection() {
             ref={titleRef}
           >
             Ces compétences traduisent ma façon de concevoir des{" "}
-            <span className="text-[#008366] italic font-serif">
+            <span className="text-[#4E6471] italic font-serif">
               solutions web fiables
             </span>{" "}
             claires et centrées sur l&apos;utilisateur.
@@ -164,19 +164,11 @@ export default function ServicesSection() {
                 index === 0 ? "md:border-l border-t" : ""
               }`}
             >
-              {/* Rayures par défaut */}
-              <div 
-                className="absolute inset-0 pointer-events-none opacity-40" 
-                style={{
-                  backgroundImage: `repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.08) 0px, rgba(0, 0, 0, 0.08) 1px, transparent 1px, transparent 10px)`
-                }}
-              />
-              
               {/* Number, Icon, Title, Description */}
               <div className="absolute top-4 right-4 text-gray-400 font-light text-xl group-hover:text-black transition-colors">
                 {service.id}
               </div>
-              <div className="mb-8 flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-[#008366] border border-[#008366] text-white transition-transform duration-500 shrink-0">
+              <div className="mb-8 flex h-16 w-16 md:h-20 md:w-20 items-center justify-center rounded-full bg-[#4E6471] border border-[#4E6471] text-white transition-transform duration-500 shrink-0">
                 {service.icon}
               </div>
               <h3 className="text-2xl lg:text-3xl font-bold mb-4 font-bricolage-grotesque leading-tight w-[95%] min-h-auto md:min-h-20">

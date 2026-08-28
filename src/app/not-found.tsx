@@ -39,7 +39,7 @@ export default function NotFound() {
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium font-bricolage-grotesque tracking-tight text-slate-900 leading-tight">
               Oups ! Cette page semble{" "}
-              <span className="text-[#008366] italic font-serif">perdue.</span>
+              <span className="text-[#4E6471] italic font-serif">perdue.</span>
             </h1>
 
             <p className="text-lg text-slate-600 leading-relaxed">

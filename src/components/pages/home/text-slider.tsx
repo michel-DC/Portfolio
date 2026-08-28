@@ -14,7 +14,7 @@ export default function TextSlider() {
       gsap.to(sliderRef.current, {
         xPercent: -50,
         ease: "none",
-        duration: 25,
+        duration: 18,
         repeat: -1,
       });
     },
@@ -37,11 +37,11 @@ const TextItem = () => {
       <span className="px-4 text-[10vw] font-black leading-none tracking-normal text-[#181717] uppercase">
         Développeur Fullstack
       </span>
-      <Star className="mx-4 h-[6vw] w-[6vw] fill-[#008366] text-[#008366]" />
+      <Star className="mx-4 h-[6vw] w-[6vw] fill-[#4E6471] text-[#4E6471]" />
       <span className="px-4 text-[10vw] font-black leading-none tracking-normal text-[#181717] uppercase">
         UI & UX Designer
       </span>
-      <Star className="mx-4 h-[6vw] w-[6vw] fill-[#008366] text-[#008366]" />
+      <Star className="mx-4 h-[6vw] w-[6vw] fill-[#4E6471] text-[#4E6471]" />
     </div>
   );
 };

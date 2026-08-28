@@ -211,7 +211,7 @@ export default function CommandMenu() {
                         )
                       }
                     >
-                      <FileText className="mr-3 h-4 w-4 text-[#008366]" />
+                      <FileText className="mr-3 h-4 w-4 text-[#4E6471]" />
                       <span>{project.title}</span>
                     </CommandItem>
                   ))}
@@ -298,7 +298,7 @@ function CommandItem({
       onSelect={onSelect}
       className={cn(
         "flex items-center px-3 py-2.5 rounded-xl cursor-default select-none outline-none transition-colors",
-        "aria-selected:bg-[#008366]/10 aria-selected:text-[#008366] text-gray-700",
+        "aria-selected:bg-[#4E6471]/10 aria-selected:text-[#4E6471] text-gray-700",
         className,
       )}
     >

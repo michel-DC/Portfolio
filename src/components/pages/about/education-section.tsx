@@ -49,9 +49,9 @@ export default function EducationSection() {
             className="text-4xl md:text-6xl font-medium tracking-tight font-bricolage-grotesque"
           >
             Un parcours scolaire guidé par la{" "}
-            <span className="text-[#008366] italic font-serif">curiosité</span>{" "}
+            <span className="text-[#4E6471] italic font-serif">curiosité</span>{" "}
             et l&apos;envie de{" "}
-            <span className="text-[#008366] italic font-serif">
+            <span className="text-[#4E6471] italic font-serif">
               comprendre le numérique.
             </span>
           </motion.h2>
@@ -74,7 +74,7 @@ export default function EducationSection() {
               }`}
             >
               <div className="flex items-baseline gap-4 mb-6">
-                <span className="text-sm font-bold uppercase tracking-widest text-[#008366]">
+                <span className="text-sm font-bold uppercase tracking-widest text-[#4E6471]">
                   [{item.year}]
                 </span>
                 <div className="h-px grow bg-gray-100" />
