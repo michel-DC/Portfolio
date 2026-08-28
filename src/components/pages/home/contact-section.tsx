@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowUpRight, Clock3, Mail } from "lucide-react";
 import { motion } from "framer-motion";
+import type { ReactElement } from "react";
 import { useForm, type UseFormRegisterReturn } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -25,7 +26,7 @@ interface ContactFieldProps {
   type?: "email" | "text";
 }
 
-function ContactField({ error, id, label, registration, type = "text" }: ContactFieldProps): JSX.Element {
+function ContactField({ error, id, label, registration, type = "text" }: ContactFieldProps): ReactElement {
   const fieldErrorId = `${id}-error`;
 
   return (
@@ -46,7 +47,7 @@ function ContactField({ error, id, label, registration, type = "text" }: Contact
   );
 }
 
-export default function ContactSection(): JSX.Element {
+export default function ContactSection(): ReactElement {
   const {
     register,
     handleSubmit,
