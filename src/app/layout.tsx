@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Michel DJOUMESSI" }],
   robots:
     "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+  alternates: {
+    canonical: "/",
+  },
 
   openGraph: {
     title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
@@ -87,7 +90,6 @@ export default async function RootLayout({
         })(window,document,'script','dataLayer','GTM-5QMDFMGS');`}
         </Script>
         {/* Canonical and JSON-LD for improved SEO */}
-        <link rel="canonical" href={SITE_URL} />
         <link
           rel="sitemap"
           type="application/xml"

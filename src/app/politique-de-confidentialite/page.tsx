@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Politique de Confidentialité • Michel DJOUMESSI",
   description:
     `Comment sont collectées, utilisées et protégées vos données sur ${SITE_DOMAIN}`,
+  alternates: {
+    canonical: "/politique-de-confidentialite",
+  },
 };
 
 export default function PrivacyPolicyPage() {

@@ -3,7 +3,13 @@ import path from "path";
 import { SITE_URL } from "@/lib/site";
 
 export async function GET() {
-  const pages = ["/", "/a-propos", "/mes-projets"];
+  const pages = [
+    "/",
+    "/a-propos",
+    "/mes-projets",
+    "/mentions-legales",
+    "/politique-de-confidentialite",
+  ];
 
   const projectsDir = path.join(process.cwd(), "src", "data", "projects");
   const projectUrls: string[] = [];

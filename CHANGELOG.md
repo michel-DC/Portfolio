@@ -1,5 +1,9 @@
 # Changelog
 
+## 03-09-2026
+
+- 23:37 Correction des balises canoniques : chaque page publique et chaque projet déclare désormais sa propre URL canonique, tandis que les pages légales sont ajoutées au sitemap.
+
 ## 28-08-2026
 
 - 13:59 Correction du type de retour du formulaire de contact pour la vérification TypeScript de production.

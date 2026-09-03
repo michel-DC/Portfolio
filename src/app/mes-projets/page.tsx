@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Mes Projets • Michel DJOUMESSI",
   description:
     "Découvrez l'ensemble de mes projets, allant des applications web aux outils backend et dashboards.",
+  alternates: {
+    canonical: "/mes-projets",
+  },
 };
 
 export default function ProjectsPage() {

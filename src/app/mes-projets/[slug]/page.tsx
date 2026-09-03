@@ -95,6 +95,9 @@ export async function generateMetadata({
   return {
     title: `${project.name} | Portfolio`,
     description: project.description,
+    alternates: {
+      canonical: `/mes-projets/${slug}`,
+    },
   };
 }
 

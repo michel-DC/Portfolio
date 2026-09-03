@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Mentions Légales • Michel DJOUMESSI",
   description:
     `Informations légales et mentions obligatoires du site ${SITE_DOMAIN}`,
+  alternates: {
+    canonical: "/mentions-legales",
+  },
 };
 
 export default function MentionsLegalesPage() {

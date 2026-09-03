@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   title: "À propos • Michel DJOUMESSI",
   description:
     "Découvrez mon parcours, mes expériences et mes compétences en développement web et design.",
+  alternates: {
+    canonical: "/a-propos",
+  },
 };
 
 export default function AboutPage() {
