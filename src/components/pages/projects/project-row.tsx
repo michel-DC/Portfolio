@@ -35,7 +35,7 @@ export default function ProjectRow({ project, index }: ProjectRowProps) {
         
         {/* Colonne 1 : Index / Année */}
         <div className="md:col-span-1 hidden md:block">
-           <span className="text-sm font-medium text-gray-400 group-hover:text-[#4E6471] transition-colors duration-300">
+           <span className="text-sm font-medium text-gray-400 group-hover:text-[#008366] transition-colors duration-300">
             {project.year || "2024"}
           </span>
         </div>
@@ -63,7 +63,7 @@ export default function ProjectRow({ project, index }: ProjectRowProps) {
 
         {/* Colonne 4 : Arrow Icon */}
         <div className="md:col-span-1 flex justify-end">
-            <ArrowUpRight className="size-6 md:size-8 text-gray-300 group-hover:text-[#4E6471] group-hover:rotate-45 transition-all duration-300" />
+            <ArrowUpRight className="size-6 md:size-8 text-gray-300 group-hover:text-[#008366] group-hover:rotate-45 transition-all duration-300" />
         </div>
       </div>
 

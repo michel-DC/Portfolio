@@ -40,7 +40,7 @@ function ContactField({ error, id, label, registration, type = "text" }: Contact
         type={type}
         aria-describedby={error ? fieldErrorId : undefined}
         aria-invalid={Boolean(error)}
-        className="h-12 w-full border-b border-[#1e1e1e]/30 bg-transparent px-0 text-base text-[#1e1e1e] outline-none transition-colors placeholder:text-[#1e1e1e]/55 focus:border-[#4E6471]"
+        className="h-12 w-full border-b border-[#1e1e1e]/30 bg-transparent px-0 text-base text-[#1e1e1e] outline-none transition-colors placeholder:text-[#1e1e1e]/55 focus:border-[#008366]"
       />
       {error && <p id={fieldErrorId} role="alert" className="text-sm text-red-700">{error}</p>}
     </div>
@@ -88,11 +88,11 @@ export default function ContactSection(): ReactElement {
           transition={{ duration: 0.45, ease: "easeOut" }}
           className="border-b border-[#1e1e1e]/25 pb-10 md:pb-14"
         >
-          <p className="text-sm font-medium text-[#4E6471]">Prise de contact</p>
+          <p className="text-sm font-medium text-[#008366]">Prise de contact</p>
           <div className="mt-5 flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <h2 className="text-5xl font-medium leading-[0.9] tracking-[-0.035em] text-balance md:text-7xl lg:text-8xl">
-                Alors <span className="font-serif font-light italic text-[#4E6471]">convaincu&nbsp;?</span>
+                Alors <span className="font-serif font-light italic text-[#008366]">convaincu&nbsp;?</span>
               </h2>
               <p className="mt-5 text-2xl leading-tight tracking-[-0.02em] md:text-4xl">
                 Et si on travaillait <span className="font-serif font-light italic">ensemble&nbsp;?</span>
@@ -100,12 +100,12 @@ export default function ContactSection(): ReactElement {
             </div>
             <div className="flex flex-col gap-3 text-sm text-[#1e1e1e]/80 lg:items-end">
               <div className="flex items-center gap-2">
-                <Clock3 className="size-4 text-[#4E6471]" aria-hidden="true" />
+                <Clock3 className="size-4 text-[#008366]" aria-hidden="true" />
                 <span>Réponse sous 24 heures.</span>
               </div>
               <a
                 href={`mailto:${CONTACT_EMAIL}`}
-                className="inline-flex items-center gap-2 border-b border-[#4E6471]/50 pb-1 font-medium text-[#1e1e1e] transition-colors hover:border-[#1e1e1e] hover:text-[#4E6471] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#4E6471]"
+                className="inline-flex items-center gap-2 border-b border-[#008366]/50 pb-1 font-medium text-[#1e1e1e] transition-colors hover:border-[#1e1e1e] hover:text-[#008366] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#008366]"
               >
                 <Mail className="size-4" aria-hidden="true" />
                 {CONTACT_EMAIL}
@@ -128,7 +128,7 @@ export default function ContactSection(): ReactElement {
               rows={5}
               aria-describedby={errors.message ? "message-error" : undefined}
               aria-invalid={Boolean(errors.message)}
-              className="w-full resize-y border-b border-[#1e1e1e]/30 bg-transparent px-0 py-3 text-base leading-relaxed text-[#1e1e1e] outline-none transition-colors placeholder:text-[#1e1e1e]/55 focus:border-[#4E6471]"
+              className="w-full resize-y border-b border-[#1e1e1e]/30 bg-transparent px-0 py-3 text-base leading-relaxed text-[#1e1e1e] outline-none transition-colors placeholder:text-[#1e1e1e]/55 focus:border-[#008366]"
             />
             {errors.message && <p id="message-error" role="alert" className="text-sm text-red-700">{errors.message.message}</p>}
           </div>
@@ -136,7 +136,7 @@ export default function ContactSection(): ReactElement {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#4E6471] px-6 text-sm font-medium text-white transition-colors hover:bg-[#3f535e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1e1e1e] disabled:cursor-not-allowed disabled:opacity-60"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#008366] px-6 text-sm font-medium text-white transition-colors hover:bg-[#3f535e] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1e1e1e] disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isSubmitting ? "Envoi en cours…" : "Envoyer mon message"}
               {!isSubmitting && <ArrowUpRight className="size-4" aria-hidden="true" />}

@@ -90,7 +90,7 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="hover:text-[#4E6471] transition-colors text-lg "
+                  className="hover:text-[#008366] transition-colors text-lg "
                 >
                   {item.label}
                 </Link>
@@ -104,7 +104,7 @@ export default function Header() {
                 className="relative overflow-hidden bg-black text-white px-5 py-2 rounded-full font-bold text-sm"
               >
                 <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
-                <span className="relative z-10 transition-colors duration-500 group-hover:text-[#4E6471]">
+                <span className="relative z-10 transition-colors duration-500 group-hover:text-[#008366]">
                   Contact
                 </span>
               </motion.div>
@@ -114,7 +114,7 @@ export default function Header() {
                 className="relative overflow-hidden bg-black text-white p-2 rounded-full flex items-center justify-center"
               >
                 <span className="absolute inset-0 bg-white translate-x-[-101%] group-hover:translate-x-0 transition-transform duration-500 ease-in-out" />
-                <span className="relative z-10 transition-colors duration-500 group-hover:text-[#4E6471]">
+                <span className="relative z-10 transition-colors duration-500 group-hover:text-[#008366]">
                   <ArrowUpRight size={16} />
                 </span>
               </motion.div>

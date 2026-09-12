@@ -34,7 +34,7 @@ export default function PrivacyPolicyPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-neutral-100">
               <section className="space-y-4 md:col-span-2">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
+                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
                   1. Données collectées
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
 
               <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
+                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
                   2. Finalités du traitement
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -64,7 +64,7 @@ export default function PrivacyPolicyPage() {
 
               <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
+                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
                   3. Cookies et outils analytiques
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -80,7 +80,7 @@ export default function PrivacyPolicyPage() {
 
               <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
+                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
                   4. Durée de conservation
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -95,7 +95,7 @@ export default function PrivacyPolicyPage() {
 
               <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
+                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
                   5. Sécurité
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
 
               <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
+                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
                   6. Transfert et hébergement
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -126,7 +126,7 @@ export default function PrivacyPolicyPage() {
 
               <section className="space-y-4 md:col-span-2">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#4E6471]" />
+                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
                   7. Vos droits
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -137,7 +137,7 @@ export default function PrivacyPolicyPage() {
                     contactez :{" "}
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="text-[#4E6471] hover:underline underline-offset-4"
+                      className="text-[#008366] hover:underline underline-offset-4"
                     >
                       {CONTACT_EMAIL}
                     </a>

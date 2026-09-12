@@ -1,5 +1,9 @@
 # Changelog
 
+## 12-09-2026
+
+- 08:31 Restauration du fond texturé historique `fond-page.png` sur une base blanche et du vert émeraude `#008366` sur l’ensemble des accents de l’interface et des e-mails, avec une variante verte claire pour préserver la lisibilité sur fond sombre.
+
 ## 03-09-2026
 
 - 23:37 Correction des balises canoniques : chaque page publique et chaque projet déclare désormais sa propre URL canonique, tandis que les pages légales sont ajoutées au sitemap.

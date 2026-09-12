@@ -78,7 +78,7 @@ export default function ExperienceSection(): React.JSX.Element {
             className="text-4xl md:text-6xl font-medium tracking-tight font-bricolage-grotesque"
           >
             Des expériences qui traduisent une{" "}
-            <span className="text-[#4E6471] italic font-serif">
+            <span className="text-[#008366] italic font-serif">
               montée en compétences
             </span>{" "}
             progressive et orientée terrain.
@@ -93,7 +93,7 @@ export default function ExperienceSection(): React.JSX.Element {
             >
               <div className="py-10 md:py-16 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start relative z-10">
                 <div className="md:col-span-3">
-                  <span className="text-lg md:text-2xl font-medium text-[#4E6471] md:text-gray-400 md:group-hover:text-[#4E6471] transition-colors duration-300">
+                  <span className="text-lg md:text-2xl font-medium text-[#008366] md:text-gray-400 md:group-hover:text-[#008366] transition-colors duration-300">
                     {exp.date}
                   </span>
                 </div>
@@ -134,7 +134,7 @@ export default function ExperienceSection(): React.JSX.Element {
                 </div>
 
                 <div className="absolute top-10 right-0 md:hidden">
-                  <ArrowUpRight className="size-6 text-[#4E6471]/40" />
+                  <ArrowUpRight className="size-6 text-[#008366]/40" />
                 </div>
               </div>
             </div>
