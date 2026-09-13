@@ -2,6 +2,7 @@
 
 ## 13-09-2026
 
+- 10:54 Harmonisation des URL canoniques sur le domaine `hey-michel.me` pour toutes les pages indexables, avec neutralisation explicite de la canonique héritée sur les pages légales et les routes du dashboard.
 - 10:31 Refonte de la présentation du projet Zen avec quatre captures réelles en mode clair au format iPhone 15 Pro Max, intégrées dans des mockups sans barre de défilement, avec une zone blanche sous la Dynamic Island et la navigation mobile basse entièrement visible.
 - 10:31 Nettoyage du portfolio avec suppression des caches, sorties temporaires, anciens visuels Zen, vidéos et médias non référencés, tout en conservant les dépendances `node_modules`, la documentation et les fichiers Python.
 
