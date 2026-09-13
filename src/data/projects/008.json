@@ -1,10 +1,15 @@
 {
   "name": "Zen • Catalogue de films intelligent",
   "slugName": "zen",
-  "description": "Zen est une application web de découverte de films qui combine une interface moderne, une navigation fluide et une mise en avant visuelle des contenus. Le projet s'appuie sur une architecture front/back séparée pour afficher des films, consulter leurs détails, filtrer les résultats et extraire automatiquement des palettes de couleurs à partir des affiches.",
+  "description": "Zen est une cinémathèque personnelle mobile qui réunit découverte, catalogue, parcours guidés et journal après-film dans une expérience pensée comme une véritable application iPhone.",
   "date": "Mai 2026",
   "themes": ["FULLSTACK", "API", "DEVOPS"],
-  "images": ["/images/projects/zen/001.png", "/images/projects/zen/002.png"],
+  "images": [
+    "/images/projects/zen/screens/home.png",
+    "/images/projects/zen/screens/catalog.png",
+    "/images/projects/zen/screens/search.png",
+    "/images/projects/zen/screens/movie.png"
+  ],
   "technologies": [
     "Next.js",
     "TypeScript",
@@ -12,23 +17,24 @@
     "Shadcn UI",
     "FastAPI",
     "Python",
-    "Docker",
     "Prisma",
-    "Vercel"
+    "Cloudflare Workers",
+    "Workers AI",
+    "PWA"
   ],
-  "context": "Développement d'une application de découverte de films avec une expérience visuelle forte, un front Next.js moderne et un backend FastAPI chargé de l'extraction et de la synchronisation des palettes de couleurs. Le projet a également servi de terrain d'expérimentation pour fiabiliser les flux de données, structurer les filtres et préparer une mise en production propre via Docker et un déploiement cloud.",
+  "context": "Le projet est né d’un besoin simple : conserver une mémoire personnelle du cinéma sans reproduire les interfaces d’un service de streaming. Zen privilégie l’usage mobile, les affiches et les gestes courts. L’application relie un front Next.js installable à des services Python et Cloudflare pour enrichir les films, synchroniser le catalogue et produire des recommandations contextualisées.",
   "task": [
-    "J'ai d'abord conçu l'interface du catalogue pour qu'elle soit claire, responsive et cohérente avec une direction artistique orientée cinéma. Le front a été structuré avec **Next.js**, **TypeScript** et **Shadcn UI** afin de partir sur une base modulaire et maintenable.",
-    "J'ai ensuite développé la partie fonctionnelle du projet autour de l'API : affichage des listes de films, page de détail, filtres par tendances et genres, ainsi qu'un système de synchronisation des couleurs extraites depuis les affiches. La séparation front/back m'a permis de garder une logique métier nette et évolutive.",
-    "Enfin, j'ai préparé le projet pour la mise en production avec **Docker**, en sécurisant le build du front en mode standalone et en organisant le backend comme un service indépendant. Cette étape m'a permis de transformer le projet en application réellement déployable dans un contexte professionnel."
+    "J’ai conçu une expérience **mobile-first** centrée sur trois gestes : retrouver un film, décider quoi regarder et conserver ce qu’il a laissé. La navigation tactile, les actions rapides et la présentation des affiches ont été travaillées pour rester lisibles et naturelles sur iPhone.",
+    "J’ai structuré la bibliothèque autour du catalogue, de la liste à voir et du top personnel, puis développé une recherche par titre, cinéaste ou ambiance. Chaque fiche réunit informations, casting, images, couleurs dominantes et historique de visionnage.",
+    "J’ai enfin ajouté les fonctions les plus personnelles de Zen : des parcours cinématographiques progressifs et un journal après-film assisté par IA. L’application est installable en **PWA** et s’appuie sur **Cloudflare Workers** et **Workers AI** pour proposer une expérience rapide et contextualisée."
   ],
   "results": [
-    "Le projet aboutit à une application de films stable, agréable à parcourir et techniquement structurée pour évoluer. L'interface met mieux en valeur les contenus, les filtres sont opérationnels, les palettes de couleurs sont synchronisées correctement entre les vues, et l'ensemble est prêt pour un déploiement propre dans un environnement de production.",
-    "Au-delà de l'aspect visuel, le projet m'a permis de consolider ma capacité à diagnostiquer des problèmes d'architecture, à corriger des incohérences de données entre plusieurs couches applicatives et à préparer une livraison fiable avec une configuration de déploiement claire."
+    "Zen réunit désormais 101 films dans une interface mobile cohérente, avec recherche, classement personnel, fiches enrichies et synchronisation entre les appareils.",
+    "Les parcours guidés et le journal conversationnel transforment le catalogue en expérience personnelle : l’application ne se contente plus d’archiver des films, elle accompagne la découverte et la réflexion après le visionnage."
   ],
   "learningOutcomes": [
-    "Ce projet m'a appris à mieux séparer les responsabilités entre front et back, à fiabiliser les échanges de données et à anticiper les contraintes de production dès la phase de développement.",
-    "J'ai aussi renforcé ma maîtrise de **Next.js**, de l'intégration d'une API Python et des bonnes pratiques de conteneurisation pour rendre une application plus robuste et plus simple à déployer."
+    "Ce projet m’a appris à faire évoluer une interface desktop vers une expérience réellement mobile, en repensant la hiérarchie, les interactions tactiles et les états de navigation plutôt qu’en réduisant simplement les composants.",
+    "J’ai aussi renforcé ma maîtrise de **Next.js**, des architectures distribuées et de l’intégration de l’IA dans un produit sans perdre la clarté ni la maîtrise de l’expérience utilisateur."
   ],
   "github": "https://github.com/michel-DC/Zen",
   "url": "https://zen-movies.vercel.app/"

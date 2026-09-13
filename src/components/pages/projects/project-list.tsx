@@ -19,7 +19,7 @@ const PROJECTS: Project[] = [
     id: 1,
     title: "Zen • Catalogue de films intelligent",
     category: "Application Web",
-    image: "/images/projects/zen/001.png",
+    image: "/images/projects/zen/screens/home.png",
     slug: "zen",
     json: "/data/projects/008.json",
     year: "2026",

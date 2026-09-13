@@ -5,6 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ZenProjectPreview } from "@/components/pages/projects/zen-mobile-showcase";
 
 interface Project {
   id: number;
@@ -40,7 +41,7 @@ const PROJECTS: Project[] = [
     id: 4,
     title: "Zen • Catalogue de films intelligent",
     category: "Application Web",
-    image: "/images/projects/zen/001.png",
+    image: "/images/projects/zen/screens/home.png",
     slug: "zen",
   },
 ];
@@ -57,15 +58,21 @@ const ProjectCard = ({ project }: { project: Project }) => {
         whileHover="hover"
         animate="rest"
       >
-        <Image
-          src={project.image}
-          alt={project.title}
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          quality={90}
-          priority={project.id <= 2}
-        />
+        {project.slug === "zen" ? (
+          <div className="h-full w-full transition-transform duration-700 group-hover:scale-105">
+            <ZenProjectPreview />
+          </div>
+        ) : (
+          <Image
+            src={project.image}
+            alt={project.title}
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            quality={90}
+            priority={project.id <= 2}
+          />
+        )}
 
         <motion.div
           variants={{

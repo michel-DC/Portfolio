@@ -1,5 +1,10 @@
 # Changelog
 
+## 13-09-2026
+
+- 10:31 Refonte de la présentation du projet Zen avec quatre captures réelles en mode clair au format iPhone 15 Pro Max, intégrées dans des mockups sans barre de défilement, avec une zone blanche sous la Dynamic Island et la navigation mobile basse entièrement visible.
+- 10:31 Nettoyage du portfolio avec suppression des caches, sorties temporaires, anciens visuels Zen, vidéos et médias non référencés, tout en conservant les dépendances `node_modules`, la documentation et les fichiers Python.
+
 ## 12-09-2026
 
 - 08:31 Restauration du fond texturé historique `fond-page.png` sur une base blanche et du vert émeraude `#008366` sur l’ensemble des accents de l’interface et des e-mails, avec une variante verte claire pour préserver la lisibilité sur fond sombre.

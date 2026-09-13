@@ -16,6 +16,7 @@ import { Metadata } from "next";
 import Header from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
 import ProjectEntryAnimation from "@/animations/project-entry-animation";
+import ZenMobileShowcase from "@/components/pages/projects/zen-mobile-showcase";
 
 // Interface matching the JSON structure
 interface ProjectData {
@@ -149,19 +150,22 @@ export default async function ProjectPage({
           </div>
         </div>
 
-        {/* Image Section - Single Large Image */}
         <div className="w-full px-4 md:px-24 mb-16">
-          <div className="w-full">
-            <Image
-              src={project.images[0]}
-              alt={`${project.name} screenshot`}
-              width={2400}
-              height={1600}
-              className="w-full h-auto"
-              priority
-              sizes="100vw"
-            />
-          </div>
+          {project.slugName === "zen" ? (
+            <ZenMobileShowcase images={project.images} />
+          ) : (
+            <div className="w-full">
+              <Image
+                src={project.images[0]}
+                alt={`${project.name} screenshot`}
+                width={2400}
+                height={1600}
+                className="w-full h-auto"
+                priority
+                sizes="100vw"
+              />
+            </div>
+          )}
         </div>
 
         <div className="w-full px-4 md:px-24">
@@ -251,7 +255,7 @@ export default async function ProjectPage({
             <div className="space-y-8">
               <div className="sticky top-32 space-y-8">
                 {/* Mobile Mockup - 2nd Image */}
-                {project.images.length > 1 && (
+                {project.slugName !== "zen" && project.images.length > 1 && (
                   <div className="relative aspect-9/16 w-full max-w-70 mx-auto overflow-hidden rounded-3xl  shadow-xl">
                     <Image
                       src={project.images[1]}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { useState } from "react";
+import { ZenProjectPreview } from "./zen-mobile-showcase";
 
 interface Project {
   id: number;
@@ -79,12 +80,16 @@ export default function ProjectRow({ project, index }: ProjectRowProps) {
         transition={{ duration: 0.25, ease: "easeOut" }}
         className="absolute hidden lg:block right-[20%] top-1/2 -translate-y-1/2 w-[300px] h-[200px] pointer-events-none z-20 overflow-hidden rounded-lg shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500"
       >
-        <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            className="object-cover"
-        />
+        {project.slug === "zen" ? (
+          <ZenProjectPreview />
+        ) : (
+          <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+          />
+        )}
       </motion.div>
 
     </Link>
