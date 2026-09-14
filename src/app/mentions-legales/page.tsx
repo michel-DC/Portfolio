@@ -3,13 +3,14 @@ import { Footer } from "@/components/layouts/footer";
 import { Metadata } from "next";
 import LegalAnimation from "@/animations/legal-animation";
 import { CONTACT_EMAIL, SITE_DOMAIN } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Mentions Légales • Michel DJOUMESSI",
   description:
     `Informations légales et mentions obligatoires du site ${SITE_DOMAIN}`,
-  alternates: null,
-};
+  pathname: "/mentions-legales",
+});
 
 export default function MentionsLegalesPage() {
   return (

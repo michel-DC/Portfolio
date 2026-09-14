@@ -9,15 +9,14 @@ import {
 import TextSlider from "@/components/pages/home/text-slider";
 import { Metadata } from "next";
 import AboutAnimation from "@/animations/about-animation";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "À propos • Michel DJOUMESSI",
   description:
     "Découvrez mon parcours, mes expériences et mes compétences en développement web et design.",
-  alternates: {
-    canonical: "/a-propos",
-  },
-};
+  pathname: "/a-propos",
+});
 
 export default function AboutPage() {
   return (

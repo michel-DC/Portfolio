@@ -3,13 +3,14 @@ import { Footer } from "@/components/layouts/footer";
 import { Metadata } from "next";
 import PrivacyAnimation from "@/animations/privacy-animation";
 import { CONTACT_EMAIL, SITE_DOMAIN } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Politique de Confidentialité • Michel DJOUMESSI",
   description:
     `Comment sont collectées, utilisées et protégées vos données sur ${SITE_DOMAIN}`,
-  alternates: null,
-};
+  pathname: "/politique-de-confidentialite",
+});
 
 export default function PrivacyPolicyPage() {
   return (

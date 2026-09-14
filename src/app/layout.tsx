@@ -7,12 +7,16 @@ import { Toaster } from "sonner";
 import CommandMenu from "@/components/ui/command-menu";
 import { trackVisit } from "@/lib/analytics";
 import { SITE_URL } from "@/lib/site";
+import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
-  description:
-    "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
+  ...createPageMetadata({
+    title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
+    description:
+      "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
+    pathname: "/",
+  }),
   keywords: [
     "Michel DJOUMESSI",
     "Michel DJOUMESSI portfolio",
@@ -29,37 +33,6 @@ export const metadata: Metadata = {
   authors: [{ name: "Michel DJOUMESSI" }],
   robots:
     "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
-  alternates: {
-    canonical: "/",
-  },
-
-  openGraph: {
-    title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
-    description:
-      "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
-    type: "website",
-    url: SITE_URL,
-    siteName: "Michel Portfolio",
-    locale: "fr_FR",
-    images: [
-      {
-        url: "/images/svg/favicon.png",
-        width: 32,
-        height: 32,
-        alt: "Bannière de Michel Djoumessi",
-      },
-    ],
-  },
-
-  twitter: {
-    card: "summary_large_image",
-    site: "@Michel",
-    creator: "@Michel",
-    title: "Michel DJOUMESSI • Développeur Fullstack & Créateur Web",
-    description:
-      "Découvrez un portfolio mettant en avant des projets web innovants, des expériences professionnelles et des réalisations fullstack axées sur la performance et le design.",
-    images: ["/images/profile/og-image.png"],
-  },
   icons: {
     icon: "/images/svg/favicon.svg",
     shortcut: "/images/svg/favicon.svg",
@@ -93,7 +66,7 @@ export default async function RootLayout({
         <link
           rel="sitemap"
           type="application/xml"
-          href={`${SITE_URL}/google-sitemap.xml`}
+          href={`${SITE_URL}/sitemap.xml`}
         />
         <script
           type="application/ld+json"

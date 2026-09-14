@@ -1,5 +1,9 @@
 # Changelog
 
+## 14-09-2026
+
+- 20:33 Canonicalisation SEO complète du portfolio vers `https://www.hey-michel.me` avec métadonnées canoniques et sociales propres à chaque page, redirections 301 des anciens hôtes, sitemap standardisé sur `/sitemap.xml`, robots.txt cohérent et exclusion explicite du dashboard de l’indexation.
+
 ## 13-09-2026
 
 - 10:54 Harmonisation des URL canoniques sur le domaine `hey-michel.me` pour toutes les pages indexables, avec neutralisation explicite de la canonique héritée sur les pages légales et les routes du dashboard.

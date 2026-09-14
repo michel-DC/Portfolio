@@ -8,15 +8,13 @@ import {
   ArrowUpRight,
   Github,
   Calendar,
-  Layers,
-  CheckCircle2,
-  Lightbulb,
 } from "lucide-react";
 import { Metadata } from "next";
 import Header from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
 import ProjectEntryAnimation from "@/animations/project-entry-animation";
 import ZenMobileShowcase from "@/components/pages/projects/zen-mobile-showcase";
+import { createPageMetadata } from "@/lib/seo";
 
 // Interface matching the JSON structure
 interface ProjectData {
@@ -93,13 +91,11 @@ export async function generateMetadata({
     };
   }
 
-  return {
+  return createPageMetadata({
     title: `${project.name} | Portfolio`,
-    description: project.description,
-    alternates: {
-      canonical: `/mes-projets/${slug}`,
-    },
-  };
+    description: project.description ?? project.context,
+    pathname: `/mes-projets/${slug}`,
+  });
 }
 
 export default async function ProjectPage({

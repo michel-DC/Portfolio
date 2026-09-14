@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { SITE_URL } from "@/lib/site";
 
 const SOURCE_MAP: Record<string, string> = {
   "/li": "LinkedIn",
@@ -12,12 +13,29 @@ const SOURCE_MAP: Record<string, string> = {
 const COOKIE_NAME = "visitor_source";
 const DEFAULT_SOURCE = "Google/Direct";
 const COOKIE_MAX_AGE = 30 * 24 * 60 * 60; // 30 jours
+const REDIRECT_HOSTNAMES = new Set([
+  "hey-michel.me",
+  "onlinemichel.dev",
+  "www.onlinemichel.dev",
+]);
 
 const BOT_UA_REGEX =
   /bot|crawler|spider|crawling|lighthouse|googlebot|bingbot|yandexbot|baiduspider|slurp|duckduckbot|ia_archiver|twitterbot|facebookexternalhit|linkedinbot|embedly|quora link preview|showyoubot|outbrain|pinterest\/0\.|developers\.google\.com\/\+\/web\/snippet|slackbot|vkShare|W3C_Validator|redditbot|Applebot|WhatsApp|flipboard|tumblr|bitlybot|SkypeShell|ShortLinkTranslate|Screaming Frog SEO Spider|Google-PageRenderer|Google-InspectionTool/i;
 
 export function proxy(request: NextRequest): NextResponse {
   const { pathname } = request.nextUrl;
+  const requestHostname =
+    request.headers.get("host")?.split(":")[0].toLowerCase() ??
+    request.nextUrl.hostname.toLowerCase();
+
+  if (REDIRECT_HOSTNAMES.has(requestHostname)) {
+    const canonicalUrl = new URL(
+      `${pathname}${request.nextUrl.search}`,
+      SITE_URL,
+    );
+    return NextResponse.redirect(canonicalUrl, 301);
+  }
+
   const userAgent = request.headers.get("user-agent") || "";
   const isBot = BOT_UA_REGEX.test(userAgent);
 
