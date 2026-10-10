@@ -37,11 +37,11 @@ const TextItem = () => {
       <span className="px-4 text-[10vw] font-black leading-none tracking-normal text-[#181717] uppercase">
         Développeur Fullstack
       </span>
-      <Star className="mx-4 h-[6vw] w-[6vw] fill-[#008366] text-[#008366]" />
+      <Star className="mx-4 h-[6vw] w-[6vw] fill-[var(--portfolio-accent)] text-[var(--accent-ink)]" />
       <span className="px-4 text-[10vw] font-black leading-none tracking-normal text-[#181717] uppercase">
         UI & UX Designer
       </span>
-      <Star className="mx-4 h-[6vw] w-[6vw] fill-[#008366] text-[#008366]" />
+      <Star className="mx-4 h-[6vw] w-[6vw] fill-[var(--portfolio-accent)] text-[var(--accent-ink)]" />
     </div>
   );
 };

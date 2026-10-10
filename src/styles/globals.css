@@ -9,20 +9,22 @@
     --font-cabinet-regular: "CabinetGrotesk-Regular", sans-serif;
     --font-bricolage-grotesque: "CabinetGrotesk-Regular", sans-serif;
     --font-amoria: "Amoria", serif;
+    --font-reference: var(--font-montserrat), sans-serif;
 }
 
 @custom-variant dark (&:is(.dark *));
 
 @layer base {
     ::selection {
-        background-color: #1e1e1e;
-        color: white;
+        background-color: var(--portfolio-accent);
+        color: #1e1e1e;
     }
     * {
         @apply border-border outline-ring/50;
     }
     body {
         @apply bg-background text-foreground;
+        caret-color: var(--accent-ink);
         background-color: #ffffff;
         background-image: url("/images/background/fond-page.png");
         background-repeat: repeat;
@@ -35,6 +37,9 @@
     h2,
     h3 {
         font-family: "CabinetGrotesk-Regular", sans-serif;
+    }
+    :focus-visible {
+        outline-color: var(--accent-ink);
     }
 }
 
@@ -217,8 +222,9 @@
 }
 
 :root {
-    --vert: #008366;
-    --accent-on-dark: #63d1b5;
+    --portfolio-accent: #E8AF59;
+    --accent-ink: #95601e;
+    --accent-on-dark: #E8AF59;
     --white: #ffffff;
     --black: #1e1e1e;
     --radius: 0.625rem;

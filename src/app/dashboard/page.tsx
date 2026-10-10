@@ -73,17 +73,17 @@ export default async function DashboardPage() {
   });
 
   const chartData = days.map(day => {
-    const dayData: any = { ...day };
+    const counts: Record<string, number> = {};
     ALL_SOURCES.forEach(source => {
-      dayData[source] = chartDataRaw.filter(v => {
+      counts[source] = chartDataRaw.filter(v => {
         const vd = v.createdAt;
         return v.source === source && `${vd.getFullYear()}-${String(vd.getMonth() + 1).padStart(2, '0')}-${String(vd.getDate()).padStart(2, '0')}` === day.dateStr;
       }).length;
     });
-    return dayData;
+    return { ...day, counts };
   });
 
-  const maxVisitsInDay = Math.max(...chartData.map(d => ALL_SOURCES.reduce((acc, s) => acc + (d[s] as number), 0)), 1);
+  const maxVisitsInDay = Math.max(...chartData.map(d => ALL_SOURCES.reduce((acc, s) => acc + d.counts[s], 0)), 1);
   const allVisits = await prisma.visit.findMany({ orderBy: { createdAt: "desc" }, take: 1000 });
 
   return (
@@ -94,7 +94,7 @@ export default async function DashboardPage() {
         <div className="flex justify-between items-center pb-6 border-b border-zinc-200">
           <div>
             <h1 className="text-2xl font-bold tracking-tight">Dashboard Analytics</h1>
-            <p className="text-sm text-zinc-500 font-medium">Vue d'ensemble • Portfolio Michel DJOUMESSI</p>
+            <p className="text-sm text-zinc-500 font-medium">Vue d&apos;ensemble • Portfolio Michel DJOUMESSI</p>
           </div>
           <div className="flex items-center gap-2 bg-white border border-zinc-200 rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-wider shadow-sm">
             <div className="h-2 w-2 bg-green-500 rounded-full animate-pulse" /> Live Tracking
@@ -141,13 +141,13 @@ export default async function DashboardPage() {
           
           <div className="h-72 flex items-end justify-between gap-2 border-b border-zinc-100 pb-4">
             {chartData.map((day) => {
-              const totalDay = ALL_SOURCES.reduce((acc, s) => acc + (day[s] as number), 0);
+              const totalDay = ALL_SOURCES.reduce((acc, s) => acc + day.counts[s], 0);
               const height = (totalDay / maxVisitsInDay) * 100;
               return (
                 <div key={day.dateStr} className="flex-1 flex flex-col items-center gap-3 group relative h-full justify-end">
                   <div className="w-full max-w-[34px] flex flex-col-reverse bg-zinc-50 rounded-t-xl overflow-hidden shadow-inner" style={{ height: `${height}%` }}>
                     {ALL_SOURCES.map((source, i) => {
-                      const val = day[source] as number;
+                      const val = day.counts[source];
                       if (val === 0) return null;
                       return <div key={source} className="w-full transition-all group-hover:brightness-110" style={{ height: `${(val / (totalDay || 1)) * 100}%`, backgroundColor: `rgb(${i * 45}, ${i * 45}, ${i * 45})` }} />;
                     })}
@@ -157,7 +157,7 @@ export default async function DashboardPage() {
                   {/* Tooltip */}
                   <div className="absolute bottom-full mb-3 opacity-0 group-hover:opacity-100 bg-black text-white text-[11px] p-4 rounded-2xl shadow-2xl pointer-events-none z-10 transition-all border border-zinc-800">
                     <div className="font-bold mb-2 border-b border-zinc-800 pb-2">{day.fullDate}</div>
-                    {ALL_SOURCES.map(s => day[s] > 0 && <div key={s} className="flex justify-between gap-6 py-0.5"><span className="text-zinc-400">{s}</span><span className="font-bold">{day[s]}</span></div>)}
+                    {ALL_SOURCES.map(s => day.counts[s] > 0 && <div key={s} className="flex justify-between gap-6 py-0.5"><span className="text-zinc-400">{s}</span><span className="font-bold">{day.counts[s]}</span></div>)}
                     <div className="mt-2 pt-2 border-t border-zinc-800 font-bold flex justify-between"><span>Total</span><span>{totalDay}</span></div>
                   </div>
                 </div>

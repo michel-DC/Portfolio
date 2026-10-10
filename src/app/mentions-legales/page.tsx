@@ -1,7 +1,6 @@
 import Header from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
 import { Metadata } from "next";
-import LegalAnimation from "@/animations/legal-animation";
 import { CONTACT_EMAIL, SITE_DOMAIN } from "@/lib/site";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -15,7 +14,6 @@ export const metadata: Metadata = createPageMetadata({
 export default function MentionsLegalesPage() {
   return (
     <div>
-      <LegalAnimation />
       <div className="bg-transparent min-h-screen flex flex-col">
         <Header />
               <main className="grow pt-32 pb-24 px-4 md:px-24">
@@ -32,7 +30,7 @@ export default function MentionsLegalesPage() {
         
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-neutral-100">              <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
+                  <span className="w-2 h-2 rounded-full bg-[var(--portfolio-accent)]" />
                   Éditeur du site
                 </h2>
                 <div className="text-neutral-600 leading-relaxed space-y-2">
@@ -45,7 +43,7 @@ export default function MentionsLegalesPage() {
                     Email :{" "}
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="text-[#008366] hover:underline underline-offset-4"
+                      className="text-[var(--accent-ink)] hover:underline underline-offset-4"
                     >
                       {CONTACT_EMAIL}
                     </a>
@@ -55,7 +53,7 @@ export default function MentionsLegalesPage() {
 
               <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
+                  <span className="w-2 h-2 rounded-full bg-[var(--portfolio-accent)]" />
                   Hébergement
                 </h2>
                 <div className="text-neutral-600 leading-relaxed space-y-2">
@@ -70,7 +68,7 @@ export default function MentionsLegalesPage() {
 
               <section className="space-y-4 md:col-span-2">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
+                  <span className="w-2 h-2 rounded-full bg-[var(--portfolio-accent)]" />
                   Propriété intellectuelle
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -87,7 +85,7 @@ export default function MentionsLegalesPage() {
 
               <section className="space-y-4 md:col-span-2">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
+                  <span className="w-2 h-2 rounded-full bg-[var(--portfolio-accent)]" />
                   Limitation de responsabilité
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -105,7 +103,7 @@ export default function MentionsLegalesPage() {
 
               <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
+                  <span className="w-2 h-2 rounded-full bg-[var(--portfolio-accent)]" />
                   Liens externes
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -120,7 +118,7 @@ export default function MentionsLegalesPage() {
 
               <section className="space-y-4">
                 <h2 className="text-sm font-semibold text-neutral-900 uppercase tracking-wider flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#008366]" />
+                  <span className="w-2 h-2 rounded-full bg-[var(--portfolio-accent)]" />
                   Contact
                 </h2>
                 <div className="text-neutral-600 leading-relaxed">
@@ -129,7 +127,7 @@ export default function MentionsLegalesPage() {
                     vous pouvez contacter le propriétaire à :{" "}
                     <a
                       href={`mailto:${CONTACT_EMAIL}`}
-                      className="text-[#008366] hover:underline underline-offset-4"
+                      className="text-[var(--accent-ink)] hover:underline underline-offset-4"
                     >
                       {CONTACT_EMAIL}
                     </a>

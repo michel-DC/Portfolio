@@ -17,6 +17,7 @@ import {
   Linkedin,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { signalCinemaNavigation } from "@/lib/cinema-navigation";
 
 const PROJECTS = [
   {
@@ -53,6 +54,10 @@ export default function CommandMenu() {
   const [open, setOpen] = React.useState(false);
   const [search, setSearch] = React.useState("");
   const router = useRouter();
+  const navigateToPage = (href: string): void => {
+    signalCinemaNavigation(href);
+    router.push(href);
+  };
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -106,31 +111,31 @@ export default function CommandMenu() {
 
           <Command.List className="max-h-[60vh] overflow-y-auto p-2">
             <Command.Empty className="py-12 text-center text-sm text-gray-500">
-              Aucun résultat trouvé pour "{search}".
+              Aucun résultat trouvé pour &quot;{search}&quot;.
             </Command.Empty>
 
             <Command.Group
               heading="Navigation"
               className="px-2 py-3 text-[10px] font-semibold text-gray-400 uppercase tracking-wider"
             >
-              <CommandItem onSelect={() => runCommand(() => router.push("/"))}>
+              <CommandItem onSelect={() => runCommand(() => navigateToPage("/"))}>
                 <Home className="mr-3 h-4 w-4" />
                 <span>Accueil</span>
               </CommandItem>
               <CommandItem
-                onSelect={() => runCommand(() => router.push("/a-propos"))}
+                onSelect={() => runCommand(() => navigateToPage("/a-propos"))}
               >
                 <User className="mr-3 h-4 w-4" />
                 <span>À propos</span>
               </CommandItem>
               <CommandItem
-                onSelect={() => runCommand(() => router.push("/mes-projets"))}
+                onSelect={() => runCommand(() => navigateToPage("/mes-projets"))}
               >
                 <Briefcase className="mr-3 h-4 w-4" />
                 <span>Mes Projets</span>
               </CommandItem>
               <CommandItem
-                onSelect={() => runCommand(() => router.push("/#contact"))}
+                onSelect={() => runCommand(() => navigateToPage("/#contact"))}
               >
                 <Search className="mr-3 h-4 w-4" />
                 <span>Me contacter</span>
@@ -207,11 +212,11 @@ export default function CommandMenu() {
                       key={project.slug}
                       onSelect={() =>
                         runCommand(() =>
-                          router.push(`/mes-projets/${project.slug}`),
+                          navigateToPage(`/mes-projets/${project.slug}`),
                         )
                       }
                     >
-                      <FileText className="mr-3 h-4 w-4 text-[#008366]" />
+                      <FileText className="mr-3 h-4 w-4 text-[var(--accent-ink)]" />
                       <span>{project.title}</span>
                     </CommandItem>
                   ))}
@@ -238,7 +243,7 @@ export default function CommandMenu() {
                   </CommandItem>
                   <CommandItem
                     onSelect={() =>
-                      runCommand(() => router.push("/mentions-legales"))
+                      runCommand(() => navigateToPage("/mentions-legales"))
                     }
                   >
                     <ShieldCheck className="mr-3 h-4 w-4" />
@@ -247,7 +252,7 @@ export default function CommandMenu() {
                   <CommandItem
                     onSelect={() =>
                       runCommand(() =>
-                        router.push("/politique-de-confidentialite"),
+                        navigateToPage("/politique-de-confidentialite"),
                       )
                     }
                   >
@@ -298,7 +303,7 @@ function CommandItem({
       onSelect={onSelect}
       className={cn(
         "flex items-center px-3 py-2.5 rounded-xl cursor-default select-none outline-none transition-colors",
-        "aria-selected:bg-[#008366]/10 aria-selected:text-[#008366] text-gray-700",
+        "aria-selected:bg-[var(--portfolio-accent)]/10 aria-selected:text-[var(--accent-ink)] text-gray-700",
         className,
       )}
     >

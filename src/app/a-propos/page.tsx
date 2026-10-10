@@ -8,7 +8,6 @@ import {
 } from "@/components/pages/about";
 import TextSlider from "@/components/pages/home/text-slider";
 import { Metadata } from "next";
-import AboutAnimation from "@/animations/about-animation";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
@@ -21,7 +20,6 @@ export const metadata: Metadata = createPageMetadata({
 export default function AboutPage() {
   return (
     <div>
-      <AboutAnimation />
       <div className="bg-transparent min-h-screen flex flex-col">
         <Header />
         <main className="grow pt-20">

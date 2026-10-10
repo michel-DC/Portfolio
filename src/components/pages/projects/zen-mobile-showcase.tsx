@@ -71,8 +71,8 @@ export function ZenProjectPreview() {
   ];
 
   return (
-    <div className="relative h-full w-full overflow-hidden bg-[#dcebe6]">
-      <div className="absolute inset-x-0 bottom-[-27%] flex items-start justify-center gap-[3%] px-[8%]">
+    <div className="relative h-full w-full overflow-hidden bg-[#eee3d2]">
+      <div className="absolute inset-x-0 top-[12%] flex items-start justify-center gap-[3%] px-[8%]">
         {previewScreens.map((src, index) => (
           <div
             key={src}
@@ -109,7 +109,7 @@ export default function ZenMobileShowcase({ images }: ZenMobileShowcaseProps) {
   return (
     <section
       aria-label="Zen sur iPhone 15 Pro Max"
-      className="overflow-hidden rounded-[2rem] bg-[#e8f2ef] px-6 py-16 md:px-12 md:py-24"
+      className="overflow-hidden rounded-[2rem] bg-[#f2e9dc] px-6 py-16 md:px-12 md:py-24"
     >
       <div className="mx-auto mb-16 max-w-3xl text-center md:mb-24">
         <h2 className="text-3xl font-bold tracking-[-0.025em] text-neutral-950 md:text-5xl">

@@ -1,5 +1,15 @@
 # Changelog
 
+## 10-10-2026
+
+- 18:41 Correction des erreurs de lint existantes : compteurs du dashboard typés, caractères JSX échappés et lecture du cookie de tracking via un store externe. Lint et build de production validés avant commit, avec contrôle de l’accueil et de la recherche dans Helium.
+- 18:34 Remplacement uniquement du fond de Zen par une photographie de Yosemite au crépuscule de Casey Horner, avec source et droits documentés. Conservation des autres fonds et vérification sur ordinateur, mobile et TypeScript.
+- 18:27 Adoucissement du survol des projets : fondu d’entrée de 500 ms, sortie de 300 ms et zoom limité à 2 % sur 700 ms avec décélération progressive. Vérification des interruptions, du clavier et du mobile ; zoom désactivé en mouvement réduit.
+- 18:22 Ajout d’un fond illustré distinct derrière chaque aperçu de projet, avec une illustration centrée et des marges visibles selon la référence Marie Camilo. Création de huit fonds optimisés en WebP, conservation des quatre projets sur l’accueil et vérification des filtres, liens, tailles mobiles et du clavier.
+- 18:09 Correction de la transition cinéma : démarrage dès la navigation, pellicule illustrée centrée en haut de l’écran et progression maintenue pendant l’attente de la route. Séquence rapide de 620 ms, vérifiée sur ordinateur et mobile, avec recherche, clavier, retour arrière, clics rapprochés et mouvement réduit ; serveur conservé actif.
+- 14:44 Rétablissement de la sélection de quatre projets sur l’accueil et du bouton « Voir tous mes projets », avec la galerie complète et ses filtres réservés à la page dédiée. Vérification sur ordinateur et mobile ainsi que du lien vers les huit projets.
+- 13:14 Refonte ciblée du portfolio avec un accent doré inspiré de Marie Camilo, une présentation sur fond papier et une galerie filtrable commune à l’accueil et aux projets ; suppression du curseur suiveur et remplacement des écrans d’entrée par une pellicule illustrée de 560 ms, désactivée en mouvement réduit. Ajout d’aperçus WebP légers et vérification du responsive, du clavier et des types TypeScript.
+
 ## 14-09-2026
 
 - 20:33 Canonicalisation SEO complète du portfolio vers `https://www.hey-michel.me` avec métadonnées canoniques et sociales propres à chaque page, redirections 301 des anciens hôtes, sitemap standardisé sur `/sitemap.xml`, robots.txt cohérent et exclusion explicite du dashboard de l’indexation.

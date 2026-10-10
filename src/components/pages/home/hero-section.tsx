@@ -17,7 +17,7 @@ export default function HeroSection() {
         transition={{ duration: 0.9, ease: "easeOut" }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full pointer-events-none blur-[100px]"
         style={{
-          background: "radial-gradient(circle, #008366 0%, transparent 70%)",
+          background: "radial-gradient(circle, #E8AF59 0%, transparent 70%)",
         }}
       />
 
@@ -52,7 +52,7 @@ export default function HeroSection() {
                 }}
                 className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.035em] flex items-baseline uppercase font-medium"
               >
-                M<span className="text-[#008366] italic mr-[0.1em]">I</span>CHEL
+                M<span className="text-[var(--portfolio-accent)] italic mr-[0.1em]">I</span>CHEL
               </motion.h1>
             </div>
 
@@ -72,7 +72,7 @@ export default function HeroSection() {
                 className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.035em] flex items-baseline uppercase font-medium mr-2"
               >
                 DJOUMESS
-                <span className="text-[#008366] italic mr-[0.05em]">I</span>
+                <span className="text-[var(--portfolio-accent)] italic mr-[0.05em]">I</span>
               </motion.h1>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function HeroSection() {
                 <Link
                   href="/documents/MICHEL-DJOUMESSI-ALTERNANCE.pdf"
                   target="_blank"
-                  className="hover:text-[#008366] flex items-center"
+                  className="hover:text-[var(--accent-ink)] flex items-center"
                 >
                   <FileDown size={16} className="mr-2" />
                   Mon CV
@@ -174,7 +174,7 @@ export default function HeroSection() {
               <motion.div
                 animate={{ y: ["-100%", "100%"] }}
                 transition={{ duration: 1.4, repeat: Infinity, ease: "linear" }}
-                className="absolute top-0 left-0 w-full h-full bg-[#008366]"
+                className="absolute top-0 left-0 w-full h-full bg-[var(--portfolio-accent)]"
               />
             </div>
           </div>

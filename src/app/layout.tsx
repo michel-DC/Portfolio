@@ -1,13 +1,21 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "@/styles/globals.css";
 import Script from "next/script";
-import CustomCursor from "@/components/ui/custom-cursor";
+import CinemaTransition from "@/components/ui/cinema-transition";
 import SmoothScroll from "@/components/ui/smooth-scroll";
 import { Toaster } from "sonner";
 import CommandMenu from "@/components/ui/command-menu";
 import { trackVisit } from "@/lib/analytics";
 import { SITE_URL } from "@/lib/site";
 import { createPageMetadata } from "@/lib/seo";
+
+const montserrat = localFont({
+  src: "../../public/fonts/montserrat/Montserrat-Variable.ttf",
+  variable: "--font-montserrat",
+  display: "swap",
+  weight: "100 900",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -53,7 +61,7 @@ export default async function RootLayout({
   await trackVisit();
 
   return (
-    <html lang="fr" className={`h-full text-foreground`}>
+    <html lang="fr" className={`h-full text-foreground ${montserrat.variable}`}>
       <head>
         <Script id="gtm-script" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -94,7 +102,7 @@ export default async function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        <CustomCursor />
+        <CinemaTransition />
         <SmoothScroll />
         <CommandMenu />
         <Toaster position="bottom-right" richColors />

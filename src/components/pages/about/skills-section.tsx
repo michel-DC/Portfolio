@@ -98,22 +98,22 @@ const BentoQuoteCard = ({
     whileInView={{ opacity: 1, scale: 1 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay: index * 0.08 }}
-    className={`relative bg-[#008366] rounded-3xl p-6 md:p-8 flex flex-col justify-center items-center text-center shadow-lg ${className}`}
+    className={`relative bg-[var(--portfolio-accent)] rounded-3xl p-6 md:p-8 flex flex-col justify-center items-center text-center shadow-lg ${className}`}
   >
     <svg
-      className="w-10 h-10 md:w-12 md:h-12 text-white/30 mb-4"
+      className="w-10 h-10 md:w-12 md:h-12 text-black/30 mb-4"
       fill="currentColor"
       viewBox="0 0 24 24"
     >
       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
     </svg>
 
-    <p className="text-lg md:text-xl font-medium text-white leading-relaxed mb-4">
+    <p className="text-lg md:text-xl font-medium text-black leading-relaxed mb-4">
       Le design n&apos;est pas à quoi le produit ressemble ou quelle impression
       il donne. Le design, c&apos;est comment il fonctionne
     </p>
 
-    <p className="text-sm md:text-base text-white/80 font-medium">
+    <p className="text-sm md:text-base text-black/80 font-medium">
       — Steve Jobs
     </p>
   </motion.div>
@@ -133,7 +133,7 @@ export default function SkillsSection() {
           <h2 className="text-4xl md:text-6xl font-medium tracking-tight font-bricolage-grotesque">
             Du code à l&apos;interface, chaque compétence participe à la
             cohérence{" "}
-            <span className="text-[#008366] italic font-serif">du projet.</span>
+            <span className="text-[var(--accent-ink)] italic font-serif">du projet.</span>
           </h2>
         </motion.div>
 

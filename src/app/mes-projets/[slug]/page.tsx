@@ -12,7 +12,6 @@ import {
 import { Metadata } from "next";
 import Header from "@/components/layouts/header";
 import { Footer } from "@/components/layouts/footer";
-import ProjectEntryAnimation from "@/animations/project-entry-animation";
 import ZenMobileShowcase from "@/components/pages/projects/zen-mobile-showcase";
 import { createPageMetadata } from "@/lib/seo";
 
@@ -113,7 +112,6 @@ export default async function ProjectPage({
 
   return (
     <div className="min-h-screen flex flex-col bg-transparent">
-      <ProjectEntryAnimation projectName={project.name.split(" • ")[0]} />
       <Header />
       <main className="grow pb-24 pt-32">
         {/* Back Link */}
@@ -170,7 +168,7 @@ export default async function ProjectPage({
             <div className="lg:col-span-2 space-y-24">
               {/* Description & Context */}
               <section className="space-y-6">
-                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#008366]">
+                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent-ink)]">
                   Contexte
                 </h2>
                 <div className="max-w-3xl space-y-6">
@@ -185,7 +183,7 @@ export default async function ProjectPage({
 
               {/* Tasks - Narrative Process */}
               <section className="space-y-10">
-                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#008366]">
+                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent-ink)]">
                   Missions
                 </h2>
                 <div className="space-y-12 max-w-3xl">
@@ -207,7 +205,7 @@ export default async function ProjectPage({
 
               {/* Results - The Impact */}
               <section className="space-y-8">
-                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#008366]">
+                <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent-ink)]">
                   Impact
                 </h2>
                 <div className="max-w-3xl space-y-8">
@@ -226,7 +224,7 @@ export default async function ProjectPage({
               {project.learningOutcomes &&
                 project.learningOutcomes.length > 0 && (
                   <section className="space-y-6">
-                    <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[#008366]">
+                    <h2 className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent-ink)]">
                       Apprentissage
                     </h2>
                     <div className="max-w-3xl space-y-6">
@@ -321,7 +319,7 @@ export default async function ProjectPage({
                         <Link
                           href={project.url}
                           target="_blank"
-                          className="text-sm font-medium hover:text-[#008366] transition-colors flex items-center gap-2"
+                          className="text-sm font-medium hover:text-[var(--accent-ink)] transition-colors flex items-center gap-2"
                         >
                           <ArrowUpRight className="w-4 h-4" /> Voir le projet en
                           ligne
@@ -331,7 +329,7 @@ export default async function ProjectPage({
                         <Link
                           href={project.github}
                           target="_blank"
-                          className="text-sm font-medium hover:text-[#008366] transition-colors flex items-center gap-2"
+                          className="text-sm font-medium hover:text-[var(--accent-ink)] transition-colors flex items-center gap-2"
                         >
                           <Github className="w-4 h-4" /> Voir le code source
                         </Link>
@@ -365,7 +363,7 @@ export default async function ProjectPage({
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
                 </div>
-                <h3 className="text-2xl font-bold group-hover:text-[#008366] transition-colors mb-2">
+                <h3 className="text-2xl font-bold group-hover:text-[var(--accent-ink)] transition-colors mb-2">
                   {p.name.split(" • ")[0]}
                 </h3>
                 <p className="text-neutral-600 dark:text-neutral-400 line-clamp-2">
