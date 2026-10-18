@@ -2,6 +2,7 @@
 
 import HeroSection from "./hero-section";
 import AboutSection from "./about-section";
+import FilmSection from "./film-section";
 import ServicesSection from "./skills-overview-section";
 import TextSlider from "./text-slider";
 import ProjectsSection from "./projects-section";
@@ -13,6 +14,7 @@ export default function Home() {
     <div>
       <HeroSection />
       <AboutSection />
+      <FilmSection />
       <ProjectsSection />
       <TextSlider />
       <ServicesSection />

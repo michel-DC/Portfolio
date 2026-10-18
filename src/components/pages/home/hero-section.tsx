@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import localFont from "next/font/local";
-import { Github, Linkedin, BriefcaseBusiness, FileDown } from "lucide-react";
+import { Github, Linkedin, BriefcaseBusiness, FileDown, Play } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
@@ -194,7 +194,7 @@ export default function HeroSection(): React.JSX.Element {
           </motion.div>
         </div>
 
-        <div className="hero-bottom-meta flex justify-between items-end">
+        <div className="hero-bottom-meta flex justify-between items-end gap-4">
           <div className="scroll-indicator hidden md:block">
             <div className="scroll-line w-[1px] h-12 bg-black/10 relative overflow-hidden">
               <motion.div
@@ -204,6 +204,11 @@ export default function HeroSection(): React.JSX.Element {
               />
             </div>
           </div>
+
+          <a href="#film" className="inline-flex min-h-11 items-center gap-2 rounded-full px-2 text-sm text-[var(--accent-ink)] underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent-ink)] md:ml-4">
+            <Play aria-hidden="true" className="size-4" />
+            Voir le film
+          </a>
 
           <div className="location-info text-right">
             <span className="label block text-[10px] font-bold uppercase tracking-[0.2em] opacity-30 mb-1">

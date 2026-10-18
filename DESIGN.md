@@ -86,6 +86,14 @@ Les cartes arrondies superposent deux plans : un fond décoratif couvrant toute 
 
 Les deux lignes du nom entrent en 800 ms par une translation verticale de 30 % et un fondu, avec un décalage de 120 ms et une décélération exponentielle. Le « i » vert se déploie depuis une rotation de -35° et une échelle de 0,6 ; le « O » tourne depuis -100° et une échelle de 0,65. Ces deux accents durent une seconde et démarrent à 180 et 300 ms. La séquence joue une fois au montage du hero, y compris après un retour à l’accueil. GSAP nettoie les styles et les animations au démontage. Le nom reste visible sans JavaScript ; la préférence de mouvement réduit supprime son entrée spatiale.
 
+### Film de présentation
+
+Le film V3 approuvé se place après la présentation et avant les projets, dans une section « Mon univers, en mouvement. » plafonnée à 1440 px. Le cadre 16:9 conserve le fond et les couleurs du film. Le titre utilise Italiana ; le bouton central associe un disque de lecture blanc et un libellé vert « Découvrir mon univers · 40 s ». Un lien discret « Voir le film » dans le bas du hero mène à cette section.
+
+L’aperçu de 4,5 secondes est muet et se charge lorsque la section devient visible. Il se met en pause hors écran, dans un onglet masqué et pendant la lecture du film. Un bouton permet de le suspendre ; la préférence de mouvement réduit conserve l’affiche fixe. Au clic, le film intégral se charge dans un dialogue natif avec son activé volontairement, contrôles vidéo et bouton Fermer. Échap et le clic sur le fond ferment le lecteur, arrêtent le son, libèrent la source et rendent le focus au déclencheur. Le fond de page reste inerte pendant la lecture.
+
+La copie publique du film conserve exactement les octets de la V3 finale archivée. L’aperçu et l’affiche sont des dérivés destinés au Web ; les trois archives approuvées restent intactes.
+
 ### Captures de Zen
 
 La présentation détaillée de Zen utilise les cinq mockups fournis par l’utilisateur : accueil, catalogue, recherche, fiche film et Top personnel. Les PNG transparents mesurent 462 × 946 px et intègrent déjà le téléphone complet. Ils sont importés statiquement via `next/image`, affichés à leur ratio naturel et plafonnés à 330 px de largeur. Aucun cadre, bouton latéral ou encoche supplémentaire n’est dessiné en code. L’aperçu des cartes réutilise directement les mockups Catalogue, Accueil et Fiche film avec ses rotations existantes. Le fichier du Top est `top.png` ; son contenu et sa provenance sont documentés dans `docs/design/zen-top-capture.md`.
