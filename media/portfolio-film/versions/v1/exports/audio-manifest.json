@@ -1,0 +1,11 @@
+{
+  "durationSeconds": 32.0,
+  "sampleRate": 48000,
+  "channels": 2,
+  "bpm": 120,
+  "key": "D minor",
+  "peakDbfs": -1.5144142787623671,
+  "rmsDbfs": -16.48888945978833,
+  "originalComposition": true,
+  "externalSamples": false
+}

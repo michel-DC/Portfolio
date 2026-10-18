@@ -1,5 +1,18 @@
 # Changelog
 
+## 18-10-2026
+
+- 14:39 Ajout d’une entrée décalée des deux lignes du nom, avec déploiement et rotations distinctes du « i » et du « O » verts, sans animation en mouvement réduit. Élargissement de la galerie commune à l’accueil et à la page des projets pour reprendre les marges du hero. Vérification Helium de 320 à 2560 px, des filtres et du retour à l’accueil ; TypeScript validé et serveur conservé allumé.
+- 10:45 Remplacement de l’accent orange par le Pin profond #173F35, avec un survol #235A4B et un vert clair #A3C2B2 sur les surfaces sombres. Adaptation des textes des boutons, de la sélection, des icônes et de la citation pour préserver leur contraste. Vérification Helium sur ordinateur et mobile, focus et survols validés, TypeScript validé ; serveur conservé allumé.
+- 10:29 Intégration des cinq nouveaux mockups Zen fournis par l’utilisateur, avec conservation de leur transparence et de leur ratio 462 × 946. Suppression des téléphones dessinés en code dans la fiche et l’aperçu des cartes, correction du chemin du Top et imports statiques pour renouveler automatiquement les images. Vérification Helium sur ordinateur et mobile, navigation et TypeScript validés ; serveur conservé allumé.
+- 10:03 Nouvelle capture du Top de Zen avec The Grand Budapest Hotel, Moonrise Kingdom et Asteroid City, exclusivement réalisés par Wes Anderson. Conservation du format 1290 × 2796 px et renouvellement de l’URL de l’image pour éviter le cache de la version avec placeholders.
+- 09:59 Descente légère du bloc du nom et des liens, de 16 px sur ordinateur et de 12 px sur mobile. Ajout d’une cinquième capture Zen pour le Top personnel, avec trois places disponibles et des placeholders, au format 1290 × 2796 px. Présentation et accueil vérifiés dans Helium sur ordinateur et mobile ; TypeScript validé et serveur laissé allumé.
+- 09:53 Remontée du bloc du nom et des liens de 32 px sur ordinateur et de 24 px sur mobile, avec contrôle du placement et de la visibilité dans Helium.
+- 09:51 Agrandissement d’environ 9 % des deux lignes du nom, avec conservation de la typographie et des accents dorés. Vérification dans Helium en 1920, 1366, 390 et 320 px, sans débordement du titre.
+- 09:49 Adoption d’Italiana pour un nom plus sobre et proche de la référence Marie Camilo, avec les seuls « i » et « O » étoilés d’Amoria en doré. Retrait des polices de la proposition précédente et vérification dans Helium sur quatre tailles d’écran ; TypeScript validé.
+- 09:46 Remplacement d’Amoria dans le hero par Bodoni Moda et des initiales « M » et « D » en Pinyon Script doré, avec polices et licences hébergées localement. Ajustement de l’espacement pour garder les liens visibles sur petit ordinateur et vérification du titre dans Helium sur ordinateur et mobile.
+- 09:40 Agrandissement du nom du hero avec la police locale Amoria, à la même échelle que la référence Marie Camilo, et mise en valeur du « i » étoilé et du « O » ornementé en doré. Vérification dans Helium sur ordinateur, tablette et mobile, contrôle du mouvement réduit et validation TypeScript.
+
 ## 10-10-2026
 
 - 18:41 Correction des erreurs de lint existantes : compteurs du dashboard typés, caractères JSX échappés et lecture du cookie de tracking via un store externe. Lint et build de production validés avant commit, avec contrôle de l’accueil et de la recherche dans Helium.

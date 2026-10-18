@@ -1,0 +1,19 @@
+{
+  "identity": "Existing logo, Italiana, Amoria, Cabinet Grotesk, texture and palette",
+  "conceptSources": [
+    "src/components/pages/about/intro-section.tsx",
+    "src/data/projects/001.json",
+    "src/data/projects/008.json"
+  ],
+  "previousVersion": "media/portfolio-film-v10/exports/michel-djoumessi-v10.mp4",
+  "previousTailFromSeconds": 4.166666666666667,
+  "preservedTailFromSeconds": 4.166666666666667,
+  "continuousOriginalSoundtrackSeconds": 40,
+  "codex": {
+    "source": "https://openai.com/codex/",
+    "local": "codex.webp",
+    "use": "Preserved brief tool identification"
+  },
+  "projectScreensUsed": false,
+  "externalAudioSamplesUsed": false
+}

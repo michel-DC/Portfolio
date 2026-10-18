@@ -136,7 +136,7 @@ export default function ContactSection(): ReactElement {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[var(--portfolio-accent)] px-6 text-sm font-medium text-black transition-colors hover:bg-[#d99b40] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1e1e1e] disabled:cursor-not-allowed disabled:opacity-60"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[var(--portfolio-accent)] px-6 text-sm font-medium text-white transition-colors hover:bg-[var(--accent-hover)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1e1e1e] disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isSubmitting ? "Envoi en cours…" : "Envoyer mon message"}
               {!isSubmitting && <ArrowUpRight className="size-4" aria-hidden="true" />}

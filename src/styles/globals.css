@@ -17,7 +17,7 @@
 @layer base {
     ::selection {
         background-color: var(--portfolio-accent);
-        color: #1e1e1e;
+        color: var(--white);
     }
     * {
         @apply border-border outline-ring/50;
@@ -222,9 +222,10 @@
 }
 
 :root {
-    --portfolio-accent: #E8AF59;
-    --accent-ink: #95601e;
-    --accent-on-dark: #E8AF59;
+    --portfolio-accent: #173F35;
+    --accent-ink: #173F35;
+    --accent-hover: #235A4B;
+    --accent-on-dark: #A3C2B2;
     --white: #ffffff;
     --black: #1e1e1e;
     --radius: 0.625rem;

@@ -1,0 +1,57 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_type": "video",
+      "width": 1920,
+      "height": 1080,
+      "color_range": "tv",
+      "color_space": "bt709",
+      "r_frame_rate": "30/1",
+      "nb_frames": "960",
+      "side_data_list": [
+        {}
+      ]
+    },
+    {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_type": "audio",
+      "sample_rate": "48000",
+      "channels": 2,
+      "r_frame_rate": "0/0",
+      "nb_frames": "1501"
+    }
+  ],
+  "format": {
+    "duration": "32.000000",
+    "size": "19905152",
+    "bit_rate": "4976288"
+  },
+  "checks": {
+    "fullDecodeErrors": 0,
+    "sourceAssetsVerified": 20,
+    "brandGreenMatchesCss": "#173F35",
+    "javascriptSyntax": "passed",
+    "pythonSyntax": "passed",
+    "audioIntegratedLufs": -15.87,
+    "audioTruePeakDbtp": -1.64,
+    "audioNoClipping": true,
+    "audioAudition": "Unavailable to the agent; objective signal checks performed.",
+    "heliumPlayback": {
+      "duration": 32,
+      "width": 1920,
+      "height": 1080,
+      "time": 32,
+      "ended": true,
+      "error": null,
+      "decoded": 1182,
+      "dropped": 0
+    },
+    "finalCapture": "media/portfolio-film/review/verified-film.jpg"
+  },
+  "sha256": "40a629eb998d8c95e2efeb860d9d8f3cda941952c51013fb044acb8a2c97e520"
+}

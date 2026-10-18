@@ -149,7 +149,7 @@ export default function CinemaTransition(): JSX.Element {
       className="pointer-events-none invisible fixed top-5 left-1/2 z-[110] w-[400px] max-w-[calc(100vw-32px)] -translate-x-1/2 p-4 text-white bg-neutral-950 rounded-md opacity-0 shadow-xl motion-reduce:hidden md:top-6"
     >
       <div className="flex items-center justify-between mb-3">
-        <span className="text-[11px] font-semibold tracking-[0.16em] text-[var(--portfolio-accent)]">CHANGEMENT DE PLAN</span>
+        <span className="text-[11px] font-semibold tracking-[0.16em] text-[var(--accent-on-dark)]">CHANGEMENT DE PLAN</span>
         <span ref={percentageRef} className="font-mono text-xl tabular-nums">
           00 %
         </span>
@@ -190,8 +190,8 @@ export default function CinemaTransition(): JSX.Element {
           ref={playheadRef}
           className="absolute inset-x-0 top-1 bottom-1"
         >
-          <span className="absolute inset-y-0 left-0 w-0.5 bg-[var(--portfolio-accent)]" />
-          <span className="absolute -top-1 -left-1 w-2.5 h-2.5 bg-[var(--portfolio-accent)] rotate-45" />
+          <span className="absolute inset-y-0 left-0 w-0.5 bg-[var(--accent-on-dark)]" />
+          <span className="absolute -top-1 -left-1 w-2.5 h-2.5 bg-[var(--accent-on-dark)] rotate-45" />
         </div>
       </div>
     </div>

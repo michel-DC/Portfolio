@@ -23,7 +23,7 @@ export default function ProjectGallery({ headingLevel = "h2", prioritizeImages =
   const projects = galleryProjects.slice(0, projectLimit).filter((project) => activeFilter === "Tous" || project.category === activeFilter);
 
   return (
-    <div className="mx-auto w-full max-w-[1920px] px-6 [&_*]:font-reference md:px-12 lg:px-[6.5%]">
+    <div className="mx-auto w-[calc(100%_-_2rem)] max-w-[2200px] [&_*]:font-reference sm:w-[calc(100%_-_3rem)] md:w-[92%]">
       <div className="mb-6 flex items-baseline gap-3 md:mb-10 md:gap-5">
         <Heading className="text-[clamp(3.5rem,8vw,9rem)] font-normal uppercase leading-none tracking-[-0.025em]">Projets</Heading>
         <span aria-hidden="true" className="text-2xl text-[var(--accent-ink)] md:text-5xl">{projects.length}</span>

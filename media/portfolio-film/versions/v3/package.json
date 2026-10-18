@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-film-v11",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "node source/render.mjs --preview",
+    "render": "node source/render.mjs"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.100"
+  }
+}

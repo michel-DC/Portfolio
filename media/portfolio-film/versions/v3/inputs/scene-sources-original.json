@@ -1,0 +1,140 @@
+{
+  "version": "v9",
+  "edition": "Développeur créatif",
+  "duration": 30,
+  "fps": 60,
+  "projectAssetsUsed": false,
+  "preservedTail": {
+    "from": 16.5,
+    "source": "media/portfolio-film-v8/exports/michel-djoumessi-v8.mp4"
+  },
+  "identity": {
+    "palette": {
+      "ink": "#1e1e1e",
+      "green": "#173F35",
+      "ivory": "#ffffff",
+      "pale": "#A3C2B2",
+      "white": "#ffffff",
+      "hover": "#235A4B"
+    },
+    "fonts": [
+      "Italiana",
+      "Amoria",
+      "Cabinet Grotesk"
+    ]
+  },
+  "assets": [
+    {
+      "key": "texture",
+      "source": "public/images/background/fond-page.png",
+      "sha256": "b56cc8a000edb8ff3badcd616675088163edb8d092386a8e78cb7555ded9f2df"
+    },
+    {
+      "key": "logo",
+      "source": "public/images/svg/logo-noir.svg",
+      "sha256": "40696c58c2d8bf6c1371caec607134a1449393272dd71a29d6873b7b5d8dfe50"
+    },
+    {
+      "key": "figma",
+      "source": "public/images/skills/figma.svg",
+      "sha256": "6ed5c9271e1050035037c7e1715f574af241ac4add1cf7ae3f810ed98798c94a"
+    },
+    {
+      "key": "nextjs",
+      "source": "public/images/skills/nextjs.svg",
+      "sha256": "59ba0f1f6b77a2736b4d1ef50f35e180b4a234cb73f4c3bce4e7e422fc6aab91"
+    },
+    {
+      "key": "typescript",
+      "source": "public/images/skills/typescript.svg",
+      "sha256": "e38dfcfd3dae1b00878fec9424bbce89098dfba37eb278aa5e46ee9a5121786a"
+    },
+    {
+      "key": "python",
+      "source": "public/images/skills/python.svg",
+      "sha256": "94c411b22eebda93241eeb1f752e3a94d12fe504099681064fe11782189e90f3"
+    },
+    {
+      "key": "tailwind",
+      "source": "public/images/skills/tailwindcss.svg",
+      "sha256": "d9011701823845cab3a08d3806a56e475119eced675309bd62ae4312d4bd30d4"
+    },
+    {
+      "key": "postgresql",
+      "source": "public/images/skills/postgresql.png",
+      "sha256": "2af52257c910e6351896bff47c030c7b20a459def7cf78ab3db09a186f128df2"
+    },
+    {
+      "key": "codex",
+      "source": "media/portfolio-film-v9/assets/codex.webp",
+      "sha256": "141239ea7961627266ee21592f9d1154cd677d0ea86b12c2b509f92f8f05fac3"
+    },
+    {
+      "key": "cabinet/CabinetGrotesk-Regular.ttf",
+      "source": "public/fonts/cabinet/CabinetGrotesk-Regular.ttf",
+      "sha256": "982a97b68034bf65b53518aba720823c7cc501660c8c8085cfc66dfb5d168a13"
+    },
+    {
+      "key": "italiana/Italiana-Regular.ttf",
+      "source": "public/fonts/italiana/Italiana-Regular.ttf",
+      "sha256": "0ad271d9cd42a57cd5c5fa483ae2406a8138b95acb2a43eb73a8d37b7291fee9"
+    },
+    {
+      "key": "amoria/AMORIA-BF64a2f6809ce9e.otf",
+      "source": "public/fonts/amoria/AMORIA-BF64a2f6809ce9e.otf",
+      "sha256": "b261d7147ba6acb023b775838677e4d488b0aa91eafd86c4e106d156b64f0fca"
+    }
+  ],
+  "timeline": [
+    {
+      "start": 0,
+      "end": 3,
+      "name": "L’image et le code · double regard"
+    },
+    {
+      "start": 3,
+      "end": 6.5,
+      "name": "Penser l’image · composition et exploration"
+    },
+    {
+      "start": 6.5,
+      "end": 10,
+      "name": "Créer le geste · interaction et réponse"
+    },
+    {
+      "start": 10,
+      "end": 13.5,
+      "name": "Relier l’ensemble · Python et données"
+    },
+    {
+      "start": 13.5,
+      "end": 16.5,
+      "name": "L’expérience prend vie · convergence"
+    },
+    {
+      "start": 16.5,
+      "end": 19.5,
+      "name": "Mouvement et relief · Codex comme outil bref"
+    },
+    {
+      "start": 19.5,
+      "end": 22.5,
+      "name": "Mes outils · défilement rapide des logos"
+    },
+    {
+      "start": 22.5,
+      "end": 24,
+      "name": "Concevoir · développer · animer"
+    },
+    {
+      "start": 24,
+      "end": 26.5,
+      "name": "Michel Djoumessi · identité"
+    },
+    {
+      "start": 26.5,
+      "end": 30,
+      "name": "Explorer mon portfolio · hey-michel.me"
+    }
+  ]
+}

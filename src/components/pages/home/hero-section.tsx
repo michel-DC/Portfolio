@@ -1,28 +1,76 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import localFont from "next/font/local";
 import { Github, Linkedin, BriefcaseBusiness, FileDown } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-export default function HeroSection() {
-  return (
-    <section className="relative h-screen w-full bg-transparent flex items-center justify-center p-6 md:p-12 lg:p-24 overflow-hidden text-[#1A1A1A] font-amoria select-none pt-32 md:pt-48">
-      {/* Orbe verte diffuse au centre */}
+const italiana = localFont({
+  src: "../../../../public/fonts/italiana/Italiana-Regular.ttf",
+  display: "swap",
+  weight: "400",
+});
 
+const accentLettering = localFont({
+  src: "../../../../public/fonts/amoria/AMORIA-BF64a2f6809ce9e.otf",
+  display: "swap",
+  weight: "400",
+});
+
+export default function HeroSection(): React.JSX.Element {
+  const shouldReduceMotion = useReducedMotion();
+  const nameRef = useRef<HTMLHeadingElement>(null);
+
+  useGSAP(() => {
+    const media = gsap.matchMedia();
+
+    media.add("(prefers-reduced-motion: no-preference)", () => {
+      const entrance = gsap.timeline({
+        defaults: {
+          duration: 0.8,
+          ease: "expo.out",
+          clearProps: "transform,transformOrigin,opacity",
+        },
+      });
+
+      entrance
+        .from("[data-name-line]", { yPercent: 30, opacity: 0, stagger: 0.12 }, 0)
+        .from("[data-name-accent='i']", {
+          rotation: -35,
+          scale: 0.6,
+          opacity: 0,
+          transformOrigin: "50% 70%",
+          duration: 1,
+        }, 0.18)
+        .from("[data-name-accent='o']", {
+          rotation: -100,
+          scale: 0.65,
+          opacity: 0,
+          transformOrigin: "50% 55%",
+          duration: 1,
+        }, 0.3);
+    });
+
+    return (): void => media.revert();
+  }, { scope: nameRef });
+
+  return (
+    <section className="relative flex min-h-svh w-full overflow-hidden bg-transparent px-4 pt-32 pb-6 text-[#1A1A1A] sm:px-6 md:px-[4vw] md:pt-[clamp(6rem,13.33svh,9rem)] md:pb-8">
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.3, scale: 1 }}
         transition={{ duration: 0.9, ease: "easeOut" }}
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] rounded-full pointer-events-none blur-[100px]"
         style={{
-          background: "radial-gradient(circle, #E8AF59 0%, transparent 70%)",
+          background: "radial-gradient(circle, var(--portfolio-accent) 0%, transparent 70%)",
         }}
       />
 
-      <div className="hero-wrapper relative z-10 w-full h-full flex flex-col justify-between max-w-[1800px] mx-auto pt-10 sm:pt-24">
-        {/* Top Meta */}
+      <div className="hero-wrapper relative z-10 mx-auto flex w-full max-w-[2200px] flex-col justify-between gap-4">
         <div className="hero-top-meta">
           <div className="overflow-hidden">
             <motion.span
@@ -36,53 +84,33 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Main Content (Title + Social Buttons) */}
-        <div className="flex flex-col w-full py-12">
-          {/* Main Title Container */}
-          <div className="main-title-container flex flex-col w-full">
-            {/* Prénom : MICHEL (Haut / Gauche) */}
-            <div className="title-line overflow-hidden flex justify-start">
-              <motion.h1
-                initial={{ y: "110%" }}
-                animate={{ y: 0 }}
-                transition={{
-                  duration: 0.7,
-                  delay: 0.4,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.035em] flex items-baseline uppercase font-medium"
-              >
-                M<span className="text-[var(--portfolio-accent)] italic mr-[0.1em]">I</span>CHEL
-              </motion.h1>
-            </div>
+        <div className="my-auto flex w-full -translate-y-3 flex-col py-4 md:-translate-y-4">
+          <h1
+            ref={nameRef}
+            aria-label="Michel Djoumessi"
+            className="flex w-full flex-col gap-[0.05em] text-[clamp(3.25rem,18.5vw,26rem)] leading-[0.9] font-normal tracking-[-0.025em]"
+          >
+            <span
+              data-name-line
+              aria-hidden="true"
+              className={`${italiana.className} block whitespace-nowrap`}
+            >
+              M<span data-name-accent="i" className={`${accentLettering.className} inline-block text-[var(--portfolio-accent)]`}>i</span>CHEL
+            </span>
+            <span
+              data-name-line
+              aria-hidden="true"
+              className={`${italiana.className} block self-end text-[0.94em] whitespace-nowrap`}
+            >
+              DJ<span data-name-accent="o" className={`${accentLettering.className} inline-block text-[var(--portfolio-accent)]`}>O</span>UMESSI
+            </span>
+          </h1>
 
-            {/* Gap réduit entre prénom et nom */}
-            <div className="h-[1vw] md:h-[1.5vw]" />
-
-            {/* Nom : DJOUMESSI */}
-            <div className="title-line overflow-hidden flex justify-end md:pr-[5vw]">
-              <motion.h1
-                initial={{ y: "110%" }}
-                animate={{ y: 0 }}
-                transition={{
-                  duration: 0.7,
-                  delay: 0.46,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="text-[16vw] md:text-[12vw] leading-[0.8] tracking-[-0.035em] flex items-baseline uppercase font-medium mr-2"
-              >
-                DJOUMESS
-                <span className="text-[var(--portfolio-accent)] italic mr-[0.05em]">I</span>
-              </motion.h1>
-            </div>
-          </div>
-
-          {/* Social Buttons Container */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.7 }}
-            className="flex flex-wrap justify-center gap-4 mt-12 md:mt-20 w-full"
+            className="mt-8 flex w-full flex-wrap justify-center gap-3 md:gap-4"
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -166,20 +194,17 @@ export default function HeroSection() {
           </motion.div>
         </div>
 
-        {/* Bottom Meta */}
         <div className="hero-bottom-meta flex justify-between items-end">
-          {/* Scroll Indicator Minimaliste */}
           <div className="scroll-indicator hidden md:block">
             <div className="scroll-line w-[1px] h-12 bg-black/10 relative overflow-hidden">
               <motion.div
-                animate={{ y: ["-100%", "100%"] }}
+                animate={shouldReduceMotion ? undefined : { y: ["-100%", "100%"] }}
                 transition={{ duration: 1.4, repeat: Infinity, ease: "linear" }}
                 className="absolute top-0 left-0 w-full h-full bg-[var(--portfolio-accent)]"
               />
             </div>
           </div>
 
-          {/* Location Info */}
           <div className="location-info text-right">
             <span className="label block text-[10px] font-bold uppercase tracking-[0.2em] opacity-30 mb-1">
               Paris, France

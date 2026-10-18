@@ -114,8 +114,8 @@ export async function POST(request: Request) {
                        display:block;
                        width:calc(100% - 48px);
                        text-align:center;
-                       background-color:#E8AF59;
-                       color:#1e1e1e;
+                       background-color:#173F35;
+                       color:#ffffff;
                        padding:14px 24px;
                        border-radius:9999px;
                        font-weight:600;

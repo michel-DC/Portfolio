@@ -1,0 +1,382 @@
+{
+  "bpm": 120,
+  "fps": 60,
+  "duration": 30,
+  "motionTiming": {
+    "letterStep": 0.0625,
+    "design": {
+      "panel": 0.5,
+      "fill": 0.875,
+      "pointer": 1.25,
+      "click": 2
+    },
+    "develop": {
+      "pointer": 0.25,
+      "press": 0.75
+    },
+    "responsive": {
+      "desktop": 0,
+      "tablet": 0.125,
+      "phone": 0.25
+    },
+    "dimension": {
+      "tool": 0.25,
+      "toolExit": 1.25
+    },
+    "roll": {
+      "step": 0.5,
+      "hold": 0.375,
+      "travel": 0.125
+    },
+    "outro": {
+      "cursor": 1,
+      "press": 2
+    },
+    "opening": {
+      "image": 0,
+      "code": 0.5,
+      "join": 2.25
+    },
+    "visual": {
+      "resize": 0.5,
+      "strip": 1.5
+    },
+    "gesture": {
+      "drag": 0.5,
+      "snap": 1.25,
+      "explore": 2.25
+    },
+    "connections": {
+      "arrange": 0.25,
+      "transmit": 1.25
+    },
+    "alive": {
+      "assemble": 0.5,
+      "mark": 1.25
+    }
+  },
+  "cues": [
+    {
+      "time": 0,
+      "kind": "cut",
+      "label": "L’image et le code · double regard",
+      "frame": 0,
+      "audioTime": 0
+    },
+    {
+      "time": 0.5,
+      "kind": "hit",
+      "label": "Le code répond à l’image",
+      "frame": 30,
+      "audioTime": 0.5
+    },
+    {
+      "time": 1.25,
+      "kind": "tick",
+      "label": "Le lien entre les regards",
+      "frame": 75,
+      "audioTime": 1.25
+    },
+    {
+      "time": 2.25,
+      "kind": "sweep",
+      "label": "Convergence du titre",
+      "frame": 135,
+      "audioTime": 2.25
+    },
+    {
+      "time": 3,
+      "kind": "cut",
+      "label": "Penser l’image · composition et exploration",
+      "frame": 180,
+      "audioTime": 3
+    },
+    {
+      "time": 3.5,
+      "kind": "click",
+      "label": "Ajuster la composition",
+      "frame": 210,
+      "audioTime": 3.5
+    },
+    {
+      "time": 4.5,
+      "kind": "sweep",
+      "label": "Déployer les images",
+      "frame": 270,
+      "audioTime": 4.5
+    },
+    {
+      "time": 5,
+      "kind": "tick",
+      "label": "Rythme de la composition",
+      "frame": 300,
+      "audioTime": 5
+    },
+    {
+      "time": 5.5,
+      "kind": "tick",
+      "label": "Explorer la série",
+      "frame": 330,
+      "audioTime": 5.5
+    },
+    {
+      "time": 6.5,
+      "kind": "cut",
+      "label": "Créer le geste · interaction et réponse",
+      "frame": 390,
+      "audioTime": 6.5
+    },
+    {
+      "time": 7,
+      "kind": "sweep",
+      "label": "Glisser le curseur",
+      "frame": 420,
+      "audioTime": 7
+    },
+    {
+      "time": 7.75,
+      "kind": "click",
+      "label": "Les formes réagissent",
+      "frame": 465,
+      "audioTime": 7.75
+    },
+    {
+      "time": 8.75,
+      "kind": "click",
+      "label": "Explorer l’interaction",
+      "frame": 525,
+      "audioTime": 8.75
+    },
+    {
+      "time": 10,
+      "kind": "cut",
+      "label": "Relier l’ensemble · Python et données",
+      "frame": 600,
+      "audioTime": 10
+    },
+    {
+      "time": 10.25,
+      "kind": "tick",
+      "label": "Organiser les éléments",
+      "frame": 615,
+      "audioTime": 10.25
+    },
+    {
+      "time": 11.25,
+      "kind": "tone",
+      "label": "Relier les actions",
+      "frame": 675,
+      "audioTime": 11.25
+    },
+    {
+      "time": 13.5,
+      "kind": "cut",
+      "label": "L’expérience prend vie · convergence",
+      "frame": 810,
+      "audioTime": 13.5
+    },
+    {
+      "time": 14,
+      "kind": "sweep",
+      "label": "Rassembler l’expérience",
+      "frame": 840,
+      "audioTime": 14
+    },
+    {
+      "time": 14.75,
+      "kind": "tone",
+      "label": "Révéler la signature",
+      "frame": 885,
+      "audioTime": 14.75
+    },
+    {
+      "time": 16.5,
+      "kind": "cut",
+      "label": "Mouvement et relief · Codex comme outil bref",
+      "frame": 990,
+      "audioTime": 16.5
+    },
+    {
+      "time": 16.75,
+      "kind": "tick",
+      "label": "Outil Codex",
+      "frame": 1005,
+      "audioTime": 16.75
+    },
+    {
+      "time": 19.5,
+      "kind": "cut",
+      "label": "Mes outils · défilement rapide des logos",
+      "frame": 1170,
+      "audioTime": 19.5
+    },
+    {
+      "time": 19.5,
+      "kind": "logo",
+      "label": "Logo 1",
+      "frame": 1170,
+      "audioTime": 19.5
+    },
+    {
+      "time": 20,
+      "kind": "logo",
+      "label": "Logo 2",
+      "frame": 1200,
+      "audioTime": 20
+    },
+    {
+      "time": 20.5,
+      "kind": "logo",
+      "label": "Logo 3",
+      "frame": 1230,
+      "audioTime": 20.5
+    },
+    {
+      "time": 21,
+      "kind": "logo",
+      "label": "Logo 4",
+      "frame": 1260,
+      "audioTime": 21
+    },
+    {
+      "time": 21.5,
+      "kind": "logo",
+      "label": "Logo 5",
+      "frame": 1290,
+      "audioTime": 21.5
+    },
+    {
+      "time": 22,
+      "kind": "logo",
+      "label": "Logo 6",
+      "frame": 1320,
+      "audioTime": 22
+    },
+    {
+      "time": 22.5,
+      "kind": "cut",
+      "label": "Concevoir · développer · animer",
+      "frame": 1350,
+      "audioTime": 22.5
+    },
+    {
+      "time": 23,
+      "kind": "hit",
+      "label": "Développer",
+      "frame": 1380,
+      "audioTime": 23
+    },
+    {
+      "time": 23.5,
+      "kind": "hit",
+      "label": "Animer",
+      "frame": 1410,
+      "audioTime": 23.5
+    },
+    {
+      "time": 24,
+      "kind": "cut",
+      "label": "Michel Djoumessi · identité",
+      "frame": 1440,
+      "audioTime": 24
+    },
+    {
+      "time": 24,
+      "kind": "letter",
+      "label": "Signature 1",
+      "frame": 1440,
+      "audioTime": 24
+    },
+    {
+      "time": 24.0625,
+      "kind": "letter",
+      "label": "Signature 2",
+      "frame": 1444,
+      "audioTime": 24.066666666666666
+    },
+    {
+      "time": 24.125,
+      "kind": "letter",
+      "label": "Signature 3",
+      "frame": 1448,
+      "audioTime": 24.133333333333333
+    },
+    {
+      "time": 24.1875,
+      "kind": "letter",
+      "label": "Signature 4",
+      "frame": 1451,
+      "audioTime": 24.183333333333334
+    },
+    {
+      "time": 24.25,
+      "kind": "letter",
+      "label": "Signature 5",
+      "frame": 1455,
+      "audioTime": 24.25
+    },
+    {
+      "time": 24.3125,
+      "kind": "letter",
+      "label": "Signature 6",
+      "frame": 1459,
+      "audioTime": 24.316666666666666
+    },
+    {
+      "time": 24.375,
+      "kind": "letter",
+      "label": "Signature 7",
+      "frame": 1463,
+      "audioTime": 24.383333333333333
+    },
+    {
+      "time": 24.4375,
+      "kind": "letter",
+      "label": "Signature 8",
+      "frame": 1466,
+      "audioTime": 24.433333333333334
+    },
+    {
+      "time": 24.5,
+      "kind": "letter",
+      "label": "Signature 9",
+      "frame": 1470,
+      "audioTime": 24.5
+    },
+    {
+      "time": 24.5625,
+      "kind": "letter",
+      "label": "Signature 10",
+      "frame": 1474,
+      "audioTime": 24.566666666666666
+    },
+    {
+      "time": 24.625,
+      "kind": "letter",
+      "label": "Signature 11",
+      "frame": 1478,
+      "audioTime": 24.633333333333333
+    },
+    {
+      "time": 26.5,
+      "kind": "cut",
+      "label": "Explorer mon portfolio · hey-michel.me",
+      "frame": 1590,
+      "audioTime": 26.5
+    },
+    {
+      "time": 27.5,
+      "kind": "sweep",
+      "label": "Invitation au portfolio",
+      "frame": 1650,
+      "audioTime": 27.5
+    },
+    {
+      "time": 28.5,
+      "kind": "click",
+      "label": "Explorer mon portfolio",
+      "frame": 1710,
+      "audioTime": 28.5
+    }
+  ]
+}

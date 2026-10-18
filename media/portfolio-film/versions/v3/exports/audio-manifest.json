@@ -1,0 +1,32 @@
+{
+  "durationSeconds": 40.0,
+  "sampleRate": 48000,
+  "channels": 2,
+  "bpm": 120,
+  "key": "D major",
+  "originalComposition": true,
+  "continuousComposition": true,
+  "copiedPreviousAudio": false,
+  "internalFadesOrRestarts": false,
+  "finalCadenceStartsSeconds": 36.5,
+  "externalSamples": false,
+  "referenceAudioUsed": false,
+  "cutAccentsSeconds": [
+    4,
+    10,
+    13,
+    16.5,
+    20,
+    23.5,
+    26.5,
+    29.5,
+    32.5,
+    34,
+    36.5
+  ],
+  "synchronizedEvents": 58,
+  "syncSource": "motion-cues.json",
+  "intent": "One continuous forty-second score using the established piano and electronic instruments at 120 BPM. Sustained harmony and shared reverb span every scene, including ten seconds. Final resolution occurs only with the portfolio invitation.",
+  "peakDbfs": -1.6186329727925113,
+  "rmsDbfs": -16.707202236747417
+}

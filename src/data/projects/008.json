@@ -8,7 +8,8 @@
     "/images/projects/zen/screens/home.png",
     "/images/projects/zen/screens/catalog.png",
     "/images/projects/zen/screens/search.png",
-    "/images/projects/zen/screens/movie.png"
+    "/images/projects/zen/screens/movie.png",
+    "/images/projects/zen/screens/top.png"
   ],
   "technologies": [
     "Next.js",

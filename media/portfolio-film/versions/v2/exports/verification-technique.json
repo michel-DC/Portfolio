@@ -1,0 +1,75 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "index": 0,
+      "codec_name": "h264",
+      "codec_type": "video",
+      "width": 1920,
+      "height": 1080,
+      "color_range": "tv",
+      "color_space": "bt709",
+      "r_frame_rate": "30/1",
+      "nb_frames": "960",
+      "side_data_list": [
+        {}
+      ]
+    },
+    {
+      "index": 1,
+      "codec_name": "aac",
+      "codec_type": "audio",
+      "sample_rate": "48000",
+      "channels": 2,
+      "r_frame_rate": "0/0",
+      "nb_frames": "1501"
+    }
+  ],
+  "format": {
+    "duration": "32.000000",
+    "size": "26479396",
+    "bit_rate": "6619849"
+  },
+  "checks": {
+    "fullDecodeErrors": 0,
+    "sourceAssetsVerified": 27,
+    "brandGreenMatchesCss": "#173F35",
+    "v1FrozenFilesIntact": 68,
+    "v1OriginalVideoUnchanged": true,
+    "v1BackupZipUnchanged": true,
+    "javascriptSyntax": "passed",
+    "pythonSyntax": "passed",
+    "noCodePanelsOrDedicatedAiScene": true,
+    "codexApproximateVisibilitySeconds": 1.3,
+    "audioAudition": "Unavailable to the agent; objective measurements performed.",
+    "audioIntegratedLufs": -15.83,
+    "audioTruePeakDbtp": -1.66,
+    "audioNoClipping": true,
+    "heliumPlayback": {
+      "ended": true,
+      "duration": 32,
+      "currentTime": 32,
+      "width": 1920,
+      "height": 1080,
+      "muted": false,
+      "error": null,
+      "quality": {
+        "totalVideoFrames": 1161,
+        "droppedVideoFrames": 0,
+        "corruptedVideoFrames": 0
+      },
+      "note": "The frame counter includes seeking before complete playback."
+    },
+    "inspectedEncodedFramesSeconds": [
+      7.8,
+      12,
+      16,
+      23.6,
+      32
+    ]
+  },
+  "edition": "V2 — En mouvement — visual revision",
+  "file": "michel-djoumessi-v2-motion.mp4",
+  "sha256": "18c23e216395700bf810a3e04b836a20ced19f82653675cbfcd1286cecbfabbb"
+}

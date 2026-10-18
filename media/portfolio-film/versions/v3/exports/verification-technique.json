@@ -1,0 +1,74 @@
+{
+  "synchronizedEventsVerified": 58,
+  "syncToleranceFrames": 1,
+  "preservedTailFromSeconds": 4.166666666666667,
+  "previousTailFromSeconds": 4.166666666666667,
+  "continuousFortySecondComposition": true,
+  "internalAudioRestart": false,
+  "quietestInterior100msDbfs": -24.945150028623573,
+  "identicalDecodedTailFrames": 2150,
+  "previousV10Unchanged": true,
+  "timelineUnchanged": true,
+  "animationCueTimesUnchanged": true,
+  "paletteAndFontsMatchV2": true,
+  "file": "michel-djoumessi-v11.mp4",
+  "sha256": "35db1e06b74bee8d79d7acd236129633ab067bfefcee56c46d3688644ecabcf2",
+  "bytes": 18997124,
+  "durationSeconds": 40,
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "frames": 2400,
+  "videoCodec": "h264",
+  "pixelFormat": "yuv420p",
+  "colorSpace": "bt709",
+  "audioCodec": "aac",
+  "audioChannels": 2,
+  "audioSampleRate": 48000,
+  "decodeErrors": 0,
+  "loudness": {
+    "input_i": "-16.27",
+    "input_tp": "-2.25",
+    "input_lra": "1.70",
+    "input_thresh": "-26.31",
+    "output_i": "-16.17",
+    "output_tp": "-2.29",
+    "output_lra": "0.70",
+    "output_thresh": "-26.19",
+    "normalization_type": "dynamic",
+    "target_offset": "0.17"
+  },
+  "sourceHashesVerified": 12,
+  "projectScreensUsed": false,
+  "referenceAudioUsed": false,
+  "approvedVersions": [
+    {
+      "version": "v1",
+      "sha256": "40a629eb998d8c95e2efeb860d9d8f3cda941952c51013fb044acb8a2c97e520",
+      "unchanged": true
+    },
+    {
+      "version": "v2",
+      "sha256": "18c23e216395700bf810a3e04b836a20ced19f82653675cbfcd1286cecbfabbb",
+      "unchanged": true
+    }
+  ],
+  "previousV7Unchanged": true,
+  "browserPlayback": {
+    "ended": true,
+    "currentTime": 40,
+    "duration": 40,
+    "width": 1920,
+    "height": 1080,
+    "muted": false,
+    "error": null,
+    "totalVideoFrames": 2400,
+    "droppedVideoFrames": 3,
+    "corruptedVideoFrames": 0
+  },
+  "browser": "Helium isolated helium-tests",
+  "nativeCaptures": [
+    "helium-ouverture.png",
+    "helium-fin.png"
+  ]
+}

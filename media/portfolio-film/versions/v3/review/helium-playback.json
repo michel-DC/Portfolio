@@ -1,0 +1,12 @@
+{
+  "ended": true,
+  "currentTime": 40,
+  "duration": 40,
+  "width": 1920,
+  "height": 1080,
+  "muted": false,
+  "error": null,
+  "totalVideoFrames": 2400,
+  "droppedVideoFrames": 3,
+  "corruptedVideoFrames": 0
+}

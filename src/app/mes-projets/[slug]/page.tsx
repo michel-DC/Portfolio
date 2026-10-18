@@ -146,7 +146,7 @@ export default async function ProjectPage({
 
         <div className="w-full px-4 md:px-24 mb-16">
           {project.slugName === "zen" ? (
-            <ZenMobileShowcase images={project.images} />
+            <ZenMobileShowcase />
           ) : (
             <div className="w-full">
               <Image

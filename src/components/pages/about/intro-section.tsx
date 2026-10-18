@@ -61,7 +61,7 @@ export default function IntroSection() {
             <div className="pt-4 flex justify-center lg:justify-start">
               <Button
                 asChild
-                className="rounded-full bg-[var(--portfolio-accent)] text-black transition-colors duration-300 px-8 py-6 text-lg shadow-sm"
+                className="rounded-full bg-[var(--portfolio-accent)] text-white transition-colors duration-300 px-8 py-6 text-lg shadow-sm"
                 size="lg"
               >
                 <Link

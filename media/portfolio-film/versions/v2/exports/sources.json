@@ -1,0 +1,258 @@
+{
+  "version": "v2",
+  "identity": {
+    "cssSource": "src/styles/globals.css",
+    "palette": {
+      "ink": "#1e1e1e",
+      "green": "#173F35",
+      "ivory": "#ffffff",
+      "pale": "#A3C2B2",
+      "white": "#ffffff",
+      "hover": "#235A4B"
+    },
+    "fonts": [
+      "Italiana",
+      "Amoria",
+      "Cabinet Grotesk"
+    ],
+    "texture": "images/background/fond-page.png"
+  },
+  "references": [
+    "https://x.com/melvynx/status/2104074646224248944",
+    "https://x.com/melvynx/status/2103741783234732518",
+    "https://openai.com/codex/"
+  ],
+  "assets": [
+    {
+      "key": "zenHome",
+      "source": "public/images/projects/zen/screens/home.png",
+      "sha256": "304110ee3adedc5de4ffdd3bbbcbd94f52d765894505abde48dda45d6039707a",
+      "width": 462,
+      "height": 946
+    },
+    {
+      "key": "zenCatalog",
+      "source": "public/images/projects/zen/screens/catalog.png",
+      "sha256": "cc3cc90674931f2b490feded18ca162e1d6b5d1ef3d4cfc020bcd602c96eb443",
+      "width": 462,
+      "height": 946
+    },
+    {
+      "key": "zenSearch",
+      "source": "public/images/projects/zen/screens/search.png",
+      "sha256": "e7af75697f5b73f1da093366a23f3c60518b60978ae91e4f0f3f719721291992",
+      "width": 462,
+      "height": 946
+    },
+    {
+      "key": "zenMovie",
+      "source": "public/images/projects/zen/screens/movie.png",
+      "sha256": "c95f2858ab6dc20199dad8dc35f5ff6de3003f840562abafa1f39f05b87bf733",
+      "width": 462,
+      "height": 946
+    },
+    {
+      "key": "zenTop",
+      "source": "public/images/projects/zen/screens/top.png",
+      "sha256": "766b2be0e60469ef3f02bcd2882c9dcb8cb11ec7950fbc37dfe837846950a6db",
+      "width": 462,
+      "height": 946
+    },
+    {
+      "key": "teamifyLaptop",
+      "source": "public/images/projects/teamify/001.png",
+      "sha256": "18ee2f60607a5a3fee8e54eb2da411acdbdf4623de33ade623b58c26f01e414e",
+      "width": 2800,
+      "height": 2100
+    },
+    {
+      "key": "teamifyPhone",
+      "source": "public/images/projects/teamify/002.png",
+      "sha256": "aeefb33f0a290fa53df405ddad5ee0fc21dbf5993bddfb7e6bb7e37fe3583780",
+      "width": 2800,
+      "height": 2100
+    },
+    {
+      "key": "lookarounLaptop",
+      "source": "public/images/projects/lookaroun/001.png",
+      "sha256": "b4aa62a71566f000b066f31e4434aa183f78176ecc3126123a60c9484214f99f",
+      "width": 2800,
+      "height": 2100
+    },
+    {
+      "key": "lookarounPhone",
+      "source": "public/images/projects/lookaroun/002.png",
+      "sha256": "03cc8d93091f1a12264f3e62f8c25a4c7bdf3e29b90e6a2cc85c90d4001124bf",
+      "width": 2800,
+      "height": 2100
+    },
+    {
+      "key": "flowLaptop",
+      "source": "public/images/projects/flow-media/001.png",
+      "sha256": "13a4dd7653fab59315642aae65d319f8d61204404e91a2b9e7890271415bc9cf",
+      "width": 2800,
+      "height": 1960
+    },
+    {
+      "key": "flowPhone",
+      "source": "public/images/projects/flow-media/002.png",
+      "sha256": "2d013f24c6b4b8dcd3ae87c70f0ff61addb682adced5bbff34f7c8a47f57f728",
+      "width": 2800,
+      "height": 2100
+    },
+    {
+      "key": "texture",
+      "source": "public/images/background/fond-page.png",
+      "sha256": "b56cc8a000edb8ff3badcd616675088163edb8d092386a8e78cb7555ded9f2df",
+      "width": 1491,
+      "height": 957
+    },
+    {
+      "key": "logo",
+      "source": "public/images/svg/logo-noir.svg",
+      "sha256": "40696c58c2d8bf6c1371caec607134a1449393272dd71a29d6873b7b5d8dfe50",
+      "width": 428,
+      "height": 382
+    },
+    {
+      "key": "zenBackground",
+      "source": "public/images/projects/backgrounds/zen-landscape.webp",
+      "sha256": "130568b77aef689b0f396e157f9364c2335d77001a57012629550306e0a063ba",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "key": "teamifyBackground",
+      "source": "public/images/projects/backgrounds/teamify.webp",
+      "sha256": "5d1af34782d62c3a0cb2f2a9ed3d1db808d425171612632f247f90c1826fffd0",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "key": "lookarounBackground",
+      "source": "public/images/projects/backgrounds/lookaroun.webp",
+      "sha256": "44342be43508a99097843d73d447bb30351b63b468e097a66c9b944130bf1f23",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "key": "flowBackground",
+      "source": "public/images/projects/backgrounds/flow-media.webp",
+      "sha256": "30b0fa09d5bca9c56b4395d72fc2e94b8ea21d61779fbb5cf50d5decbdd95d55",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "key": "teamifyPreview",
+      "source": "public/images/projects/previews/teamify.webp",
+      "sha256": "94d0ac3c0ee5bc4ea75e7ab84675f364f22790b2aea26a60f544f30eddbd5c8d",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "key": "lookarounPreview",
+      "source": "public/images/projects/previews/lookaroun.webp",
+      "sha256": "194b42e7fa0a3e5000480cf6f046fa0e76247895f73e4dbdc665e9aefdd48a26",
+      "width": 1600,
+      "height": 1200
+    },
+    {
+      "key": "flowPreview",
+      "source": "public/images/projects/previews/flow-media.webp",
+      "sha256": "416856b9427ad9b30499a65302671a6499d1316588542b547704eba2305454ff",
+      "width": 1600,
+      "height": 1120
+    },
+    {
+      "key": "typescript",
+      "source": "public/images/skills/typescript.svg",
+      "sha256": "e38dfcfd3dae1b00878fec9424bbce89098dfba37eb278aa5e46ee9a5121786a",
+      "width": 96,
+      "height": 96
+    },
+    {
+      "key": "nextjs",
+      "source": "public/images/skills/nextjs.svg",
+      "sha256": "59ba0f1f6b77a2736b4d1ef50f35e180b4a234cb73f4c3bce4e7e422fc6aab91",
+      "width": 96,
+      "height": 96
+    },
+    {
+      "key": "python",
+      "source": "public/images/skills/python.svg",
+      "sha256": "94c411b22eebda93241eeb1f752e3a94d12fe504099681064fe11782189e90f3",
+      "width": 110,
+      "height": 110
+    },
+    {
+      "key": "tailwind",
+      "source": "public/images/skills/tailwindcss.svg",
+      "sha256": "d9011701823845cab3a08d3806a56e475119eced675309bd62ae4312d4bd30d4",
+      "width": 800,
+      "height": 800
+    },
+    {
+      "key": "postgresql",
+      "source": "public/images/skills/postgresql.png",
+      "sha256": "2af52257c910e6351896bff47c030c7b20a459def7cf78ab3db09a186f128df2",
+      "width": 1163,
+      "height": 1199
+    },
+    {
+      "key": "figma",
+      "source": "public/images/skills/figma.svg",
+      "sha256": "6ed5c9271e1050035037c7e1715f574af241ac4add1cf7ae3f810ed98798c94a",
+      "width": 38,
+      "height": 57
+    },
+    {
+      "key": "codex",
+      "source": "media/portfolio-film-v2/assets/codex.webp",
+      "sha256": "141239ea7961627266ee21592f9d1154cd677d0ea86b12c2b509f92f8f05fac3",
+      "width": 250,
+      "height": 250
+    }
+  ],
+  "timeline": [
+    {
+      "start": 0,
+      "end": 3,
+      "name": "Signature"
+    },
+    {
+      "start": 3,
+      "end": 6,
+      "name": "Imaginer"
+    },
+    {
+      "start": 6,
+      "end": 10,
+      "name": "Images en perspective"
+    },
+    {
+      "start": 10,
+      "end": 14,
+      "name": "Chorégraphie des logos"
+    },
+    {
+      "start": 14,
+      "end": 18.5,
+      "name": "Fluide, précis, vivant"
+    },
+    {
+      "start": 18.5,
+      "end": 23,
+      "name": "Images et gestes"
+    },
+    {
+      "start": 23,
+      "end": 27.5,
+      "name": "Des idées à l’écran"
+    },
+    {
+      "start": 27.5,
+      "end": 32,
+      "name": "Ensemble"
+    }
+  ]
+}
