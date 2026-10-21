@@ -1,0 +1,671 @@
+{
+  "version": "v4",
+  "revision": 5,
+  "bpm": 120,
+  "fps": 60,
+  "duration": 45,
+  "cues": [
+    {
+      "time": 0,
+      "kind": "cut",
+      "label": "Michel, développeur créatif",
+      "frame": 0,
+      "audioTime": 0,
+      "originalOpening": true
+    },
+    {
+      "time": 0.25,
+      "kind": "sweep",
+      "label": "Révéler le prénom",
+      "frame": 15,
+      "audioTime": 0.25,
+      "originalOpening": true
+    },
+    {
+      "time": 1.25,
+      "kind": "tone",
+      "label": "Dire le métier",
+      "frame": 75,
+      "audioTime": 1.25,
+      "originalOpening": true
+    },
+    {
+      "time": 2.25,
+      "kind": "logo",
+      "label": "Outil de création",
+      "frame": 135,
+      "audioTime": 2.25,
+      "originalOpening": true
+    },
+    {
+      "time": 2.375,
+      "kind": "logo",
+      "label": "Outil de création",
+      "frame": 143,
+      "audioTime": 2.3833333333333333,
+      "originalOpening": true
+    },
+    {
+      "time": 2.5,
+      "kind": "logo",
+      "label": "Outil de création",
+      "frame": 150,
+      "audioTime": 2.5,
+      "originalOpening": true
+    },
+    {
+      "time": 2.625,
+      "kind": "logo",
+      "label": "Outil de création",
+      "frame": 158,
+      "audioTime": 2.6333333333333333,
+      "originalOpening": true
+    },
+    {
+      "time": 4,
+      "frame": 240,
+      "audioTime": 4,
+      "kind": "hit",
+      "label": "Entrer dans la composition"
+    },
+    {
+      "time": 4.6,
+      "frame": 276,
+      "audioTime": 4.6,
+      "kind": "sweep",
+      "label": "Suivre le curseur"
+    },
+    {
+      "time": 5.6,
+      "frame": 336,
+      "audioTime": 5.6,
+      "kind": "click",
+      "label": "Ajuster le détail"
+    },
+    {
+      "time": 6,
+      "frame": 360,
+      "audioTime": 6,
+      "kind": "tick",
+      "label": "Aligner les angles"
+    },
+    {
+      "time": 6.25,
+      "frame": 375,
+      "audioTime": 6.25,
+      "kind": "tick",
+      "label": "Propager l’alignement"
+    },
+    {
+      "time": 7,
+      "frame": 420,
+      "audioTime": 7,
+      "kind": "tone",
+      "label": "Reculer pour vérifier"
+    },
+    {
+      "time": 8.25,
+      "frame": 495,
+      "audioTime": 8.25,
+      "kind": "sweep",
+      "label": "Entrer dans la forme"
+    },
+    {
+      "time": 8.8,
+      "frame": 528,
+      "audioTime": 8.8,
+      "kind": "logo",
+      "label": "Figma"
+    },
+    {
+      "time": 9.35,
+      "frame": 561,
+      "audioTime": 9.35,
+      "kind": "tick",
+      "label": "Tracer la courbe"
+    },
+    {
+      "time": 9.6,
+      "frame": 576,
+      "audioTime": 9.6,
+      "kind": "click",
+      "label": "Ajuster la poignée"
+    },
+    {
+      "time": 10.25,
+      "frame": 615,
+      "audioTime": 10.25,
+      "kind": "tone",
+      "label": "Équilibrer les formes"
+    },
+    {
+      "time": 11.75,
+      "frame": 705,
+      "audioTime": 11.75,
+      "kind": "sweep",
+      "label": "La forme devient un fichier"
+    },
+    {
+      "time": 12,
+      "frame": 720,
+      "audioTime": 12,
+      "kind": "logo",
+      "label": "Python"
+    },
+    {
+      "time": 12.5,
+      "frame": 750,
+      "audioTime": 12.5,
+      "kind": "tick",
+      "label": "Lire les fichiers"
+    },
+    {
+      "time": 13.15,
+      "frame": 789,
+      "audioTime": 13.15,
+      "kind": "tick",
+      "label": "Trier"
+    },
+    {
+      "time": 13.8,
+      "frame": 828,
+      "audioTime": 13.8,
+      "kind": "click",
+      "label": "Préparer la publication"
+    },
+    {
+      "time": 14.5,
+      "frame": 870,
+      "audioTime": 14.5,
+      "kind": "tick",
+      "label": "Assembler les ressources"
+    },
+    {
+      "time": 15.25,
+      "frame": 915,
+      "audioTime": 15.25,
+      "kind": "tick",
+      "label": "Vérifier le paquet"
+    },
+    {
+      "time": 15.75,
+      "frame": 945,
+      "audioTime": 15.75,
+      "kind": "tone",
+      "label": "Prêt à publier"
+    },
+    {
+      "time": 16.75,
+      "frame": 1005,
+      "audioTime": 16.75,
+      "kind": "sweep",
+      "label": "Le code quitte le PC"
+    },
+    {
+      "time": 17.35,
+      "frame": 1041,
+      "audioTime": 17.35,
+      "kind": "logo",
+      "label": "Next.js et TypeScript"
+    },
+    {
+      "time": 17.85,
+      "frame": 1071,
+      "audioTime": 17.85,
+      "kind": "click",
+      "label": "Transmettre"
+    },
+    {
+      "time": 18.2,
+      "frame": 1092,
+      "audioTime": 18.2,
+      "kind": "tick",
+      "label": "Suivre le paquet"
+    },
+    {
+      "time": 19.15,
+      "frame": 1149,
+      "audioTime": 19.15,
+      "kind": "hit",
+      "label": "Le serveur reçoit"
+    },
+    {
+      "time": 19.5,
+      "frame": 1170,
+      "audioTime": 19.5,
+      "kind": "tick",
+      "label": "Activer les services"
+    },
+    {
+      "time": 20,
+      "frame": 1200,
+      "audioTime": 20,
+      "kind": "tick",
+      "label": "Le serveur répond"
+    },
+    {
+      "time": 20.75,
+      "frame": 1245,
+      "audioTime": 20.75,
+      "kind": "tone",
+      "label": "Déploiement prêt"
+    },
+    {
+      "time": 22.25,
+      "frame": 1335,
+      "audioTime": 22.25,
+      "kind": "sweep",
+      "label": "Rejoindre le cloud"
+    },
+    {
+      "time": 22.8,
+      "frame": 1368,
+      "audioTime": 22.8,
+      "kind": "tone",
+      "label": "Publier"
+    },
+    {
+      "time": 23.75,
+      "frame": 1425,
+      "audioTime": 23.75,
+      "kind": "sweep",
+      "label": "Le cloud se déploie"
+    },
+    {
+      "time": 24.25,
+      "frame": 1455,
+      "audioTime": 24.25,
+      "kind": "tick",
+      "label": "Ouvrir les connexions"
+    },
+    {
+      "time": 25,
+      "frame": 1500,
+      "audioTime": 25,
+      "kind": "tick",
+      "label": "Première connexion"
+    },
+    {
+      "time": 25.5,
+      "frame": 1530,
+      "audioTime": 25.5,
+      "kind": "tick",
+      "label": "Deuxième connexion"
+    },
+    {
+      "time": 26,
+      "frame": 1560,
+      "audioTime": 26,
+      "kind": "tone",
+      "label": "Accessible"
+    },
+    {
+      "time": 27.75,
+      "frame": 1665,
+      "audioTime": 27.75,
+      "kind": "sweep",
+      "label": "Vérifier le chemin"
+    },
+    {
+      "time": 28,
+      "frame": 1680,
+      "audioTime": 28,
+      "kind": "tick",
+      "label": "Préparer"
+    },
+    {
+      "time": 28.5,
+      "frame": 1710,
+      "audioTime": 28.5,
+      "kind": "click",
+      "label": "Corriger le passage"
+    },
+    {
+      "time": 29,
+      "frame": 1740,
+      "audioTime": 29,
+      "kind": "tick",
+      "label": "Connecter"
+    },
+    {
+      "time": 29.5,
+      "frame": 1770,
+      "audioTime": 29.5,
+      "kind": "tick",
+      "label": "Vérifier"
+    },
+    {
+      "time": 30,
+      "frame": 1800,
+      "audioTime": 30,
+      "kind": "sweep",
+      "label": "Zen · trois écrans"
+    },
+    {
+      "time": 30.2,
+      "frame": 1812,
+      "audioTime": 30.2,
+      "kind": "hit",
+      "label": "Les écrans se déploient"
+    },
+    {
+      "time": 30.7,
+      "frame": 1842,
+      "audioTime": 30.7,
+      "kind": "sweep",
+      "label": "Ouvrir la recherche"
+    },
+    {
+      "time": 31.25,
+      "frame": 1875,
+      "audioTime": 31.25,
+      "kind": "key",
+      "label": "W"
+    },
+    {
+      "time": 31.333333333333332,
+      "frame": 1880,
+      "audioTime": 31.333333333333332,
+      "kind": "key",
+      "label": "o"
+    },
+    {
+      "time": 31.416666666666668,
+      "frame": 1885,
+      "audioTime": 31.416666666666668,
+      "kind": "key",
+      "label": "n"
+    },
+    {
+      "time": 31.5,
+      "frame": 1890,
+      "audioTime": 31.5,
+      "kind": "key",
+      "label": "g"
+    },
+    {
+      "time": 31.583333333333332,
+      "frame": 1895,
+      "audioTime": 31.583333333333332,
+      "kind": "key",
+      "label": " "
+    },
+    {
+      "time": 31.666666666666668,
+      "frame": 1900,
+      "audioTime": 31.666666666666668,
+      "kind": "key",
+      "label": "K"
+    },
+    {
+      "time": 31.75,
+      "frame": 1905,
+      "audioTime": 31.75,
+      "kind": "key",
+      "label": "a"
+    },
+    {
+      "time": 31.833333333333332,
+      "frame": 1910,
+      "audioTime": 31.833333333333332,
+      "kind": "key",
+      "label": "r"
+    },
+    {
+      "time": 31.916666666666668,
+      "frame": 1915,
+      "audioTime": 31.916666666666668,
+      "kind": "key",
+      "label": "-"
+    },
+    {
+      "time": 32,
+      "frame": 1920,
+      "audioTime": 32,
+      "kind": "key",
+      "label": "w"
+    },
+    {
+      "time": 32.083333333333336,
+      "frame": 1925,
+      "audioTime": 32.083333333333336,
+      "kind": "key",
+      "label": "a"
+    },
+    {
+      "time": 32.166666666666664,
+      "frame": 1930,
+      "audioTime": 32.166666666666664,
+      "kind": "key",
+      "label": "i"
+    },
+    {
+      "time": 32.35,
+      "frame": 1941,
+      "audioTime": 32.35,
+      "kind": "click",
+      "label": "Lancer la recherche"
+    },
+    {
+      "time": 32.55,
+      "frame": 1953,
+      "audioTime": 32.55,
+      "kind": "hit",
+      "label": "Le film apparaît"
+    },
+    {
+      "time": 33.5,
+      "frame": 2010,
+      "audioTime": 33.5,
+      "kind": "logo",
+      "label": "PHP"
+    },
+    {
+      "time": 34,
+      "frame": 2040,
+      "audioTime": 34,
+      "kind": "logo",
+      "label": "C++"
+    },
+    {
+      "time": 34.5,
+      "kind": "cut",
+      "label": "Mes outils · défilement rapide des logos",
+      "frame": 2070,
+      "audioTime": 34.5,
+      "preserved": true
+    },
+    {
+      "time": 34.5,
+      "kind": "logo",
+      "label": "Logo 1",
+      "frame": 2070,
+      "audioTime": 34.5,
+      "preserved": true
+    },
+    {
+      "time": 35,
+      "kind": "logo",
+      "label": "Logo 2",
+      "frame": 2100,
+      "audioTime": 35,
+      "preserved": true
+    },
+    {
+      "time": 35.5,
+      "kind": "logo",
+      "label": "Logo 3",
+      "frame": 2130,
+      "audioTime": 35.5,
+      "preserved": true
+    },
+    {
+      "time": 36,
+      "kind": "logo",
+      "label": "Logo 4",
+      "frame": 2160,
+      "audioTime": 36,
+      "preserved": true
+    },
+    {
+      "time": 36.5,
+      "kind": "logo",
+      "label": "Logo 5",
+      "frame": 2190,
+      "audioTime": 36.5,
+      "preserved": true
+    },
+    {
+      "time": 37,
+      "kind": "logo",
+      "label": "Logo 6",
+      "frame": 2220,
+      "audioTime": 37,
+      "preserved": true
+    },
+    {
+      "time": 37.5,
+      "kind": "cut",
+      "label": "Concevoir · développer · animer",
+      "frame": 2250,
+      "audioTime": 37.5,
+      "preserved": true
+    },
+    {
+      "time": 38,
+      "kind": "hit",
+      "label": "Développer",
+      "frame": 2280,
+      "audioTime": 38,
+      "preserved": true
+    },
+    {
+      "time": 38.5,
+      "kind": "hit",
+      "label": "Animer",
+      "frame": 2310,
+      "audioTime": 38.5,
+      "preserved": true
+    },
+    {
+      "time": 39,
+      "kind": "cut",
+      "label": "Michel Djoumessi · identité",
+      "frame": 2340,
+      "audioTime": 39,
+      "preserved": true
+    },
+    {
+      "time": 39,
+      "kind": "letter",
+      "label": "Signature 1",
+      "frame": 2340,
+      "audioTime": 39,
+      "preserved": true
+    },
+    {
+      "time": 39.0625,
+      "kind": "letter",
+      "label": "Signature 2",
+      "frame": 2344,
+      "audioTime": 39.06666666666666,
+      "preserved": true
+    },
+    {
+      "time": 39.125,
+      "kind": "letter",
+      "label": "Signature 3",
+      "frame": 2348,
+      "audioTime": 39.13333333333333,
+      "preserved": true
+    },
+    {
+      "time": 39.1875,
+      "kind": "letter",
+      "label": "Signature 4",
+      "frame": 2351,
+      "audioTime": 39.18333333333334,
+      "preserved": true
+    },
+    {
+      "time": 39.25,
+      "kind": "letter",
+      "label": "Signature 5",
+      "frame": 2355,
+      "audioTime": 39.25,
+      "preserved": true
+    },
+    {
+      "time": 39.3125,
+      "kind": "letter",
+      "label": "Signature 6",
+      "frame": 2359,
+      "audioTime": 39.31666666666666,
+      "preserved": true
+    },
+    {
+      "time": 39.375,
+      "kind": "letter",
+      "label": "Signature 7",
+      "frame": 2363,
+      "audioTime": 39.38333333333333,
+      "preserved": true
+    },
+    {
+      "time": 39.4375,
+      "kind": "letter",
+      "label": "Signature 8",
+      "frame": 2366,
+      "audioTime": 39.43333333333334,
+      "preserved": true
+    },
+    {
+      "time": 39.5,
+      "kind": "letter",
+      "label": "Signature 9",
+      "frame": 2370,
+      "audioTime": 39.5,
+      "preserved": true
+    },
+    {
+      "time": 39.5625,
+      "kind": "letter",
+      "label": "Signature 10",
+      "frame": 2374,
+      "audioTime": 39.56666666666666,
+      "preserved": true
+    },
+    {
+      "time": 39.625,
+      "kind": "letter",
+      "label": "Signature 11",
+      "frame": 2378,
+      "audioTime": 39.63333333333333,
+      "preserved": true
+    },
+    {
+      "time": 41.5,
+      "kind": "cut",
+      "label": "Explorer mon portfolio · hey-michel.me",
+      "frame": 2490,
+      "audioTime": 41.5,
+      "preserved": true
+    },
+    {
+      "time": 42.5,
+      "kind": "sweep",
+      "label": "Invitation au portfolio",
+      "frame": 2550,
+      "audioTime": 42.5,
+      "preserved": true
+    },
+    {
+      "time": 43.5,
+      "kind": "click",
+      "label": "Explorer mon portfolio",
+      "frame": 2610,
+      "audioTime": 43.5,
+      "preserved": true
+    }
+  ]
+}

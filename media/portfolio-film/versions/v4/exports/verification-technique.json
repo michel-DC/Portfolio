@@ -1,0 +1,111 @@
+{
+  "version": "v4",
+  "revision": 5,
+  "duration": 45,
+  "resolution": [
+    1920,
+    1080
+  ],
+  "fps": 60,
+  "frames": 2700,
+  "audio": {
+    "channels": 2,
+    "sampleRate": 48000,
+    "codec": "aac",
+    "replacementMusic": {
+      "title": "Cat Walk",
+      "artist": "Arulo",
+      "library": "Mixkit",
+      "id": 371,
+      "page": "https://mixkit.co/free-stock-music/edm/",
+      "audioUrl": "https://assets.mixkit.co/music/371/371.mp3",
+      "license": "Mixkit Stock Music Free License",
+      "licenseUrl": "https://mixkit.co/license/#musicFree",
+      "sha256": "e241cba000ce12e52cadd4c9956274e391ef1f66d1e48a5dd40bfc21645aa489",
+      "sourceBpm": 130,
+      "editedBpm": 120,
+      "tempoAdjustedWithoutPitchChange": true
+    },
+    "continuityChecks": [
+      {
+        "time": 11.75,
+        "continuousSourceCorrelation": 0.9999993374806191
+      },
+      {
+        "time": 16.75,
+        "continuousSourceCorrelation": 0.9999982375582325
+      },
+      {
+        "time": 22.25,
+        "continuousSourceCorrelation": 0.9999978731216628
+      },
+      {
+        "time": 27.75,
+        "continuousSourceCorrelation": 0.9999999988114312
+      },
+      {
+        "time": 29,
+        "continuousSourceCorrelation": 0.9999999988268142
+      }
+    ],
+    "approvedFirstSecondsPcmIdentical": 11.7,
+    "approvedEndingPcmIdenticalFrom": 34.5,
+    "musicAndEffectsSumVerified": true,
+    "typing": {
+      "query": "Wong Kar-wai",
+      "start": 31.25,
+      "keystrokes": 12,
+      "aacTemplateCorrelation": 0.7593977271113241
+    },
+    "finalMouseClick": {
+      "time": 43.5,
+      "frame": 2610,
+      "aacTemplateCorrelation": 0.7653850468862747,
+      "lagSamples": 0,
+      "lagMilliseconds": 0.0,
+      "decodedPeakDbfs": -8.494230270385742
+    },
+    "minimumQuarterSecondRmsDbfs": -33.640348630216366,
+    "synchronizedEvents": 90,
+    "samplesPerFrame": 800
+  },
+  "fullDecode": "passed",
+  "v3Unchanged": "35db1e06b74bee8d79d7acd236129633ab067bfefcee56c46d3688644ecabcf2",
+  "v4bisUnchanged": "2f19f4c7c765cc817d67ea398ecee4930b82d76d077f859f82254ecd6871fa51",
+  "previousBackupsVerified": 4,
+  "v3Opening": {
+    "start": 0,
+    "duration": 4,
+    "ssim": 0.997186,
+    "originalAnimation": true
+  },
+  "preservedPictureTail": {
+    "oldStart": 29.5,
+    "newStart": 34.5,
+    "duration": 7,
+    "ssim": 0.996723,
+    "reencoded": true
+  },
+  "removedSequence": "Reconstruction du logo",
+  "onlyProject": {
+    "name": "Zen",
+    "start": 30,
+    "end": 33.5,
+    "screensVisibleTogether": 3,
+    "search": "Wong Kar-wai",
+    "typingSound": true
+  },
+  "addedTools": [
+    "PHP",
+    "C++"
+  ],
+  "finalScreen": {
+    "start": 41.5,
+    "end": 45,
+    "reference": "assets/reference-ending.png",
+    "title": "ET SI ON TRAVAILLAIT ENSEMBLE ?",
+    "button": "hey-michel.me"
+  },
+  "bytes": 32882478,
+  "sha256": "8c42723ae9b17162a7ba5ec3a169c6f74e3bf136c0528fababffc1013109d99f"
+}

@@ -1,30 +1,34 @@
-# Intégration du film V3
+# Intégration du film V4
 
-La section se trouve dans l’accueil après la présentation et avant la galerie. Le lien « Voir le film » du hero mène à `#film`.
+La V4 officielle validée le 21 octobre 2026 remplace la V3 dans la section vidéo de l’accueil. L’emplacement, le lecteur et ses interactions sont conservés : après la présentation, avant les projets ; le lien Voir le film du hero mène à #film.
 
 ## Ressources
 
-- `public/videos/portfolio/michel-djoumessi-v3.mp4` : copie exacte de la vidéo finale archivée, 40 secondes, 1920 × 1080, 60 images/s, 18 997 124 octets. SHA-256 : `35db1e06b74bee8d79d7acd236129633ab067bfefcee56c46d3688644ecabcf2`.
-- `public/videos/portfolio/apercu.mp4` : extrait muet de 4,5 secondes à partir de 26,5 secondes, 1280 × 720 à 30 images/s, 423 149 octets.
-- `public/videos/portfolio/affiche.webp` : image extraite à 27,5 secondes, 1600 × 900, 30 126 octets.
+- public/videos/portfolio/michel-djoumessi-v4.mp4 : copie exacte du master validé, 45 secondes, 1920 × 1080, 60 images/s, AAC stéréo 48 kHz, 32 882 478 octets. SHA-256 : 8c42723ae9b17162a7ba5ec3a169c6f74e3bf136c0528fababffc1013109d99f.
+- public/videos/portfolio/apercu-v4.mp4 : aperçu muet de six secondes, 1280 × 720, 30 images/s, 923 298 octets. Il réunit des extraits de l’ouverture, du déploiement, de Zen et des outils.
+- public/videos/portfolio/affiche-v4.webp : image de l’ouverture à 1,7 seconde, 1600 × 900, 237 660 octets.
 
-Les archives V1, V2 et V3 ne sont pas modifiées. Aucun nouveau dossier de version n’est créé.
+Les libellés visibles et accessibles indiquent 45 secondes. Les URL versionnées évitent de réutiliser en cache les anciens médias. L’ancien master V3 et ses ressources ne sont plus référencés par la section vidéo ; ses archives sont conservées.
 
-## Comportement vérifié
+## Archivage
 
-Contrôle TypeScript : `pnpm exec tsc --noEmit` réussi.
+La version validée reste dans media/portfolio-film/versions/v4/exports/michel-djoumessi-v4.mp4, sans réencodage. ARCHIVE.md et archive-manifest.json identifient cette V4 officielle. Les 122 fichiers du manifeste ont été vérifiés par SHA-256, ainsi que l’égalité du master et de la copie publique.
 
-Parcours réels dans Helium, profil isolé `helium-tests`, à 1920 × 1080, 1366 × 768, 390 × 844 et 320 × 568 :
+Les ressources utilisées du portfolio sont figées dans inputs/public et les fonctions graphiques V1 de l’écran final dans inputs/dependencies/v1. Les sources, les bruitages, les conditions musicales, les contrôles et les sauvegardes précédentes restent disponibles dans le dossier de version.
 
-- Emplacement entre la présentation et les projets ; lien du hero opérationnel ; aucun débordement horizontal constaté.
-- Aucune source du film intégral avant le clic. L’aperçu est muet, sa pause manuelle et sa reprise fonctionnent. Il s’arrête hors écran et à l’ouverture du dialogue.
-- Avec mouvement réduit, aucun aperçu vidéo n’est chargé ; l’affiche et le bouton de lecture restent présents.
-- Ouverture au clavier et à la souris, lecture avec son, contrôles natifs, fermeture par le bouton, Échap ou clic sur le fond. Le focus retourne au déclencheur ; les éléments du fond ne peuvent pas recevoir le focus pendant le dialogue.
-- Lors du parcours Tab dans les contrôles vidéo natifs, le navigateur peut recevoir le focus dans sa propre interface, puis le rend au dialogue ; aucun contrôle de la page derrière ne devient actif.
-- Lecture intégrale jusqu’à 40 secondes, 2 400 images signalées et aucune erreur média. Le lecteur a signalé quatre images sautées pendant cette lecture locale.
-- Erreur réseau simulée sur la source vidéo : message de repli et lien d’ouverture directe présents. Fermeture puis réouverture : la bonne source est restaurée, la lecture reprend à zéro sans erreur.
-- Le dialogue tient dans l’écran de 1366 × 768 et sur mobile. La copie publique du film a la même empreinte que l’archive.
+## Vérifications de cette intégration
 
-Le serveur local signale des erreurs préexistantes de suivi de visites Prisma liées à sa clé d’API et des avertissements sur la qualité 80 des images de projets. Ces messages ne concernent pas les ressources du film et n’empêchent pas les parcours vidéo. Leur configuration n’est pas modifiée dans cette intégration.
+- pnpm exec tsc --noEmit --incremental false : réussi. Aucun build ni lint lancé.
+- Aperçu V4 muet et animé lorsque la section est visible ; pause manuelle et reprise exercées dans Helium.
+- Le film intégral n’a aucune source avant le clic.
+- Lecture intégrale depuis le dialogue du site, avec son, jusqu’à 45 secondes, à 1920 × 1080. Le lecteur décode 2 700 images, ne signale aucune erreur média et abandonne trois images pendant cette lecture locale.
+- L’aperçu reste en pause derrière le dialogue. La fermeture par le bouton a été exercée.
+- À 390 × 844, ouverture et lecture avec son de la bonne V4, dialogue entièrement dans l’écran et aucun débordement horizontal.
+- Format et durée du master et de l’aperçu contrôlés avec ffprobe.
+- Captures natives inspectées : portfolio-v4-site-final.png, portfolio-v4-lecteur-desktop.png et portfolio-v4-lecteur-mobile.png.
 
-Le serveur démarré pour ces contrôles est arrêté à la fin. Aucun build ni lint n’est lancé pour cette tâche.
+Le serveur local signale toujours l’erreur préexistante de clé d’API du suivi des visites Prisma et des avertissements de qualité d’images de projets. Ces messages étaient déjà documentés lors de l’intégration de la V3 ; ils ne bloquent pas la vidéo et leur configuration n’est pas modifiée.
+
+Une tentative complémentaire de capture mobile avec les contrôles natifs a expiré dans Helium après les parcours réussis ci-dessus. Elle n’a modifié aucun fichier du site ; les captures et les résultats issus du parcours complet validé sont conservés.
+
+Le serveur démarré temporairement pour cette vérification a été arrêté après les contrôles. Cette intégration modifie les fichiers locaux du site ; aucune publication distante, aucun commit et aucun push ne sont effectués dans cette tâche.

@@ -1,0 +1,69 @@
+{
+  "version": "v4",
+  "revision": 5,
+  "duration": 45,
+  "bpm": 120,
+  "sampleRate": 48000,
+  "channels": 2,
+  "originalComposition": false,
+  "musicSource": {
+    "title": "Cat Walk",
+    "artist": "Arulo",
+    "library": "Mixkit",
+    "id": 371,
+    "page": "https://mixkit.co/free-stock-music/edm/",
+    "audioUrl": "https://assets.mixkit.co/music/371/371.mp3",
+    "license": "Mixkit Stock Music Free License",
+    "licenseUrl": "https://mixkit.co/license/#musicFree",
+    "sha256": "e241cba000ce12e52cadd4c9956274e391ef1f66d1e48a5dd40bfc21645aa489",
+    "sourceBpm": 130,
+    "editedBpm": 120,
+    "tempoAdjustedWithoutPitchChange": true
+  },
+  "v3AudioUsed": false,
+  "synchronizedEvents": 90,
+  "continuousMusic": {
+    "start": 0,
+    "end": 33.75,
+    "sourceStartAfterTempoAdjustment": 28,
+    "sourceTimeAdvancesContinuously": true,
+    "noRestartsAt": [
+      11.75,
+      16.75,
+      22.25,
+      27.75
+    ],
+    "crossfadeToApprovedEnding": [
+      33.75,
+      34.5
+    ]
+  },
+  "preservedEnding": {
+    "start": 34.5,
+    "end": 45,
+    "source": "history/v4-revision-04.zip",
+    "mixPcmIdentical": true
+  },
+  "keyboard": {
+    "query": "Wong Kar-wai",
+    "start": 31.25,
+    "keystrokes": 12,
+    "stepFrames": 5
+  },
+  "finalMouseClick": {
+    "time": 43.5,
+    "frame": 2610,
+    "audioSample": 2088000,
+    "musicDuckingDb": -20,
+    "releaseDelay": 0.058
+  },
+  "peakDbfs": -1.0120896658346126,
+  "rmsDbfs": -16.394094913751278,
+  "stems": [
+    "musique-mixkit-montage.wav",
+    "bruitages.wav",
+    "clic-final.wav",
+    "frappe-clavier.wav"
+  ],
+  "workingStemsForVideoProductionOnly": true
+}

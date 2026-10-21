@@ -13,9 +13,10 @@ const italiana = localFont({
   weight: "400",
 });
 
-const FILM_SOURCE = "/videos/portfolio/michel-djoumessi-v3.mp4";
-const PREVIEW_SOURCE = "/videos/portfolio/apercu.mp4";
-const POSTER_SOURCE = "/videos/portfolio/affiche.webp";
+const FILM_SOURCE = "/videos/portfolio/michel-djoumessi-v4.mp4";
+const PREVIEW_SOURCE = "/videos/portfolio/apercu-v4.mp4";
+const POSTER_SOURCE = "/videos/portfolio/affiche-v4.webp";
+const FILM_DURATION_SECONDS = 45;
 
 export default function FilmSection(): React.JSX.Element {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -111,19 +112,19 @@ export default function FilmSection(): React.JSX.Element {
         <h2 id="film-title" className={cn("text-[clamp(2.25rem,4.5vw,4.75rem)] leading-none tracking-[-0.025em] text-[var(--accent-ink)]", italiana.className)}>
           Mon univers, en mouvement.
         </h2>
-        <span className="pb-1 text-xs uppercase tracking-[0.15em] text-[var(--accent-ink)] md:text-sm">Le film · 40 s</span>
+        <span className="pb-1 text-xs uppercase tracking-[0.15em] text-[var(--accent-ink)] md:text-sm">Le film · {FILM_DURATION_SECONDS} s</span>
       </div>
 
       <div className="relative aspect-video overflow-hidden rounded-lg bg-[var(--portfolio-accent)] md:rounded-xl">
         <Image src={POSTER_SOURCE} alt="" fill sizes="(max-width: 767px) 100vw, (max-width: 1565px) 92vw, 1440px" className="object-cover" />
         <video ref={previewRef} muted loop playsInline preload="none" aria-hidden="true" tabIndex={-1} disablePictureInPicture onPlaying={(): void => setIsPreviewReady(true)} onError={(): void => setIsPreviewReady(false)} className={cn("absolute inset-0 h-full w-full object-cover", isPreviewReady ? "opacity-100" : "opacity-0")} />
-        <button type="button" onClick={openFilm} aria-label="Découvrir mon univers — lire le film de 40 secondes avec le son" aria-haspopup="dialog" className="group absolute inset-0 flex flex-col items-center justify-center gap-4 focus-visible:outline-4 focus-visible:-outline-offset-8 focus-visible:outline-white sm:gap-6">
+        <button type="button" onClick={openFilm} aria-label={`Découvrir mon univers — lire le film de ${FILM_DURATION_SECONDS} secondes avec le son`} aria-haspopup="dialog" className="group absolute inset-0 flex flex-col items-center justify-center gap-4 focus-visible:outline-4 focus-visible:-outline-offset-8 focus-visible:outline-white sm:gap-6">
           <span className="flex size-16 items-center justify-center rounded-full bg-white text-[var(--accent-ink)] shadow-lg transition-transform duration-300 motion-safe:group-hover:scale-110 motion-reduce:transition-none md:size-24">
             <Play aria-hidden="true" fill="currentColor" strokeWidth={0} className="ml-1 size-6 md:size-9" />
           </span>
           <span className="inline-flex items-center gap-3 rounded-full bg-[var(--portfolio-accent)] px-4 py-3 text-sm text-white shadow-lg sm:gap-5 sm:px-6 sm:text-lg">
             Découvrir mon univers
-            <span className="border-l border-white/30 pl-3 text-white/80 sm:pl-5">40 s</span>
+            <span className="border-l border-white/30 pl-3 text-white/80 sm:pl-5">{FILM_DURATION_SECONDS} s</span>
           </span>
         </button>
       </div>
@@ -145,7 +146,7 @@ export default function FilmSection(): React.JSX.Element {
             <X aria-hidden="true" className="size-5" />
           </button>
         </div>
-        <video ref={filmRef} controls playsInline preload="none" aria-label="Film de présentation de Michel Djoumessi, 40 secondes" onError={(): void => setHasFilmError(true)} onPlaying={(): void => setNeedsManualPlayback(false)} className="aspect-video max-h-[calc(100dvh-8rem)] w-full rounded-lg bg-black object-contain" />
+        <video ref={filmRef} controls playsInline preload="none" aria-label={`Film de présentation de Michel Djoumessi, ${FILM_DURATION_SECONDS} secondes`} onError={(): void => setHasFilmError(true)} onPlaying={(): void => setNeedsManualPlayback(false)} className="aspect-video max-h-[calc(100dvh-8rem)] w-full rounded-lg bg-black object-contain" />
         <div className="min-h-7 pt-2 text-center text-sm text-white/85" aria-live="polite">
           {hasFilmError ? <p>La vidéo ne peut pas être lue. <a href={FILM_SOURCE} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">Ouvrir le film</a></p> : needsManualPlayback ? <p>Appuyez sur Lecture pour démarrer le film.</p> : null}
         </div>

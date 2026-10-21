@@ -1,0 +1,9 @@
+{
+  "name": "portfolio-film-v4",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "node source/render.mjs --preview",
+    "render": "node source/render.mjs"
+  }
+}
